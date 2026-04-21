@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-04-19T13:36:53+00:00",
+  "generated_at": "2026-04-21T22:18:39+00:00",
   "skill_count": 229,
   "domain_count": 12,
   "skills": [
@@ -668,7 +668,7 @@
         "references/focused-fix-methodology.md",
         "scripts/change_scope_analyzer.py"
       ],
-      "size_bytes": 21873,
+      "size_bytes": 24468,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -4338,7 +4338,7 @@
         "scripts/price_sensitivity_calculator.py",
         "scripts/pricing_model_analyzer.py"
       ],
-      "size_bytes": 53929,
+      "size_bytes": 56667,
       "has_scripts": true,
       "has_references": false,
       "has_assets": false
@@ -4365,7 +4365,7 @@
         "scripts/referral_economics_calculator.py",
         "scripts/referral_funnel_analyzer.py"
       ],
-      "size_bytes": 56585,
+      "size_bytes": 59486,
       "has_scripts": true,
       "has_references": false,
       "has_assets": false
@@ -5178,7 +5178,7 @@
         "scripts/risk_matrix_analyzer.py",
         "scripts/stakeholder_mapper.py"
       ],
-      "size_bytes": 254570,
+      "size_bytes": 257803,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5854,7 +5854,7 @@
         "scripts/forecast_builder.py",
         "scripts/ratio_calculator.py"
       ],
-      "size_bytes": 137321,
+      "size_bytes": 140358,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
