@@ -47,6 +47,8 @@ type(scope): description
 
 **Scope:** Module, skill, or component name (lowercase)
 
+**Forbidden in commit messages:** Never add AI attribution lines such as `Co-Authored-By: Claude ...`, `Co-Authored-By: <any AI model>`, or `🤖 Generated with ...` footers. Commits in this repo are authored solely by humans.
+
 **Examples:**
 ```
 feat(engineering): add claude-code-mastery skill with 3 tools

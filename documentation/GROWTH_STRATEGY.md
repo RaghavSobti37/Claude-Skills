@@ -171,11 +171,7 @@ Updates:
 - README.md: Added skill description, updated counts (48→49)
 - CLAUDE.md: Updated skill count in scope
 - {domain}/CLAUDE.md: Added navigation reference
-- PYTHON_TOOLS_AUDIT.md: Added {N} tools ({X} lines)
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>"
+- PYTHON_TOOLS_AUDIT.md: Added {N} tools ({X} lines)"
 
 # Push and create PR
 git push origin feature/skill-{skill-name}

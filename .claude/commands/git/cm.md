@@ -9,6 +9,7 @@ description: Stage working tree changes and create a Conventional Commit (no pus
    - Commit subject ≤ 72 chars.
    - Scope uses kebab-case (e.g., `feat(marketing): ...`).
    - Use `.github/commit-template.txt` for Context / Testing / Reviewers sections.
+   - Never add AI attribution strings (e.g. `Co-Authored-By: Claude ...`, `🤖 Generated with ...`) to the commit message.
 5. Run `git commit` and paste the generated message + context from the template.
 6. Show the resulting commit (`git log -1 --stat`) and keep the commit hash handy.
 7. **Do not push** in this command. Use `git/cp.md` when you're ready to publish.
