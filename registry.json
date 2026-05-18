@@ -1,8 +1,26 @@
 {
   "schema_version": "1.0.0",
   "generated_at": "2026-05-18T10:35:08+00:00",
+  "repository": "claude-skills",
   "skill_count": 250,
   "domain_count": 15,
+  "domains": [
+    "business-growth",
+    "c-level-advisor",
+    "data-analytics",
+    "documents",
+    "engineering",
+    "finance",
+    "hr-operations",
+    "legal",
+    "marketing",
+    "personal-productivity",
+    "product-team",
+    "project-management",
+    "ra-qm-team",
+    "sales-success",
+    "vertical-advisors"
+  ],
   "skills": [
     {
       "name": "a11y-audit",
@@ -17,19 +35,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/a11y-audit",
-      "files": [
-        "SKILL.md",
-        "examples/sample-page.html",
-        "references/wcag-guidelines.md",
-        "scripts/a11y_scanner.py",
-        "scripts/contrast_checker.py"
-      ],
-      "size_bytes": 40934,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "agent-designer",
@@ -38,28 +46,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/agent-designer",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "agent_evaluator.py",
-        "agent_planner.py",
-        "assets/sample_execution_logs.json",
-        "assets/sample_system_requirements.json",
-        "assets/sample_tool_descriptions.json",
-        "expected_outputs/sample_agent_architecture.json",
-        "expected_outputs/sample_evaluation_report.json",
-        "expected_outputs/sample_tool_schemas.json",
-        "references/agent_architecture_patterns.md",
-        "references/evaluation_methodology.md",
-        "references/tool_design_best_practices.md",
-        "tool_schema_generator.py"
-      ],
-      "size_bytes": 283746,
       "has_scripts": false,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "agent-protocol",
@@ -68,18 +57,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/agent-protocol",
-      "files": [
-        "SKILL.md",
-        "scripts/capability_mapper.py",
-        "scripts/protocol_validator.py",
-        "scripts/schema_generator.py"
-      ],
-      "size_bytes": 91138,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "agent-workflow-designer",
@@ -88,18 +68,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/agent-workflow-designer",
-      "files": [
-        "SKILL.md",
-        "scripts/cost_estimator.py",
-        "scripts/workflow_validator.py",
-        "scripts/workflow_visualizer.py"
-      ],
-      "size_bytes": 61994,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "agenthub",
@@ -115,27 +86,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/agenthub",
-      "files": [
-        "SKILL.md",
-        "references/multi-agent-patterns.md",
-        "scripts/board_manager.py",
-        "scripts/dag_analyzer.py",
-        "scripts/result_ranker.py",
-        "scripts/session_manager.py",
-        "skills/board.md",
-        "skills/eval.md",
-        "skills/init.md",
-        "skills/merge.md",
-        "skills/run.md",
-        "skills/spawn.md",
-        "skills/status.md"
-      ],
-      "size_bytes": 80856,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ai-security",
@@ -150,17 +103,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/ai-security",
-      "files": [
-        "SKILL.md",
-        "references/ai-threat-landscape.md",
-        "scripts/ai_threat_scanner.py"
-      ],
-      "size_bytes": 24351,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "api-design-reviewer",
@@ -169,20 +114,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/api-design-reviewer",
-      "files": [
-        "SKILL.md",
-        "references/api_antipatterns.md",
-        "references/rest_design_rules.md",
-        "scripts/api_linter.py",
-        "scripts/api_scorecard.py",
-        "scripts/breaking_change_detector.py"
-      ],
-      "size_bytes": 199074,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "api-test-suite-builder",
@@ -191,18 +125,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/api-test-suite-builder",
-      "files": [
-        "SKILL.md",
-        "scripts/contract_validator.py",
-        "scripts/coverage_analyzer.py",
-        "scripts/test_generator.py"
-      ],
-      "size_bytes": 75625,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "aws-solution-architect",
@@ -216,23 +141,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/aws-solution-architect",
-      "files": [
-        "SKILL.md",
-        "assets/expected_output.json",
-        "assets/sample_input.json",
-        "references/architecture_patterns.md",
-        "references/best_practices.md",
-        "references/service_selection.md",
-        "scripts/architecture_designer.py",
-        "scripts/cost_optimizer.py",
-        "scripts/serverless_stack.py"
-      ],
-      "size_bytes": 138078,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "browser-automation",
@@ -247,19 +158,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/browser-automation",
-      "files": [
-        "SKILL.md",
-        "references/browser-automation-guide.md",
-        "scripts/anti_detection_checker.py",
-        "scripts/form_automation_builder.py",
-        "scripts/scraping_toolkit.py"
-      ],
-      "size_bytes": 46938,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "changelog-generator",
@@ -268,18 +169,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/changelog-generator",
-      "files": [
-        "SKILL.md",
-        "scripts/breaking_change_detector.py",
-        "scripts/changelog_formatter.py",
-        "scripts/commit_parser.py"
-      ],
-      "size_bytes": 52595,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ci-cd-pipeline-builder",
@@ -288,18 +180,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/ci-cd-pipeline-builder",
-      "files": [
-        "SKILL.md",
-        "scripts/cache_optimizer.py",
-        "scripts/pipeline_generator.py",
-        "scripts/pipeline_linter.py"
-      ],
-      "size_bytes": 66630,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "claude-code-mastery",
@@ -313,23 +196,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/claude-code-mastery",
-      "files": [
-        "SKILL.md",
-        "assets/agent-template.md",
-        "assets/skill-template.md",
-        "references/hooks-cookbook.md",
-        "references/skill-authoring-guide.md",
-        "references/subagent-patterns.md",
-        "scripts/claudemd_optimizer.py",
-        "scripts/context_analyzer.py",
-        "scripts/skill_scaffolder.py"
-      ],
-      "size_bytes": 124258,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "code-reviewer",
@@ -343,21 +212,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/code-reviewer",
-      "files": [
-        "SKILL.md",
-        "references/code_review_checklist.md",
-        "references/coding_standards.md",
-        "references/common_antipatterns.md",
-        "scripts/code_quality_checker.py",
-        "scripts/pr_analyzer.py",
-        "scripts/review_report_generator.py"
-      ],
-      "size_bytes": 100955,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "codebase-onboarding",
@@ -366,18 +223,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/codebase-onboarding",
-      "files": [
-        "SKILL.md",
-        "scripts/architecture_mapper.py",
-        "scripts/onboarding_generator.py",
-        "scripts/setup_validator.py"
-      ],
-      "size_bytes": 58032,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "codex-cli-specialist",
@@ -391,21 +239,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/codex-cli-specialist",
-      "files": [
-        "SKILL.md",
-        "assets/openai-yaml-template.yaml",
-        "references/codex-cli-guide.md",
-        "references/cross-platform-skills.md",
-        "scripts/codex_skill_converter.py",
-        "scripts/cross_platform_validator.py",
-        "scripts/skills_index_builder.py"
-      ],
-      "size_bytes": 112679,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "context-engine",
@@ -414,18 +250,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/context-engine",
-      "files": [
-        "SKILL.md",
-        "scripts/context_analyzer.py",
-        "scripts/context_pruner.py",
-        "scripts/memory_indexer.py"
-      ],
-      "size_bytes": 67103,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "database-designer",
@@ -434,28 +261,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/database-designer",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample_query_patterns.json",
-        "assets/sample_schema.json",
-        "assets/sample_schema.sql",
-        "expected_outputs/index_optimization_sample.txt",
-        "expected_outputs/migration_sample.txt",
-        "expected_outputs/schema_analysis_sample.txt",
-        "index_optimizer.py",
-        "migration_generator.py",
-        "references/database_selection_decision_tree.md",
-        "references/index_strategy_patterns.md",
-        "references/normalization_guide.md",
-        "schema_analyzer.py"
-      ],
-      "size_bytes": 237850,
       "has_scripts": false,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "database-schema-designer",
@@ -464,18 +272,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/database-schema-designer",
-      "files": [
-        "SKILL.md",
-        "scripts/erd_generator.py",
-        "scripts/migration_diffr.py",
-        "scripts/schema_validator.py"
-      ],
-      "size_bytes": 64701,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "dependency-auditor",
@@ -484,30 +283,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/dependency-auditor",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample_go.mod",
-        "assets/sample_package.json",
-        "assets/sample_requirements.txt",
-        "expected_outputs/sample_license_report.txt",
-        "expected_outputs/sample_upgrade_plan.txt",
-        "expected_outputs/sample_vulnerability_report.json",
-        "references/dependency_management_best_practices.md",
-        "references/license_compatibility_matrix.md",
-        "references/vulnerability_assessment_guide.md",
-        "scripts/dep_scanner.py",
-        "scripts/license_checker.py",
-        "scripts/upgrade_planner.py",
-        "test-inventory.json",
-        "test-project/package.json"
-      ],
-      "size_bytes": 218456,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "design-auditor",
@@ -521,24 +299,9 @@
       ],
       "version": "2.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/design-auditor",
-      "files": [
-        "SKILL.md",
-        "assets/design_audit_template.md",
-        "assets/sample_audit_data.json",
-        "references/accessibility_checklist.md",
-        "references/ai_slop_patterns.md",
-        "references/design_audit_methodology.md",
-        "scripts/ai_slop_detector.py",
-        "scripts/color_contrast_checker.py",
-        "scripts/design_scorer.py",
-        "scripts/design_system_validator.py"
-      ],
-      "size_bytes": 133946,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "devops-workflow-engineer",
@@ -552,23 +315,9 @@
       ],
       "version": "1.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/devops-workflow-engineer",
-      "files": [
-        "SKILL.md",
-        "assets/cd-template.yml",
-        "assets/ci-template.yml",
-        "references/agentic-workflows-guide.md",
-        "references/deployment-strategies.md",
-        "references/github-actions-patterns.md",
-        "scripts/deployment_planner.py",
-        "scripts/pipeline_analyzer.py",
-        "scripts/workflow_generator.py"
-      ],
-      "size_bytes": 161373,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "doc-drift-detector",
@@ -582,23 +331,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-03-18",
-      "author": "borghei",
       "path": "engineering/doc-drift-detector",
-      "files": [
-        "SKILL.md",
-        "assets/drift_report_template.md",
-        "assets/sample_drift_data.json",
-        "references/documentation_standards.md",
-        "references/drift_prevention_guide.md",
-        "scripts/api_doc_validator.py",
-        "scripts/doc_staleness_scorer.py",
-        "scripts/drift_analyzer.py",
-        "scripts/link_checker.py"
-      ],
-      "size_bytes": 138313,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "docker-development",
@@ -613,20 +348,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/docker-development",
-      "files": [
-        "SKILL.md",
-        "examples/Dockerfile.sample",
-        "examples/docker-compose.sample.yml",
-        "references/docker-best-practices.md",
-        "scripts/compose_validator.py",
-        "scripts/dockerfile_analyzer.py"
-      ],
-      "size_bytes": 43816,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "env-secrets-manager",
@@ -635,18 +359,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/env-secrets-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/env_sync_checker.py",
-        "scripts/env_validator.py",
-        "scripts/secret_scanner.py"
-      ],
-      "size_bytes": 54967,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "focused-fix",
@@ -661,21 +376,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/focused-fix",
-      "files": [
-        "SKILL.md",
-        "evals/README.md",
-        "evals/grader.py",
-        "evals/runner.py",
-        "evals/test_cases.json",
-        "references/focused-fix-methodology.md",
-        "scripts/change_scope_analyzer.py"
-      ],
-      "size_bytes": 42564,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "git-worktree-manager",
@@ -684,18 +387,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/git-worktree-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/port_allocator.py",
-        "scripts/worktree_manager.py",
-        "scripts/worktree_validator.py"
-      ],
-      "size_bytes": 62711,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "google-workspace-cli",
@@ -710,19 +404,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/google-workspace-cli",
-      "files": [
-        "SKILL.md",
-        "references/gws-admin-guide.md",
-        "scripts/auth_setup_guide.py",
-        "scripts/gws_doctor.py",
-        "scripts/workspace_audit.py"
-      ],
-      "size_bytes": 58022,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "helm-chart-builder",
@@ -737,20 +421,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/helm-chart-builder",
-      "files": [
-        "SKILL.md",
-        "examples/Chart.yaml",
-        "examples/values.yaml",
-        "references/helm-best-practices.md",
-        "scripts/chart_analyzer.py",
-        "scripts/values_validator.py"
-      ],
-      "size_bytes": 44411,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "incident-commander",
@@ -764,39 +437,9 @@
       ],
       "version": "1.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/incident-commander",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/incident_report_template.md",
-        "assets/runbook_template.md",
-        "assets/sample_incident_classification.json",
-        "assets/sample_incident_data.json",
-        "assets/sample_incident_pir_data.json",
-        "assets/sample_timeline_events.json",
-        "assets/simple_incident.json",
-        "assets/simple_timeline_events.json",
-        "expected_outputs/incident_classification_text_output.txt",
-        "expected_outputs/pir_markdown_output.md",
-        "expected_outputs/simple_incident_classification.txt",
-        "expected_outputs/timeline_reconstruction_text_output.txt",
-        "references/communication_templates.md",
-        "references/incident-response-framework.md",
-        "references/incident_severity_matrix.md",
-        "references/rca_frameworks_guide.md",
-        "references/sla-management-guide.md",
-        "scripts/incident_classifier.py",
-        "scripts/incident_timeline_builder.py",
-        "scripts/pir_generator.py",
-        "scripts/postmortem_generator.py",
-        "scripts/severity_classifier.py",
-        "scripts/timeline_reconstructor.py"
-      ],
-      "size_bytes": 411228,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "interview-system-designer",
@@ -805,28 +448,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/interview-system-designer",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample_interview_results.json",
-        "assets/sample_role_definitions.json",
-        "expected_outputs/product_manager_senior_questions.json",
-        "expected_outputs/product_manager_senior_questions.txt",
-        "expected_outputs/senior_software_engineer_senior_interview_loop.json",
-        "expected_outputs/senior_software_engineer_senior_interview_loop.txt",
-        "hiring_calibrator.py",
-        "loop_designer.py",
-        "question_bank_generator.py",
-        "references/bias_mitigation_checklist.md",
-        "references/competency_matrix_templates.md",
-        "references/debrief_facilitation_guide.md"
-      ],
-      "size_bytes": 298394,
       "has_scripts": false,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "llm-cost-optimizer",
@@ -841,18 +465,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/llm-cost-optimizer",
-      "files": [
-        "SKILL.md",
-        "references/llm-pricing-guide.md",
-        "scripts/prompt_optimizer.py",
-        "scripts/token_counter.py"
-      ],
-      "size_bytes": 31519,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "mcp-server-builder",
@@ -861,18 +476,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/mcp-server-builder",
-      "files": [
-        "SKILL.md",
-        "scripts/openapi_converter.py",
-        "scripts/server_scaffolder.py",
-        "scripts/tool_linter.py"
-      ],
-      "size_bytes": 62760,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "migration-architect",
@@ -881,34 +487,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/migration-architect",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/database_schema_after.json",
-        "assets/database_schema_before.json",
-        "assets/sample_database_migration.json",
-        "assets/sample_service_migration.json",
-        "expected_outputs/rollback_runbook.json",
-        "expected_outputs/rollback_runbook.txt",
-        "expected_outputs/sample_database_migration_plan.json",
-        "expected_outputs/sample_database_migration_plan.txt",
-        "expected_outputs/sample_service_migration_plan.json",
-        "expected_outputs/sample_service_migration_plan.txt",
-        "expected_outputs/schema_compatibility_report.json",
-        "expected_outputs/schema_compatibility_report.txt",
-        "references/data_reconciliation_strategies.md",
-        "references/migration_patterns_catalog.md",
-        "references/zero_downtime_techniques.md",
-        "scripts/compatibility_checker.py",
-        "scripts/migration_planner.py",
-        "scripts/rollback_generator.py"
-      ],
-      "size_bytes": 346838,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "monorepo-navigator",
@@ -917,18 +498,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/monorepo-navigator",
-      "files": [
-        "SKILL.md",
-        "scripts/dependency_graph.py",
-        "scripts/impact_detector.py",
-        "scripts/package_analyzer.py"
-      ],
-      "size_bytes": 64011,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ms365-tenant-manager",
@@ -942,23 +514,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/ms365-tenant-manager",
-      "files": [
-        "SKILL.md",
-        "expected_output.json",
-        "references/powershell-templates.md",
-        "references/security-policies.md",
-        "references/troubleshooting.md",
-        "sample_input.json",
-        "scripts/powershell_generator.py",
-        "scripts/tenant_setup.py",
-        "scripts/user_management.py"
-      ],
-      "size_bytes": 116223,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "observability-designer",
@@ -967,27 +525,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/observability-designer",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample_alerts.json",
-        "assets/sample_service_api.json",
-        "assets/sample_service_web.json",
-        "expected_outputs/sample_dashboard.json",
-        "expected_outputs/sample_slo_framework.json",
-        "references/alert_design_patterns.md",
-        "references/dashboard_best_practices.md",
-        "references/slo_cookbook.md",
-        "scripts/alert_optimizer.py",
-        "scripts/dashboard_generator.py",
-        "scripts/slo_designer.py"
-      ],
-      "size_bytes": 247298,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "performance-profiler",
@@ -996,18 +536,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/performance-profiler",
-      "files": [
-        "SKILL.md",
-        "scripts/benchmark_reporter.py",
-        "scripts/bottleneck_detector.py",
-        "scripts/resource_analyzer.py"
-      ],
-      "size_bytes": 60552,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "playwright-pro",
@@ -1025,31 +556,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/playwright-pro",
-      "files": [
-        "SKILL.md",
-        "references/playwright-patterns.md",
-        "scripts/coverage_mapper.py",
-        "scripts/flaky_detector.py",
-        "scripts/page_object_generator.py",
-        "scripts/test_analyzer.py",
-        "scripts/test_generator.py",
-        "scripts/test_report_parser.py",
-        "skills/browserstack.md",
-        "skills/coverage.md",
-        "skills/fix.md",
-        "skills/generate.md",
-        "skills/init.md",
-        "skills/migrate.md",
-        "skills/report.md",
-        "skills/review.md",
-        "skills/testrail.md"
-      ],
-      "size_bytes": 122829,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "pr-review-expert",
@@ -1058,18 +567,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/pr-review-expert",
-      "files": [
-        "SKILL.md",
-        "scripts/blast_radius_calculator.py",
-        "scripts/diff_analyzer.py",
-        "scripts/review_checklist_generator.py"
-      ],
-      "size_bytes": 59090,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "prompt-engineer-toolkit",
@@ -1078,18 +578,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/prompt-engineer-toolkit",
-      "files": [
-        "SKILL.md",
-        "scripts/eval_scorer.py",
-        "scripts/prompt_analyzer.py",
-        "scripts/prompt_diff.py"
-      ],
-      "size_bytes": 56318,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "prompt-governance",
@@ -1104,18 +595,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/prompt-governance",
-      "files": [
-        "SKILL.md",
-        "references/prompt-governance-framework.md",
-        "scripts/prompt_auditor.py",
-        "scripts/prompt_catalog_manager.py"
-      ],
-      "size_bytes": 33320,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "qa-browser-automation",
@@ -1129,24 +611,9 @@
       ],
       "version": "2.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/qa-browser-automation",
-      "files": [
-        "SKILL.md",
-        "assets/qa_report_template.md",
-        "assets/sample_findings.json",
-        "references/browser_testing_methodology.md",
-        "references/performance_benchmarks.md",
-        "references/wcag_compliance_guide.md",
-        "scripts/accessibility_auditor.py",
-        "scripts/qa_health_scorer.py",
-        "scripts/test_report_generator.py",
-        "scripts/visual_regression_tracker.py"
-      ],
-      "size_bytes": 124584,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "rag-architect",
@@ -1155,21 +622,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/rag-architect",
-      "files": [
-        "SKILL.md",
-        "chunking_optimizer.py",
-        "rag_pipeline_designer.py",
-        "references/chunking_strategies_comparison.md",
-        "references/embedding_model_benchmark.md",
-        "references/rag_evaluation_framework.md",
-        "retrieval_evaluator.py"
-      ],
-      "size_bytes": 137462,
       "has_scripts": false,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "red-team",
@@ -1184,17 +639,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/red-team",
-      "files": [
-        "SKILL.md",
-        "references/red-team-methodology.md",
-        "scripts/engagement_planner.py"
-      ],
-      "size_bytes": 26036,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "release-manager",
@@ -1203,29 +650,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/release-manager",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample_commits.json",
-        "assets/sample_git_log.txt",
-        "assets/sample_git_log_full.txt",
-        "assets/sample_release_plan.json",
-        "changelog_generator.py",
-        "expected_outputs/changelog_example.md",
-        "expected_outputs/release_readiness_example.txt",
-        "expected_outputs/version_bump_example.txt",
-        "references/conventional-commits-guide.md",
-        "references/hotfix-procedures.md",
-        "references/release-workflow-comparison.md",
-        "release_planner.py",
-        "version_bumper.py"
-      ],
-      "size_bytes": 179604,
       "has_scripts": false,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "release-orchestrator",
@@ -1239,24 +666,9 @@
       ],
       "version": "2.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/release-orchestrator",
-      "files": [
-        "SKILL.md",
-        "assets/release_checklist_template.md",
-        "assets/sample_release_data.json",
-        "references/ci_cd_best_practices.md",
-        "references/release_engineering_guide.md",
-        "references/rollback_strategies.md",
-        "scripts/changelog_generator.py",
-        "scripts/preflight_checker.py",
-        "scripts/release_readiness_scorer.py",
-        "scripts/version_bumper.py"
-      ],
-      "size_bytes": 115700,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "runbook-generator",
@@ -1265,18 +677,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/runbook-generator",
-      "files": [
-        "SKILL.md",
-        "scripts/runbook_scaffolder.py",
-        "scripts/runbook_validator.py",
-        "scripts/staleness_checker.py"
-      ],
-      "size_bytes": 61890,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "saas-scaffolder",
@@ -1285,18 +688,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/saas-scaffolder",
-      "files": [
-        "SKILL.md",
-        "scripts/feature_flag_manager.py",
-        "scripts/saas_scaffolder.py",
-        "scripts/tenant_config_validator.py"
-      ],
-      "size_bytes": 65740,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "secrets-vault-manager",
@@ -1312,19 +706,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/secrets-vault-manager",
-      "files": [
-        "SKILL.md",
-        "references/secrets-management-guide.md",
-        "scripts/audit_log_analyzer.py",
-        "scripts/rotation_planner.py",
-        "scripts/vault_config_generator.py"
-      ],
-      "size_bytes": 48933,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "self-improving-agent",
@@ -1340,27 +724,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/self-improving-agent",
-      "files": [
-        "SKILL.md",
-        "references/self-improvement-methodology.md",
-        "scripts/feedback_analyzer.py",
-        "scripts/memory_health_checker.py",
-        "scripts/pattern_extractor.py",
-        "scripts/regression_detector.py",
-        "scripts/rule_manager.py",
-        "scripts/rule_promoter.py",
-        "skills/extract.md",
-        "skills/promote.md",
-        "skills/remember.md",
-        "skills/review.md",
-        "skills/status.md"
-      ],
-      "size_bytes": 121769,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-architect",
@@ -1375,21 +741,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-architect",
-      "files": [
-        "SKILL.md",
-        "references/architecture_patterns.md",
-        "references/system_design_workflows.md",
-        "references/tech_decision_guide.md",
-        "scripts/architecture_diagram_generator.py",
-        "scripts/dependency_analyzer.py",
-        "scripts/project_architect.py"
-      ],
-      "size_bytes": 133627,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-backend",
@@ -1404,21 +758,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-backend",
-      "files": [
-        "SKILL.md",
-        "references/api_design_patterns.md",
-        "references/backend_security_practices.md",
-        "references/database_optimization_guide.md",
-        "scripts/api_load_tester.py",
-        "scripts/api_scaffolder.py",
-        "scripts/database_migration_tool.py"
-      ],
-      "size_bytes": 149250,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-cloud-architect",
@@ -1435,15 +777,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-cloud-architect",
-      "files": [
-        "SKILL.md"
-      ],
-      "size_bytes": 11388,
       "has_scripts": false,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "senior-computer-vision",
@@ -1457,21 +793,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-computer-vision",
-      "files": [
-        "SKILL.md",
-        "references/computer_vision_architectures.md",
-        "references/object_detection_optimization.md",
-        "references/production_vision_systems.md",
-        "scripts/dataset_pipeline_builder.py",
-        "scripts/inference_optimizer.py",
-        "scripts/vision_model_trainer.py"
-      ],
-      "size_bytes": 209499,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-data-engineer",
@@ -1486,21 +810,9 @@
       ],
       "version": "1.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/senior-data-engineer",
-      "files": [
-        "SKILL.md",
-        "references/data_modeling_patterns.md",
-        "references/data_pipeline_architecture.md",
-        "references/dataops_best_practices.md",
-        "scripts/data_quality_validator.py",
-        "scripts/etl_performance_optimizer.py",
-        "scripts/pipeline_orchestrator.py"
-      ],
-      "size_bytes": 270255,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-data-scientist",
@@ -1516,21 +828,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-data-scientist",
-      "files": [
-        "SKILL.md",
-        "references/experiment_design_frameworks.md",
-        "references/feature_engineering_patterns.md",
-        "references/statistical_methods_advanced.md",
-        "scripts/experiment_designer.py",
-        "scripts/feature_engineering_pipeline.py",
-        "scripts/model_evaluation_suite.py"
-      ],
-      "size_bytes": 28865,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-devops",
@@ -1545,23 +845,9 @@
       ],
       "version": "2.1.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/senior-devops",
-      "files": [
-        "SKILL.md",
-        "references/cicd_pipeline_guide.md",
-        "references/cloud_platform_guide.md",
-        "references/deployment_strategies.md",
-        "references/infrastructure_as_code.md",
-        "references/kubernetes_patterns.md",
-        "scripts/deployment_manager.py",
-        "scripts/pipeline_generator.py",
-        "scripts/terraform_scaffolder.py"
-      ],
-      "size_bytes": 35230,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-frontend",
@@ -1576,21 +862,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-frontend",
-      "files": [
-        "SKILL.md",
-        "references/frontend_best_practices.md",
-        "references/nextjs_optimization_guide.md",
-        "references/react_patterns.md",
-        "scripts/bundle_analyzer.py",
-        "scripts/component_generator.py",
-        "scripts/frontend_scaffolder.py"
-      ],
-      "size_bytes": 123134,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-fullstack",
@@ -1605,20 +879,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-fullstack",
-      "files": [
-        "SKILL.md",
-        "references/architecture_patterns.md",
-        "references/development_workflows.md",
-        "references/tech_stack_guide.md",
-        "scripts/code_quality_analyzer.py",
-        "scripts/project_scaffolder.py"
-      ],
-      "size_bytes": 109345,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-ml-engineer",
@@ -1632,21 +895,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-ml-engineer",
-      "files": [
-        "SKILL.md",
-        "references/llm_integration_guide.md",
-        "references/mlops_production_patterns.md",
-        "references/rag_system_architecture.md",
-        "scripts/ml_monitoring_suite.py",
-        "scripts/model_deployment_pipeline.py",
-        "scripts/rag_system_builder.py"
-      ],
-      "size_bytes": 50084,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-mobile",
@@ -1663,22 +914,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-mobile",
-      "files": [
-        "REFERENCE.md",
-        "SKILL.md",
-        "references/ios-android-patterns.md",
-        "references/mobile-security-guide.md",
-        "references/react-native-patterns.md",
-        "scripts/app_performance_analyzer.py",
-        "scripts/mobile_scaffold.py",
-        "scripts/store_metadata_generator.py"
-      ],
-      "size_bytes": 193800,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-prompt-engineer",
@@ -1692,21 +930,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-prompt-engineer",
-      "files": [
-        "SKILL.md",
-        "references/agentic_system_design.md",
-        "references/llm_evaluation_frameworks.md",
-        "references/prompt_engineering_patterns.md",
-        "scripts/agent_orchestrator.py",
-        "scripts/prompt_optimizer.py",
-        "scripts/rag_evaluator.py"
-      ],
-      "size_bytes": 130376,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-qa",
@@ -1720,22 +946,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-qa",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "references/qa_best_practices.md",
-        "references/test_automation_patterns.md",
-        "references/testing_strategies.md",
-        "scripts/coverage_analyzer.py",
-        "scripts/e2e_test_scaffolder.py",
-        "scripts/test_suite_generator.py"
-      ],
-      "size_bytes": 169413,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-secops",
@@ -1744,21 +957,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-secops",
-      "files": [
-        "SKILL.md",
-        "references/compliance_requirements.md",
-        "references/security_standards.md",
-        "references/vulnerability_management_guide.md",
-        "scripts/compliance_checker.py",
-        "scripts/security_scanner.py",
-        "scripts/vulnerability_assessor.py"
-      ],
-      "size_bytes": 158036,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "senior-security",
@@ -1772,20 +973,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/senior-security",
-      "files": [
-        "SKILL.md",
-        "references/cryptography-implementation.md",
-        "references/security-architecture-patterns.md",
-        "references/threat-modeling-guide.md",
-        "scripts/secret_scanner.py",
-        "scripts/threat_modeler.py"
-      ],
-      "size_bytes": 131379,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "skill-security-auditor",
@@ -1794,18 +984,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/skill-security-auditor",
-      "files": [
-        "SKILL.md",
-        "scripts/code_scanner.py",
-        "scripts/prompt_injection_scanner.py",
-        "scripts/supply_chain_checker.py"
-      ],
-      "size_bytes": 67579,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "skill-tester",
@@ -1814,30 +995,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/skill-tester",
-      "files": [
-        "README.md",
-        "SKILL.md",
-        "assets/sample-skill/README.md",
-        "assets/sample-skill/SKILL.md",
-        "assets/sample-skill/assets/sample_text.txt",
-        "assets/sample-skill/assets/test_data.csv",
-        "assets/sample-skill/expected_outputs/sample_text_analysis.json",
-        "assets/sample-skill/references/api-reference.md",
-        "assets/sample-skill/scripts/text_processor.py",
-        "expected_outputs/sample_validation_report.json",
-        "references/quality-scoring-rubric.md",
-        "references/skill-structure-specification.md",
-        "references/tier-requirements-matrix.md",
-        "scripts/quality_scorer.py",
-        "scripts/script_tester.py",
-        "scripts/skill_validator.py"
-      ],
-      "size_bytes": 196074,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "snowflake-development",
@@ -1852,17 +1012,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/snowflake-development",
-      "files": [
-        "SKILL.md",
-        "references/snowflake-best-practices.md",
-        "scripts/snowflake_query_helper.py"
-      ],
-      "size_bytes": 25692,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "sql-database-assistant",
@@ -1877,21 +1029,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/sql-database-assistant",
-      "files": [
-        "SKILL.md",
-        "examples/queries.sql",
-        "examples/schema.sql",
-        "references/sql-optimization.md",
-        "scripts/migration_generator.py",
-        "scripts/query_optimizer.py",
-        "scripts/schema_explorer.py"
-      ],
-      "size_bytes": 55689,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "stripe-integration-expert",
@@ -1900,18 +1040,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "engineering/stripe-integration-expert",
-      "files": [
-        "SKILL.md",
-        "scripts/checkout_scaffolder.py",
-        "scripts/integration_auditor.py",
-        "scripts/webhook_validator.py"
-      ],
-      "size_bytes": 84236,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "tdd-guide",
@@ -1925,32 +1056,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/tdd-guide",
-      "files": [
-        "HOW_TO_USE.md",
-        "README.md",
-        "SKILL.md",
-        "assets/expected_output.json",
-        "assets/sample_coverage_report.lcov",
-        "assets/sample_input_python.json",
-        "assets/sample_input_typescript.json",
-        "references/ci-integration.md",
-        "references/framework-guide.md",
-        "references/tdd-best-practices.md",
-        "scripts/coverage_analyzer.py",
-        "scripts/fixture_generator.py",
-        "scripts/format_detector.py",
-        "scripts/framework_adapter.py",
-        "scripts/metrics_calculator.py",
-        "scripts/output_formatter.py",
-        "scripts/tdd_workflow.py",
-        "scripts/test_generator.py"
-      ],
-      "size_bytes": 187978,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "tech-debt-tracker",
@@ -1959,32 +1067,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/tech-debt-tracker",
-      "files": [
-        "README.md",
-        "REFERENCE.md",
-        "SKILL.md",
-        "assets/historical_debt_2024-01-15.json",
-        "assets/historical_debt_2024-02-01.json",
-        "assets/sample_codebase/src/frontend.js",
-        "assets/sample_codebase/src/payment_processor.py",
-        "assets/sample_codebase/src/user_service.py",
-        "assets/sample_debt_inventory.json",
-        "expected_outputs/sample_dashboard_output.json",
-        "expected_outputs/sample_prioritization_output.json",
-        "expected_outputs/sample_scan_output.json",
-        "references/debt-classification-taxonomy.md",
-        "references/prioritization-framework.md",
-        "references/stakeholder-communication-templates.md",
-        "scripts/debt_dashboard.py",
-        "scripts/debt_prioritizer.py",
-        "scripts/debt_scanner.py"
-      ],
-      "size_bytes": 340821,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "tech-stack-evaluator",
@@ -1997,29 +1082,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "engineering/tech-stack-evaluator",
-      "files": [
-        "SKILL.md",
-        "assets/expected_output_comparison.json",
-        "assets/sample_input_structured.json",
-        "assets/sample_input_tco.json",
-        "assets/sample_input_text.json",
-        "references/examples.md",
-        "references/metrics.md",
-        "references/workflows.md",
-        "scripts/ecosystem_analyzer.py",
-        "scripts/format_detector.py",
-        "scripts/migration_analyzer.py",
-        "scripts/report_generator.py",
-        "scripts/security_assessor.py",
-        "scripts/stack_comparator.py",
-        "scripts/tco_calculator.py"
-      ],
-      "size_bytes": 166674,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "terraform-patterns",
@@ -2034,19 +1099,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/terraform-patterns",
-      "files": [
-        "SKILL.md",
-        "examples/main.tf",
-        "references/terraform-patterns.md",
-        "scripts/tf_module_analyzer.py",
-        "scripts/tf_security_scanner.py"
-      ],
-      "size_bytes": 44433,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "threat-detection",
@@ -2061,18 +1116,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "engineering/threat-detection",
-      "files": [
-        "SKILL.md",
-        "examples/access.log",
-        "references/threat-indicators.md",
-        "scripts/threat_signal_analyzer.py"
-      ],
-      "size_bytes": 32301,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ab-test-setup",
@@ -2087,20 +1133,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "marketing/ab-test-setup",
-      "files": [
-        "SKILL.md",
-        "examples/test_results.csv",
-        "references/ab-testing-guide.md",
-        "scripts/results_analyzer.py",
-        "scripts/sample_size_calculator.py",
-        "scripts/test_designer.py"
-      ],
-      "size_bytes": 49597,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ad-creative",
@@ -2109,18 +1144,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/ad-creative",
-      "files": [
-        "SKILL.md",
-        "scripts/creative_fatigue_detector.py",
-        "scripts/creative_matrix_builder.py",
-        "scripts/headline_generator.py"
-      ],
-      "size_bytes": 40492,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ai-seo",
@@ -2129,18 +1155,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/ai-seo",
-      "files": [
-        "SKILL.md",
-        "scripts/content_scorer.py",
-        "scripts/keyword_analyzer.py",
-        "scripts/serp_simulator.py"
-      ],
-      "size_bytes": 53220,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "analytics-tracking",
@@ -2149,18 +1166,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/analytics-tracking",
-      "files": [
-        "SKILL.md",
-        "scripts/event_schema_checker.py",
-        "scripts/funnel_drop_off_analyzer.py",
-        "scripts/utm_validator.py"
-      ],
-      "size_bytes": 54679,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "app-store-optimization",
@@ -2175,31 +1183,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/app-store-optimization",
-      "files": [
-        "HOW_TO_USE.md",
-        "README.md",
-        "SKILL.md",
-        "assets/aso-audit-template.md",
-        "expected_output.json",
-        "references/aso-best-practices.md",
-        "references/keyword-research-guide.md",
-        "references/platform-requirements.md",
-        "sample_input.json",
-        "scripts/ab_test_planner.py",
-        "scripts/aso_scorer.py",
-        "scripts/competitor_analyzer.py",
-        "scripts/keyword_analyzer.py",
-        "scripts/launch_checklist.py",
-        "scripts/localization_helper.py",
-        "scripts/metadata_optimizer.py",
-        "scripts/review_analyzer.py"
-      ],
-      "size_bytes": 278650,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "brand-guidelines",
@@ -2208,18 +1194,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/brand-guidelines",
-      "files": [
-        "SKILL.md",
-        "scripts/brand_audit_scorer.py",
-        "scripts/color_accessibility_checker.py",
-        "scripts/messaging_consistency_checker.py"
-      ],
-      "size_bytes": 55426,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "brand-strategist",
@@ -2234,18 +1211,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/brand-strategist",
-      "files": [
-        "SKILL.md",
-        "scripts/brand_architecture_analyzer.py",
-        "scripts/brand_health_dashboard.py",
-        "scripts/positioning_map_generator.py"
-      ],
-      "size_bytes": 41613,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "campaign-analytics",
@@ -2254,26 +1222,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-02-06",
-      "author": "borghei",
       "path": "marketing/campaign-analytics",
-      "files": [
-        "SKILL.md",
-        "assets/ab_test_template.md",
-        "assets/campaign_report_template.md",
-        "assets/channel_comparison_template.md",
-        "assets/expected_output.json",
-        "assets/sample_campaign_data.json",
-        "references/attribution-models-guide.md",
-        "references/campaign-metrics-benchmarks.md",
-        "references/funnel-optimization-framework.md",
-        "scripts/attribution_analyzer.py",
-        "scripts/campaign_roi_calculator.py",
-        "scripts/funnel_analyzer.py"
-      ],
-      "size_bytes": 111501,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "cold-email",
@@ -2282,18 +1233,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/cold-email",
-      "files": [
-        "SKILL.md",
-        "scripts/deliverability_checker.py",
-        "scripts/sequence_optimizer.py",
-        "scripts/subject_line_scorer.py"
-      ],
-      "size_bytes": 60869,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "content-creator",
@@ -2302,24 +1244,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
-      "author": "borghei",
       "path": "marketing/content-creator",
-      "files": [
-        "SKILL.md",
-        "assets/content_calendar_template.md",
-        "examples/brand_voice_analysis_example.md",
-        "examples/seo_optimization_example.md",
-        "references/analytics_guide.md",
-        "references/brand_guidelines.md",
-        "references/content_frameworks.md",
-        "references/social_media_optimization.md",
-        "scripts/brand_voice_analyzer.py",
-        "scripts/seo_optimizer.py"
-      ],
-      "size_bytes": 90959,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "content-humanizer",
@@ -2328,18 +1255,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/content-humanizer",
-      "files": [
-        "SKILL.md",
-        "scripts/ai_pattern_detector.py",
-        "scripts/content_scorer.py",
-        "scripts/readability_scorer.py"
-      ],
-      "size_bytes": 48912,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "content-production",
@@ -2348,18 +1266,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/content-production",
-      "files": [
-        "SKILL.md",
-        "scripts/content_brief_generator.py",
-        "scripts/headline_analyzer.py",
-        "scripts/readability_scorer.py"
-      ],
-      "size_bytes": 40878,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "content-strategy",
@@ -2368,18 +1277,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/content-strategy",
-      "files": [
-        "SKILL.md",
-        "scripts/content_brief_generator.py",
-        "scripts/content_calendar_planner.py",
-        "scripts/headline_analyzer.py"
-      ],
-      "size_bytes": 43968,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "copy-editing",
@@ -2388,18 +1288,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/copy-editing",
-      "files": [
-        "SKILL.md",
-        "scripts/ai_pattern_detector.py",
-        "scripts/readability_scorer.py",
-        "scripts/style_checker.py"
-      ],
-      "size_bytes": 43523,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "copywriting",
@@ -2408,18 +1299,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/copywriting",
-      "files": [
-        "SKILL.md",
-        "scripts/cta_optimizer.py",
-        "scripts/headline_scorer.py",
-        "scripts/page_copy_auditor.py"
-      ],
-      "size_bytes": 40332,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "email-sequence",
@@ -2428,18 +1310,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/email-sequence",
-      "files": [
-        "SKILL.md",
-        "scripts/performance_analyzer.py",
-        "scripts/sequence_mapper.py",
-        "scripts/subject_line_scorer.py"
-      ],
-      "size_bytes": 39406,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "email-template-builder",
@@ -2448,18 +1321,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/email-template-builder",
-      "files": [
-        "SKILL.md",
-        "scripts/render_size_analyzer.py",
-        "scripts/spam_score_checker.py",
-        "scripts/template_validator.py"
-      ],
-      "size_bytes": 46657,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "growth-marketer",
@@ -2474,18 +1338,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/growth-marketer",
-      "files": [
-        "SKILL.md",
-        "scripts/experiment_prioritizer.py",
-        "scripts/growth_loop_modeler.py",
-        "scripts/viral_coefficient_calculator.py"
-      ],
-      "size_bytes": 38510,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "landing-page-generator",
@@ -2494,18 +1349,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/landing-page-generator",
-      "files": [
-        "SKILL.md",
-        "scripts/conversion_checklist.py",
-        "scripts/cta_analyzer.py",
-        "scripts/page_speed_estimator.py"
-      ],
-      "size_bytes": 44159,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "launch-strategy",
@@ -2514,18 +1360,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/launch-strategy",
-      "files": [
-        "SKILL.md",
-        "scripts/launch_metrics_tracker.py",
-        "scripts/launch_readiness_checker.py",
-        "scripts/launch_timeline_generator.py"
-      ],
-      "size_bytes": 44812,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-analyst",
@@ -2540,18 +1377,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/marketing-analyst",
-      "files": [
-        "SKILL.md",
-        "scripts/channel_mix_optimizer.py",
-        "scripts/cohort_analyzer.py",
-        "scripts/marketing_forecast_generator.py"
-      ],
-      "size_bytes": 35965,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-context",
@@ -2560,18 +1388,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/marketing-context",
-      "files": [
-        "SKILL.md",
-        "scripts/competitive_landscape_mapper.py",
-        "scripts/context_completeness_checker.py",
-        "scripts/icp_fit_scorer.py"
-      ],
-      "size_bytes": 46494,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-demand-acquisition",
@@ -2580,20 +1399,9 @@
       "tags": [],
       "version": "1.1.0",
       "updated": "2025-01",
-      "author": "borghei",
       "path": "marketing/marketing-demand-acquisition",
-      "files": [
-        "SKILL.md",
-        "references/attribution-guide.md",
-        "references/campaign-templates.md",
-        "references/hubspot-workflows.md",
-        "references/international-playbooks.md",
-        "scripts/calculate_cac.py"
-      ],
-      "size_bytes": 43481,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "marketing-ideas",
@@ -2602,18 +1410,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/marketing-ideas",
-      "files": [
-        "SKILL.md",
-        "scripts/campaign_brief_generator.py",
-        "scripts/idea_scorer.py",
-        "scripts/trend_evaluator.py"
-      ],
-      "size_bytes": 49025,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-ops",
@@ -2622,18 +1421,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/marketing-ops",
-      "files": [
-        "SKILL.md",
-        "scripts/campaign_budget_allocator.py",
-        "scripts/lead_scoring_simulator.py",
-        "scripts/martech_stack_auditor.py"
-      ],
-      "size_bytes": 50122,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-psychology",
@@ -2642,18 +1432,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/marketing-psychology",
-      "files": [
-        "SKILL.md",
-        "scripts/cognitive_bias_checker.py",
-        "scripts/persuasion_auditor.py",
-        "scripts/pricing_psychology_analyzer.py"
-      ],
-      "size_bytes": 51448,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "marketing-strategy-pmm",
@@ -2668,22 +1449,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/marketing-strategy-pmm",
-      "files": [
-        "SKILL.md",
-        "references/international-gtm.md",
-        "references/launch-checklists.md",
-        "references/messaging-templates.md",
-        "references/positioning-frameworks.md",
-        "scripts/battlecard_generator.py",
-        "scripts/gtm_planner.py",
-        "scripts/win_loss_analyzer.py"
-      ],
-      "size_bytes": 83460,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "paid-ads",
@@ -2692,18 +1460,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/paid-ads",
-      "files": [
-        "SKILL.md",
-        "scripts/ad_copy_scorer.py",
-        "scripts/audience_sizer.py",
-        "scripts/cpc_calculator.py"
-      ],
-      "size_bytes": 45521,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "programmatic-seo",
@@ -2718,18 +1477,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/programmatic-seo",
-      "files": [
-        "SKILL.md",
-        "scripts/data_validator.py",
-        "scripts/keyword_pattern_miner.py",
-        "scripts/template_scorer.py"
-      ],
-      "size_bytes": 53993,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "schema-markup",
@@ -2745,18 +1495,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/schema-markup",
-      "files": [
-        "SKILL.md",
-        "scripts/schema_auditor.py",
-        "scripts/schema_generator.py",
-        "scripts/schema_validator.py"
-      ],
-      "size_bytes": 55326,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "seo-audit",
@@ -2765,18 +1506,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/seo-audit",
-      "files": [
-        "SKILL.md",
-        "scripts/content_scorer.py",
-        "scripts/redirect_checker.py",
-        "scripts/sitemap_analyzer.py"
-      ],
-      "size_bytes": 63847,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "seo-specialist",
@@ -2791,18 +1523,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/seo-specialist",
-      "files": [
-        "SKILL.md",
-        "scripts/content_scorer.py",
-        "scripts/keyword_analyzer.py",
-        "scripts/serp_simulator.py"
-      ],
-      "size_bytes": 41339,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "site-architecture",
@@ -2811,18 +1534,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/site-architecture",
-      "files": [
-        "SKILL.md",
-        "scripts/link_mapper.py",
-        "scripts/redirect_checker.py",
-        "scripts/sitemap_analyzer.py"
-      ],
-      "size_bytes": 49152,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "social-content",
@@ -2831,18 +1545,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/social-content",
-      "files": [
-        "SKILL.md",
-        "scripts/engagement_calculator.py",
-        "scripts/hashtag_analyzer.py",
-        "scripts/post_scheduler.py"
-      ],
-      "size_bytes": 47500,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "social-media-analyzer",
@@ -2856,21 +1561,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "marketing/social-media-analyzer",
-      "files": [
-        "HOW_TO_USE.md",
-        "SKILL.md",
-        "assets/expected_output.json",
-        "assets/sample_input.json",
-        "references/platform-benchmarks.md",
-        "scripts/analyze_performance.py",
-        "scripts/calculate_metrics.py"
-      ],
-      "size_bytes": 41589,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "social-media-manager",
@@ -2879,18 +1572,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "marketing/social-media-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/content_calendar_generator.py",
-        "scripts/growth_tracker.py",
-        "scripts/social_audit_scorer.py"
-      ],
-      "size_bytes": 41888,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "video-content-strategist",
@@ -2906,19 +1590,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "marketing/video-content-strategist",
-      "files": [
-        "SKILL.md",
-        "references/video-strategy-guide.md",
-        "scripts/thumbnail_analyzer.py",
-        "scripts/video_content_planner.py",
-        "scripts/video_seo_optimizer.py"
-      ],
-      "size_bytes": 47933,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "x-twitter-growth",
@@ -2934,20 +1608,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "marketing/x-twitter-growth",
-      "files": [
-        "SKILL.md",
-        "examples/tweets.csv",
-        "references/x-growth-playbook.md",
-        "scripts/growth_tracker.py",
-        "scripts/thread_builder.py",
-        "scripts/tweet_analyzer.py"
-      ],
-      "size_bytes": 53797,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "board-deck-builder",
@@ -2956,18 +1619,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/board-deck-builder",
-      "files": [
-        "SKILL.md",
-        "scripts/board_prep_checklist.py",
-        "scripts/deck_structure_validator.py",
-        "scripts/metrics_dashboard_generator.py"
-      ],
-      "size_bytes": 54023,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "board-meeting",
@@ -2976,18 +1630,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/board-meeting",
-      "files": [
-        "SKILL.md",
-        "scripts/complexity_scorer.py",
-        "scripts/decision_tracker.py",
-        "scripts/meeting_simulator.py"
-      ],
-      "size_bytes": 44671,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ceo-advisor",
@@ -2996,20 +1641,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
-      "author": "borghei",
       "path": "c-level-advisor/ceo-advisor",
-      "files": [
-        "SKILL.md",
-        "references/board_governance_investor_relations.md",
-        "references/executive_decision_framework.md",
-        "references/leadership_organizational_culture.md",
-        "scripts/financial_scenario_analyzer.py",
-        "scripts/strategy_analyzer.py"
-      ],
-      "size_bytes": 94560,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "cfo-advisor",
@@ -3024,18 +1658,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "c-level-advisor/cfo-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/burn_rate_calculator.py",
-        "scripts/financial_health_scorer.py",
-        "scripts/scenario_modeler.py"
-      ],
-      "size_bytes": 49093,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "change-management",
@@ -3044,18 +1669,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/change-management",
-      "files": [
-        "SKILL.md",
-        "scripts/adoption_tracker.py",
-        "scripts/change_readiness_assessor.py",
-        "scripts/communication_planner.py"
-      ],
-      "size_bytes": 52249,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "chief-of-staff",
@@ -3064,18 +1680,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/chief-of-staff",
-      "files": [
-        "SKILL.md",
-        "scripts/ecosystem_mapper.py",
-        "scripts/routing_engine.py",
-        "scripts/synthesis_generator.py"
-      ],
-      "size_bytes": 47754,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "chro-advisor",
@@ -3084,18 +1691,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/chro-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/comp_band_analyzer.py",
-        "scripts/headcount_planner.py",
-        "scripts/retention_risk_scorer.py"
-      ],
-      "size_bytes": 49653,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ciso-advisor",
@@ -3104,18 +1702,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/ciso-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/compliance_tracker.py",
-        "scripts/risk_register_manager.py",
-        "scripts/security_posture_scorer.py"
-      ],
-      "size_bytes": 58468,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "cmo-advisor",
@@ -3130,18 +1719,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "c-level-advisor/cmo-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/brand_health_tracker.py",
-        "scripts/channel_mix_optimizer.py",
-        "scripts/marketing_roi_calculator.py"
-      ],
-      "size_bytes": 41835,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "company-os",
@@ -3150,18 +1730,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/company-os",
-      "files": [
-        "SKILL.md",
-        "scripts/meeting_pulse_designer.py",
-        "scripts/rocks_tracker.py",
-        "scripts/scorecard_builder.py"
-      ],
-      "size_bytes": 44489,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "competitive-intel",
@@ -3170,18 +1741,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/competitive-intel",
-      "files": [
-        "SKILL.md",
-        "scripts/competitor_tracker.py",
-        "scripts/market_landscape_mapper.py",
-        "scripts/swot_analyzer.py"
-      ],
-      "size_bytes": 44022,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "coo-advisor",
@@ -3196,18 +1758,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "c-level-advisor/coo-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/capacity_modeler.py",
-        "scripts/operational_kpi_tracker.py",
-        "scripts/process_efficiency_scorer.py"
-      ],
-      "size_bytes": 42022,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "cpo-advisor",
@@ -3216,18 +1769,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/cpo-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/feature_prioritizer.py",
-        "scripts/product_health_scorer.py",
-        "scripts/product_portfolio_analyzer.py"
-      ],
-      "size_bytes": 48719,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "cro-advisor",
@@ -3236,18 +1780,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/cro-advisor",
-      "files": [
-        "SKILL.md",
-        "scripts/pipeline_coverage_calculator.py",
-        "scripts/revenue_waterfall_analyzer.py",
-        "scripts/sales_efficiency_scorer.py"
-      ],
-      "size_bytes": 50358,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "cs-onboard",
@@ -3256,15 +1791,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/cs-onboard",
-      "files": [
-        "SKILL.md"
-      ],
-      "size_bytes": 19211,
       "has_scripts": false,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "cto-advisor",
@@ -3273,20 +1802,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
-      "author": "borghei",
       "path": "c-level-advisor/cto-advisor",
-      "files": [
-        "SKILL.md",
-        "references/architecture_decision_records.md",
-        "references/engineering_metrics.md",
-        "references/technology_evaluation_framework.md",
-        "scripts/team_scaling_calculator.py",
-        "scripts/tech_debt_analyzer.py"
-      ],
-      "size_bytes": 83327,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "culture-architect",
@@ -3295,18 +1813,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/culture-architect",
-      "files": [
-        "SKILL.md",
-        "scripts/culture_survey_analyzer.py",
-        "scripts/engagement_tracker.py",
-        "scripts/values_alignment_scorer.py"
-      ],
-      "size_bytes": 52907,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "decision-logger",
@@ -3315,18 +1824,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/decision-logger",
-      "files": [
-        "SKILL.md",
-        "scripts/decision_quality_scorer.py",
-        "scripts/decision_tracker.py",
-        "scripts/decision_tree_builder.py"
-      ],
-      "size_bytes": 52438,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "executive-mentor",
@@ -3335,18 +1835,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/executive-mentor",
-      "files": [
-        "SKILL.md",
-        "scripts/coaching_plan_generator.py",
-        "scripts/goal_tracker.py",
-        "scripts/leadership_assessment.py"
-      ],
-      "size_bytes": 64911,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "founder-coach",
@@ -3355,18 +1846,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/founder-coach",
-      "files": [
-        "SKILL.md",
-        "scripts/founder_wellness_checker.py",
-        "scripts/milestone_tracker.py",
-        "scripts/startup_stage_assessor.py"
-      ],
-      "size_bytes": 55738,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "internal-narrative",
@@ -3375,18 +1857,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/internal-narrative",
-      "files": [
-        "SKILL.md",
-        "scripts/messaging_framework_generator.py",
-        "scripts/narrative_consistency_checker.py",
-        "scripts/stakeholder_mapper.py"
-      ],
-      "size_bytes": 53582,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "intl-expansion",
@@ -3395,18 +1868,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/intl-expansion",
-      "files": [
-        "SKILL.md",
-        "scripts/localization_checklist.py",
-        "scripts/market_readiness_scorer.py",
-        "scripts/regulatory_mapper.py"
-      ],
-      "size_bytes": 59656,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ma-playbook",
@@ -3415,18 +1879,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/ma-playbook",
-      "files": [
-        "SKILL.md",
-        "scripts/due_diligence_tracker.py",
-        "scripts/integration_planner.py",
-        "scripts/synergy_calculator.py"
-      ],
-      "size_bytes": 55487,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "org-health-diagnostic",
@@ -3435,18 +1890,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/org-health-diagnostic",
-      "files": [
-        "SKILL.md",
-        "scripts/engagement_benchmarker.py",
-        "scripts/org_health_scorer.py",
-        "scripts/span_of_control_analyzer.py"
-      ],
-      "size_bytes": 45816,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "scenario-war-room",
@@ -3455,18 +1901,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/scenario-war-room",
-      "files": [
-        "SKILL.md",
-        "scripts/decision_tree_analyzer.py",
-        "scripts/impact_matrix_calculator.py",
-        "scripts/scenario_builder.py"
-      ],
-      "size_bytes": 47188,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "strategic-alignment",
@@ -3475,18 +1912,9 @@
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "c-level-advisor/strategic-alignment",
-      "files": [
-        "SKILL.md",
-        "scripts/alignment_scorer.py",
-        "scripts/okr_cascade_validator.py",
-        "scripts/strategy_map_generator.py"
-      ],
-      "size_bytes": 49058,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "capa-officer",
@@ -3501,18 +1929,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/capa-officer",
-      "files": [
-        "SKILL.md",
-        "references/effectiveness-verification-guide.md",
-        "references/rca-methodologies.md",
-        "scripts/capa_tracker.py"
-      ],
-      "size_bytes": 71952,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ccpa-cpra-privacy-expert",
@@ -3527,19 +1946,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/ccpa-cpra-privacy-expert",
-      "files": [
-        "SKILL.md",
-        "references/ccpa-cpra-requirements-guide.md",
-        "references/ccpa-implementation-playbook.md",
-        "scripts/ccpa_compliance_checker.py",
-        "scripts/ccpa_data_mapper.py"
-      ],
-      "size_bytes": 136447,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "dora-compliance-expert",
@@ -3553,19 +1962,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/dora-compliance-expert",
-      "files": [
-        "SKILL.md",
-        "references/dora-five-pillars-guide.md",
-        "references/dora-third-party-management.md",
-        "scripts/dora_incident_classifier.py",
-        "scripts/dora_readiness_checker.py"
-      ],
-      "size_bytes": 132846,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "eu-ai-act-specialist",
@@ -3580,21 +1979,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/eu-ai-act-specialist",
-      "files": [
-        "SKILL.md",
-        "references/ai-act-classification-guide.md",
-        "references/ai-governance-framework.md",
-        "references/ai-technical-documentation-templates.md",
-        "scripts/ai_bias_detector.py",
-        "scripts/ai_compliance_checker.py",
-        "scripts/ai_risk_classifier.py"
-      ],
-      "size_bytes": 293591,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "fda-consultant-specialist",
@@ -3610,23 +1997,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/fda-consultant-specialist",
-      "files": [
-        "SKILL.md",
-        "references/device_cybersecurity_guidance.md",
-        "references/fda_capa_requirements.md",
-        "references/fda_submission_guide.md",
-        "references/hipaa_compliance_framework.md",
-        "references/qsr_compliance_requirements.md",
-        "scripts/fda_submission_tracker.py",
-        "scripts/hipaa_risk_assessment.py",
-        "scripts/qsr_compliance_checker.py"
-      ],
-      "size_bytes": 190870,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "gdpr-dsgvo-expert",
@@ -3641,21 +2014,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/gdpr-dsgvo-expert",
-      "files": [
-        "SKILL.md",
-        "references/dpia_methodology.md",
-        "references/gdpr_compliance_guide.md",
-        "references/german_bdsg_requirements.md",
-        "scripts/data_subject_rights_tracker.py",
-        "scripts/dpia_generator.py",
-        "scripts/gdpr_compliance_checker.py"
-      ],
-      "size_bytes": 116102,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "information-security-manager-iso27001",
@@ -3670,20 +2031,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/information-security-manager-iso27001",
-      "files": [
-        "SKILL.md",
-        "references/incident-response.md",
-        "references/iso27001-controls.md",
-        "references/risk-assessment-guide.md",
-        "scripts/compliance_checker.py",
-        "scripts/risk_assessment.py"
-      ],
-      "size_bytes": 104821,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "infrastructure-compliance-auditor",
@@ -3698,21 +2048,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/infrastructure-compliance-auditor",
-      "files": [
-        "SKILL.md",
-        "references/access-control-standards.md",
-        "references/cloud-security-baseline.md",
-        "references/compliance-framework-mapping.md",
-        "scripts/access_control_auditor.py",
-        "scripts/dns_security_checker.py",
-        "scripts/infra_audit_runner.py"
-      ],
-      "size_bytes": 269266,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "isms-audit-expert",
@@ -3727,19 +2065,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/isms-audit-expert",
-      "files": [
-        "SKILL.md",
-        "references/cloud-security-audit.md",
-        "references/iso27001-audit-methodology.md",
-        "references/security-control-testing.md",
-        "scripts/isms_audit_scheduler.py"
-      ],
-      "size_bytes": 48475,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "iso42001-ai-management",
@@ -3754,19 +2082,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/iso42001-ai-management",
-      "files": [
-        "SKILL.md",
-        "references/ai-lifecycle-management.md",
-        "references/iso42001-clause-guide.md",
-        "scripts/ai_impact_assessor.py",
-        "scripts/aims_readiness_checker.py"
-      ],
-      "size_bytes": 142073,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "mdr-745-specialist",
@@ -3781,19 +2099,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/mdr-745-specialist",
-      "files": [
-        "SKILL.md",
-        "references/clinical-evidence-requirements.md",
-        "references/mdr-classification-guide.md",
-        "references/technical-documentation-templates.md",
-        "scripts/mdr_gap_analyzer.py"
-      ],
-      "size_bytes": 78897,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "nis2-directive-specialist",
@@ -3807,19 +2115,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/nis2-directive-specialist",
-      "files": [
-        "SKILL.md",
-        "references/nis2-implementation-playbook.md",
-        "references/nis2-requirements-guide.md",
-        "scripts/nis2_compliance_checker.py",
-        "scripts/nis2_scope_analyzer.py"
-      ],
-      "size_bytes": 150230,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "nist-csf-specialist",
@@ -3833,19 +2131,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/nist-csf-specialist",
-      "files": [
-        "SKILL.md",
-        "references/csf-functions-guide.md",
-        "references/csf-implementation-playbook.md",
-        "scripts/csf_control_mapper.py",
-        "scripts/csf_maturity_assessor.py"
-      ],
-      "size_bytes": 150418,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "pci-dss-specialist",
@@ -3859,19 +2147,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/pci-dss-specialist",
-      "files": [
-        "SKILL.md",
-        "references/pci-dss-requirements-guide.md",
-        "references/pci-infrastructure-security.md",
-        "scripts/pci_compliance_checker.py",
-        "scripts/pci_scope_analyzer.py"
-      ],
-      "size_bytes": 146580,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "qms-audit-expert",
@@ -3886,18 +2164,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/qms-audit-expert",
-      "files": [
-        "SKILL.md",
-        "references/iso13485-audit-guide.md",
-        "references/nonconformity-classification.md",
-        "scripts/audit_schedule_optimizer.py"
-      ],
-      "size_bytes": 46537,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "quality-documentation-manager",
@@ -3911,18 +2180,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/quality-documentation-manager",
-      "files": [
-        "SKILL.md",
-        "references/21cfr11-compliance-guide.md",
-        "references/document-control-procedures.md",
-        "scripts/document_validator.py"
-      ],
-      "size_bytes": 67886,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "quality-manager-qmr",
@@ -3937,18 +2197,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/quality-manager-qmr",
-      "files": [
-        "SKILL.md",
-        "references/management-review-guide.md",
-        "references/quality-kpi-framework.md",
-        "scripts/management_review_tracker.py"
-      ],
-      "size_bytes": 64224,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "quality-manager-qms-iso13485",
@@ -3957,18 +2208,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/quality-manager-qms-iso13485",
-      "files": [
-        "SKILL.md",
-        "references/iso13485-clause-requirements.md",
-        "references/qms-process-templates.md",
-        "scripts/qms_audit_checklist.py"
-      ],
-      "size_bytes": 115396,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "regulatory-affairs-head",
@@ -3983,20 +2225,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/regulatory-affairs-head",
-      "files": [
-        "SKILL.md",
-        "references/eu-mdr-submission-guide.md",
-        "references/fda-submission-guide.md",
-        "references/global-regulatory-pathways.md",
-        "references/iso-regulatory-requirements.md",
-        "scripts/regulatory_tracker.py"
-      ],
-      "size_bytes": 59938,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "risk-management-specialist",
@@ -4011,18 +2242,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/risk-management-specialist",
-      "files": [
-        "SKILL.md",
-        "references/iso14971-implementation-guide.md",
-        "references/risk-analysis-methods.md",
-        "scripts/risk_matrix_calculator.py"
-      ],
-      "size_bytes": 83500,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "soc2-compliance-expert",
@@ -4036,22 +2258,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "ra-qm-team/soc2-compliance-expert",
-      "files": [
-        "REFERENCE.md",
-        "SKILL.md",
-        "references/audit-preparation-playbook.md",
-        "references/infrastructure-security-controls.md",
-        "references/trust-services-criteria-guide.md",
-        "scripts/evidence_collector.py",
-        "scripts/soc2_infrastructure_auditor.py",
-        "scripts/soc2_readiness_checker.py"
-      ],
-      "size_bytes": 274747,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "churn-prevention",
@@ -4067,18 +2276,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/churn-prevention",
-      "files": [
-        "SKILL.md",
-        "scripts/churn_impact_calculator.py",
-        "scripts/dunning_sequence_analyzer.py",
-        "scripts/exit_survey_analyzer.py"
-      ],
-      "size_bytes": 50792,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "competitive-teardown",
@@ -4087,18 +2287,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/competitive-teardown",
-      "files": [
-        "SKILL.md",
-        "scripts/battle_card_generator.py",
-        "scripts/competitor_scorer.py",
-        "scripts/feature_matrix_builder.py"
-      ],
-      "size_bytes": 44663,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "competitor-alternatives",
@@ -4107,18 +2298,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/competitor-alternatives",
-      "files": [
-        "SKILL.md",
-        "scripts/comparison_content_scorer.py",
-        "scripts/comparison_page_planner.py",
-        "scripts/competitor_data_tracker.py"
-      ],
-      "size_bytes": 40273,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "contract-and-proposal-writer",
@@ -4127,18 +2309,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "business-growth/contract-and-proposal-writer",
-      "files": [
-        "SKILL.md",
-        "scripts/contract_clause_checker.py",
-        "scripts/contract_comparison_analyzer.py",
-        "scripts/proposal_cost_estimator.py"
-      ],
-      "size_bytes": 50597,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "customer-success-manager",
@@ -4153,27 +2326,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-02-06",
-      "author": "borghei",
       "path": "business-growth/customer-success-manager",
-      "files": [
-        "SKILL.md",
-        "assets/executive_business_review_template.md",
-        "assets/expected_output.json",
-        "assets/onboarding_checklist_template.md",
-        "assets/qbr_template.md",
-        "assets/sample_customer_data.json",
-        "assets/success_plan_template.md",
-        "references/cs-metrics-benchmarks.md",
-        "references/cs-playbooks.md",
-        "references/health-scoring-framework.md",
-        "scripts/churn_risk_analyzer.py",
-        "scripts/expansion_opportunity_scorer.py",
-        "scripts/health_score_calculator.py"
-      ],
-      "size_bytes": 135152,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "form-cro",
@@ -4188,18 +2343,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/form-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/ab_test_calculator.py",
-        "scripts/field_cost_analyzer.py",
-        "scripts/form_scorer.py"
-      ],
-      "size_bytes": 50016,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "free-tool-strategy",
@@ -4208,18 +2354,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/free-tool-strategy",
-      "files": [
-        "SKILL.md",
-        "scripts/launch_checklist_generator.py",
-        "scripts/tool_idea_scorer.py",
-        "scripts/tool_roi_calculator.py"
-      ],
-      "size_bytes": 45808,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "onboarding-cro",
@@ -4228,18 +2365,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/onboarding-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/activation_funnel_analyzer.py",
-        "scripts/onboarding_checklist_scorer.py",
-        "scripts/ttv_estimator.py"
-      ],
-      "size_bytes": 50140,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "page-cro",
@@ -4254,18 +2382,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/page-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/conversion_benchmark_calculator.py",
-        "scripts/headline_scorer.py",
-        "scripts/page_cro_scorer.py"
-      ],
-      "size_bytes": 54939,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "paywall-upgrade-cro",
@@ -4281,18 +2400,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/paywall-upgrade-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/paywall_copy_scorer.py",
-        "scripts/paywall_trigger_auditor.py",
-        "scripts/upgrade_funnel_analyzer.py"
-      ],
-      "size_bytes": 57858,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "popup-cro",
@@ -4308,18 +2418,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/popup-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/popup_ab_test_calculator.py",
-        "scripts/popup_roi_estimator.py",
-        "scripts/popup_strategy_auditor.py"
-      ],
-      "size_bytes": 49250,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "pricing-strategy",
@@ -4335,18 +2436,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/pricing-strategy",
-      "files": [
-        "SKILL.md",
-        "scripts/price_increase_modeler.py",
-        "scripts/price_sensitivity_calculator.py",
-        "scripts/pricing_model_analyzer.py"
-      ],
-      "size_bytes": 56667,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "referral-program",
@@ -4362,18 +2454,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/referral-program",
-      "files": [
-        "SKILL.md",
-        "scripts/affiliate_commission_modeler.py",
-        "scripts/referral_economics_calculator.py",
-        "scripts/referral_funnel_analyzer.py"
-      ],
-      "size_bytes": 59486,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "revenue-operations",
@@ -4388,28 +2471,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/revenue-operations",
-      "files": [
-        "SKILL.md",
-        "assets/expected_output.json",
-        "assets/forecast_report_template.md",
-        "assets/gtm_dashboard_template.md",
-        "assets/pipeline_review_template.md",
-        "assets/sample_forecast_data.json",
-        "assets/sample_gtm_data.json",
-        "assets/sample_pipeline_data.json",
-        "references/gtm-efficiency-benchmarks.md",
-        "references/pipeline-management-framework.md",
-        "references/revops-metrics-guide.md",
-        "scripts/forecast_accuracy_tracker.py",
-        "scripts/gtm_efficiency_calculator.py",
-        "scripts/pipeline_analyzer.py"
-      ],
-      "size_bytes": 121726,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "sales-engineer",
@@ -4424,26 +2488,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/sales-engineer",
-      "files": [
-        "SKILL.md",
-        "assets/demo_script_template.md",
-        "assets/expected_output.json",
-        "assets/poc_scorecard_template.md",
-        "assets/sample_rfp_data.json",
-        "assets/technical_proposal_template.md",
-        "references/competitive-positioning-framework.md",
-        "references/poc-best-practices.md",
-        "references/rfp-response-guide.md",
-        "scripts/competitive_matrix_builder.py",
-        "scripts/poc_planner.py",
-        "scripts/rfp_response_analyzer.py"
-      ],
-      "size_bytes": 151569,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "signup-flow-cro",
@@ -4458,18 +2505,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "business-growth/signup-flow-cro",
-      "files": [
-        "SKILL.md",
-        "scripts/cc_requirement_analyzer.py",
-        "scripts/signup_field_auditor.py",
-        "scripts/signup_flow_scorer.py"
-      ],
-      "size_bytes": 58524,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "contract-review",
@@ -4484,19 +2522,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/contract-review",
-      "files": [
-        "SKILL.md",
-        "references/clause_analysis_guide.md",
-        "references/negotiation_playbook.md",
-        "scripts/contract_analyzer.py",
-        "scripts/redline_generator.py"
-      ],
-      "size_bytes": 82322,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "data-breach-response",
@@ -4511,19 +2539,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/data-breach-response",
-      "files": [
-        "SKILL.md",
-        "references/enisa_methodology.md",
-        "references/notification_obligations.md",
-        "scripts/breach_severity_calculator.py",
-        "scripts/breach_timeline_tracker.py"
-      ],
-      "size_bytes": 72812,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "dpia-assessment",
@@ -4538,19 +2556,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/dpia-assessment",
-      "files": [
-        "SKILL.md",
-        "references/edpb_criteria.md",
-        "references/risk_scoring_methodology.md",
-        "scripts/dpia_risk_register.py",
-        "scripts/dpia_threshold_checker.py"
-      ],
-      "size_bytes": 76035,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "legal-canned-responses",
@@ -4565,19 +2573,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/legal-canned-responses",
-      "files": [
-        "SKILL.md",
-        "references/escalation_triggers.md",
-        "references/response_templates.md",
-        "scripts/escalation_detector.py",
-        "scripts/response_generator.py"
-      ],
-      "size_bytes": 82275,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "legal-meeting-briefing",
@@ -4592,19 +2590,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/legal-meeting-briefing",
-      "files": [
-        "SKILL.md",
-        "references/briefing_templates.md",
-        "references/meeting_type_guides.md",
-        "scripts/action_item_tracker.py",
-        "scripts/meeting_brief_generator.py"
-      ],
-      "size_bytes": 68701,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "legal-red-team",
@@ -4619,19 +2607,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/legal-red-team",
-      "files": [
-        "SKILL.md",
-        "references/hallucination_patterns.md",
-        "references/verification_methodology.md",
-        "scripts/legal_fact_checker.py",
-        "scripts/legal_quality_scorer.py"
-      ],
-      "size_bytes": 87610,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "legal-risk-assessment",
@@ -4646,19 +2624,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/legal-risk-assessment",
-      "files": [
-        "SKILL.md",
-        "references/escalation_guide.md",
-        "references/risk_framework.md",
-        "scripts/risk_report_generator.py",
-        "scripts/risk_scorer.py"
-      ],
-      "size_bytes": 64472,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "mediation-analysis",
@@ -4673,19 +2641,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/mediation-analysis",
-      "files": [
-        "SKILL.md",
-        "references/mediation_process.md",
-        "references/negotiation_concepts.md",
-        "scripts/dispute_analyzer.py",
-        "scripts/settlement_calculator.py"
-      ],
-      "size_bytes": 77010,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "nda-review",
@@ -4700,18 +2658,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/nda-review",
-      "files": [
-        "SKILL.md",
-        "references/nda_clause_reference.md",
-        "references/nda_review_templates.md",
-        "scripts/nda_clause_reviewer.py"
-      ],
-      "size_bytes": 72528,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "nda-triage",
@@ -4726,18 +2675,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/nda-triage",
-      "files": [
-        "SKILL.md",
-        "references/nda_screening_criteria.md",
-        "scripts/nda_checklist.py",
-        "scripts/nda_screener.py"
-      ],
-      "size_bytes": 67899,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "privacy-compliance",
@@ -4752,20 +2692,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/privacy-compliance",
-      "files": [
-        "SKILL.md",
-        "references/dpa_review_checklist.md",
-        "references/dsr_handling_guide.md",
-        "references/global_privacy_regulations.md",
-        "scripts/dsr_tracker.py",
-        "scripts/privacy_regulation_checker.py"
-      ],
-      "size_bytes": 101654,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "privacy-notice-generator",
@@ -4780,20 +2709,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/privacy-notice-generator",
-      "files": [
-        "SKILL.md",
-        "references/compliance_verification.md",
-        "references/jurisdiction_requirements.md",
-        "references/notice_types_guide.md",
-        "scripts/notice_compliance_checker.py",
-        "scripts/privacy_notice_scaffolder.py"
-      ],
-      "size_bytes": 112513,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "statute-analysis",
@@ -4808,19 +2726,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/statute-analysis",
-      "files": [
-        "SKILL.md",
-        "references/canons_of_construction.md",
-        "references/statutory_structure.md",
-        "scripts/requirement_classifier.py",
-        "scripts/statute_keyword_analyzer.py"
-      ],
-      "size_bytes": 79741,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "tabular-document-review",
@@ -4835,19 +2743,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/tabular-document-review",
-      "files": [
-        "SKILL.md",
-        "references/common_extraction_columns.md",
-        "references/extraction_methodology.md",
-        "scripts/document_discovery.py",
-        "scripts/extraction_aggregator.py"
-      ],
-      "size_bytes": 62904,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "tech-contract-negotiation",
@@ -4862,20 +2760,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/tech-contract-negotiation",
-      "files": [
-        "SKILL.md",
-        "references/objection_handling.md",
-        "references/regulatory_leverage.md",
-        "references/three_position_framework.md",
-        "scripts/deal_complexity_scorer.py",
-        "scripts/negotiation_position_analyzer.py"
-      ],
-      "size_bytes": 84194,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "vendor-due-diligence",
@@ -4890,20 +2777,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/vendor-due-diligence",
-      "files": [
-        "SKILL.md",
-        "references/monitoring_framework.md",
-        "references/regulatory_checklists.md",
-        "references/risk_assessment_framework.md",
-        "scripts/vendor_comparison.py",
-        "scripts/vendor_risk_scorer.py"
-      ],
-      "size_bytes": 88932,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "whistleblower-compliance",
@@ -4918,19 +2794,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-10",
-      "author": "The Glass Room",
       "path": "legal/whistleblower-compliance",
-      "files": [
-        "SKILL.md",
-        "references/assessment_checklist.md",
-        "references/regulatory_framework.md",
-        "scripts/whistleblower_compliance_checker.py",
-        "scripts/whistleblower_policy_scaffolder.py"
-      ],
-      "size_bytes": 80592,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "agile-coach",
@@ -4945,18 +2811,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/agile-coach",
-      "files": [
-        "SKILL.md",
-        "scripts/agile_maturity_scorer.py",
-        "scripts/team_health_checker.py",
-        "scripts/velocity_analyzer.py"
-      ],
-      "size_bytes": 40926,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "atlassian-admin",
@@ -4971,18 +2828,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/atlassian-admin",
-      "files": [
-        "SKILL.md",
-        "scripts/license_analyzer.py",
-        "scripts/permission_auditor.py",
-        "scripts/system_health_checker.py"
-      ],
-      "size_bytes": 44287,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "atlassian-templates",
@@ -4996,18 +2844,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/atlassian-templates",
-      "files": [
-        "SKILL.md",
-        "scripts/template_scaffolder.py",
-        "scripts/template_usage_analyzer.py",
-        "scripts/template_validator.py"
-      ],
-      "size_bytes": 45870,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "confluence-expert",
@@ -5021,19 +2860,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/confluence-expert",
-      "files": [
-        "SKILL.md",
-        "references/templates.md",
-        "scripts/content_health_auditor.py",
-        "scripts/label_taxonomy_analyzer.py",
-        "scripts/space_structure_analyzer.py"
-      ],
-      "size_bytes": 51847,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "delivery-manager",
@@ -5048,18 +2877,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/delivery-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/delivery_metrics_tracker.py",
-        "scripts/dependency_mapper.py",
-        "scripts/risk_register.py"
-      ],
-      "size_bytes": 43172,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "jira-expert",
@@ -5074,20 +2894,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/jira-expert",
-      "files": [
-        "SKILL.md",
-        "references/automation-examples.md",
-        "references/jql-examples.md",
-        "scripts/board_optimizer.py",
-        "scripts/issue_quality_checker.py",
-        "scripts/workflow_analyzer.py"
-      ],
-      "size_bytes": 58786,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "program-manager",
@@ -5102,18 +2911,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "project-management/program-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/milestone_tracker.py",
-        "scripts/portfolio_dashboard.py",
-        "scripts/resource_allocator.py"
-      ],
-      "size_bytes": 40594,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "scrum-master",
@@ -5128,30 +2928,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-02-15",
-      "author": "borghei",
       "path": "project-management/scrum-master",
-      "files": [
-        "SKILL.md",
-        "assets/expected_output.json",
-        "assets/expected_velocity_output.json",
-        "assets/sample_sprint_data.json",
-        "assets/sprint_plan_template.md",
-        "assets/sprint_report_template.md",
-        "assets/team_health_check_template.md",
-        "assets/user_story_template.md",
-        "references/retro-formats.md",
-        "references/sprint-planning-guide.md",
-        "references/team-dynamics-framework.md",
-        "references/velocity-forecasting-guide.md",
-        "scripts/retrospective_analyzer.py",
-        "scripts/sprint_capacity_calculator.py",
-        "scripts/sprint_health_scorer.py",
-        "scripts/velocity_analyzer.py"
-      ],
-      "size_bytes": 242098,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "senior-pm",
@@ -5165,28 +2944,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-03-04",
-      "author": "borghei",
       "path": "project-management/senior-pm",
-      "files": [
-        "SKILL.md",
-        "assets/executive_report_template.md",
-        "assets/expected_output.json",
-        "assets/project_charter_template.md",
-        "assets/raci_matrix_template.md",
-        "assets/sample_project_data.json",
-        "assets/stakeholder_map_template.md",
-        "references/portfolio-prioritization-models.md",
-        "references/risk-management-framework.md",
-        "references/stakeholder-engagement-guide.md",
-        "scripts/project_health_dashboard.py",
-        "scripts/resource_capacity_planner.py",
-        "scripts/risk_matrix_analyzer.py",
-        "scripts/stakeholder_mapper.py"
-      ],
-      "size_bytes": 257803,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "sprint-retrospective",
@@ -5200,23 +2960,9 @@
       ],
       "version": "2.0.0",
       "updated": "2026-03-18",
-      "author": "borghei",
       "path": "project-management/sprint-retrospective",
-      "files": [
-        "SKILL.md",
-        "assets/retro_report_template.md",
-        "assets/sample_sprint_data.json",
-        "references/retrospective_facilitation.md",
-        "references/velocity_benchmarks.md",
-        "scripts/code_churn_analyzer.py",
-        "scripts/contributor_insights.py",
-        "scripts/retro_report_generator.py",
-        "scripts/velocity_analyzer.py"
-      ],
-      "size_bytes": 126613,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "ab-test-setup",
@@ -5230,22 +2976,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-09",
-      "author": "borghei",
       "path": "product-team/ab-test-setup",
-      "files": [
-        "SKILL.md",
-        "evals/README.md",
-        "evals/grader.py",
-        "evals/runner.py",
-        "evals/test_cases.json",
-        "scripts/experiment_analyzer.py",
-        "scripts/experiment_planner.py",
-        "scripts/sample_size_calculator.py"
-      ],
-      "size_bytes": 72941,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "agile-product-owner",
@@ -5260,18 +2993,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/agile-product-owner",
-      "files": [
-        "SKILL.md",
-        "references/sprint-planning-guide.md",
-        "references/user-story-templates.md",
-        "scripts/user_story_generator.py"
-      ],
-      "size_bytes": 50356,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "design-system-lead",
@@ -5286,18 +3010,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/design-system-lead",
-      "files": [
-        "SKILL.md",
-        "scripts/adoption_analyzer.py",
-        "scripts/component_scaffold.py",
-        "scripts/token_gen.py"
-      ],
-      "size_bytes": 54340,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "product-designer",
@@ -5313,18 +3028,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/product-designer",
-      "files": [
-        "SKILL.md",
-        "scripts/design_critique.py",
-        "scripts/journey_mapper.py",
-        "scripts/usability_scorer.py"
-      ],
-      "size_bytes": 55162,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "product-manager-toolkit",
@@ -5339,19 +3045,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/product-manager-toolkit",
-      "files": [
-        "SKILL.md",
-        "references/frameworks.md",
-        "references/prd_templates.md",
-        "scripts/customer_interview_analyzer.py",
-        "scripts/rice_prioritizer.py"
-      ],
-      "size_bytes": 75321,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "product-strategist",
@@ -5365,19 +3061,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/product-strategist",
-      "files": [
-        "SKILL.md",
-        "references/examples/sample_growth_okrs.json",
-        "references/okr_framework.md",
-        "references/strategy_types.md",
-        "scripts/okr_cascade_generator.py"
-      ],
-      "size_bytes": 75647,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ui-design-system",
@@ -5391,20 +3077,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/ui-design-system",
-      "files": [
-        "SKILL.md",
-        "references/component-architecture.md",
-        "references/developer-handoff.md",
-        "references/responsive-calculations.md",
-        "references/token-generation.md",
-        "scripts/design_token_generator.py"
-      ],
-      "size_bytes": 72266,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "ux-researcher-designer",
@@ -5418,20 +3093,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "product-team/ux-researcher-designer",
-      "files": [
-        "SKILL.md",
-        "references/example-personas.md",
-        "references/journey-mapping-guide.md",
-        "references/persona-methodology.md",
-        "references/usability-testing-frameworks.md",
-        "scripts/persona_generator.py"
-      ],
-      "size_bytes": 97098,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "analytics-engineer",
@@ -5440,28 +3104,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "data-analytics/analytics-engineer",
-      "files": [
-        "REFERENCE.md",
-        "SKILL.md",
-        "assets/dbt_project.yml",
-        "assets/macros.sql",
-        "assets/schema.yml",
-        "assets/source.yml",
-        "references/dbt_style_guide.md",
-        "references/modeling_patterns.md",
-        "references/optimization.md",
-        "references/testing_guide.md",
-        "scripts/doc_generator.py",
-        "scripts/impact_analyzer.py",
-        "scripts/quality_scorer.py",
-        "scripts/schema_diff.py"
-      ],
-      "size_bytes": 48986,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "business-intelligence",
@@ -5476,18 +3121,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "data-analytics/business-intelligence",
-      "files": [
-        "SKILL.md",
-        "scripts/dashboard_spec_generator.py",
-        "scripts/kpi_tracker.py",
-        "scripts/metric_validator.py"
-      ],
-      "size_bytes": 37135,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "data-analyst",
@@ -5502,18 +3138,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "data-analytics/data-analyst",
-      "files": [
-        "SKILL.md",
-        "scripts/data_profiler.py",
-        "scripts/query_optimizer.py",
-        "scripts/report_generator.py"
-      ],
-      "size_bytes": 35869,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "data-scientist",
@@ -5528,18 +3155,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "data-analytics/data-scientist",
-      "files": [
-        "SKILL.md",
-        "scripts/experiment_tracker.py",
-        "scripts/feature_selector.py",
-        "scripts/hypothesis_tester.py"
-      ],
-      "size_bytes": 42014,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "ml-ops-engineer",
@@ -5554,19 +3172,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "data-analytics/ml-ops-engineer",
-      "files": [
-        "REFERENCE.md",
-        "SKILL.md",
-        "scripts/drift_detector.py",
-        "scripts/model_registry.py",
-        "scripts/pipeline_validator.py"
-      ],
-      "size_bytes": 47719,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "account-executive",
@@ -5581,18 +3189,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "sales-success/account-executive",
-      "files": [
-        "SKILL.md",
-        "scripts/deal_scorer.py",
-        "scripts/pipeline_analyzer.py",
-        "scripts/win_loss_analyzer.py"
-      ],
-      "size_bytes": 42319,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "customer-success-manager",
@@ -5607,18 +3206,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "sales-success/customer-success-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/churn_predictor.py",
-        "scripts/health_scorer.py",
-        "scripts/qbr_generator.py"
-      ],
-      "size_bytes": 46894,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "sales-engineer",
@@ -5634,18 +3224,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "sales-success/sales-engineer",
-      "files": [
-        "SKILL.md",
-        "scripts/demo_planner.py",
-        "scripts/rfp_analyzer.py",
-        "scripts/technical_qualifier.py"
-      ],
-      "size_bytes": 49481,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "sales-operations",
@@ -5660,18 +3241,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "sales-success/sales-operations",
-      "files": [
-        "SKILL.md",
-        "scripts/forecast_analyzer.py",
-        "scripts/quota_calculator.py",
-        "scripts/territory_planner.py"
-      ],
-      "size_bytes": 50802,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "solutions-architect",
@@ -5686,18 +3258,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "sales-success/solutions-architect",
-      "files": [
-        "SKILL.md",
-        "scripts/architecture_scorer.py",
-        "scripts/migration_assessor.py",
-        "scripts/sizing_calculator.py"
-      ],
-      "size_bytes": 56642,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "hr-business-partner",
@@ -5712,18 +3275,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "hr-operations/hr-business-partner",
-      "files": [
-        "SKILL.md",
-        "scripts/compensation_analyzer.py",
-        "scripts/org_health_scorer.py",
-        "scripts/workforce_dashboard.py"
-      ],
-      "size_bytes": 64134,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "operations-manager",
@@ -5738,18 +3292,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "hr-operations/operations-manager",
-      "files": [
-        "SKILL.md",
-        "scripts/capacity_planner.py",
-        "scripts/process_mapper.py",
-        "scripts/sla_tracker.py"
-      ],
-      "size_bytes": 60382,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "people-analytics",
@@ -5764,18 +3309,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "hr-operations/people-analytics",
-      "files": [
-        "SKILL.md",
-        "scripts/attrition_predictor.py",
-        "scripts/headcount_planner.py",
-        "scripts/survey_analyzer.py"
-      ],
-      "size_bytes": 59021,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "talent-acquisition",
@@ -5790,18 +3326,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "hr-operations/talent-acquisition",
-      "files": [
-        "SKILL.md",
-        "scripts/candidate_pipeline_tracker.py",
-        "scripts/interview_scorecard.py",
-        "scripts/job_posting_analyzer.py"
-      ],
-      "size_bytes": 63024,
       "has_scripts": true,
-      "has_references": false,
-      "has_assets": false
+      "has_references": false
     },
     {
       "name": "business-investment-advisor",
@@ -5817,21 +3344,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "finance/business-investment-advisor",
-      "files": [
-        "SKILL.md",
-        "examples/opportunities.json",
-        "examples/portfolio.json",
-        "references/investment-frameworks.md",
-        "scripts/due_diligence_checklist.py",
-        "scripts/investment_screener.py",
-        "scripts/portfolio_analyzer.py"
-      ],
-      "size_bytes": 57774,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "financial-analyst",
@@ -5846,27 +3361,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-03-31",
-      "author": "borghei",
       "path": "finance/financial-analyst",
-      "files": [
-        "SKILL.md",
-        "assets/dcf_analysis_template.md",
-        "assets/expected_output.json",
-        "assets/forecast_report_template.md",
-        "assets/sample_financial_data.json",
-        "assets/variance_report_template.md",
-        "references/financial-ratios-guide.md",
-        "references/forecasting-best-practices.md",
-        "references/valuation-methodology.md",
-        "scripts/budget_variance_analyzer.py",
-        "scripts/dcf_valuation.py",
-        "scripts/forecast_builder.py",
-        "scripts/ratio_calculator.py"
-      ],
-      "size_bytes": 140358,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "saas-metrics-coach",
@@ -5884,21 +3381,9 @@
       ],
       "version": "1.0.0",
       "updated": "2026-04-02",
-      "author": "borghei",
       "path": "finance/saas-metrics-coach",
-      "files": [
-        "SKILL.md",
-        "examples/cohorts.csv",
-        "examples/subscriptions.csv",
-        "references/saas-metrics-guide.md",
-        "scripts/cohort_analyzer.py",
-        "scripts/mrr_calculator.py",
-        "scripts/unit_economics.py"
-      ],
-      "size_bytes": 51598,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "calendar-prep",
@@ -5907,18 +3392,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/calendar-prep",
-      "files": [
-        "SKILL.md",
-        "assets/meeting_input.json",
-        "references/briefing_methodology.md",
-        "scripts/meeting_prep_briefer.py"
-      ],
-      "size_bytes": 14271,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "domain-name-brainstormer",
@@ -5927,17 +3403,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/domain-name-brainstormer",
-      "files": [
-        "SKILL.md",
-        "references/naming_framework.md",
-        "scripts/name_generator.py"
-      ],
-      "size_bytes": 16519,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": false
+      "has_references": true
     },
     {
       "name": "email-triage",
@@ -5946,18 +3414,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/email-triage",
-      "files": [
-        "SKILL.md",
-        "assets/gmail_filter_template.md",
-        "references/inbox_zero_method.md",
-        "scripts/email_classifier.py"
-      ],
-      "size_bytes": 15917,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "investor-update-generator",
@@ -5966,18 +3425,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/investor-update-generator",
-      "files": [
-        "SKILL.md",
-        "assets/investor_update_template.md",
-        "references/what_makes_good_updates.md",
-        "scripts/investor_update_validator.py"
-      ],
-      "size_bytes": 17178,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "invoice-organizer",
@@ -5986,19 +3436,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/invoice-organizer",
-      "files": [
-        "SKILL.md",
-        "assets/category_rules.json",
-        "assets/monthly_summary_template.md",
-        "references/expense_categorization_guide.md",
-        "scripts/invoice_categorizer.py"
-      ],
-      "size_bytes": 23040,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "lead-researcher",
@@ -6007,19 +3447,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/lead-researcher",
-      "files": [
-        "SKILL.md",
-        "assets/icp_schema.json",
-        "assets/outreach_template.md",
-        "references/icp_framework.md",
-        "scripts/lead_qualifier.py"
-      ],
-      "size_bytes": 20903,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "meeting-insights",
@@ -6028,18 +3458,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/meeting-insights",
-      "files": [
-        "SKILL.md",
-        "assets/recap_template.md",
-        "references/insight_extraction_patterns.md",
-        "scripts/transcript_analyzer.py"
-      ],
-      "size_bytes": 17867,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "pitch-deck-reviewer",
@@ -6048,18 +3469,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/pitch-deck-reviewer",
-      "files": [
-        "SKILL.md",
-        "assets/deck_summary_template.md",
-        "references/pitch_deck_heuristics.md",
-        "scripts/deck_structure_scorer.py"
-      ],
-      "size_bytes": 19002,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "resume-tailor",
@@ -6068,19 +3480,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/resume-tailor",
-      "files": [
-        "SKILL.md",
-        "assets/tailored_resume_template.md",
-        "references/ats_optimization_guide.md",
-        "references/bullet_rewrite_patterns.md",
-        "scripts/resume_matcher.py"
-      ],
-      "size_bytes": 21063,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "weekly-review",
@@ -6089,18 +3491,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "personal-productivity/weekly-review",
-      "files": [
-        "SKILL.md",
-        "assets/weekly_review_input.json",
-        "references/weekly_review_methodology.md",
-        "scripts/weekly_review_synthesizer.py"
-      ],
-      "size_bytes": 15195,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "docx-toolkit",
@@ -6109,19 +3502,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "documents/docx-toolkit",
-      "files": [
-        "SKILL.md",
-        "assets/handoff_checklist_template.md",
-        "assets/style_compliance_template.md",
-        "references/docx_review_checklist.md",
-        "scripts/docx_auditor.py"
-      ],
-      "size_bytes": 17309,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "pdf-toolkit",
@@ -6130,18 +3513,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "documents/pdf-toolkit",
-      "files": [
-        "SKILL.md",
-        "assets/pdf_handoff_checklist.md",
-        "references/pdf_handoff_guide.md",
-        "scripts/pdf_auditor.py"
-      ],
-      "size_bytes": 18153,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "pptx-toolkit",
@@ -6150,18 +3524,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "documents/pptx-toolkit",
-      "files": [
-        "SKILL.md",
-        "assets/deck_handoff_checklist.md",
-        "references/deck_density_rubric.md",
-        "scripts/pptx_auditor.py"
-      ],
-      "size_bytes": 17888,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "xlsx-toolkit",
@@ -6170,18 +3535,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "documents/xlsx-toolkit",
-      "files": [
-        "SKILL.md",
-        "assets/workbook_handoff_checklist.md",
-        "references/financial_model_audit_guide.md",
-        "scripts/xlsx_auditor.py"
-      ],
-      "size_bytes": 20352,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "climate-tech-advisor",
@@ -6190,20 +3546,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/climate-tech",
-      "files": [
-        "SKILL.md",
-        "assets/climate_impact_assessment.md",
-        "references/climate_categories.md",
-        "references/climate_funding_sources.md",
-        "references/ghg_accounting_basics.md",
-        "scripts/carbon_impact_estimator.py"
-      ],
-      "size_bytes": 39429,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "ecommerce-advisor",
@@ -6212,19 +3557,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/ecommerce",
-      "files": [
-        "SKILL.md",
-        "assets/unit_economics_template.json",
-        "references/channel_strategy.md",
-        "references/fulfillment_models.md",
-        "scripts/ecom_unit_economics_calculator.py"
-      ],
-      "size_bytes": 25732,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "edtech-advisor",
@@ -6233,19 +3568,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/edtech",
-      "files": [
-        "SKILL.md",
-        "assets/sdpa_inventory_template.md",
-        "references/edtech_market_dynamics.md",
-        "references/student_data_privacy.md",
-        "scripts/student_data_compliance_checker.py"
-      ],
-      "size_bytes": 27486,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "fintech-advisor",
@@ -6254,21 +3579,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/fintech",
-      "files": [
-        "SKILL.md",
-        "assets/regulatory_architecture_template.md",
-        "references/embedded_finance_patterns.md",
-        "references/kyc_aml_basics.md",
-        "references/license_vs_partner_playbook.md",
-        "references/regulatory_landscape.md",
-        "scripts/regulatory_trigger_checker.py"
-      ],
-      "size_bytes": 46235,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "healthtech-advisor",
@@ -6277,21 +3590,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/healthtech",
-      "files": [
-        "SKILL.md",
-        "assets/hipaa_scope_template.md",
-        "references/fda_samd_basics.md",
-        "references/gtm_patterns.md",
-        "references/hipaa_basics.md",
-        "references/value_based_care_primer.md",
-        "scripts/phi_scope_checker.py"
-      ],
-      "size_bytes": 47247,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "marketplace-advisor",
@@ -6300,19 +3601,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/marketplace",
-      "files": [
-        "SKILL.md",
-        "assets/marketplace_metrics_template.json",
-        "references/marketplace_dynamics.md",
-        "references/take_rate_design.md",
-        "scripts/marketplace_health_scorer.py"
-      ],
-      "size_bytes": 27489,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     },
     {
       "name": "proptech-advisor",
@@ -6321,19 +3612,9 @@
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
-      "author": "borghei",
       "path": "vertical-advisors/proptech",
-      "files": [
-        "SKILL.md",
-        "assets/proptech_segment_assessment.md",
-        "references/mls_and_brokerage.md",
-        "references/proptech_segments.md",
-        "scripts/market_segment_classifier.py"
-      ],
-      "size_bytes": 29012,
       "has_scripts": true,
-      "has_references": true,
-      "has_assets": true
+      "has_references": true
     }
   ]
 }

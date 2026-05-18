@@ -20,6 +20,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "cli" / "skills.json"
+REGISTRY_PATH = REPO_ROOT / "registry.json"
 
 DOMAINS = [
     "engineering",
@@ -34,6 +35,9 @@ DOMAINS = [
     "sales-success",
     "hr-operations",
     "finance",
+    "personal-productivity",
+    "documents",
+    "vertical-advisors",
 ]
 
 
@@ -202,9 +206,11 @@ def main(argv: list[str]) -> int:
             if entry is not None:
                 skills.append(entry)
 
+    generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+
     manifest = {
         "schema_version": "1.0.0",
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": generated_at,
         "skill_count": len(skills),
         "domain_count": len({s["domain"] for s in skills}),
         "skills": skills,
@@ -216,10 +222,40 @@ def main(argv: list[str]) -> int:
         encoding="utf-8",
     )
 
+    registry = {
+        "schema_version": "1.0.0",
+        "generated_at": generated_at,
+        "repository": "claude-skills",
+        "skill_count": len(skills),
+        "domain_count": len({s["domain"] for s in skills}),
+        "domains": sorted({s["domain"] for s in skills}),
+        "skills": [_registry_entry(s) for s in skills],
+    }
+    REGISTRY_PATH.write_text(
+        json.dumps(registry, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
     print(f"Wrote {MANIFEST_PATH.relative_to(REPO_ROOT)}")
     print(f"  skills: {manifest['skill_count']}")
     print(f"  domains: {manifest['domain_count']}")
+    print(f"Wrote {REGISTRY_PATH.relative_to(REPO_ROOT)} (public registry)")
     return 0
+
+
+REGISTRY_FIELDS = ("name", "domain", "description", "tags", "version", "updated", "path")
+
+
+def _registry_entry(skill: dict) -> dict:
+    """Public-facing slice of a skill entry — no file lists, no sizes.
+
+    This is the shape third-party indexers and registries consume. Internal
+    CLI metadata stays in cli/skills.json.
+    """
+    entry = {k: skill.get(k, "" if k != "tags" else []) for k in REGISTRY_FIELDS}
+    entry["has_scripts"] = skill.get("has_scripts", False)
+    entry["has_references"] = skill.get("has_references", False)
+    return entry
 
 
 if __name__ == "__main__":
