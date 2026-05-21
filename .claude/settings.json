@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/pre_tool_secret_scan.py"
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre_tool_secret_scan.py\""
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/session_start_skill_check.py"
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_start_skill_check.py\""
           }
         ]
       }

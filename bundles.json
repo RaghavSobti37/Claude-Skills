@@ -124,6 +124,66 @@
         "data-analytics/ml-ops-engineer"
       ],
       "persona": "ai-engineer"
+    },
+    "pm-starter-pack": {
+      "name": "PM Starter Pack",
+      "description": "The 10 essential PM skills — discovery, definition, prioritization, status, and career growth",
+      "skills": [
+        "project-management/execution/create-prd",
+        "project-management/execution/prfaq",
+        "project-management/execution/prioritization-frameworks",
+        "project-management/execution/backlog-refinement",
+        "project-management/execution/status-update-generator",
+        "project-management/execution/north-star-metric",
+        "project-management/discovery/identify-assumptions",
+        "project-management/discovery/interview-synthesis",
+        "project-management/senior-pm",
+        "project-management/career/pm-interview-prep"
+      ],
+      "persona": "product-manager"
+    },
+    "pm-scrum-master": {
+      "name": "Scrum Master Toolkit",
+      "description": "Sprint analytics, refinement, splitting, flow metrics, retrospectives",
+      "skills": [
+        "project-management/scrum-master",
+        "project-management/execution/backlog-refinement",
+        "project-management/execution/story-splitting",
+        "project-management/execution/cycle-time-analyzer",
+        "project-management/execution/dependency-map",
+        "project-management/sprint-retrospective",
+        "project-management/execution/daci-framework",
+        "project-management/agile-coach"
+      ],
+      "persona": "scrum-master"
+    },
+    "pm-discovery-coach": {
+      "name": "Product Discovery Coach",
+      "description": "Idea → assumption → experiment → opportunity tree, end-to-end",
+      "skills": [
+        "project-management/discovery/brainstorm-ideas",
+        "project-management/discovery/identify-assumptions",
+        "project-management/discovery/brainstorm-experiments",
+        "project-management/discovery/pre-mortem",
+        "project-management/discovery/interview-synthesis",
+        "project-management/execution/job-stories",
+        "project-management/execution/north-star-metric",
+        "project-management/execution/outcome-roadmap"
+      ],
+      "persona": "product-manager"
+    },
+    "pm-career-track": {
+      "name": "PM Career Growth",
+      "description": "Interview prep, career ladder, onboarding, and 1:1s — for PMs growing their craft",
+      "skills": [
+        "project-management/career/pm-interview-prep",
+        "project-management/career/pm-career-ladder",
+        "project-management/career/pm-onboarding",
+        "project-management/career/pm-1on1s",
+        "project-management/senior-pm",
+        "project-management/execution/daci-framework"
+      ],
+      "persona": "product-manager"
     }
   }
 }

@@ -5,6 +5,45 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.0] - 2026-05-21
+
+### Added
+
+**Project Management domain expanded to 42 skills (most-used domain in the library).**
+
+- **17 new PM skills (wide push, production-ready scaffolds):**
+  - `discovery/interview-synthesis` — customer interview → opportunity solution tree (Python tool: 6-format output)
+  - `execution/prfaq` — Amazon Working Backwards PR/FAQ as a standalone skill
+  - `execution/backlog-refinement` — INVEST + DoR/DoD + splitting playbook (Python tool: refinement scorer)
+  - `execution/status-update-generator` — weekly exec status from Jira/Linear data (Python tool: 6-format output)
+  - `execution/north-star-metric` — NSM + input metric tree (Python tool: Mermaid tree builder)
+  - `execution/roadmap-communication` — exec / customer / internal roadmap variants
+  - `execution/beta-program` — closed beta playbook (Kano + cohort design)
+  - `execution/launch-playbook` — internal + external launch coordination
+  - `execution/cycle-time-analyzer` — flow metrics, CFD, Little's Law (Python tool)
+  - `execution/dependency-map` — cross-team dependencies + critical path (Python tool: Mermaid graph LR)
+  - `execution/story-splitting` — Lawrence's 9 vertical slicing patterns
+  - `career/pm-interview-prep` — APM → Group PM interview prep (CIRCLES, AARM, STAR, Decode and Conquer)
+  - `career/pm-career-ladder` — rubrics, gap analysis, growth plan, promo packet
+  - `career/pm-onboarding` — 30-60-90 day plan (Watkins + STARS)
+  - `career/pm-1on1s` — 1:1 templates by partner type (EM, designer, IC, manager)
+  - `linear-expert` — Linear admin, GraphQL queries, Jira → Linear migration
+  - `notion-pm` — Notion DBs for PRDs/OKRs/Roadmap/Decisions, REST API patterns
+- **`project-management/SHARED_OUTPUT_SCHEMA.md`** — defines `--format json|markdown|mermaid|confluence|notion|linear` convention for all PM Python tools
+- **`project-management/examples/feature-end-to-end.md`** — worked scenario showing idea → release notes in 6 commands
+- **4 new bundles** in `bundles.json`: `pm-starter-pack` (10 skills), `pm-scrum-master` (8), `pm-discovery-coach` (8), `pm-career-track` (6)
+
+### Changed
+
+- **Project Management bolded as the most-visited domain** in main `README.md`, `docs/SKILLS.md`, and `CLAUDE.md`
+- **PM `README.md` rewritten** with hero block, role-based Quick Start (7 roles: APM → CPO), visual gallery, 42-skill catalog
+- **PM `CLAUDE.md` rewritten** to cover all 42 skills, shared output schema, Linear/Notion integration patterns, and 6 workflow patterns
+
+### Fixed
+
+- **`scripts/build_manifest.py`** now recurses one level into container folders (e.g., `discovery/`, `execution/`, `career/`) so nested skills appear in the registry. Previously the registry undercounted PM by ~30 nested skills.
+- Skill count reconciled across `README.md`, `CLAUDE.md`, `docs/SKILLS.md`, and `project-management/CLAUDE.md` (was inconsistent across 13 / 22 / 25). Authoritative count: **282 total, 42 PM**.
+
 ## [4.2.0] - 2026-05-04
 
 ### Added

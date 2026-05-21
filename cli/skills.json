@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-18T10:42:32+00:00",
-  "skill_count": 250,
+  "generated_at": "2026-05-21T21:22:34+00:00",
+  "skill_count": 282,
   "domain_count": 15,
   "skills": [
     {
@@ -2065,10 +2065,11 @@
       "path": "engineering/threat-detection",
       "files": [
         "SKILL.md",
+        "examples/access.log",
         "references/threat-indicators.md",
         "scripts/threat_signal_analyzer.py"
       ],
-      "size_bytes": 24700,
+      "size_bytes": 32301,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -5009,6 +5010,92 @@
       "has_assets": false
     },
     {
+      "name": "pm-1on1s",
+      "domain": "project-management",
+      "description": "Structured PM 1:1 templates by partner type — with manager, engineering manager partner, designer, IC reports — grounded in Radical Candor, the GROW coaching model, and the Manager Tools 1:1 framework.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/career/pm-1on1s",
+      "files": [
+        "SKILL.md",
+        "assets/1on1_notes_template.md",
+        "assets/kickoff_template.md",
+        "assets/manager_1on1_agenda.md",
+        "references/1on1-playbook.md"
+      ],
+      "size_bytes": 30833,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-career-ladder",
+      "domain": "project-management",
+      "description": "PM career ladder rubrics from APM through VP/CPO across product sense, execution, leadership, strategy, and communication. Includes gap analysis, growth planning, and promotion packet templates.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/career/pm-career-ladder",
+      "files": [
+        "SKILL.md",
+        "assets/gap_analysis.md",
+        "assets/growth_plan.md",
+        "assets/promo_packet.md",
+        "references/ladder-rubric-detail.md"
+      ],
+      "size_bytes": 38410,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-interview-prep",
+      "domain": "project-management",
+      "description": "Structured PM interview preparation across product sense, execution, strategy, behavioral, and technical rounds, using CIRCLES, AARM, STAR, and the estimation framework. Calibrated to APM, PM, Senior PM, and Group PM rubrics.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/career/pm-interview-prep",
+      "files": [
+        "SKILL.md",
+        "assets/mock_feedback_form.md",
+        "assets/self_assessment.md",
+        "assets/story_worksheet.md",
+        "references/framework-deep-dive.md",
+        "references/question-bank.md"
+      ],
+      "size_bytes": 43364,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-onboarding",
+      "domain": "project-management",
+      "description": "30-60-90 day plan for a new PM joining a company or team, grounded in Michael Watkins' First 90 Days framework and the STARS situational diagnosis. Includes week-by-week plan, stakeholder map, 1:1 question bank, and first-PRD template.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/career/pm-onboarding",
+      "files": [
+        "SKILL.md",
+        "assets/30_60_90_plan.md",
+        "assets/first_prd_template.md",
+        "assets/onboarding_1on1_questions.md",
+        "assets/stakeholder_map.md",
+        "references/first-90-days-playbook.md"
+      ],
+      "size_bytes": 39866,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "confluence-expert",
       "domain": "project-management",
       "description": "Atlassian Confluence expert for creating and managing spaces, knowledge bases, documentation, planning, product discovery, page layouts, macros, templates, and all Confluence features. Use for documentation strategy, space architecture, content organization, and collaborative knowledge management.",
@@ -5061,6 +5148,531 @@
       "has_assets": false
     },
     {
+      "name": "brainstorm-experiments",
+      "domain": "project-management",
+      "description": "Experiment design expert using pretotyping and lean validation for both new product concepts and existing product features.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/discovery/brainstorm-experiments",
+      "files": [
+        "SKILL.md",
+        "assets/experiment_plan_template.md",
+        "references/experiment-methods.md",
+        "scripts/experiment_designer.py"
+      ],
+      "size_bytes": 35083,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "brainstorm-ideas",
+      "domain": "project-management",
+      "description": "Product ideation expert using Product Trio approach and Opportunity Solution Trees for both new and existing products.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/discovery/brainstorm-ideas",
+      "files": [
+        "SKILL.md",
+        "assets/ideation_workshop_template.md",
+        "references/ideation-frameworks.md",
+        "scripts/idea_scorer.py",
+        "scripts/opportunity_tree_builder.py",
+        "scripts/scamper_generator.py"
+      ],
+      "size_bytes": 39266,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "identify-assumptions",
+      "domain": "project-management",
+      "description": "Assumption mapping expert that identifies, categorizes, and prioritizes product assumptions across 4-8 risk categories using devil's advocate analysis.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/discovery/identify-assumptions",
+      "files": [
+        "SKILL.md",
+        "assets/assumption_map_template.md",
+        "references/assumption-mapping-guide.md",
+        "scripts/assumption_tracker.py"
+      ],
+      "size_bytes": 37994,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "interview-synthesis",
+      "domain": "project-management",
+      "description": "Customer interview synthesis expert that turns raw transcripts into themed insights, an opportunity solution tree, and a follow-up question list using Teresa Torres' continuous discovery methodology.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/discovery/interview-synthesis",
+      "files": [
+        "SKILL.md",
+        "assets/interview_input_template.json",
+        "assets/opportunity_tree_template.md",
+        "references/synthesis-methodology-guide.md",
+        "scripts/interview_synthesizer.py"
+      ],
+      "size_bytes": 49175,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pre-mortem",
+      "domain": "project-management",
+      "description": "Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/discovery/pre-mortem",
+      "files": [
+        "SKILL.md",
+        "assets/pre_mortem_template.md",
+        "references/pre-mortem-guide.md",
+        "scripts/risk_categorizer.py"
+      ],
+      "size_bytes": 40836,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "backlog-refinement",
+      "domain": "project-management",
+      "description": "Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/backlog-refinement",
+      "files": [
+        "SKILL.md",
+        "assets/refinement_checklist.md",
+        "references/invest-and-splitting-guide.md",
+        "scripts/refinement_scorer.py"
+      ],
+      "size_bytes": 52238,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "beta-program",
+      "domain": "project-management",
+      "description": "Closed beta program playbook covering recruitment, success criteria, communication cadence, and beta-to-GA exit gates.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/beta-program",
+      "files": [
+        "SKILL.md",
+        "assets/beta-program-plan.md",
+        "assets/exit-memo.md",
+        "assets/recruitment-script.md",
+        "assets/weekly-cadence-template.md",
+        "references/beta-program-guide.md"
+      ],
+      "size_bytes": 43926,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "brainstorm-okrs",
+      "domain": "project-management",
+      "description": "OKR brainstorming and validation using the Radical Focus framework. Generates outcome-focused objectives with measurable key results and counter-metrics. Use when setting quarterly OKRs, validating existing OKRs against quality criteria, aligning team goals to company objectives, or teaching teams the difference between outputs and outcomes in goal-setting.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/brainstorm-okrs",
+      "files": [
+        "SKILL.md",
+        "assets/okr_template.md",
+        "references/okr-best-practices.md",
+        "scripts/okr_validator.py"
+      ],
+      "size_bytes": 38330,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "create-prd",
+      "domain": "project-management",
+      "description": "PRD scaffolding expert that generates structured product requirements documents using an 8-section framework.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/create-prd",
+      "files": [
+        "SKILL.md",
+        "assets/prd_template.md",
+        "references/prd-writing-guide.md",
+        "scripts/prd_scaffolder.py"
+      ],
+      "size_bytes": 32553,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "cycle-time-analyzer",
+      "domain": "project-management",
+      "description": "Flow metrics analyzer (lead time, cycle time, throughput, WIP, aging WIP) for sprint and team health, with cumulative flow diagrams.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/cycle-time-analyzer",
+      "files": [
+        "SKILL.md",
+        "assets/flow-metrics-dashboard.md",
+        "references/flow-metrics-guide.md",
+        "scripts/flow_metrics.py"
+      ],
+      "size_bytes": 53829,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "daci-framework",
+      "domain": "project-management",
+      "description": "DACI decision facilitation framework for clarifying decision ownership, reducing decision thrash, and improving governance across product teams. Use for decision-making clarity, role assignment, governance design, and reducing ambiguity about who drives, approves, contributes, or is informed.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-04-10",
+      "author": "borghei",
+      "path": "project-management/execution/daci-framework",
+      "files": [
+        "SKILL.md"
+      ],
+      "size_bytes": 9610,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "dependency-map",
+      "domain": "project-management",
+      "description": "Cross-team dependency tracking with critical path analysis and Mermaid dependency graphs for program coordination.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/dependency-map",
+      "files": [
+        "SKILL.md",
+        "assets/dependency-template.json",
+        "assets/weekly-sync-agenda.md",
+        "references/dependency-management-guide.md",
+        "scripts/dependency_graph.py"
+      ],
+      "size_bytes": 52444,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "eol-communication",
+      "domain": "project-management",
+      "description": "End-of-life product messaging and sunset communication framework for creating clear, empathetic EOL announcements that preserve customer trust and facilitate smooth transitions. Use when sunsetting a product, feature, or service.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-04-10",
+      "author": "borghei",
+      "path": "project-management/execution/eol-communication",
+      "files": [
+        "SKILL.md"
+      ],
+      "size_bytes": 9731,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "job-stories",
+      "domain": "project-management",
+      "description": "Jobs-to-Be-Done story writing that focuses on user situations and motivations rather than personas.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/job-stories",
+      "files": [
+        "SKILL.md",
+        "assets/job_story_template.md",
+        "references/jtbd-guide.md",
+        "scripts/invest_validator.py",
+        "scripts/story_converter.py",
+        "scripts/story_quality_checker.py"
+      ],
+      "size_bytes": 50836,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "launch-playbook",
+      "domain": "project-management",
+      "description": "Internal and external launch coordination playbook covering pre-launch, launch day, and post-launch with run-of-show, comms, rollback, and retro.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/launch-playbook",
+      "files": [
+        "SKILL.md",
+        "assets/external-comms-checklist.md",
+        "assets/internal-comms-plan.md",
+        "assets/launch-run-of-show.md",
+        "assets/post-launch-retro.md",
+        "assets/rollback-plan.md",
+        "references/launch-coordination-guide.md"
+      ],
+      "size_bytes": 47112,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "north-star-metric",
+      "domain": "project-management",
+      "description": "Define a North Star Metric (NSM) and its input metric tree, with leading indicators, anti-metrics, and counter-metrics. Includes a Python tool that renders the metric tree as a Mermaid diagram.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/north-star-metric",
+      "files": [
+        "SKILL.md",
+        "assets/nsm_spec_template.md",
+        "references/nsm-framework-guide.md",
+        "scripts/metric_tree_builder.py"
+      ],
+      "size_bytes": 46284,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "outcome-roadmap",
+      "domain": "project-management",
+      "description": "Transforms output-based feature lists into outcome-driven roadmaps with measurable impact using Now/Next/Later framing and the \"so what?\" technique. Use when converting a feature-list roadmap into outcome-driven format, communicating product strategy to executives or customers, running quarterly planning, or aligning teams around impact rather than deliverables.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/outcome-roadmap",
+      "files": [
+        "SKILL.md",
+        "assets/outcome_roadmap_template.md",
+        "references/outcome-roadmap-guide.md",
+        "scripts/roadmap_transformer.py"
+      ],
+      "size_bytes": 37096,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "prfaq",
+      "domain": "project-management",
+      "description": "Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written. Produces a press release, an internal FAQ, and an external FAQ as a single decision artifact.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/prfaq",
+      "files": [
+        "SKILL.md",
+        "assets/prfaq_template.md",
+        "references/working-backwards-guide.md"
+      ],
+      "size_bytes": 30401,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "prioritization-frameworks",
+      "domain": "project-management",
+      "description": "Comprehensive prioritization framework expert covering 9 methods with scoring tools and decision guidance for product managers.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/prioritization-frameworks",
+      "files": [
+        "SKILL.md",
+        "assets/prioritization_matrix_template.md",
+        "references/prioritization-guide.md",
+        "scripts/prioritization_scorer.py"
+      ],
+      "size_bytes": 41823,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "release-notes",
+      "domain": "project-management",
+      "description": "Structured release notes creation that translates technical changes into user-benefit-oriented communication.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/release-notes",
+      "files": [
+        "SKILL.md",
+        "assets/release_notes_template.md",
+        "references/release-notes-guide.md",
+        "scripts/release_notes_generator.py"
+      ],
+      "size_bytes": 30715,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "roadmap-communication",
+      "domain": "project-management",
+      "description": "Same roadmap, three audiences. Produce executive, customer, and internal variants of a single roadmap with appropriate framing, detail level, and risk language for each.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/roadmap-communication",
+      "files": [
+        "SKILL.md",
+        "assets/customer_roadmap_template.md",
+        "assets/executive_roadmap_template.md",
+        "assets/internal_roadmap_template.md",
+        "references/roadmap-communication-guide.md"
+      ],
+      "size_bytes": 34676,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "status-update-generator",
+      "domain": "project-management",
+      "description": "Generate weekly executive status updates from Jira/Linear data exports. Produces a structured \"highlights / blockers / risks / asks / what's next\" briefing in markdown, Confluence, Notion, Linear, JSON, or Mermaid.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/status-update-generator",
+      "files": [
+        "SKILL.md",
+        "assets/weekly_status_template.md",
+        "references/status-update-style-guide.md",
+        "scripts/status_generator.py"
+      ],
+      "size_bytes": 45860,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "story-mapping",
+      "domain": "project-management",
+      "description": "Jeff Patton-style user story mapping for visualizing user journeys and translating product strategy into prioritized, deliverable work. Use for release planning, MVP definition, backlog sequencing, and cross-team alignment on what to build and in what order.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-04-10",
+      "author": "borghei",
+      "path": "project-management/execution/story-mapping",
+      "files": [
+        "SKILL.md"
+      ],
+      "size_bytes": 12541,
+      "has_scripts": false,
+      "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "story-splitting",
+      "domain": "project-management",
+      "description": "Vertical-slicing playbook with 9 canonical patterns for splitting epics into shippable user stories without losing user value.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/execution/story-splitting",
+      "files": [
+        "SKILL.md",
+        "assets/before-after-examples.md",
+        "references/splitting-patterns-guide.md"
+      ],
+      "size_bytes": 39036,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "summarize-meeting",
+      "domain": "project-management",
+      "description": "Structured meeting summarization that captures decisions, action items, and open questions in a consistent format.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/summarize-meeting",
+      "files": [
+        "SKILL.md",
+        "assets/meeting_summary_template.md",
+        "references/meeting-facilitation-guide.md",
+        "scripts/action_item_tracker.py",
+        "scripts/decision_log_builder.py",
+        "scripts/meeting_effectiveness_scorer.py"
+      ],
+      "size_bytes": 40568,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "wwas",
+      "domain": "project-management",
+      "description": "Why-What-Acceptance backlog format that connects every work item to strategic business objectives.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-03-04",
+      "author": "borghei",
+      "path": "project-management/execution/wwas",
+      "files": [
+        "SKILL.md",
+        "assets/wwas_template.md",
+        "references/backlog-management-guide.md",
+        "scripts/backlog_alignment_checker.py",
+        "scripts/invest_gate_checker.py",
+        "scripts/wwas_quality_scorer.py"
+      ],
+      "size_bytes": 52039,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "jira-expert",
       "domain": "project-management",
       "description": "Atlassian Jira expert for creating and managing projects, planning, product discovery, JQL queries, workflows, custom fields, automation, reporting, and all Jira features. Use for Jira project setup, configuration, advanced search, dashboard creation, workflow design, and technical Jira operations.",
@@ -5087,6 +5699,64 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
+    },
+    {
+      "name": "linear-expert",
+      "domain": "project-management",
+      "description": "Linear expert for team and workspace administration, Cycles, Projects, Initiatives, Roadmaps, GraphQL API queries, automations, triage workflows, GitHub integration, bulk operations, and Jira-to-Linear migration. Use for Linear configuration, workflow design, GraphQL authoring, and modern PM-friendly issue tracking at scale.",
+      "tags": [
+        "linear",
+        "graphql",
+        "cycles",
+        "initiatives",
+        "roadmaps",
+        "triage",
+        "migration"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/linear-expert",
+      "files": [
+        "SKILL.md",
+        "assets/linear-team-template.md",
+        "assets/linear-triage-workflow.md",
+        "references/linear-graphql-patterns.md",
+        "references/linear-vs-jira.md"
+      ],
+      "size_bytes": 47888,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "notion-pm",
+      "domain": "project-management",
+      "description": "Notion expert for product management workflows. Covers database design for PRDs, OKRs, Roadmaps, and Decisions; property types (relation, rollup, formula); view design (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored Markdown blocks; Notion REST API patterns; and sync patterns with Jira, Linear, and GitHub.",
+      "tags": [
+        "notion",
+        "databases",
+        "prd",
+        "okr",
+        "roadmap",
+        "decisions"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-21",
+      "author": "borghei",
+      "path": "project-management/notion-pm",
+      "files": [
+        "SKILL.md",
+        "assets/notion-okr-template.md",
+        "assets/notion-prd-template.md",
+        "assets/notion-roadmap-template.md",
+        "references/notion-api-patterns.md",
+        "references/notion-database-design-for-pm.md"
+      ],
+      "size_bytes": 59531,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
     },
     {
       "name": "program-manager",

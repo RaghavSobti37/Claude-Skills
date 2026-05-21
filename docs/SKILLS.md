@@ -168,11 +168,11 @@ User-centered product development with automation tools.
 | [design-system-lead](../product-team/design-system-lead/SKILL.md) | Design tokens, component libraries, documentation | - |
 | [ab-test-setup](../product-team/ab-test-setup/SKILL.md) | A/B testing design, statistical significance, feature flags | - |
 
-## Project Management (23)
+## Project Management (42) ★ most-visited domain
 
-Delivery excellence with discovery, execution frameworks, and Atlassian integration.
+Delivery excellence with discovery, execution frameworks, career growth, and Jira / Linear / Notion / Confluence integration. See [Quick Start by role](../project-management/README.md#quick-start-by-role).
 
-### Role-Based Skills (10)
+### Role-Based Skills (12)
 
 | Skill | Description | Tools |
 |-------|-------------|-------|
@@ -180,14 +180,16 @@ Delivery excellence with discovery, execution frameworks, and Atlassian integrat
 | [scrum-master](../project-management/scrum-master/SKILL.md) | Sprint analytics, velocity forecasting, capacity planning, team health | 4 |
 | [delivery-manager](../project-management/delivery-manager/SKILL.md) | Release management, deployment, incident response | - |
 | [jira-expert](../project-management/jira-expert/SKILL.md) | JQL mastery, workflows, automation, dashboards | - |
+| [linear-expert](../project-management/linear-expert/SKILL.md) ★ NEW | GraphQL queries, cycles, projects, Jira → Linear migration | - |
 | [confluence-expert](../project-management/confluence-expert/SKILL.md) | Knowledge management, space architecture | - |
+| [notion-pm](../project-management/notion-pm/SKILL.md) ★ NEW | DB design for PRDs/OKRs/Roadmap/Decisions, Notion API patterns | - |
 | [atlassian-admin](../project-management/atlassian-admin/SKILL.md) | System administration, security, integrations | - |
 | [atlassian-templates](../project-management/atlassian-templates/SKILL.md) | Template design, custom blueprints | - |
 | [agile-coach](../project-management/agile-coach/SKILL.md) | Transformation, framework implementation, coaching | - |
 | [program-manager](../project-management/program-manager/SKILL.md) | Multi-project coordination, portfolio governance | - |
 | [sprint-retrospective](../project-management/sprint-retrospective/SKILL.md) | Data-driven sprint retros, velocity analytics, code churn, trend tracking | 4 |
 
-### Discovery Skills (4)
+### Discovery Skills (5)
 
 | Skill | Description | Tools |
 |-------|-------------|-------|
@@ -195,19 +197,44 @@ Delivery excellence with discovery, execution frameworks, and Atlassian integrat
 | [brainstorm-experiments](../project-management/discovery/brainstorm-experiments/SKILL.md) | Lean experiment design, XYZ hypotheses | 1 |
 | [identify-assumptions](../project-management/discovery/identify-assumptions/SKILL.md) | Assumption mapping across 4-8 risk categories | 1 |
 | [pre-mortem](../project-management/discovery/pre-mortem/SKILL.md) | Tiger/Paper Tiger/Elephant risk classification | 1 |
+| [interview-synthesis](../project-management/discovery/interview-synthesis/SKILL.md) ★ NEW | Interview transcripts → opportunity solution tree | 1 |
 
-### Execution Skills (8)
+### Execution Skills (21)
 
 | Skill | Description | Tools |
 |-------|-------------|-------|
 | [create-prd](../project-management/execution/create-prd/SKILL.md) | PRD scaffolding with 8-section structure | 1 |
+| [prfaq](../project-management/execution/prfaq/SKILL.md) ★ NEW | Amazon Working Backwards PR/FAQ as standalone skill | - |
 | [brainstorm-okrs](../project-management/execution/brainstorm-okrs/SKILL.md) | OKR brainstorming and validation (Wodtke) | 1 |
+| [north-star-metric](../project-management/execution/north-star-metric/SKILL.md) ★ NEW | NSM + input metric tree with leading indicators | 1 |
 | [outcome-roadmap](../project-management/execution/outcome-roadmap/SKILL.md) | Output-to-outcome roadmap transformation | 1 |
+| [roadmap-communication](../project-management/execution/roadmap-communication/SKILL.md) ★ NEW | Exec / customer / internal roadmap variants | - |
 | [prioritization-frameworks](../project-management/execution/prioritization-frameworks/SKILL.md) | Multi-framework scoring (RICE, ICE, MoSCoW) | 1 |
-| [release-notes](../project-management/execution/release-notes/SKILL.md) | Release notes from tickets/changelogs | 1 |
-| [summarize-meeting](../project-management/execution/summarize-meeting/SKILL.md) | Structured meeting summaries with action items | - |
+| [backlog-refinement](../project-management/execution/backlog-refinement/SKILL.md) ★ NEW | INVEST + DoR/DoD + splitting playbook | 1 |
+| [story-splitting](../project-management/execution/story-splitting/SKILL.md) ★ NEW | 9 vertical slicing patterns (Lawrence) | - |
+| [story-mapping](../project-management/execution/story-mapping/SKILL.md) | Jeff Patton user story mapping | - |
 | [job-stories](../project-management/execution/job-stories/SKILL.md) | JTBD When/Want/So backlog format | - |
 | [wwas](../project-management/execution/wwas/SKILL.md) | Why-What-Acceptance structured backlog items | - |
+| [cycle-time-analyzer](../project-management/execution/cycle-time-analyzer/SKILL.md) ★ NEW | Lead time, cycle time, CFD, Little's Law | 1 |
+| [dependency-map](../project-management/execution/dependency-map/SKILL.md) ★ NEW | Cross-team dependencies + critical path | 1 |
+| [status-update-generator](../project-management/execution/status-update-generator/SKILL.md) ★ NEW | Weekly exec status from Jira/Linear data | 1 |
+| [summarize-meeting](../project-management/execution/summarize-meeting/SKILL.md) | Structured meeting summaries with action items | - |
+| [daci-framework](../project-management/execution/daci-framework/SKILL.md) | DACI decision facilitation and governance | - |
+| [beta-program](../project-management/execution/beta-program/SKILL.md) ★ NEW | Closed beta playbook (Kano + cohort design) | - |
+| [launch-playbook](../project-management/execution/launch-playbook/SKILL.md) ★ NEW | Internal + external launch coordination | - |
+| [release-notes](../project-management/execution/release-notes/SKILL.md) | Release notes from tickets/changelogs | 1 |
+| [eol-communication](../project-management/execution/eol-communication/SKILL.md) | End-of-life messaging and sunset | - |
+
+### Career Skills (4) ★ NEW
+
+PM career growth — interview prep, ladder rubrics, onboarding, 1:1s. Unique to this library.
+
+| Skill | Description | Tools |
+|-------|-------------|-------|
+| [pm-interview-prep](../project-management/career/pm-interview-prep/SKILL.md) | APM → Group PM interview prep (CIRCLES, AARM, STAR) | - |
+| [pm-career-ladder](../project-management/career/pm-career-ladder/SKILL.md) | Rubrics, gap analysis, growth plan, promo packet | - |
+| [pm-onboarding](../project-management/career/pm-onboarding/SKILL.md) | 30-60-90 day plan (Watkins + STARS) | - |
+| [pm-1on1s](../project-management/career/pm-1on1s/SKILL.md) | 1:1 templates by partner type (EM, designer, IC, manager) | - |
 
 ## Regulatory Affairs, Quality Management & Compliance (21)
 

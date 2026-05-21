@@ -151,7 +151,7 @@ def walk_skill_dir(skill_dir: Path) -> tuple[list[str], int]:
     return sorted(files), total
 
 
-def build_skill_entry(domain: str, skill_dir: Path) -> dict | None:
+def build_skill_entry(domain: str, skill_dir: Path, rel_path: str | None = None) -> dict | None:
     skill_md = skill_dir / "SKILL.md"
     if not skill_md.is_file():
         return None
@@ -175,6 +175,7 @@ def build_skill_entry(domain: str, skill_dir: Path) -> dict | None:
         tags = [t.strip() for t in tags.split(",") if t.strip()]
 
     files, size_bytes = walk_skill_dir(skill_dir)
+    path_suffix = rel_path if rel_path is not None else skill_dir.name
 
     return {
         "name": name,
@@ -184,7 +185,7 @@ def build_skill_entry(domain: str, skill_dir: Path) -> dict | None:
         "version": metadata.get("version", "1.0.0"),
         "updated": metadata.get("updated", ""),
         "author": metadata.get("author", ""),
-        "path": f"{domain}/{skill_dir.name}",
+        "path": f"{domain}/{path_suffix}",
         "files": files,
         "size_bytes": size_bytes,
         "has_scripts": "scripts" in {f.split("/", 1)[0] for f in files},
@@ -205,6 +206,18 @@ def main(argv: list[str]) -> int:
             entry = build_skill_entry(domain, skill_dir)
             if entry is not None:
                 skills.append(entry)
+                continue
+            # Container folder without its own SKILL.md (e.g. PM's
+            # discovery/, execution/, career/). Recurse one level for
+            # nested skills.
+            for nested_dir in sorted(skill_dir.iterdir()):
+                if not nested_dir.is_dir() or nested_dir.name.startswith("."):
+                    continue
+                nested_entry = build_skill_entry(
+                    domain, nested_dir, rel_path=f"{skill_dir.name}/{nested_dir.name}"
+                )
+                if nested_entry is not None:
+                    skills.append(nested_entry)
 
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
