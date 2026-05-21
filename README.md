@@ -3,12 +3,12 @@
 </p>
 
 <h1 align="center">Claude Skills</h1>
-<p align="center"><b>The AI skills library for the whole company. Not just engineers.</b></p>
+<p align="center"><b>AI skills for every team — not just engineering.</b></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Skills-282-brightgreen.svg" alt="282 Skills">
-  <img src="https://img.shields.io/badge/Domains-17-blue.svg" alt="17 Domains">
-  <img src="https://img.shields.io/badge/Agents-67_cs--*-purple.svg" alt="67 cs-* agents">
+  <img src="https://img.shields.io/badge/Domains-15-blue.svg" alt="15 Domains">
+  <img src="https://img.shields.io/badge/Expert_Agents-67-purple.svg" alt="67 Expert Agents">
   <img src="https://img.shields.io/badge/AI_Assistants-11-orange.svg" alt="11 AI Assistants">
   <img src="https://img.shields.io/badge/Compliance_Frameworks-18-red.svg" alt="18 Compliance Frameworks">
   <img src="https://img.shields.io/github/stars/borghei/Claude-Skills?style=social" alt="GitHub Stars">
@@ -17,148 +17,101 @@
 
 ---
 
-## Install any skill in one command
+## Try it now
+
+**No setup, any AI chat.** Browse the [skill library](https://borghei.github.io/Claude-Skills), click **Try it now** on any skill, and paste the prompt into Claude.ai, ChatGPT, or Gemini.
+
+**Save it to your AI.** Click **Save to my AI** to install as a Claude Project or Custom GPT — guided setup, no terminal.
+
+### For developers
 
 ```bash
 npx @borghei/claude-skills add senior-fullstack
 ```
 
-Auto-detects Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider and Goose. Drops the skill into the right directory for whichever assistant you're using. Node 18+, no Python required for end users.
+Auto-detects Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, and Goose. Drops the skill into the right directory for your assistant. Node 18+, no Python required.
 
-**Alternative paths:**
-
-- **No setup, any AI chat.** Browse the [skill library](https://borghei.github.io/Claude-Skills), click **Try in Chat** on any skill, paste into Claude.ai, ChatGPT or Gemini.
-- **Claude Code native plugin.** Run `/plugin marketplace add borghei/Claude-Skills` in Claude Code.
-- **Per-platform manual install.** See [docs/INSTALLATION.md](docs/INSTALLATION.md).
+See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the Claude Code plugin, MCP server, manual install, and CLI tooling.
 
 ---
 
-## Why teams use this
+## What you get
 
-- **282 skills covering the whole org.** Engineering (76), Marketing (38), C-Level (26), Compliance (21), Legal (17), **PM (42)** ★ *most-visited domain*, Personal Productivity (10), Product (8), Vertical Advisors (7), Documents (4) and more.
-- **18 compliance frameworks built in.** SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR and more. The only OSS skills library covering regulated industries.
-- **7 vertical strategic advisors.** Fintech, healthtech, edtech, ecommerce, proptech, climate-tech, marketplace — industry-specific frameworks for founders and operators.
-- **11 AI assistants supported.** One library, works across Claude Code, Cursor, Codex, Gemini, Copilot, Windsurf, Cline, Aider, Goose, OpenCode and ChatGPT/Claude.ai.
-- **674+ Python tools.** Real automation, not prompts. Run `code_quality_analyzer.py`, `dcf_valuation.py`, `seo_audit.py`, `regulatory_trigger_checker.py` directly.
-- **67 cs-* agents and 7 personas.** Activate `cs-cto-advisor`, `cs-fintech-advisor`, `startup-cto`, `growth-marketer` or `solo-founder` and get a multi-skill identity in one command.
+**Ship a SOC 2 audit. Run a sprint retro. Draft a board update. Spin up a fintech compliance program.** Real workflows you can finish today — not prompt templates that need a prompt engineer to drive them.
+
+- **The only OSS skills library covering regulated industries.** SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR — 18 compliance frameworks with checklists, gap analyses, and audit-ready outputs.
+- **Scripts that actually run — not just prompt templates.** 700+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
+- **Call one persona, get a stack of skills behind it.** `startup-cto`, `growth-marketer`, `solo-founder`, `cs-cto-advisor`, `cs-fintech-advisor` — 74 expert identities ready out of the box.
+- **Works with your AI assistant.** Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose, OpenCode, and ChatGPT / Claude.ai.
+- **Discovery → delivery → career for product teams.** Project Management is the deepest domain (42 skills) — PRDs, OKRs, status updates, story splitting, interview prep — with Jira / Linear / Notion / Confluence integrations.
+
+*Supporting evidence:* 282 skills · 700+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
 
 ---
 
 ## Browse skills by domain
 
-**[PM (42) ★](project-management/)** *(most-visited domain — discovery → delivery → career, with Jira, Linear, Notion, Confluence integrations)*
+**[Project Management (42) ★](project-management/)** — *most-visited domain. Discovery, delivery, career growth, Jira / Linear / Notion / Confluence.*
 
-[Engineering (76)](engineering/) · [Marketing (38)](marketing/) · [C-Level (26)](c-level-advisor/) · [Compliance (21)](ra-qm-team/) · [Business & Growth (16)](business-growth/) · [Legal (17)](legal/) · [Personal Productivity (10)](personal-productivity/) · [Product (8)](product-team/) · [Vertical Advisors (7)](vertical-advisors/) · [Data (5)](data-analytics/) · [Sales (5)](sales-success/) · [HR (4)](hr-operations/) · [Documents (4)](documents/) · [Finance (3)](finance/) · [All skills →](docs/SKILLS.md)
+[Engineering (76)](engineering/) · [Marketing (38)](marketing/) · [C-Level (26)](c-level-advisor/) · [Compliance (21)](ra-qm-team/) · [Business & Growth (16)](business-growth/) · [Legal (17)](legal/) · [Personal Productivity (10)](personal-productivity/) · [Product Team (8)](product-team/) · [Vertical Advisors (7)](vertical-advisors/) · [Data (5)](data-analytics/) · [Sales (5)](sales-success/) · [HR (4)](hr-operations/) · [Documents (4)](documents/) · [Finance (3)](finance/) · [All skills →](docs/SKILLS.md)
 
 ---
 
-## Key Features
+## How it works
 
-### Cross-Domain Personas
+### Pre-built expert identities
 
-7 personas that combine skills from multiple domains into a single expert identity:
+7 cross-domain personas that combine skills from multiple domains into a single expert:
 
-`startup-cto` | `growth-marketer` | `solo-founder` | `content-strategist` | `devops-engineer` | `finance-lead` | `product-manager`
+`startup-cto` · `growth-marketer` · `solo-founder` · `content-strategist` · `devops-engineer` · `finance-lead` · `product-manager`
 
-Activate with `/persona startup-cto` or by referencing the persona in conversation.
+Activate with `/persona startup-cto` or just mention it in conversation. Add the 67 single-domain `cs-*` agents (e.g. `cs-cto-advisor`, `cs-fintech-advisor`, `cs-scrum-master`) for narrower expertise.
 
-### Compound Sub-Skill Systems
+### Deep-dive skill packs
 
-3 deep-dive skill systems with 21 total sub-skills:
+Three multi-skill packs go deeper on a single topic: **Playwright Pro** (browser automation, 8 sub-skills), **Self-Improving Agent** (agents that evaluate their own outputs, 6 sub-skills), and **AgentHub** (multi-agent orchestration, 7 sub-skills). See [standards/](standards/).
 
-- **Playwright Pro** -- Advanced browser automation, testing patterns, and debugging
-- **Self-Improving Agent** -- Agents that evaluate and improve their own performance
-- **AgentHub** -- Multi-agent orchestration, tool schemas, and communication protocols
+### Slash commands
 
-### Slash Commands
+26 commands for common workflows — `/tdd`, `/rice`, `/prd`, `/retro`, `/tech-debt`, `/security-scan`, `/sprint-plan`, `/changelog` and more. Run `/README` in Claude Code for the full list, or see [docs/commands/](docs/commands/).
 
-26 commands for common workflows:
+### Ready-made kits by role
 
-| Command | Purpose |
-|---------|---------|
-| `/tdd` | Test-driven development workflow |
-| `/rice` | RICE-score feature prioritization |
-| `/prd` | Generate a product requirements doc |
-| `/retro` | Data-driven sprint retrospective |
-| `/tech-debt` | Scan and prioritize technical debt |
-| `/security-scan` | Run security audit gate |
-| `/a11y-audit` | WCAG accessibility audit |
-| `/changelog` | Generate changelog from git history |
-| `/sprint-plan` | Plan a sprint from backlog |
-| `/focused-fix` | Minimal-blast-radius bugfix |
+Pre-configured skill bundles for common roles:
 
-Run `/README` in Claude Code to see the full list.
+`SaaS Founder Kit` · `DevOps Kit` · `Compliance Kit` · `Growth Kit` · `Product Kit` · `Data Kit` · `Security Kit` · `Finance Kit` · `PM Starter Pack` · `PM Career Track`
 
-### One-Click Skill Setup (No Code Required)
+Install one bundle and the right set of skills lands in your project. See [bundles.json](bundles.json).
 
-Every skill page on the [website](https://borghei.github.io/Claude-Skills) includes copy-paste prompts for beginners:
-
-| Button | What It Does |
-|--------|-------------|
-| **Try in Chat** | Instant expertise in any AI chat -- no setup needed |
-| **Add to My AI** | Creates a permanent Claude Project or Custom GPT with the full skill. The AI guides you through setup step by step |
-
-No terminal, no git, no configuration. Browse a skill, click copy, paste into your AI, done.
-
-### Orchestration Protocol
+### Orchestration patterns
 
 4 multi-agent patterns for complex workflows: sequential pipeline, parallel fan-out, supervisor delegation, and consensus voting. Defined in the [Orchestration Protocol standard](standards/).
 
-### MCP Server
-
-Use skills as Claude Code tools via the built-in MCP server:
-
-```bash
-python scripts/mcp_server.py
-```
-
-### Starter Bundles
-
-Pre-configured skill sets for common roles:
-
-`SaaS Founder Kit` | `DevOps Kit` | `Compliance Kit` | `Growth Kit` | `Product Kit` | `Data Kit` | `Security Kit` | `Finance Kit`
-
-Install with `python scripts/cs.py bundle saas-founder`.
-
 ---
 
-## Platform Support
+## Works with your AI assistant
 
-| Platform | Config File | Status |
-|----------|-------------|--------|
-| **Claude Code** | `CLAUDE.md` | Native |
-| **OpenAI Codex** | `AGENTS.md` | Native |
-| **Gemini CLI** | `GEMINI.md`, `.gemini/` | Native |
-| **Cursor** | `.cursorrules` | Native |
-| **GitHub Copilot** | `.github/copilot-instructions.md` | Native |
-| **Windsurf** | `.windsurfrules` | Native |
-| **Cline** | `.clinerules` | Native |
-| **Aider** | `AGENTS.md` | Compatible |
-| **Goose** | `.goosehints` | Native |
-| **Jules** | `AGENTS.md` | Compatible |
-| **RooCode** | `AGENTS.md` | Compatible |
+| Platform | Status |
+|----------|--------|
+| Claude Code | Native |
+| OpenAI Codex | Native |
+| Gemini CLI | Native |
+| Cursor | Native |
+| GitHub Copilot | Native |
+| Windsurf | Native |
+| Cline | Native |
+| Goose | Native |
+| Aider | Compatible |
+| Jules | Compatible |
+| RooCode | Compatible |
 
----
-
-## CLI Tool
-
-```bash
-python scripts/cs.py <command>
-
-# Commands
-  search <query>       Search skills by keyword
-  install <skill>      Install a skill into your project
-  list                 List all available skills
-  stats                Show library statistics
-  doctor               Check skill health and integrity
-  bundle <name>        Install a starter bundle
-```
+See [docs/INSTALLATION.md](docs/INSTALLATION.md) for per-platform setup.
 
 ---
 
 ## Documentation
 
-- **Full docs site:** [docs/](docs/) (MkDocs Material)
+- **Full docs site:** [borghei.github.io/Claude-Skills](https://borghei.github.io/Claude-Skills)
 - **Skills reference:** [docs/SKILLS.md](docs/SKILLS.md)
 - **Agents reference:** [docs/AGENTS.md](docs/AGENTS.md)
 - **Usage guide:** [docs/USAGE.md](docs/USAGE.md)
@@ -186,18 +139,18 @@ Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Fo
 
 ## Disclaimer
 
-> **This project is built with the assistance of AI tools (Claude, GPT, etc.).** While every effort is made to ensure accuracy, AI-generated content -- including skill definitions, reference guides, Python tools, frameworks, and documentation -- may contain errors, inaccuracies, or outdated information. Always verify critical information independently before using it in production, compliance, legal, financial, or safety-critical contexts. The authors accept no liability for decisions made based on the content in this repository. Use at your own risk.
+> **This project is built with the assistance of AI tools (Claude, GPT, etc.).** While every effort is made to ensure accuracy, AI-generated content — including skill definitions, reference guides, Python tools, frameworks, and documentation — may contain errors, inaccuracies, or outdated information. Always verify critical information independently before using it in production, compliance, legal, financial, or safety-critical contexts. The authors accept no liability for decisions made based on the content in this repository. Use at your own risk.
 
 ---
 
 ## License
 
-**MIT + Commons Clause** -- Free for open-source, personal, education, and internal business use. Cannot be sold or repackaged as a paid product. See [LICENSE](LICENSE) for full terms.
+**MIT + Commons Clause** — free for open-source, personal, education, and internal business use. Cannot be sold or repackaged as a paid product. See [LICENSE](LICENSE) for full terms.
 
 ---
 
 <p align="center">
-  <strong>266 skills. 674+ tools. 17 domains. 74 agents. 11 platforms.</strong><br>
+  <strong>282 skills · 700+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
   <a href="https://borghei.me">borghei.me</a>
 </p>
 

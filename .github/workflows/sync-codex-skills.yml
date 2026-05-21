@@ -82,8 +82,18 @@ jobs:
 
           Triggered by push to main.
           Source paths: **/SKILL.md, **/scripts/**"
-          git push
-          echo "Changes committed and pushed."
+          # Resilient push: another bot (build_manifest, etc.) may have
+          # pushed while we were running. Rebase and retry up to 3 times.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Changes committed and pushed (attempt $attempt)."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; rebasing onto origin/main..."
+            git pull --rebase origin main
+          done
+          echo "Push still failing after 3 attempts." >&2
+          exit 1
 
       - name: No changes detected
         if: steps.check.outputs.found == 'true' && steps.changes.outputs.has_changes != 'true'
