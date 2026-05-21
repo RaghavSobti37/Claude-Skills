@@ -1,13 +1,13 @@
 {
   "name": "claude-skills",
-  "description": "The Universal AI Skills Library — 245 production-ready skills across 14 domains",
-  "version": "4.1.0",
+  "description": "The Universal AI Skills Library — 282 production-ready skills across 15 domains. Project Management is the most-used domain.",
+  "version": "4.3.0",
   "repository": "https://github.com/borghei/Claude-Skills",
   "website": "https://borghei.github.io/Claude-Skills",
   "author": "borghei",
   "license": "MIT + Commons Clause",
-  "total_skills": 245,
-  "updated": "2026-04-10",
+  "total_skills": 282,
+  "updated": "2026-05-21",
   "domains": {
     "business-growth": {
       "count": 16,
@@ -42,8 +42,8 @@
       "tools": 15
     },
     "project-management": {
-      "count": 22,
-      "tools": 53
+      "count": 42,
+      "tools": 59
     },
     "ra-qm-team": {
       "count": 21,
@@ -55,8 +55,19 @@
     },
     "legal": {
       "count": 17,
-      "tools": 34,
-      "experimental": true
+      "tools": 33
+    },
+    "documents": {
+      "count": 4,
+      "tools": 4
+    },
+    "personal-productivity": {
+      "count": 10,
+      "tools": 10
+    },
+    "vertical-advisors": {
+      "count": 7,
+      "tools": 7
     }
   },
   "skills": [
@@ -2945,7 +2956,11 @@
       "subdomain": "pm-execution",
       "version": "1.0.0",
       "license": "MIT + Commons Clause",
-      "tags": ["daci", "decision-framework", "governance"],
+      "tags": [
+        "daci",
+        "decision-framework",
+        "governance"
+      ],
       "tools": 0,
       "has_references": false,
       "has_assets": false
@@ -2959,7 +2974,11 @@
       "subdomain": "pm-execution",
       "version": "1.0.0",
       "license": "MIT + Commons Clause",
-      "tags": ["eol", "product-lifecycle", "change-communication"],
+      "tags": [
+        "eol",
+        "product-lifecycle",
+        "change-communication"
+      ],
       "tools": 0,
       "has_references": false,
       "has_assets": false
@@ -2973,7 +2992,11 @@
       "subdomain": "pm-execution",
       "version": "1.0.0",
       "license": "MIT + Commons Clause",
-      "tags": ["story-mapping", "release-planning", "jeff-patton"],
+      "tags": [
+        "story-mapping",
+        "release-planning",
+        "jeff-patton"
+      ],
       "tools": 0,
       "has_references": false,
       "has_assets": false
@@ -4376,6 +4399,696 @@
       "has_references": true,
       "has_assets": false,
       "experimental": true
+    },
+    {
+      "name": "docx-toolkit",
+      "description": "Audit Microsoft Word (.docx) documents for word count, heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, enforcing a style guide, or when the user mentions Word document review, docx audit, comment cleanup, or tracked-changes resolution.",
+      "path": "documents/docx-toolkit/SKILL.md",
+      "domain": "documents",
+      "category": "documents",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "docx",
+        "OOXML"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pdf-toolkit",
+      "description": "Audit PDF files for metadata leakage, page count, encryption, JavaScript, embedded files, and version. Use before sending a PDF externally, when redacting sensitive metadata, or when the user mentions PDF audit, PDF metadata, PDF leakage check, or PDF security review.",
+      "path": "documents/pdf-toolkit/SKILL.md",
+      "domain": "documents",
+      "category": "documents",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pdf"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pptx-toolkit",
+      "description": "Audit PowerPoint (.pptx) decks for slide count, text density per slide, embedded images, embedded fonts, hidden slides, speaker notes presence, and animation density. Use when reviewing a board deck, sales deck, or conference talk before sending, or when the user mentions deck audit, pptx review, slide density, or speaker notes check.",
+      "path": "documents/pptx-toolkit/SKILL.md",
+      "domain": "documents",
+      "category": "documents",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pptx",
+        "OOXML"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "xlsx-toolkit",
+      "description": "Audit Microsoft Excel (.xlsx) workbooks for sheet count, cell count, formula density, external references, named ranges, hidden sheets, and data validation rules. Use when reviewing a financial model, sharing a workbook externally, or when the user mentions xlsx audit, spreadsheet review, formula audit, or workbook leakage check.",
+      "path": "documents/xlsx-toolkit/SKILL.md",
+      "domain": "documents",
+      "category": "documents",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "xlsx",
+        "OOXML"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "calendar-prep",
+      "description": "Generate one-page meeting briefings from a structured input (attendees, prior context, decisions needed) so you walk into every meeting prepared. Use before customer calls, board meetings, 1:1s, or when the user mentions meeting prep, briefing, pre-read, or pre-meeting.",
+      "path": "personal-productivity/calendar-prep/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "meetings",
+        "productivity"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "domain-name-brainstormer",
+      "description": "Generate candidate brand and product names by combining seed words with prefixes, suffixes, vowel-drops, blends, and TLD variations, then score candidates for memorability, length, and pronounceability. Use when naming a new product, company, or feature, or when the user mentions domain names, brand naming, naming brainstorm, or finding an available .com.",
+      "path": "personal-productivity/domain-name-brainstormer/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "branding",
+        "naming"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "email-triage",
+      "description": "Classify a batch of email subjects/snippets into action categories (reply now / reply later / archive / delete / unsubscribe), and surface unsubscribe candidates and recurring senders. Use after a busy week, when running inbox-zero, or when the user mentions inbox triage, email overload, unsubscribe, or inbox zero.",
+      "path": "personal-productivity/email-triage/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "email",
+        "productivity"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "investor-update-generator",
+      "description": "Validate that a monthly investor update has the structural sections that separate strong updates (transparent, decision-relevant, asks specific) from weak ones (PR-style, all-good-news, no asks). Use before sending a monthly investor update, or when the user mentions investor update, monthly update, or fundraise communication cadence.",
+      "path": "personal-productivity/investor-update-generator/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "investor-relations",
+        "fundraising"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "invoice-organizer",
+      "description": "Categorize invoices and receipts by vendor, expense category, and tax bucket, detect duplicates, and produce a tax-ready monthly summary. Use during bookkeeping, tax prep, expense reimbursement, or when the user mentions receipts, invoices, expenses, bookkeeping, or tax categorization.",
+      "path": "personal-productivity/invoice-organizer/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "bookkeeping",
+        "tax"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "lead-researcher",
+      "description": "Qualify and prioritize sales leads against an ICP definition, score lead lists for outreach worthiness, and draft personalized outreach hooks. Use when building a target account list, qualifying inbound leads, prepping for outreach, or when the user mentions lead research, prospecting, sales outreach, ICP scoring, or account targeting.",
+      "path": "personal-productivity/lead-researcher/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "sales",
+        "outbound",
+        "CRM"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "meeting-insights",
+      "description": "Analyze meeting transcripts to extract decisions, action items, owners, due dates, open questions, and risks. Use after recorded meetings, sales calls, customer interviews, or planning sessions, or when the user mentions meeting notes, action items, decision log, transcript analysis, or follow-up emails.",
+      "path": "personal-productivity/meeting-insights/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "meetings",
+        "async-collaboration"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pitch-deck-reviewer",
+      "description": "Score a pitch deck (provided as text/markdown summary of slides) against YC, Sequoia, and a16z heuristics — does it have the right slides in the right order with the right content? Use before sending a deck to investors, practicing pitch with a co-founder, or when the user mentions pitch deck, fundraising deck, seed deck, or Series A deck review.",
+      "path": "personal-productivity/pitch-deck-reviewer/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "fundraising",
+        "pitch"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "resume-tailor",
+      "description": "Tailor a resume to a specific job description by extracting target keywords, scoring keyword match, and rewriting bullets for impact and relevance. Use when applying to a specific role, optimizing for ATS keyword match, or when the user mentions resume tailoring, job application, ATS optimization, or cover letter customization.",
+      "path": "personal-productivity/resume-tailor/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "ATS",
+        "job-search"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "weekly-review",
+      "description": "Synthesize a week of inputs (calendar, tasks, journal, OKR check-ins) into a structured weekly review with wins, learnings, blockers, and next-week priorities. Use every Friday or Sunday, or when the user mentions weekly review, GTD review, OKR check-in, or end-of-week reflection.",
+      "path": "personal-productivity/weekly-review/SKILL.md",
+      "domain": "personal-productivity",
+      "category": "personal-productivity",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "GTD",
+        "OKRs",
+        "productivity"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-1on1s",
+      "description": "Structured PM 1:1 templates by partner type — with manager, engineering manager partner, designer, IC reports — grounded in Radical Candor, the GROW coaching model, and the Manager Tools 1:1 framework.",
+      "path": "project-management/career/pm-1on1s/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "career",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "1on1s",
+        "manager-cadence",
+        "grow-model",
+        "radical-candor"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-career-ladder",
+      "description": "PM career ladder rubrics from APM through VP/CPO across product sense, execution, leadership, strategy, and communication. Includes gap analysis, growth planning, and promotion packet templates.",
+      "path": "project-management/career/pm-career-ladder/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "career",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pm-rubric",
+        "promotion-packet",
+        "growth-plan",
+        "career-ladder"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-interview-prep",
+      "description": "Structured PM interview preparation across product sense, execution, strategy, behavioral, and technical rounds, using CIRCLES, AARM, STAR, and the estimation framework. Calibrated to APM, PM, Senior PM, and Group PM rubrics.",
+      "path": "project-management/career/pm-interview-prep/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "career",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pm-interviews",
+        "product-sense",
+        "execution",
+        "behavioral",
+        "frameworks"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pm-onboarding",
+      "description": "30-60-90 day plan for a new PM joining a company or team, grounded in Michael Watkins' First 90 Days framework and the STARS situational diagnosis. Includes week-by-week plan, stakeholder map, 1:1 question bank, and first-PRD template.",
+      "path": "project-management/career/pm-onboarding/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "career",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pm-onboarding",
+        "30-60-90",
+        "first-90-days",
+        "stars-framework"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "interview-synthesis",
+      "description": "Customer interview synthesis expert that turns raw transcripts into themed insights, an opportunity solution tree, and a follow-up question list using Teresa Torres' continuous discovery methodology.",
+      "path": "project-management/discovery/interview-synthesis/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "discovery",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "customer-interviews",
+        "opportunity-solution-tree",
+        "jobs-to-be-done"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "backlog-refinement",
+      "description": "Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.",
+      "path": "project-management/execution/backlog-refinement/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "invest",
+        "story-splitting",
+        "definition-of-ready",
+        "definition-of-done"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "beta-program",
+      "description": "Closed beta program playbook covering recruitment, success criteria, communication cadence, and beta-to-GA exit gates.",
+      "path": "project-management/execution/beta-program/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "beta-program",
+        "kano-model",
+        "cohort-design",
+        "beta-to-ga-gates"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "cycle-time-analyzer",
+      "description": "Flow metrics analyzer (lead time, cycle time, throughput, WIP, aging WIP) for sprint and team health, with cumulative flow diagrams.",
+      "path": "project-management/execution/cycle-time-analyzer/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "kanban",
+        "flow-metrics",
+        "cfd",
+        "littles-law",
+        "aging-wip"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "dependency-map",
+      "description": "Cross-team dependency tracking with critical path analysis and Mermaid dependency graphs for program coordination.",
+      "path": "project-management/execution/dependency-map/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "dependencies",
+        "critical-path",
+        "dsm",
+        "conway",
+        "mermaid"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "launch-playbook",
+      "description": "Internal and external launch coordination playbook covering pre-launch, launch day, and post-launch with run-of-show, comms, rollback, and retro.",
+      "path": "project-management/execution/launch-playbook/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "launch",
+        "three-launches",
+        "dark-launch",
+        "raci",
+        "progressive-rollout"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "north-star-metric",
+      "description": "Define a North Star Metric (NSM) and its input metric tree, with leading indicators, anti-metrics, and counter-metrics. Includes a Python tool that renders the metric tree as a Mermaid diagram.",
+      "path": "project-management/execution/north-star-metric/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "north-star",
+        "input-metrics",
+        "leading-indicators",
+        "counter-metrics",
+        "omtm"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "prfaq",
+      "description": "Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written. Produces a press release, an internal FAQ, and an external FAQ as a single decision artifact.",
+      "path": "project-management/execution/prfaq/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "working-backwards",
+        "pr-faq",
+        "amazon-method",
+        "narrative-memo"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "roadmap-communication",
+      "description": "Same roadmap, three audiences. Produce executive, customer, and internal variants of a single roadmap with appropriate framing, detail level, and risk language for each.",
+      "path": "project-management/execution/roadmap-communication/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "roadmap",
+        "communication",
+        "now-next-later",
+        "outcome-roadmap",
+        "marty-cagan"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "status-update-generator",
+      "description": "Generate weekly executive status updates from Jira/Linear data exports. Produces a structured \"highlights / blockers / risks / asks / what's next\" briefing in markdown, Confluence, Notion, Linear, JSON, or Mermaid.",
+      "path": "project-management/execution/status-update-generator/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "jira",
+        "linear",
+        "weekly-status",
+        "executive-reporting",
+        "sbnr",
+        "r-y-g"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "story-splitting",
+      "description": "Vertical-slicing playbook with 9 canonical patterns for splitting epics into shippable user stories without losing user value.",
+      "path": "project-management/execution/story-splitting/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "story-splitting",
+        "vertical-slicing",
+        "lawrence-flowchart",
+        "invest"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "linear-expert",
+      "description": "Linear expert for team and workspace administration, Cycles, Projects, Initiatives, Roadmaps, GraphQL API queries, automations, triage workflows, GitHub integration, bulk operations, and Jira-to-Linear migration. Use for Linear configuration, workflow design, GraphQL authoring, and modern PM-friendly issue tracking at scale.",
+      "path": "project-management/linear-expert/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "linear",
+        "graphql",
+        "github",
+        "slack"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "notion-pm",
+      "description": "Notion expert for product management workflows. Covers database design for PRDs, OKRs, Roadmaps, and Decisions; property types (relation, rollup, formula); view design (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored Markdown blocks; Notion REST API patterns; and sync patterns with Jira, Linear, and GitHub.",
+      "path": "project-management/notion-pm/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "notion",
+        "rest-api",
+        "jira",
+        "linear",
+        "github"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "climate-tech-advisor",
+      "description": "Strategic advisory for climate-tech founders covering carbon markets, GHG accounting (Scope 1/2/3), regulatory landscape (CSRD, SEC climate rules, EU Green Deal), funding sources (DOE, IRA, private climate VC), and category landscape (energy, industry, transport, food, carbon removal). Use when scoping a climate-tech idea, navigating climate funding, picking a category, or when the user mentions climate, carbon, GHG, ESG, IRA, DOE, CDR, or net-zero.",
+      "path": "vertical-advisors/climate-tech/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "climate",
+        "sustainability"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "ecommerce-advisor",
+      "description": "Strategic advisory for e-commerce founders covering unit economics, fulfillment models (3PL, DTC, dropship, retail), payment economics, returns / refunds, and channel strategy (DTC site / Amazon / wholesale / retail). Use when evaluating an ecommerce idea, modeling unit economics, picking fulfillment strategy, or when the user mentions DTC, e-commerce, Shopify, Amazon, 3PL, CAC, contribution margin, or retail expansion.",
+      "path": "vertical-advisors/ecommerce/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "ecommerce",
+        "retail"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "edtech-advisor",
+      "description": "Strategic advisory for edtech founders covering FERPA / COPPA / GDPR-K compliance, K-12 vs higher-ed vs corporate L&D market dynamics, school district sales cycles, and edtech pricing models. Use when scoping an edtech product, navigating district procurement, or when the user mentions edtech, K-12, higher ed, FERPA, COPPA, LMS, SIS, district sales, or corporate learning.",
+      "path": "vertical-advisors/edtech/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "edtech",
+        "education"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "fintech-advisor",
+      "description": "Strategic advisory for fintech founders and product leaders covering US/EU regulatory triggers, license-vs-partner decisions, KYC/AML basics, PSD2 / Open Banking, embedded finance patterns, and fintech business models. Use when evaluating a fintech idea, scoping regulatory exposure, picking a BaaS partner, or when the user mentions fintech, money transmitter, lending, neobank, embedded finance, KYC, AML, or PSD2.",
+      "path": "vertical-advisors/fintech/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "fintech",
+        "banking",
+        "payments"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "healthtech-advisor",
+      "description": "Strategic advisory for digital health and healthtech founders covering HIPAA scope, FDA SaMD vs non-SaMD classification, EHR integration patterns, payor/provider/employer GTM, and value-based care models. Complements the RA/QM compliance domain with software-side strategic guidance. Use when scoping a healthtech idea, classifying PHI, picking a GTM, or when the user mentions HIPAA, PHI, FDA SaMD, EHR integration, telehealth, or digital therapeutics.",
+      "path": "vertical-advisors/healthtech/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "healthtech",
+        "digital-health"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "marketplace-advisor",
+      "description": "Strategic advisory for two-sided marketplace founders covering chicken-and-egg problem solving, take rates, liquidity metrics, supply/demand balance, network effects, and marketplace business model patterns. Use when scoping a marketplace idea, scoring marketplace health, or when the user mentions marketplace, two-sided market, take rate, liquidity, supply density, or network effects.",
+      "path": "vertical-advisors/marketplace/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "marketplace",
+        "network-effects"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "proptech-advisor",
+      "description": "Strategic advisory for proptech founders covering real-estate market segments (residential / commercial / industrial), MLS access and brokerage models, state-by-state real-estate licensing, and proptech business-model patterns (transaction, listing, financing, management, services). Use when scoping a proptech idea, classifying market segment, or when the user mentions proptech, real estate technology, MLS, brokerage, iBuyer, property management, or RESPA.",
+      "path": "vertical-advisors/proptech/SKILL.md",
+      "domain": "vertical-advisors",
+      "category": "vertical-advisors",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "proptech",
+        "real-estate"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
     }
   ]
 }

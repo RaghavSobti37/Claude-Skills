@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backlog Refinement - Claude Skills</title>
+  <meta name="description" content="Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a rea">
+  <link rel="canonical" href="https://borghei.github.io/Claude-Skills/skills/project-management/backlog-refinement.html">
+  <meta property="og:title" content="Backlog Refinement - Claude Skills">
+  <meta property="og:description" content="Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a rea">
+  <meta property="og:url" content="https://borghei.github.io/Claude-Skills/skills/project-management/backlog-refinement.html">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Backlog Refinement", "description": "Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.", "applicationCategory": "Project Management", "operatingSystem": "Any", "url": "https://borghei.github.io/Claude-Skills/skills/project-management/backlog-refinement.html", "author": {"@type": "Person", "name": "borghei"}, "license": "https://opensource.org/licenses/MIT"}</script>
+  <style>
+:root {
+  --bg: #faf9f5;
+  --bg-secondary: #f0eee6;
+  --text: #141413;
+  --text-muted: #5e5d59;
+  --accent: #d97757;
+  --accent-deep: #c6613f;
+  --border: rgba(20,20,19,0.1);
+  --border-strong: rgba(20,20,19,0.18);
+  --white: #ffffff;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', SFMono-Regular, ui-monospace, 'Cascadia Code', Menlo, monospace;
+  --max-width: 1200px;
+  --shadow-sm: 0 1px 2px rgba(20,20,19,0.04);
+  --shadow: 0 1px 3px rgba(20,20,19,0.06), 0 1px 2px rgba(20,20,19,0.04);
+  --shadow-md: 0 4px 12px rgba(20,20,19,0.08), 0 1px 3px rgba(20,20,19,0.06);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
+a:hover { color: var(--accent-deep); }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+code { font-family: var(--font-mono); font-size: 0.875em; }
+
+/* Navbar */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,249,245,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.navbar .container { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.nav-logo:hover { color: var(--text); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.gh-link { display: inline-flex; align-items: center; gap: 5px; }
+
+/* Breadcrumbs */
+.breadcrumbs { padding: 20px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumbs a { color: var(--text-muted); }
+.breadcrumbs a:hover { color: var(--accent); }
+.breadcrumbs .sep { margin: 0 8px; opacity: 0.4; }
+
+/* Page header */
+.page-header { padding: 48px 0 32px; }
+.page-title {
+  font-family: var(--font-serif); font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em;
+  color: var(--text);
+}
+.page-subtitle { color: var(--text-muted); max-width: 700px; font-size: 1.05rem; line-height: 1.6; }
+
+/* Count badge (inline with title) */
+.count-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--accent); background: rgba(217,119,87,0.08);
+  padding: 2px 10px; border-radius: 20px; margin-left: 8px;
+  vertical-align: middle; font-weight: 500;
+}
+
+/* Search + Filter */
+.filter-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+.search-input {
+  flex: 1; min-width: 200px; padding: 10px 14px 10px 38px;
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius); color: var(--text); font-family: var(--font-sans);
+  font-size: 0.9rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217,119,87,0.1); }
+.search-input::placeholder { color: var(--text-muted); }
+.search-wrap { position: relative; flex: 1; min-width: 200px; }
+.search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.filter-select {
+  padding: 10px 14px; background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius); color: var(--text); font-family: var(--font-sans);
+  font-size: 0.9rem; outline: none; cursor: pointer;
+}
+.filter-select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217,119,87,0.1); }
+
+/* Card grid */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 60px; }
+.skill-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  display: flex; flex-direction: column;
+}
+.skill-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.skill-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+.skill-card h3 a { color: var(--text); }
+.skill-card h3 a:hover { color: var(--accent); }
+.skill-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+
+/* Badges */
+.badge-bar { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 6px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono); font-size: 0.7rem; padding: 3px 9px;
+  border-radius: 5px; font-weight: 500; white-space: nowrap;
+}
+.badge-domain { background: rgba(217,119,87,0.1); border: 1px solid rgba(217,119,87,0.2); color: var(--accent-deep); }
+.badge-subdomain { background: rgba(20,20,19,0.04); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-version { background: rgba(20,20,19,0.03); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-tools { background: rgba(20,20,19,0.04); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-refs { background: rgba(217,119,87,0.06); border: 1px solid rgba(217,119,87,0.15); color: var(--accent); }
+
+/* Tags */
+.skill-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.tag {
+  font-family: var(--font-mono); font-size: 0.65rem; padding: 2px 8px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-muted);
+}
+
+/* Example pills on domain summary cards */
+.example-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.example-pill {
+  font-family: var(--font-mono); font-size: 0.65rem; padding: 2px 7px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-muted);
+}
+
+/* Skill detail page */
+.skill-detail { padding-bottom: 80px; }
+.skill-detail h2 {
+  font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700;
+  margin: 40px 0 16px; padding-top: 16px;
+  border-top: 1px solid var(--border); color: var(--text);
+}
+.skill-detail h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 10px; }
+.skill-detail p, .skill-detail li { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+.skill-detail ul, .skill-detail ol { margin-left: 20px; margin-bottom: 16px; }
+.skill-detail li { margin-bottom: 6px; }
+.skill-detail pre {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 20px; overflow-x: auto;
+  font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.7;
+  color: var(--text); margin: 12px 0 20px;
+}
+.skill-detail code {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px;
+}
+.skill-detail pre code { background: none; padding: 0; }
+
+/* Platform tabs */
+.platform-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 0; }
+.tab-btn {
+  padding: 10px 18px; font-size: 0.85rem; font-weight: 500;
+  font-family: var(--font-sans); background: none; border: none;
+  border-bottom: 2px solid transparent; color: var(--text-muted);
+  cursor: pointer; transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-content pre {
+  border-top: none; border-radius: 0 0 var(--radius) var(--radius);
+  margin-top: 0;
+}
+
+/* Quick Start prompt cards */
+.prompt-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  padding: 20px; background: var(--bg-secondary);
+  border: 1px solid var(--border); border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+@media (max-width: 640px) { .prompt-cards { grid-template-columns: 1fr; } }
+.prompt-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.prompt-card-featured { border-color: var(--accent); border-width: 2px; }
+.prompt-card-header { display: flex; align-items: center; justify-content: space-between; }
+.prompt-card-header h3 { font-size: 1rem; font-weight: 700; margin: 0; color: var(--text); }
+.prompt-card-badge {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 8px;
+  border-radius: 4px; background: var(--bg-secondary);
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.badge-featured { background: rgba(217,119,87,0.12); color: var(--accent-deep); }
+.prompt-card-desc { font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex-grow: 1; }
+.copy-btn-featured { background: var(--accent-deep); }
+.prompt-details { margin-top: 4px; }
+.prompt-details summary {
+  font-size: 0.78rem; color: var(--text-muted); cursor: pointer;
+  padding: 4px 0; user-select: none;
+}
+.prompt-details summary:hover { color: var(--accent); }
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 16px; font-size: 0.82rem; font-weight: 600;
+  font-family: var(--font-sans);
+  background: var(--accent); color: var(--white);
+  border: none; border-radius: 6px; cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.copy-btn:hover { background: var(--accent-deep); }
+.copy-btn:active { transform: scale(0.97); }
+.copy-btn.copied { background: #2d8a4e; }
+.prompt-preview {
+  max-height: 200px; overflow-y: auto; padding: 16px 18px;
+  font-size: 0.8rem; line-height: 1.5; white-space: pre-wrap;
+  word-wrap: break-word; color: var(--text-muted);
+  background: var(--white); margin: 0; border: none;
+  font-family: var(--font-mono);
+}
+.prompt-hint {
+  padding: 10px 18px; font-size: 0.78rem; color: var(--text-muted);
+  background: var(--bg-secondary); margin: 0; border-top: 1px solid var(--border);
+}
+
+/* Tools list */
+.tool-item {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px;
+}
+.tool-item h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 3px; color: var(--text); }
+.tool-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+/* Related skills */
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+
+/* Agents grid */
+.agents-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 60px; }
+.agent-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.agent-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.agent-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.agent-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+.agent-card .view-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; margin-top: 10px; color: var(--accent);
+}
+
+/* Commands grid */
+.commands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding-bottom: 60px; }
+.command-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.command-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.command-card h3 {
+  font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600;
+  margin-bottom: 6px; color: var(--accent);
+}
+.command-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+.command-card .view-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; margin-top: 10px; color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: var(--radius); font-size: 0.875rem;
+  font-weight: 500; font-family: var(--font-sans);
+  border: 1px solid transparent; cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+.btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+.btn-primary:hover { background: #2a2a28; color: var(--bg); box-shadow: var(--shadow); }
+.btn-secondary { background: transparent; color: var(--text); border-color: var(--border-strong); }
+.btn-secondary:hover { background: var(--bg-secondary); color: var(--text); box-shadow: var(--shadow-sm); }
+
+/* Section heading */
+.section-heading {
+  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700;
+  margin-bottom: 20px; color: var(--text);
+}
+
+/* Footer */
+.footer {
+  padding: 36px 0; border-top: 1px solid var(--border); margin-top: 40px;
+  background: var(--bg);
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-links {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.85rem; color: var(--text-muted);
+}
+.footer-links a { color: var(--text-muted); }
+.footer-links a:hover { color: var(--accent); }
+.footer-sep { color: var(--border-strong); }
+.footer-credit { font-size: 0.85rem; color: var(--text-muted); }
+.footer-credit a { color: var(--text); font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid, .agents-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .commands-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 16px; }
+  .platform-tabs { overflow-x: auto; }
+  .tab-btn { padding: 8px 12px; font-size: 0.8rem; white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .skills-grid, .agents-grid, .related-grid { grid-template-columns: 1fr; }
+  .filter-bar { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <a href="https://borghei.github.io/Claude-Skills/" class="nav-logo">Claude Skills</a>
+    <div class="nav-links">
+      <a href="https://borghei.github.io/Claude-Skills/skills/" class="active">Skills</a>
+      <a href="https://borghei.github.io/Claude-Skills/agents/">Agents</a>
+      <a href="https://borghei.github.io/Claude-Skills/commands/">Commands</a>
+      <a href="https://github.com/borghei/Claude-Skills" target="_blank" rel="noopener" class="gh-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+    </div>
+  </div>
+</nav>
+<div class="breadcrumbs container"><a href="https://borghei.github.io/Claude-Skills/">Home</a><span class=sep>/</span><a href="https://borghei.github.io/Claude-Skills/skills/">Skills</a><span class=sep>/</span><a href="https://borghei.github.io/Claude-Skills/skills/project-management/">Project Management</a><span class=sep>/</span><span>Backlog Refinement</span></div>
+<main class="container">
+
+<article class="skill-detail">
+  <div class="page-header">
+    <h1 class="page-title">Backlog Refinement</h1>
+    <p class="page-subtitle">Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.</p>
+    <div class="badge-bar"><span class="badge badge-domain">Project Management</span> <span class="badge badge-subdomain">Execution</span> <span class="badge badge-version">v1.0.0</span> <span class="badge badge-tools"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> 1 tool</span> <span class="badge badge-refs">references</span></div>
+    <div class="skill-meta" style="margin-bottom:24px"><span class="tag">invest</span><span class="tag">story-splitting</span><span class="tag">definition-of-ready</span><span class="tag">definition-of-done</span></div>
+  </div>
+  <h2>How to Use</h2>
+<div class="platform-tabs">
+  <button class="tab-btn active" data-tab="quickstart">Quick Start</button>
+  <button class="tab-btn" data-tab="claude">Claude Code</button>
+  <button class="tab-btn" data-tab="codex">Codex</button>
+  <button class="tab-btn" data-tab="gemini">Gemini CLI</button>
+  <button class="tab-btn" data-tab="cursor">Cursor</button>
+  <button class="tab-btn" data-tab="manual">Manual</button>
+</div>
+<div class="tab-content active" id="tab-quickstart">
+  <div class="prompt-cards">
+    <div class="prompt-card">
+      <div class="prompt-card-header">
+        <h3>Try in Chat</h3>
+        <span class="prompt-card-badge">Quick</span>
+      </div>
+      <p class="prompt-card-desc">Paste into any AI chat for instant expertise. Works in one conversation -- no setup needed.</p>
+      <button class="copy-btn" onclick="copyPrompt(this)" data-prompt="You are an expert Backlog Refinement (Project Management domain).
+
+Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.
+
+Refinement is the most under-invested ritual in agile teams. Stories arrive at sprint planning oversized, ambiguous, or strategically disconnected, and the team spends planning meetings doing what should have happened the week before. This skill is the refinement playbook: how to grade stories again
+
+## Your Key Capabilities
+- When to Use
+- When NOT to Use
+- The 9 splitting recipes (Richard Lawrence)
+- The SPIDR alternative (Mike Cohn)
+- Splitting anti-patterns to avoid
+- Recommended DoR template
+
+## Frameworks &amp; Templates You Know
+- Recommended DoR template
+- Recommended DoD template
+- - Definition of Ready and Definition of Done templates and enforcement protocol
+- - Backlog prioritization or sequencing (use `prioritization-frameworks/`)
+
+## How to Help
+When the user asks for help in this domain:
+1. Ask clarifying questions to understand their context
+2. Apply the relevant framework or workflow from your expertise
+3. Provide actionable, specific output (not generic advice)
+4. Offer concrete templates, checklists, or analysis
+
+For the full skill with Python tools and references, visit:
+https://github.com/borghei/Claude-Skills/tree/main/backlog-refinement
+
+---
+Start by asking the user what they need help with.">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> <span>Copy Prompt</span>
+      </button>
+      <details class="prompt-details">
+        <summary>Preview prompt</summary>
+        <pre class="prompt-preview">You are an expert Backlog Refinement (Project Management domain).
+
+Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.
+
+Refinement is the most under-invested ritual in agile teams. Stories arrive at sprint planning oversized, ambiguous, or strategically disconnected, and the team spends planning meetings doing what should have happened the week before. This skill is the refinement playbook: how to grade stories again
+
+## Your Key Capabilities
+- When to Use
+- When NOT to Use
+- The 9 splitting recipes (Richard Lawrence)
+- The SPIDR alternative (Mike Cohn)
+- Splitting anti-patterns to avoid
+- Recommended DoR template
+
+## Frameworks &amp; Templates You Know
+- Recommended DoR template
+- Recommended DoD template
+- - Definition of Ready and Definition of Done templates and enforcement protocol
+- - Backlog prioritization or sequencing (use `prioritization-frameworks/`)
+
+## How to Help
+When the user asks for help in this domain:
+1. Ask clarifying questions to understand their context
+2. Apply the relevant framework or workflow from your expertise
+3. Provide actionable, specific output (not generic advice)
+4. Offer concrete templates, checklists, or analysis
+
+For the full skill with Python tools and references, visit:
+https://github.com/borghei/Claude-Skills/tree/main/backlog-refinement
+
+---
+Start by asking the user what they need help with.</pre>
+      </details>
+    </div>
+    <div class="prompt-card prompt-card-featured">
+      <div class="prompt-card-header">
+        <h3>Add to My AI</h3>
+        <span class="prompt-card-badge badge-featured">Full Skill</span>
+      </div>
+      <p class="prompt-card-desc">Creates a permanent Claude Project or Custom GPT with the complete skill. The AI will guide you through setup step by step.</p>
+      <button class="copy-btn copy-btn-featured" onclick="copyPrompt(this)" data-prompt="# Create a &quot;Backlog Refinement&quot; AI Skill
+
+I want you to help me set up a reusable AI skill that I can use in future conversations. Read the complete skill definition below, then help me install it.
+
+## Complete Skill Definition
+
+# Backlog Refinement Expert
+
+## Overview
+
+Refinement is the most under-invested ritual in agile teams. Stories arrive at sprint planning oversized, ambiguous, or strategically disconnected, and the team spends planning meetings doing what should have happened the week before. This skill is the refinement playbook: how to grade stories against INVEST, how to split stories vertically (so each slice ships value end-to-end), and how to keep a working Definition of Ready and Definition of Done that prevent half-baked work from entering or leaving a sprint.
+
+The skill includes a Python scorer (`refinement_scorer.py`) that grades each story in a JSON backlog file against the six INVEST criteria and outputs a readiness score (0-6) per story. Stories scoring 5-6 are sprint-ready; 3-4 need targeted refinement; below 3 need to be reworked or returned to discovery.
+
+This is a complement to `wwas/` (the Why-What-Acceptance format) and `job-stories/` (the JTBD format). Either format produces stories; this skill grades them and gets them sprint-ready.
+
+### When to Use
+
+- **Weekly refinement session** -- Standard ritual: grade next-sprint candidates against INVEST and split anything too large.
+- **Backlog hygiene sweep** -- Quarterly: re-grade the top 30 backlog items and retire what no longer connects to current strategy.
+- **Sprint planning input** -- Before planning: confirm all candidates pass DoR.
+- **New team onboarding** -- A new team needs a shared definition of &quot;ready&quot; and &quot;done&quot; to ship predictably.
+- **Velocity diagnosis** -- If sprint completion is erratic, refinement quality is usually the cause; this skill is the diagnostic.
+
+### When NOT to Use
+
+- For pure technical task lists with no user-facing outcome -- INVEST applies loosely; use a simpler checklist.
+- For ad-hoc bug triage -- bugs follow a different lifecycle (triage &gt; prioritize &gt; fix) than feature stories.
+- When the work has not been scoped yet -- send it back to `discovery/` skills before refining.
+
+## The INVEST Criteria
+
+Bill Wake&#x27;s INVEST acronym (2003) defines the six properties of a high-quality story:
+
+| Letter | Property | What it means | Quick test |
+|--------|----------|---------------|------------|
+| **I** | **Independent** | Can be delivered without waiting for another story | &quot;Can this ship alone? If no, what is the dependency?&quot; |
+| **N** | **Negotiable** | Implementation is open to discussion | &quot;Does this prescribe HOW, or only WHAT and WHY?&quot; |
+| **V** | **Valuable** | Delivers value to a user or business | &quot;If we built only this and nothing else, who benefits?&quot; |
+| **E** | **Estimable** | The team can size effort with reasonable confidence | &quot;Can two engineers independently estimate within ~2x?&quot; |
+| **S** | **Small** | Fits within one sprint (typically 1-5 days of effort) | &quot;Can a pair finish this in &lt;5 days?&quot; |
+| **T** | **Testable** | Acceptance criteria are observable and verifiable | &quot;How would QA prove this is done?&quot; |
+
+A story scoring 6/6 is sprint-ready. A story scoring 5/6 with a soft fail on one criterion is usually safe to admit if the team agrees on the gap. Anything 4 or below needs a refinement pass.
+
+## Vertical Slicing and Story Splitting
+
+The most common refinement failure is **horizontal slicing** -- splitting a story by layer (DB, API, UI, infra) rather than by user outcome. Horizontal slices fail INVEST-V (no slice delivers user value alone) and INVEST-I (every slice depends on the others).
+
+**Vertical slices** cut through every layer to deliver an end-to-end thin sliver of user value. Each slice is independently shippable and independently valuable.
+
+### The 9 splitting recipes (Richard Lawrence)
+
+Richard Lawrence&#x27;s Story Splitting Flowchart enumerates 9 reliable patterns. Use them in this priority order:
+
+| # | Pattern | Use when | Example |
+|---|---------|----------|---------|
+| 1 | **Workflow steps** | The story spans a multi-step process | &quot;Checkout&quot; → &quot;Add to cart&quot; / &quot;Pay&quot; / &quot;Confirm&quot; |
+| 2 | **Business rule variations** | The story covers many rules | &quot;Discount&quot; → &quot;Loyalty discount&quot; / &quot;Volume discount&quot; / &quot;Promo code&quot; |
+| 3 | **Happy / unhappy paths** | Error handling adds complexity | &quot;Submit form&quot; → &quot;Submit valid form&quot; / &quot;Handle validation errors&quot; |
+| 4 | **Input options / platforms** | Multiple inputs or platforms | &quot;Search&quot; → &quot;Search via keyword&quot; / &quot;Search via filters&quot; / &quot;Search via voice&quot; |
+| 5 | **Data types or parameters** | Multiple data variations | &quot;Export report&quot; → &quot;Export CSV&quot; / &quot;Export PDF&quot; / &quot;Export XLSX&quot; |
+| 6 | **Operations (CRUD)** | The story covers multiple ops | &quot;Manage users&quot; → &quot;Create user&quot; / &quot;Edit user&quot; / &quot;Delete user&quot; |
+| 7 | **Test scenarios / cases** | Test plan reveals natural splits | &quot;Login&quot; → &quot;Login with email&quot; / &quot;Login with SSO&quot; / &quot;Login with MFA&quot; |
+| 8 | **Defer performance** | The simple version works | &quot;Search 1M records&quot; → &quot;Search basic&quot; (v1) / &quot;Optimize search&quot; (v2) |
+| 9 | **Spike (last resort)** | The team cannot estimate | A time-boxed investigation, then re-split |
+
+### The SPIDR alternative (Mike Cohn)
+
+Mike Cohn&#x27;s SPIDR mnemonic covers a similar space with five buckets: **S**pikes, **P**aths, **I**nterfaces, **D**ata, **R**ules. Use whichever taxonomy your team finds memorable; the patterns overlap.
+
+### Splitting anti-patterns to avoid
+
+- **Splitting by layer.** &quot;Backend API&quot; / &quot;Frontend UI&quot; / &quot;Database migration&quot; are tasks, not stories. They violate INVEST-V.
+- **Splitting by team.** If only &quot;the backend team&quot; can deliver a slice, the slice is not independently valuable.
+- **Splitting by sprint.** Forcing a 10-day story into &quot;Sprint 1 part&quot; and &quot;Sprint 2 part&quot; is scheduling, not splitting.
+- **Splitting too thin.** A 2-hour story is not a story; it is a task. Roll it back up.
+
+## Definition of Ready (DoR)
+
+The DoR is the team&#x27;s agreement on what a story must satisfy before it can enter a sprint. It is the **input quality gate**.
+
+### Recommended DoR template
+
+A story is Ready when:
+
+- [ ] Title is descriptive and specific (no &quot;Implement X&quot;)
+- [ ] Why statement references a specific objective, OKR, or customer outcome
+- [ ] Description is 1-2 paragraphs and serves as a reminder of the refinement discussion
+- [ ] Acceptance criteria: at least 4, each describing an observable user-facing outcome
+- [ ] INVEST score &gt;= 5/6 (verified by `refinement_scorer.py` or facilitated review)
+- [ ] Dependencies on other stories or teams are identified and noted
+- [ ] Design assets linked (or marked &quot;TBD by [date]&quot; with owner)
+- [ ] Estimated by the team using their preferred unit (story points, t-shirt, days)
+- [ ] No open blocker questions
+- [ ] Tagged with sprint goal it contributes to
+
+### DoR anti-patterns
+
+- **Too strict** -- a 20-item DoR creates a backlog of &quot;almost ready&quot; stories. Cap at 10.
+- **Unenforced** -- a DoR that planning ignores is theater. Enforce: stories that fail DoR are removed from the sprint candidate list, not &quot;negotiated in.&quot;
+- **One-size-fits-all** -- spikes, bugs, and feature stories have different DoRs. Keep three short checklists rather than one long one.
+
+## Definition of Done (DoD)
+
+The DoD is the team&#x27;s agreement on what a story must satisfy before it can be called complete. It is the **output quality gate** and is typically uniform across all stories.
+
+### Recommended DoD template
+
+A story is Done when:
+
+- [ ] All acceptance criteria pass in the deployed environment
+- [ ] Code merged to main branch (or release branch per release process)
+- [ ] Automated tests written and passing (unit + integration for changed paths)
+- [ ] Code reviewed and approved by at least one other engineer
+- [ ] Manual QA pass (or QA sign-off if separate QA exists)
+- [ ] Documentation updated (help center, internal runbook, API docs, as applicable)
+- [ ] Feature flag wired (if behind a flag) or release-notes entry drafted
+- [ ] Analytics or telemetry events instrumented (so we can measure the outcome)
+- [ ] Accessibility check pass (WCAG AA for user-facing UI)
+- [ ] Product owner has accepted the story
+
+### DoD anti-patterns
+
+- **&quot;Done&quot; but not deployed** -- a story that is merged but not in front of a user is not done. Require deployment in the DoD.
+- **No instrumentation** -- shipping without telemetry means you cannot measure the outcome. Require analytics for any value-claim story.
+- **Skipping accessibility** -- a11y debt compounds. Require WCAG AA on every user-facing change.
+
+## Workflow
+
+1. **Pull candidates from the backlog.** Aim for 1.5x the team&#x27;s velocity in candidates per refinement session.
+2. **Score each candidate with `refinement_scorer.py`.** Use `--input backlog.json --format markdown` to get a per-story INVEST grade.
+3. **Triage by score:**
+   - **5-6:** Promote to &quot;Refined&quot; lane.
+   - **3-4:** Discuss in session, address the failing criteria.
+   - **0-2:** Send back to discovery (`discovery/brainstorm-ideas/` or `discovery/identify-assumptions/`) -- the work has not been scoped enough.
+4. **Split oversized stories.** Apply the 9 Lawrence patterns in priority order. Each new slice must independently pass INVEST-V and INVEST-S.
+5. **Enforce the DoR.** Anything failing DoR at planning is removed from the candidate list, not &quot;negotiated in.&quot;
+6. **Enforce the DoD at review.** Stories that miss any DoD bullet are not &quot;almost done&quot; -- they roll to the next sprint.
+7. **Hand off refined stories to sprint planning.** A well-refined backlog reduces planning to: pick the top N stories that fit capacity.
+
+## Tools
+
+| Tool | Purpose | Command |
+|------|---------|---------|
+| `refinement_scorer.py` | Grade stories against INVEST and emit readiness verdicts | `python scripts/refinement_scorer.py --input backlog.json --format markdown` |
+| `refinement_scorer.py --demo` | Inspect demo data and output format | `python scripts/refinement_scorer.py --demo --format markdown` |
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---------|--------------|------------|
+| Refinement sessions run long and produce few refined stories | Too many candidates per session; team trying to refine everything at once | Cap at 1.5x velocity in candidates; spend max 2 minutes per story on initial INVEST grade; deep-refine only those scoring 3-4 |
+| Same stories appear in 3+ refinement sessions without progress | Story is too vague; team lacks information; or story belongs in discovery | Apply the &quot;3-strike rule&quot; -- if a story fails to refine three sessions in a row, send to `discovery/identify-assumptions/` to reframe |
+| Sprint planning becomes the refinement session | DoR is not enforced; pressure to &quot;make the sprint full&quot; overrides quality | Empower the team to leave the sprint under-full rather than admit DoR-failing stories; track planning duration as a velocity proxy |
+| Splits produce horizontal slices (API / UI / DB) | Team defaults to architecture decomposition; PM does not push back | Use the 9 Lawrence patterns explicitly; require each slice to answer &quot;who benefits if this is the only thing we ship?&quot; |
+| Stories pass DoD but value does not materialize | Acceptance criteria describe activity, not outcome; no telemetry | Rewrite acceptance criteria as observable user outcomes; require telemetry/analytics in the DoD |
+| Estimates vary wildly across the team | INVEST-Estimable failure; story too vague or too large | Re-refine with a spike if needed; split into smaller slices that two engineers can size within 2x of each other |
+| `refinement_scorer.py` gives 6/6 but story still feels risky | Score covers form, not substance; risk is in the assumptions, not the format | Use `discovery/identify-assumptions/` and `discovery/pre-mortem/` for substantive risk; INVEST is necessary but not sufficient |
+
+## Success Criteria
+
+- 80%+ of stories entering sprint planning score 5/6 or 6/6 on INVEST
+- Refinement session length stays under 60 minutes per week, per team
+- DoR and DoD are reviewed and updated at least once per quarter
+- Story splits produce vertical slices in 90%+ of cases (each slice independently valuable)
+- Sprint planning meetings take less than half the duration of refinement (because refinement did the work)
+- Rolled-over story rate (stories that miss the sprint) below 15% sustained
+- Stories scoring below 3 on INVEST are sent back to discovery rather than forced into a sprint
+
+## Scope &amp; Limitations
+
+**In Scope:**
+- INVEST quality grading of individual stories
+- Vertical story splitting using the 9 Lawrence patterns and SPIDR taxonomy
+- Definition of Ready and Definition of Done templates and enforcement protocol
+- Refinement session structure and cadence guidance
+- Python tool that grades backlog JSON against INVEST and emits per-story verdicts
+
+**Out of Scope:**
+- Authoring stories from scratch (use `wwas/` or `job-stories/`)
+- Backlog prioritization or sequencing (use `prioritization-frameworks/`)
+- Sprint planning, capacity calculation, or velocity forecasting (use `../scrum-master/`)
+- Discovery, problem framing, or opportunity definition (use `discovery/` skills)
+- Story estimation techniques (Planning Poker, Affinity Estimation -- covered in `agile-coach/`)
+
+**Important Caveats:**
+- INVEST is a heuristic, not a guarantee. A story can score 6/6 and still be the wrong story to build. Use this skill alongside `prioritization-frameworks/` and `discovery/identify-assumptions/` for full coverage.
+- The 9 Lawrence patterns work for product stories. Pure technical infrastructure work may follow different splitting heuristics (component boundaries, deployment risk).
+- DoR and DoD must be team-authored to be enforced. Imposing an external DoR/DoD without team buy-in produces theater, not quality.
+- The Python scorer grades structural form (does the story have a Why, a What, and 4+ ACs?), not strategic substance. A 6/6 story can still be misaligned with strategy.
+
+## Integration Points
+
+| Integration | Direction | Description |
+|-------------|-----------|-------------|
+| `execution/wwas/` | Receives from | WWAS-format stories enter refinement to be graded and split |
+| `execution/job-stories/` | Receives from | Job stories enter refinement to be graded and split |
+| `execution/prioritization-frameworks/` | Pairs with | Prioritization sets the sequence; refinement makes the top N actually executable |
+| `discovery/identify-assumptions/` | Sends to | Stories scoring 0-2 are sent back to discovery for assumption mapping |
+| `discovery/brainstorm-experiments/` | Sends to | Stories with unvalidated assumptions become experiment candidates |
+| `../scrum-master/` | Feeds into | Refined stories feed sprint planning; refinement quality drives velocity stability |
+| `execution/status-update-generator/` | Indirect | DoD compliance feeds the &quot;what&#x27;s done this week&quot; section of status updates |
+| `../jira-expert/` | Pairs with | Refined stories become Jira tickets with structured fields and DoR/DoD checklists |
+
+## Tool Reference
+
+### refinement_scorer.py
+
+Grades each story in a JSON backlog file against the six INVEST criteria and emits a readiness score (0-6) per story plus an aggregate readiness summary for the backlog.
+
+| Flag | Type | Default | Description |
+|------|------|---------|-------------|
+| `--input` | string | (required unless `--demo`) | Path to JSON file containing backlog items |
+| `--demo` | flag | false | Use built-in demo backlog data |
+| `--format` | choice | markdown | Output format: json, markdown, mermaid, confluence, notion, linear |
+| `--output` | string | stdout | Output file path |
+| `--threshold` | int | 5 | Minimum score for a story to be flagged &quot;READY&quot; (default 5/6) |
+
+### Input JSON shape
+
+```json
+{
+  &quot;stories&quot;: [
+    {
+      &quot;id&quot;: &quot;STORY-1&quot;,
+      &quot;title&quot;: &quot;Add SSO login for enterprise users&quot;,
+      &quot;why&quot;: &quot;Enterprise customers cite missing SSO as the #1 blocker; supports $2M ARR expansion target&quot;,
+      &quot;what&quot;: &quot;Add SAML 2.0 SSO option to the login page. Users with company email domains see SSO as the primary login method; password login remains as fallback.&quot;,
+      &quot;acceptance_criteria&quot;: [
+        &quot;Users with configured domains see SSO as primary login option&quot;,
+        &quot;SAML 2.0 IdP-initiated flow works for Okta and Azure AD&quot;,
+        &quot;Failed SSO falls back to password with helpful error&quot;,
+        &quot;Audit log records every SSO login attempt&quot;
+      ],
+      &quot;estimate_days&quot;: 4,
+      &quot;has_design&quot;: true,
+      &quot;dependencies&quot;: []
+    }
+  ]
+}
+```
+
+### Scoring rubric
+
+| Criterion | Passes if... |
+|-----------|--------------|
+| Independent | `dependencies` field is empty or omitted |
+| Negotiable | `what` field is present and under 800 characters (long whats prescribe implementation) |
+| Valuable | `why` field is present and references a metric, OKR, customer, or business outcome (heuristic) |
+| Estimable | `estimate_days` field is present and is a positive number |
+| Small | `estimate_days` is between 1 and 5 |
+| Testable | `acceptance_criteria` field contains at least 4 items |
+
+## References
+
+- `references/invest-and-splitting-guide.md` -- Deep dive on INVEST, the 9 Lawrence patterns, SPIDR, and worked split examples
+- `assets/refinement_checklist.md` -- Ready-to-use DoR and DoD checklists plus a refinement session agenda
+
+---
+
+## What I Need You to Do
+
+First, detect which platform I&#x27;m using (Claude.ai, ChatGPT, etc.) and follow the matching instructions below.
+
+### If I&#x27;m on Claude.ai:
+
+Walk me through these exact steps:
+
+1. **Create the Project:** Tell me to go to **claude.ai &gt; Projects &gt; Create project** and name it **&quot;Backlog Refinement&quot;**
+
+2. **Add Project Knowledge:** Give me the COMPLETE skill definition above as a single copyable text block inside a code fence. Tell me to click **&quot;Add content&quot; &gt; &quot;Add text content&quot;** inside the project, then paste that entire block. Do NOT say &quot;paste from above&quot; -- give me the actual text to copy right there.
+
+3. **Set Custom Instructions:** Tell me to open project settings and paste this exact instruction:
+   &quot;You are an expert Backlog Refinement in the Project Management domain. Use the project knowledge as your expertise. Follow the workflows, frameworks, and templates defined there. Always provide specific, actionable output.&quot;
+
+4. **Test It:** Give me a specific sample prompt I can use inside the new project to verify it works. Pick a real task from the skill&#x27;s workflows.
+
+### If I&#x27;m on ChatGPT:
+
+Walk me through these exact steps:
+
+1. **Create a Custom GPT:** Tell me to go to **chatgpt.com &gt; Explore GPTs &gt; Create**
+2. **Configure it:**
+   - Name: **&quot;Backlog Refinement&quot;**
+   - Description: &quot;Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.&quot;
+   - Instructions: Give me the COMPLETE skill definition above as a single copyable text block inside a code fence to paste into the Instructions field. Do NOT say &quot;paste from above.&quot;
+3. **Test It:** Give me a sample prompt to verify it works.
+
+### If I&#x27;m on another platform:
+Ask which tool I&#x27;m using and adapt the instructions accordingly.
+
+## Important
+- Always provide the full skill text in a ready-to-copy code block -- never tell me to &quot;scroll up&quot; or &quot;copy from above&quot;
+- Keep the setup steps simple and numbered
+- After setup, test it with me using a real workflow from the skill
+
+Source: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/backlog-refinement/SKILL.md">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> <span>Copy &amp; Create Skill</span>
+      </button>
+      <details class="prompt-details">
+        <summary>Preview prompt</summary>
+        <pre class="prompt-preview"># Create a &quot;Backlog Refinement&quot; AI Skill
+
+I want you to help me set up a reusable AI skill that I can use in future conversations. Read the complete skill definition below, then help me install it.
+
+## Complete Skill Definition
+
+# Backlog Refinement Expert
+
+## Overview
+
+Refinement is the most under-invested ritual in agile teams. Stories arrive at sprint planning oversized, ambiguous, or strategically disconnected, and the team spends planning meetings doing what should have happened the week before. This skill is the refinement playbook: how to grade stories against INVEST, how to split stories vertically (so each slice ships value end-to-end), and how to keep a working Definition of Ready and Definition of Done that prevent half-baked work from entering or leaving a sprint.
+
+The skill includes a Python scorer (`refinement_scorer.py`) that grades each story in a JSON backlog file against the six INVEST criteria and outputs a readiness score (0-6) per story. Stories scoring 5-6 are sprint-ready; 3-4 need targeted refinement; below 3 need to be reworked or returned to discovery.
+
+This is a complement to `wwas/` (the Why-What-Acceptance format) and `job-stories/` (the JTBD format). Either format produces stories; this skill grades them and gets them sprint-ready.
+
+### When to Use
+
+- **Weekly refinement session** -- Standard ritual: grade next-sprint candidates against INVEST and split anything too large.
+- **Backlog hygiene sweep** -- Quarterly: re-grade the top 30 backlog items and retire what no longer connects to current strategy.
+- **Sprint planning input** -- Before planning: confirm all candidates pass DoR.
+- **New team onboarding** -- A new team needs a shared definition of &quot;ready&quot; and &quot;done&quot; to ship predictably.
+- **Velocity diagnosis** -- If sprint completion is erratic, refinement quality is usually the cause; this skill is the diagnostic.
+
+### When NOT to Use
+
+- For pure technical task lists with no user-facing outcome -- INVEST applies loosely; use a simpler checklist.
+- For ad-hoc bug triage -- bugs follow a different lifecycle (triage &gt; prioritize &gt; fix) than feature stories.
+- When the work has not been scoped yet -- send it back to `discovery/` skills before refining.
+
+## The INVEST Criteria
+
+Bill Wake&#x27;s INVEST acronym (2003) defines the six properties of a high-quality story:
+
+| Letter | Property | What it means | Quick test |
+|--------|----------|---------------|------------|
+| **I** | **Independent** | Can be delivered without waiting for another story | &quot;Can this ship alone? If no, what is the dependency?&quot; |
+| **N** | **Negotiable** | Implementation is open to discussion | &quot;Does this prescribe HOW, or only WHAT and WHY?&quot; |
+| **V** | **Valuable** | Delivers value to a user or business | &quot;If we built only this and nothing else, who benefits?&quot; |
+| **E** | **Estimable** | The team can size effort with reasonable confidence | &quot;Can two engineers independently estimate within ~2x?&quot; |
+| **S** | **Small** | Fits within one sprint (typically 1-5 days of effort) | &quot;Can a pair finish this in &lt;5 days?&quot; |
+| **T** | **Testable** | Acceptance criteria are observable and verifiable | &quot;How would QA prove this is done?&quot; |
+
+A story scoring 6/6 is sprint-ready. A story scoring 5/6 with a soft fail on one criterion is usually safe to admit if the team agrees on the gap. Anything 4 or below needs a refinement pass.
+
+## Vertical Slicing and Story Splitting
+
+The most common refinement failure is **horizontal slicing** -- splitting a story by layer (DB, API, UI, infra) rather than by user outcome. Horizontal slices fail INVEST-V (no slice delivers user value alone) and INVEST-I (every slice depends on the others).
+
+**Vertical slices** cut through every layer to deliver an end-to-end thin sliver of user value. Each slice is independently shippable and independently valuable.
+
+### The 9 splitting recipes (Richard Lawrence)
+
+Richard Lawrence&#x27;s Story Splitting Flowchart enumerates 9 reliable patterns. Use them in this priority order:
+
+| # | Pattern | Use when | Example |
+|---|---------|----------|---------|
+| 1 | **Workflow steps** | The story spans a multi-step process | &quot;Checkout&quot; → &quot;Add to cart&quot; / &quot;Pay&quot; / &quot;Confirm&quot; |
+| 2 | **Business rule variations** | The story covers many rules | &quot;Discount&quot; → &quot;Loyalty discount&quot; / &quot;Volume discount&quot; / &quot;Promo code&quot; |
+| 3 | **Happy / unhappy paths** | Error handling adds complexity | &quot;Submit form&quot; → &quot;Submit valid form&quot; / &quot;Handle validation errors&quot; |
+| 4 | **Input options / platforms** | Multiple inputs or platforms | &quot;Search&quot; → &quot;Search via keyword&quot; / &quot;Search via filters&quot; / &quot;Search via voice&quot; |
+| 5 | **Data types or parameters** | Multiple data variations | &quot;Export report&quot; → &quot;Export CSV&quot; / &quot;Export PDF&quot; / &quot;Export XLSX&quot; |
+| 6 | **Operations (CRUD)** | The story covers multiple ops | &quot;Manage users&quot; → &quot;Create user&quot; / &quot;Edit user&quot; / &quot;Delete user&quot; |
+| 7 | **Test scenarios / cases** | Test plan reveals natural splits | &quot;Login&quot; → &quot;Login with email&quot; / &quot;Login with SSO&quot; / &quot;Login with MFA&quot; |
+| 8 | **Defer performance** | The simple version works | &quot;Search 1M records&quot; → &quot;Search basic&quot; (v1) / &quot;Optimize search&quot; (v2) |
+| 9 | **Spike (last resort)** | The team cannot estimate | A time-boxed investigation, then re-split |
+
+### The SPIDR alternative (Mike Cohn)
+
+Mike Cohn&#x27;s SPIDR mnemonic covers a similar space with five buckets: **S**pikes, **P**aths, **I**nterfaces, **D**ata, **R**ules. Use whichever taxonomy your team finds memorable; the patterns overlap.
+
+### Splitting anti-patterns to avoid
+
+- **Splitting by layer.** &quot;Backend API&quot; / &quot;Frontend UI&quot; / &quot;Database migration&quot; are tasks, not stories. They violate INVEST-V.
+- **Splitting by team.** If only &quot;the backend team&quot; can deliver a slice, the slice is not independently valuable.
+- **Splitting by sprint.** Forcing a 10-day story into &quot;Sprint 1 part&quot; and &quot;Sprint 2 part&quot; is scheduling, not splitting.
+- **Splitting too thin.** A 2-hour story is not a story; it is a task. Roll it back up.
+
+## Definition of Ready (DoR)
+
+The DoR is the team&#x27;s agreement on what a story must satisfy before it can enter a sprint. It is the **input quality gate**.
+
+### Recommended DoR template
+
+A story is Ready when:
+
+- [ ] Title is descriptive and specific (no &quot;Implement X&quot;)
+- [ ] Why statement references a specific objective, OKR, or customer outcome
+- [ ] Description is 1-2 paragraphs and serves as a reminder of the refinement discussion
+- [ ] Acceptance criteria: at least 4, each describing an observable user-facing outcome
+- [ ] INVEST score &gt;= 5/6 (verified by `refinement_scorer.py` or facilitated review)
+- [ ] Dependencies on other stories or teams are identified and noted
+- [ ] Design assets linked (or marked &quot;TBD by [date]&quot; with owner)
+- [ ] Estimated by the team using their preferred unit (story points, t-shirt, days)
+- [ ] No open blocker questions
+- [ ] Tagged with sprint goal it contributes to
+
+### DoR anti-patterns
+
+- **Too strict** -- a 20-item DoR creates a backlog of &quot;almost ready&quot; stories. Cap at 10.
+- **Unenforced** -- a DoR that planning ignores is theater. Enforce: stories that fail DoR are removed from the sprint candidate list, not &quot;negotiated in.&quot;
+- **One-size-fits-all** -- spikes, bugs, and feature stories have different DoRs. Keep three short checklists rather than one long one.
+
+## Definition of Done (DoD)
+
+The DoD is the team&#x27;s agreement on what a story must satisfy before it can be called complete. It is the **output quality gate** and is typically uniform across all stories.
+
+### Recommended DoD template
+
+A story is Done when:
+
+- [ ] All acceptance criteria pass in the deployed environment
+- [ ] Code merged to main branch (or release branch per release process)
+- [ ] Automated tests written and passing (unit + integration for changed paths)
+- [ ] Code reviewed and approved by at least one other engineer
+- [ ] Manual QA pass (or QA sign-off if separate QA exists)
+- [ ] Documentation updated (help center, internal runbook, API docs, as applicable)
+- [ ] Feature flag wired (if behind a flag) or release-notes entry drafted
+- [ ] Analytics or telemetry events instrumented (so we can measure the outcome)
+- [ ] Accessibility check pass (WCAG AA for user-facing UI)
+- [ ] Product owner has accepted the story
+
+### DoD anti-patterns
+
+- **&quot;Done&quot; but not deployed** -- a story that is merged but not in front of a user is not done. Require deployment in the DoD.
+- **No instrumentation** -- shipping without telemetry means you cannot measure the outcome. Require analytics for any value-claim story.
+- **Skipping accessibility** -- a11y debt compounds. Require WCAG AA on every user-facing change.
+
+## Workflow
+
+1. **Pull candidates from the backlog.** Aim for 1.5x the team&#x27;s velocity in candidates per refinement session.
+2. **Score each candidate with `refinement_scorer.py`.** Use `--input backlog.json --format markdown` to get a per-story INVEST grade.
+3. **Triage by score:**
+   - **5-6:** Promote to &quot;Refined&quot; lane.
+   - **3-4:** Discuss in session, address the failing criteria.
+   - **0-2:** Send back to discovery (`discovery/brainstorm-ideas/` or `discovery/identify-assumptions/`) -- the work has not been scoped enough.
+4. **Split oversized stories.** Apply the 9 Lawrence patterns in priority order. Each new slice must independently pass INVEST-V and INVEST-S.
+5. **Enforce the DoR.** Anything failing DoR at planning is removed from the candidate list, not &quot;negotiated in.&quot;
+6. **Enforce the DoD at review.** Stories that miss any DoD bullet are not &quot;almost done&quot; -- they roll to the next sprint.
+7. **Hand off refined stories to sprint planning.** A well-refined backlog reduces planning to: pick the top N stories that fit capacity.
+
+## Tools
+
+| Tool | Purpose | Command |
+|------|---------|---------|
+| `refinement_scorer.py` | Grade stories against INVEST and emit readiness verdicts | `python scripts/refinement_scorer.py --input backlog.json --format markdown` |
+| `refinement_scorer.py --demo` | Inspect demo data and output format | `python scripts/refinement_scorer.py --demo --format markdown` |
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---------|--------------|------------|
+| Refinement sessions run long and produce few refined stories | Too many candidates per session; team trying to refine everything at once | Cap at 1.5x velocity in candidates; spend max 2 minutes per story on initial INVEST grade; deep-refine only those scoring 3-4 |
+| Same stories appear in 3+ refinement sessions without progress | Story is too vague; team lacks information; or story belongs in discovery | Apply the &quot;3-strike rule&quot; -- if a story fails to refine three sessions in a row, send to `discovery/identify-assumptions/` to reframe |
+| Sprint planning becomes the refinement session | DoR is not enforced; pressure to &quot;make the sprint full&quot; overrides quality | Empower the team to leave the sprint under-full rather than admit DoR-failing stories; track planning duration as a velocity proxy |
+| Splits produce horizontal slices (API / UI / DB) | Team defaults to architecture decomposition; PM does not push back | Use the 9 Lawrence patterns explicitly; require each slice to answer &quot;who benefits if this is the only thing we ship?&quot; |
+| Stories pass DoD but value does not materialize | Acceptance criteria describe activity, not outcome; no telemetry | Rewrite acceptance criteria as observable user outcomes; require telemetry/analytics in the DoD |
+| Estimates vary wildly across the team | INVEST-Estimable failure; story too vague or too large | Re-refine with a spike if needed; split into smaller slices that two engineers can size within 2x of each other |
+| `refinement_scorer.py` gives 6/6 but story still feels risky | Score covers form, not substance; risk is in the assumptions, not the format | Use `discovery/identify-assumptions/` and `discovery/pre-mortem/` for substantive risk; INVEST is necessary but not sufficient |
+
+## Success Criteria
+
+- 80%+ of stories entering sprint planning score 5/6 or 6/6 on INVEST
+- Refinement session length stays under 60 minutes per week, per team
+- DoR and DoD are reviewed and updated at least once per quarter
+- Story splits produce vertical slices in 90%+ of cases (each slice independently valuable)
+- Sprint planning meetings take less than half the duration of refinement (because refinement did the work)
+- Rolled-over story rate (stories that miss the sprint) below 15% sustained
+- Stories scoring below 3 on INVEST are sent back to discovery rather than forced into a sprint
+
+## Scope &amp; Limitations
+
+**In Scope:**
+- INVEST quality grading of individual stories
+- Vertical story splitting using the 9 Lawrence patterns and SPIDR taxonomy
+- Definition of Ready and Definition of Done templates and enforcement protocol
+- Refinement session structure and cadence guidance
+- Python tool that grades backlog JSON against INVEST and emits per-story verdicts
+
+**Out of Scope:**
+- Authoring stories from scratch (use `wwas/` or `job-stories/`)
+- Backlog prioritization or sequencing (use `prioritization-frameworks/`)
+- Sprint planning, capacity calculation, or velocity forecasting (use `../scrum-master/`)
+- Discovery, problem framing, or opportunity definition (use `discovery/` skills)
+- Story estimation techniques (Planning Poker, Affinity Estimation -- covered in `agile-coach/`)
+
+**Important Caveats:**
+- INVEST is a heuristic, not a guarantee. A story can score 6/6 and still be the wrong story to build. Use this skill alongside `prioritization-frameworks/` and `discovery/identify-assumptions/` for full coverage.
+- The 9 Lawrence patterns work for product stories. Pure technical infrastructure work may follow different splitting heuristics (component boundaries, deployment risk).
+- DoR and DoD must be team-authored to be enforced. Imposing an external DoR/DoD without team buy-in produces theater, not quality.
+- The Python scorer grades structural form (does the story have a Why, a What, and 4+ ACs?), not strategic substance. A 6/6 story can still be misaligned with strategy.
+
+## Integration Points
+
+| Integration | Direction | Description |
+|-------------|-----------|-------------|
+| `execution/wwas/` | Receives from | WWAS-format stories enter refinement to be graded and split |
+| `execution/job-stories/` | Receives from | Job stories enter refinement to be graded and split |
+| `execution/prioritization-frameworks/` | Pairs with | Prioritization sets the sequence; refinement makes the top N actually executable |
+| `discovery/identify-assumptions/` | Sends to | Stories scoring 0-2 are sent back to discovery for assumption mapping |
+| `discovery/brainstorm-experiments/` | Sends to | Stories with unvalidated assumptions become experiment candidates |
+| `../scrum-master/` | Feeds into | Refined stories feed sprint planning; refinement quality drives velocity stability |
+| `execution/status-update-generator/` | Indirect | DoD compliance feeds the &quot;what&#x27;s done this week&quot; section of status updates |
+| `../jira-expert/` | Pairs with | Refined stories become Jira tickets with structured fields and DoR/DoD checklists |
+
+## Tool Reference
+
+### refinement_scorer.py
+
+Grades each story in a JSON backlog file against the six INVEST criteria and emits a readiness score (0-6) per story plus an aggregate readiness summary for the backlog.
+
+| Flag | Type | Default | Description |
+|------|------|---------|-------------|
+| `--input` | string | (required unless `--demo`) | Path to JSON file containing backlog items |
+| `--demo` | flag | false | Use built-in demo backlog data |
+| `--format` | choice | markdown | Output format: json, markdown, mermaid, confluence, notion, linear |
+| `--output` | string | stdout | Output file path |
+| `--threshold` | int | 5 | Minimum score for a story to be flagged &quot;READY&quot; (default 5/6) |
+
+### Input JSON shape
+
+```json
+{
+  &quot;stories&quot;: [
+    {
+      &quot;id&quot;: &quot;STORY-1&quot;,
+      &quot;title&quot;: &quot;Add SSO login for enterprise users&quot;,
+      &quot;why&quot;: &quot;Enterprise customers cite missing SSO as the #1 blocker; supports $2M ARR expansion target&quot;,
+      &quot;what&quot;: &quot;Add SAML 2.0 SSO option to the login page. Users with company email domains see SSO as the primary login method; password login remains as fallback.&quot;,
+      &quot;acceptance_criteria&quot;: [
+        &quot;Users with configured domains see SSO as primary login option&quot;,
+        &quot;SAML 2.0 IdP-initiated flow works for Okta and Azure AD&quot;,
+        &quot;Failed SSO falls back to password with helpful error&quot;,
+        &quot;Audit log records every SSO login attempt&quot;
+      ],
+      &quot;estimate_days&quot;: 4,
+      &quot;has_design&quot;: true,
+      &quot;dependencies&quot;: []
+    }
+  ]
+}
+```
+
+### Scoring rubric
+
+| Criterion | Passes if... |
+|-----------|--------------|
+| Independent | `dependencies` field is empty or omitted |
+| Negotiable | `what` field is present and under 800 characters (long whats prescribe implementation) |
+| Valuable | `why` field is present and references a metric, OKR, customer, or business outcome (heuristic) |
+| Estimable | `estimate_days` field is present and is a positive number |
+| Small | `estimate_days` is between 1 and 5 |
+| Testable | `acceptance_criteria` field contains at least 4 items |
+
+## References
+
+- `references/invest-and-splitting-guide.md` -- Deep dive on INVEST, the 9 Lawrence patterns, SPIDR, and worked split examples
+- `assets/refinement_checklist.md` -- Ready-to-use DoR and DoD checklists plus a refinement session agenda
+
+---
+
+## What I Need You to Do
+
+First, detect which platform I&#x27;m using (Claude.ai, ChatGPT, etc.) and follow the matching instructions below.
+
+### If I&#x27;m on Claude.ai:
+
+Walk me through these exact steps:
+
+1. **Create the Project:** Tell me to go to **claude.ai &gt; Projects &gt; Create project** and name it **&quot;Backlog Refinement&quot;**
+
+2. **Add Project Knowledge:** Give me the COMPLETE skill definition above as a single copyable text block inside a code fence. Tell me to click **&quot;Add content&quot; &gt; &quot;Add text content&quot;** inside the project, then paste that entire block. Do NOT say &quot;paste from above&quot; -- give me the actual text to copy right there.
+
+3. **Set Custom Instructions:** Tell me to open project settings and paste this exact instruction:
+   &quot;You are an expert Backlog Refinement in the Project Management domain. Use the project knowledge as your expertise. Follow the workflows, frameworks, and templates defined there. Always provide specific, actionable output.&quot;
+
+4. **Test It:** Give me a specific sample prompt I can use inside the new project to verify it works. Pick a real task from the skill&#x27;s workflows.
+
+### If I&#x27;m on ChatGPT:
+
+Walk me through these exact steps:
+
+1. **Create a Custom GPT:** Tell me to go to **chatgpt.com &gt; Explore GPTs &gt; Create**
+2. **Configure it:**
+   - Name: **&quot;Backlog Refinement&quot;**
+   - Description: &quot;Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.&quot;
+   - Instructions: Give me the COMPLETE skill definition above as a single copyable text block inside a code fence to paste into the Instructions field. Do NOT say &quot;paste from above.&quot;
+3. **Test It:** Give me a sample prompt to verify it works.
+
+### If I&#x27;m on another platform:
+Ask which tool I&#x27;m using and adapt the instructions accordingly.
+
+## Important
+- Always provide the full skill text in a ready-to-copy code block -- never tell me to &quot;scroll up&quot; or &quot;copy from above&quot;
+- Keep the setup steps simple and numbered
+- After setup, test it with me using a real workflow from the skill
+
+Source: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/backlog-refinement/SKILL.md</pre>
+      </details>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-claude">
+  <pre><code># Add to your project
+cs install project-management/execution/backlog-refinement ./
+
+# Or copy directly
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/backlog-refinement your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-codex">
+  <pre><code># The skill is available in your Codex workspace at:
+.codex/skills/backlog-refinement/
+
+# Reference the SKILL.md in your Codex instructions
+# or copy it into your project:
+cp -r .codex/skills/backlog-refinement your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-gemini">
+  <pre><code># The skill is available in your Gemini CLI workspace at:
+.gemini/skills/backlog-refinement/
+
+# Reference the SKILL.md in your Gemini instructions
+# or copy it into your project:
+cp -r .gemini/skills/backlog-refinement your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-cursor">
+  <pre><code># Add to your .cursorrules or workspace settings:
+# Reference: project-management/execution/backlog-refinement/SKILL.md
+
+# Or copy the skill folder into your project:
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/backlog-refinement your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-manual">
+  <pre><code># Clone and copy
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/backlog-refinement your-project/
+
+# Or download just this skill
+curl -sL https://github.com/borghei/Claude-Skills/archive/main.tar.gz | tar xz --strip=1 Claude-Skills-main/project-management/execution/backlog-refinement</code></pre>
+</div>
+<h3>Run Python Tools</h3>
+<pre><code>python project-management/execution/backlog-refinement/scripts/tool_name.py --help</code></pre>
+  
+  
+  <h2>Related Skills in Project Management</h2><div class="related-grid"><a href="https://borghei.github.io/Claude-Skills/skills/project-management/agile-coach.html" class="skill-card" style="text-decoration:none"><h3>Agile Coach</h3><p>Expert agile coaching for team transformation, framework selection, maturity assessment, and...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/atlassian-admin.html" class="skill-card" style="text-decoration:none"><h3>Atlassian Admin</h3><p>Atlassian Administrator for managing and organizing Atlassian products, users, customization of...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/atlassian-templates.html" class="skill-card" style="text-decoration:none"><h3>Atlassian Templates</h3><p>Atlassian Template and Files Creator/Modifier expert for creating, modifying, and managing Jira...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/confluence-expert.html" class="skill-card" style="text-decoration:none"><h3>Confluence Expert</h3><p>Atlassian Confluence expert for creating and managing spaces, knowledge bases, documentation,...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/delivery-manager.html" class="skill-card" style="text-decoration:none"><h3>Delivery Manager</h3><p>Expert delivery management for release planning, deployment coordination, incident response,...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/brainstorm-experiments.html" class="skill-card" style="text-decoration:none"><h3>Brainstorm Experiments</h3><p>Experiment design expert using pretotyping and lean validation for both new product concepts and...</p></a></div>
+  <p style="margin-top:32px"><a href="https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/backlog-refinement/SKILL.md" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-links">
+      <a href="https://github.com/borghei/Claude-Skills" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">&middot;</span>
+      <span>MIT + Commons Clause</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://buymeacoffee.com/borghei" target="_blank" rel="noopener">Buy Me a Coffee</a>
+    </div>
+    <div class="footer-credit">Built by <a href="https://github.com/borghei" target="_blank" rel="noopener">borghei</a></div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active')});
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+function copyPrompt(btn){
+  var text=btn.getAttribute('data-prompt');
+  // Decode HTML entities
+  var ta=document.createElement('textarea');
+  ta.innerHTML=text;
+  text=ta.value;
+  navigator.clipboard.writeText(text).then(function(){
+    btn.classList.add('copied');
+    btn.querySelector('span').textContent='Copied!';
+    setTimeout(function(){
+      btn.classList.remove('copied');
+      btn.querySelector('span').textContent='Copy Prompt';
+    },2000);
+  });
+}
+</script>
+</body>
+</html>
