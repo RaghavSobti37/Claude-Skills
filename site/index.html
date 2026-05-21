@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/Claude-Skills/">
-  <title>Claude Skills - The AI skills library for the whole company</title>
-  <meta name="description" content="266 production-ready AI skills covering engineering, compliance (18 frameworks), C-suite, marketing, vertical advisors (fintech, healthtech, edtech, ecommerce, proptech, climate-tech, marketplace) and more. Works with 11 AI assistants. One-command install.">
-  <meta property="og:title" content="Claude Skills - The AI skills library for the whole company">
-  <meta property="og:description" content="266 skills. 17 domains. 67 cs-* agents. 18 compliance frameworks. 11 AI assistants. One-command install via npx @borghei/claude-skills.">
+  <title>Claude Skills — AI skills for every team, not just engineering</title>
+  <meta name="description" content="282 production-ready AI skills across 15 domains. The only OSS skills library covering regulated industries (SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR). Project Management is the deepest domain (42 skills). Works with 11 AI assistants.">
+  <meta property="og:title" content="Claude Skills — AI skills for every team, not just engineering">
+  <meta property="og:description" content="282 skills · 15 domains · 67 expert agents · 18 compliance frameworks · 11 AI assistants. Ship a SOC 2 audit, run a sprint retro, draft a board update — paste into any AI chat or install via npx.">
+  <meta property="og:image" content="https://borghei.github.io/Claude-Skills/assets/header.svg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://borghei.github.io/Claude-Skills">
   <link rel="stylesheet" href="css/style.css">
@@ -35,24 +36,24 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="container">
-      <h1 class="hero-title fade-in">The AI skills library for the whole company.</h1>
-      <p class="hero-subtitle fade-in">Not just engineers. 266 production skills covering engineering, compliance, C-suite, marketing, legal, vertical advisors, and more. Works with 11 AI assistants.</p>
+      <h1 class="hero-title fade-in">AI skills for every team — not just engineering.</h1>
+      <p class="hero-subtitle fade-in">Ship a SOC 2 audit. Run a sprint retro. Draft a board update. The only OSS skills library covering regulated industries — paste into any AI chat, or install with one command.</p>
       <div class="stats-row fade-in" id="stats">
-        <span class="stat-item"><span class="stat-number" data-target="266">0</span> Skills</span>
+        <span class="stat-item"><span class="stat-number" data-target="282">0</span> Skills</span>
         <span class="dot">&middot;</span>
-        <span class="stat-item"><span class="stat-number" data-target="17">0</span> Domains</span>
+        <span class="stat-item"><span class="stat-number" data-target="15">0</span> Domains</span>
         <span class="dot">&middot;</span>
-        <span class="stat-item"><span class="stat-number" data-target="67">0</span> cs-* Agents</span>
+        <span class="stat-item"><span class="stat-number" data-target="67">0</span> Expert Agents</span>
+        <span class="dot">&middot;</span>
+        <span class="stat-item"><span class="stat-number" data-target="18">0</span> Compliance Frameworks</span>
         <span class="dot">&middot;</span>
         <span class="stat-item"><span class="stat-number" data-target="11">0</span> AI Assistants</span>
       </div>
-      <div class="install-block fade-in" style="margin-top: 32px;">
-        <span class="prompt">$</span><code>npx @borghei/claude-skills add senior-fullstack</code>
+      <div class="hero-buttons fade-in" style="margin-top: 40px;">
+        <a href="skills/" class="btn btn-primary">Browse skills</a>
+        <a href="#install" class="btn btn-secondary">Install options</a>
       </div>
-      <div class="hero-buttons fade-in">
-        <a href="#install" class="btn btn-primary">View install options</a>
-        <a href="skills/" class="btn btn-secondary">Browse Skills</a>
-      </div>
+      <p class="install-hint fade-in" style="margin-top: 24px; opacity: 0.7;">No setup needed — open a skill page, click <strong>Try it now</strong>, paste into Claude.ai, ChatGPT, or Gemini.</p>
     </div>
   </section>
 
@@ -151,16 +152,17 @@
           </div>
         </a>
 
-        <a href="skills/project-management/" class="domain-card fade-in">
+        <a href="skills/project-management/" class="domain-card fade-in" style="border: 2px solid var(--accent, #7c3aed); position: relative;">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
           </div>
-          <h3>Project Management</h3>
-          <span class="badge">13 skills</span>
-          <p>Discovery, execution, DACI, story mapping, EOL communication</p>
+          <h3>Project Management ★</h3>
+          <span class="badge">42 skills</span>
+          <p>Most-used domain. Discovery, delivery, career growth — PRDs, OKRs, status updates, story splitting. Jira / Linear / Notion / Confluence.</p>
           <div class="domain-tags">
-            <span class="tag">daci</span>
-            <span class="tag">story-map</span>
+            <span class="tag">prd</span>
+            <span class="tag">linear</span>
+            <span class="tag">notion</span>
             <span class="tag">jira</span>
           </div>
         </a>
@@ -338,56 +340,56 @@
   <!-- Features -->
   <section class="features" id="features">
     <div class="container">
-      <h2 class="section-title fade-in">Key Features</h2>
-      <p class="section-subtitle fade-in">Everything you need to supercharge your AI-assisted workflow</p>
+      <h2 class="section-title fade-in">How it works</h2>
+      <p class="section-subtitle fade-in">Scripts that actually run — not just prompt templates</p>
       <div class="features-grid">
 
         <div class="feature-card fade-in">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <h3>7 Personas</h3>
-          <p>Cross-domain thinking for startup CTO, growth marketer, solo founder, and more</p>
+          <h3>Pre-built expert identities</h3>
+          <p>Call one persona, get a stack of skills behind it — startup CTO, growth marketer, solo founder, fintech advisor, and 70 more.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
           </div>
-          <h3>26 Commands</h3>
-          <p>Slash commands for every workflow -- TDD, PRDs, retros, security scans</p>
+          <h3>26 slash commands</h3>
+          <p>One-line workflows for the things you actually do — /tdd, /prd, /retro, /security-scan, /rice, /sprint-plan.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h3>MCP Server</h3>
-          <p>Model Context Protocol integration for direct use as Claude Code tools</p>
+          <h3>Regulated industries, built in</h3>
+          <p>18 compliance frameworks — SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR — with checklists and audit-ready outputs.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m8 10 3 3-3 3"/><line x1="14" y1="16" x2="18" y2="16"/></svg>
           </div>
-          <h3>CLI Tool</h3>
-          <p>Search, install, and manage skills from your terminal</p>
+          <h3>Real Python automation</h3>
+          <p>700+ CLI tools — code quality, DCF valuation, SEO audits, flow metrics, weekly status updates. Standard library only, no pip cliffs.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           </div>
-          <h3>11 Platforms</h3>
-          <p>Claude Code, Codex, Gemini CLI, Cursor, Copilot, Windsurf, and more</p>
+          <h3>Works with your AI assistant</h3>
+          <p>Claude Code, Codex, Cursor, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose, OpenCode, and ChatGPT / Claude.ai.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <h3>Starter Bundles</h3>
-          <p>Role-based skill kits for common workflows, ready to go</p>
+          <h3>Ready-made kits by role</h3>
+          <p>Pre-configured skill bundles — SaaS Founder, DevOps, Compliance, Growth, Product, PM Starter Pack, PM Career Track.</p>
         </div>
 
       </div>
@@ -397,23 +399,31 @@
   <!-- Install -->
   <section class="install" id="install">
     <div class="container">
-      <h2 class="section-title fade-in">Install in one command</h2>
-      <p class="section-subtitle fade-in">Works across Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose</p>
+      <h2 class="section-title fade-in">Install in seconds</h2>
+      <p class="section-subtitle fade-in">No terminal needed — or one command for developers</p>
+
+      <h3 class="section-title fade-in" style="font-size: 1.2rem; margin-top: 16px;">Try it now</h3>
+      <div class="install-block fade-in">
+        <span class="prompt">copy</span><code>open a skill page → click Try it now → paste into your AI</code>
+      </div>
+      <p class="install-hint fade-in">Browse any <a href="skills/">skill page</a>, click <strong>Try it now</strong>, and paste into Claude.ai, ChatGPT, or Gemini. No setup needed.</p>
+
+      <h3 class="section-title fade-in" style="font-size: 1.2rem; margin-top: 40px;">Save to my AI</h3>
+      <div class="install-block fade-in">
+        <span class="prompt">copy</span><code>open a skill page → click Save to my AI → follow the guided setup</code>
+      </div>
+      <p class="install-hint fade-in">Installs as a Claude Project or Custom GPT. Guided setup, no terminal.</p>
+
+      <h3 class="section-title fade-in" style="font-size: 1.2rem; margin-top: 40px;">For developers</h3>
       <div class="install-block fade-in">
         <span class="prompt">$</span><code>npx @borghei/claude-skills add senior-fullstack</code>
       </div>
-      <p class="install-hint fade-in">Auto-detects your AI assistant and installs the skill into the right directory. Node 18+, no Python required.</p>
+      <p class="install-hint fade-in">Auto-detects Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, and Goose. Drops the skill into the right directory. Node 18+, no Python required.</p>
 
-      <h3 class="section-title fade-in" style="font-size: 1.2rem; margin-top: 56px;">Alternative paths</h3>
-      <div class="install-block fade-in">
+      <div class="install-block fade-in" style="margin-top: 16px;">
         <span class="prompt">claude&gt;</span><code>/plugin marketplace add borghei/Claude-Skills</code>
       </div>
-      <p class="install-hint fade-in">Claude Code native plugin. Install the 5 curated bundles as plugins.</p>
-
-      <div class="install-block fade-in">
-        <span class="prompt">copy</span><code>paste the skill prompt into Claude.ai, ChatGPT or Gemini</code>
-      </div>
-      <p class="install-hint fade-in">Browse any <a href="skills/">skill page</a>, click <strong>Try in Chat</strong>, paste. Works in one conversation. No setup.</p>
+      <p class="install-hint fade-in">Claude Code native plugin — install the 5 curated bundles as plugins.</p>
     </div>
   </section>
 
