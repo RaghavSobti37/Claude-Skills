@@ -1,11 +1,12 @@
 site_name: "Claude Skills — Universal AI Skills Library"
 site_url: https://borghei.github.io/Claude-Skills
 site_description: >-
-  266 production-ready AI skills across 17 domains with 674+ Python tools,
-  74 agents (67 cs-* + 7 personas), 7 strategic vertical advisors (fintech,
-  healthtech, edtech, ecommerce, proptech, climate-tech, marketplace), and
-  support for 11 platforms including Claude Code, Cursor, Codex, Copilot,
-  Windsurf, Cline, Gemini CLI, and Aider.
+  282 production-ready AI skills across 15 domains. Project Management
+  is the most-used domain (42 skills: discovery → delivery → career, with
+  Jira / Linear / Notion / Confluence integration). Plus engineering,
+  marketing, C-level, compliance, and 7 vertical advisors. 67 cs-* agents,
+  700+ Python tools. Works with Claude Code, Cursor, Codex, Copilot,
+  Windsurf, Cline, Gemini CLI, Aider, and Goose.
 site_author: Amin Borghei
 repo_url: https://github.com/borghei/Claude-Skills
 repo_name: borghei/Claude-Skills
@@ -107,11 +108,12 @@ nav:
     - Platforms: getting-started/platforms.md
   - Skills:
     - skills/index.md
+    - "★ Project Management (42)": skills/project-management.md
     - Engineering: skills/engineering.md
     - Marketing: skills/marketing.md
     - C-Level Advisory: skills/c-level.md
     - Compliance: skills/compliance.md
-    - Product & PM: skills/product.md
+    - Product Team: skills/product.md
     - Business & Sales: skills/business.md
     - Data, HR & Other: skills/other.md
   - Agents:

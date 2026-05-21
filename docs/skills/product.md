@@ -1,14 +1,17 @@
 ---
-title: Product & PM Skills
+title: Product Team Skills
 ---
 
-# Product & Project Management Skills
+# Product Team Skills
 
-**33 skills** with **68 Python tools** covering product strategy, UX research, design systems, agile, Scrum, discovery, execution, and Atlassian tooling.
+**8 skills** with **15 Python tools** for product managers, designers, and UX researchers.
 
-## Product Team
+!!! tip "Looking for Project Management?"
+    PM skills moved to their own dedicated page → **[Project Management ★ (42 skills)](project-management.md)** — the most-used domain in the library, covering discovery, delivery, career growth, and Jira / Linear / Notion / Confluence integration.
 
-**8 skills** with **15 tools** for product managers, designers, and UX researchers.
+---
+
+## Product Team (8 skills)
 
 | Skill | Description | Tools |
 |---|---|:---:|
@@ -21,51 +24,10 @@ title: Product & PM Skills
 | [ui-design-system](https://github.com/borghei/Claude-Skills/blob/main/product-team/ui-design-system/SKILL.md) | Design token generation, responsive design calculations, developer handoff | 1 |
 | [ux-researcher-designer](https://github.com/borghei/Claude-Skills/blob/main/product-team/ux-researcher-designer/SKILL.md) | Data-driven personas, proto-persona canvas, journey mapping (happy/fail/difficult paths), usability testing | 1 |
 
-## Project Management
+---
 
-**25 skills** with **53 tools** for project managers, scrum masters, and agile coaches.
+## See also
 
-### Discovery
-
-| Skill | Description | Tools |
-|---|---|:---:|
-| [brainstorm-ideas](https://github.com/borghei/Claude-Skills/blob/main/project-management/discovery/brainstorm-ideas/SKILL.md) | Product Trio approach with Opportunity Solution Trees | 3 |
-| [brainstorm-experiments](https://github.com/borghei/Claude-Skills/blob/main/project-management/discovery/brainstorm-experiments/SKILL.md) | Pretotyping and lean validation for product concepts | 1 |
-| [identify-assumptions](https://github.com/borghei/Claude-Skills/blob/main/project-management/discovery/identify-assumptions/SKILL.md) | Assumption mapping across 4-8 risk categories with devil's advocate analysis | 1 |
-| [pre-mortem](https://github.com/borghei/Claude-Skills/blob/main/project-management/discovery/pre-mortem/SKILL.md) | Risk analysis with Tigers, Paper Tigers, and Elephants classification | 1 |
-
-### Execution
-
-| Skill | Description | Tools |
-|---|---|:---:|
-| [create-prd](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/create-prd/SKILL.md) | 8-section PRD scaffolding with problem framing canvas and working backwards PR | 1 |
-| [brainstorm-okrs](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/brainstorm-okrs/SKILL.md) | OKR brainstorming with Radical Focus framework | 1 |
-| [job-stories](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/job-stories/SKILL.md) | JTBD discovery canvas and job stories focusing on situations and motivations | 3 |
-| [outcome-roadmap](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/outcome-roadmap/SKILL.md) | Output-to-outcome roadmap transformation with Now/Next/Later framing | 1 |
-| [prioritization-frameworks](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/prioritization-frameworks/SKILL.md) | 9 prioritization methods with scoring tools and decision guidance | 1 |
-| [release-notes](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/release-notes/SKILL.md) | Technical changes to user-benefit-oriented release communication | 1 |
-| [summarize-meeting](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/summarize-meeting/SKILL.md) | Structured meeting summaries with decisions, actions, and open questions | 3 |
-| [wwas](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/wwas/SKILL.md) | Why-What-Acceptance backlog format connecting work to business objectives | 3 |
-| [daci-framework](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/daci-framework/SKILL.md) | DACI decision facilitation, governance design, role clarity | 0 |
-| [eol-communication](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/eol-communication/SKILL.md) | End-of-life product messaging and sunset communication | 0 |
-| [story-mapping](https://github.com/borghei/Claude-Skills/blob/main/project-management/execution/story-mapping/SKILL.md) | Jeff Patton user story mapping for release planning and MVP scoping | 0 |
-
-### Agile & Scrum
-
-| Skill | Description | Tools |
-|---|---|:---:|
-| [scrum-master](https://github.com/borghei/Claude-Skills/blob/main/project-management/scrum-master/SKILL.md) | Sprint health scoring, Monte Carlo forecasting, retrospective pattern analysis | 4 |
-| [agile-coach](https://github.com/borghei/Claude-Skills/blob/main/project-management/agile-coach/SKILL.md) | Team transformation, framework selection, maturity assessment | 3 |
-| [sprint-retrospective](https://github.com/borghei/Claude-Skills/blob/main/project-management/sprint-retrospective/SKILL.md) | Data-driven retros with velocity analytics and code quality trends | 4 |
-| [senior-pm](https://github.com/borghei/Claude-Skills/blob/main/project-management/senior-pm/SKILL.md) | Enterprise PM -- portfolio management, quantitative risk analysis, resource optimization | 4 |
-| [program-manager](https://github.com/borghei/Claude-Skills/blob/main/project-management/program-manager/SKILL.md) | Multi-project coordination, dependency tracking, benefits realization | 3 |
-| [delivery-manager](https://github.com/borghei/Claude-Skills/blob/main/project-management/delivery-manager/SKILL.md) | Release planning, deployment coordination, SLA tracking | 3 |
-
-### Atlassian
-
-| Skill | Description | Tools |
-|---|---|:---:|
-| [jira-expert](https://github.com/borghei/Claude-Skills/blob/main/project-management/jira-expert/SKILL.md) | Jira project setup, JQL queries, workflows, automation, reporting | 3 |
-| [confluence-expert](https://github.com/borghei/Claude-Skills/blob/main/project-management/confluence-expert/SKILL.md) | Confluence spaces, knowledge bases, page layouts, macros, templates | 3 |
-| [atlassian-admin](https://github.com/borghei/Claude-Skills/blob/main/project-management/atlassian-admin/SKILL.md) | Atlassian product administration, permissions, security, integrations | 3 |
-| [atlassian-templates](https://github.com/borghei/Claude-Skills/blob/main/project-management/atlassian-templates/SKILL.md) | Jira and Confluence templates, blueprints, custom layouts | 3 |
+- **[Project Management ★](project-management.md)** — 42 PM skills (most-used domain): discovery, execution, career, integrations
+- **[Engineering](engineering.md)** — for product engineering, fullstack, AI
+- **[Marketing](marketing.md)** — for go-to-market and content

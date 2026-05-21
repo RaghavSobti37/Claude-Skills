@@ -94,10 +94,19 @@ ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS.
 </div>
 
 <div class="card" markdown>
-### :material-clipboard-check: Product & PM
-**30 skills** &middot; 68 tools
+### :material-clipboard-check: ★ Project Management
+**42 skills** &middot; 68+ tools &middot; *most-used domain*
 
-RICE, OKRs, user stories, UX research, Scrum, discovery, Atlassian, retros.
+PRDs, OKRs, status updates, roadmaps, retros, story splitting, career growth. Jira / Linear / Notion / Confluence.
+
+[:octicons-arrow-right-24: Browse skills](skills/project-management.md)
+</div>
+
+<div class="card" markdown>
+### :material-palette-outline: Product Team
+**8 skills** &middot; 15 tools
+
+UX research, design systems, A/B tests, product strategy.
 
 [:octicons-arrow-right-24: Browse skills](skills/product.md)
 </div>
@@ -128,8 +137,8 @@ SQL, ML ops, dbt, BI, talent acquisition, people analytics, operations.
 
 | | |
 |---|---|
-| **245 Skills** | Production-ready expertise across 14 professional domains |
-| **653 Python Tools** | CLI scripts for code quality, SEO, DCF valuation, compliance auditing -- all standard library, no ML dependencies |
+| **282 Skills** | Production-ready expertise across 15 professional domains. Project Management is the most-used (42 skills). |
+| **700+ Python Tools** | CLI scripts for code quality, SEO, DCF valuation, compliance auditing, flow metrics, status updates -- all standard library, no ML dependencies |
 | **25 Role-Based Agents** | Specialized AI personas (Tech Lead, CFO, CISO, Compliance Auditor, etc.) that orchestrate multiple skills |
 | **6 Subagents** | Autonomous Claude Code agents for code review, security audit, QA, docs, changelog, and git workflows |
 | **12 CI/CD Workflows** | Ready-to-use GitHub Actions for quality gates, release drafting, skill validation |
