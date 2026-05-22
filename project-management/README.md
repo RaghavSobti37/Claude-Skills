@@ -196,6 +196,43 @@ A few highlight per-skill examples:
 
 ---
 
+## Red flags (anti-pattern library) per skill
+
+Every PM skill now ships with a `references/red-flags.md` file: 10-12 concrete anti-patterns with paired *bad* and *good* artifact snippets, plus a "How to catch it" check question. Use it before sharing your output to scan for the most common failures.
+
+Examples of red flags caught:
+
+- **status-update-generator**: "watermelon" status (green outside, red inside) — when the rationale sentence contradicts the color
+- **create-prd**: solution-before-problem (Section 7 expands while Section 3 is one sentence)
+- **post-mortem**: blame language ("Dev shipped a bad config") vs systemic framing ("Config validation lacked a pre-deploy step")
+- **brainstorm-okrs**: output-as-KR ("Ship the feature") vs outcome-as-KR ("Increase weekly active teams by 30%")
+- **customer-feedback-triage**: squeaky-wheel bias (the loudest customer's request leapfrogs the scored backlog)
+
+See any skill's `references/red-flags.md` for the full library.
+
+---
+
+## Runnable pipelines (chain multiple skills end-to-end)
+
+Five [`pipelines/`](../pipelines/) at the repo root chain multiple PM skills into single-command flows:
+
+| Pipeline | Chains | Use case |
+|---|---|---|
+| [`pipelines/feature-end-to-end.py`](../pipelines/feature-end-to-end.py) | identify-assumptions → brainstorm-experiments → pre-mortem → create-prd → brainstorm-okrs → prioritization-frameworks → release-notes | New feature from idea to launch |
+| [`pipelines/weekly-cadence.py`](../pipelines/weekly-cadence.py) | jira/linear adapter → status-update + flow-metrics + dependency-map | Weekly exec status from real tracker data |
+| [`pipelines/customer-discovery.py`](../pipelines/customer-discovery.py) | interview-synthesis → identify-assumptions → brainstorm-experiments → north-star-metric | Process a batch of customer interviews |
+| [`pipelines/post-mortem-flow.py`](../pipelines/post-mortem-flow.py) | post-mortem → pre-mortem (for follow-ups) → dependency-map | After an incident |
+| [`pipelines/launch-coordination.py`](../pipelines/launch-coordination.py) | beta-program → feature-flag-strategy → launch-playbook → release-notes | Coordinated GA launch |
+
+```bash
+python pipelines/feature-end-to-end.py --demo --output ./my-feature
+# Produces: 01-assumptions.md, 02-experiments.md, 03-pre-mortem.md,
+#           04-prd.md, 05-okrs.md, 06-priorities.md, 07-release-notes.md,
+#           summary.md
+```
+
+---
+
 ## Live data adapters
 
 PM tools all consume JSON. To remove the "first get the data" friction, ship adapters that pull from real APIs:

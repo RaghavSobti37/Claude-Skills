@@ -5,6 +5,36 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.6.0] - 2026-05-22 (Tier 2 of PM depth)
+
+### Added
+
+**Red-flag / anti-pattern library in every PM skill (54 files, ~12,000 lines).** Each skill now has `references/red-flags.md` with 10-12 concrete anti-patterns, paired bad/good QUOTED artifact snippets, and a "How to catch it" check question. Anchors to canonical authors (Wodtke, Wake, Lawrence, Vacanti, Allspaw, Dekker, Cagan, Klein, Klement, Ellis, McClure, Karpathy, Anthropic RSP, Ramanujam, Westendorp, etc.). Differentiates from generic AI-generated framework summaries.
+
+Highlight red flags:
+- status-update-generator: watermelon status (green outside, red inside)
+- create-prd: solution-before-problem (Section 7 bloat)
+- post-mortem: blame language vs systemic framing
+- brainstorm-okrs: output-as-KR, sandbagging, drift mid-quarter
+- customer-feedback-triage: squeaky-wheel bias, sales-driven roadmap
+- north-star-metric: NSM = revenue (it's not)
+- ai-feature-prd: hallucination tolerance hand-waving, no fallback model
+- linear-expert: cycle-as-sprint anti-patterns, GraphQL N+1
+
+**Runnable skill-chain pipelines (`pipelines/`).** Five stdlib-only scripts that chain multiple PM skills end-to-end with one command. Each supports `--demo`, `--input <json>`, `--format markdown|json`, `--output <dir>`:
+- `feature-end-to-end.py` — discovery → PRD → OKRs → backlog → release (chains 7 skills)
+- `weekly-cadence.py` — Jira/Linear adapter → status + flow + dependency (4 skills)
+- `customer-discovery.py` — interview-synthesis → assumptions → experiments → NSM (4 skills)
+- `post-mortem-flow.py` — post-mortem → pre-mortem follow-ups → dependency-map (3 skills)
+- `launch-coordination.py` — beta-program → feature-flag-strategy → launch-playbook → release-notes (4 skills)
+- `pipelines/README.md` — when-to-use, inputs/outputs, integration points
+
+Pipelines gracefully degrade — if a downstream skill's tool isn't available, the pipeline stubs that stage and continues, so the chain always completes.
+
+### Changed
+
+- PM README updated with new "Red flags" and "Runnable pipelines" sections.
+
 ## [4.5.0] - 2026-05-22 (later)
 
 ### Added (Tier 1 of PM depth investment)
