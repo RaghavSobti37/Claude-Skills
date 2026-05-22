@@ -1,12 +1,12 @@
 # Project Management Skills - Claude Code Guidance
 
-This guide covers the **42 production-ready project management skills** organized across role-based, discovery, execution, career, and integration domains. PM is the most-used domain in this library.
+This guide covers the **54 production-ready project management skills** organized across role-based, discovery, execution, career, and integration domains. PM is the most-used domain in this library.
 
 ## PM Skills Overview
 
-**Available Skills (42 total):**
+**Available Skills (54 total):**
 
-### Role-Based Skills (11)
+### Role-Based Skills (10)
 1. **senior-pm/** - Portfolio management, stakeholder mapping, EMV risk analysis, executive reporting
 2. **scrum-master/** - Sprint analytics, team health, velocity forecasting, capacity planning
 3. **delivery-manager/** - Release management, deployment coordination, incident response
@@ -17,47 +17,58 @@ This guide covers the **42 production-ready project management skills** organize
 8. **atlassian-admin/** - Atlassian suite administration and configuration
 9. **atlassian-templates/** - Ready-to-use templates for Jira and Confluence
 10. **sprint-retrospective/** - Data-driven sprint retrospectives
-11. **packaged-skills/** - Bundled skill packages for quick deployment
 
-### Discovery Skills (5) — `discovery/`
-12. **brainstorm-ideas/** - Product Trio ideation, Opportunity Solution Trees
-13. **brainstorm-experiments/** - Lean experiment design, XYZ hypotheses, pretotyping
-14. **identify-assumptions/** - Assumption mapping across 4-8 risk categories
-15. **pre-mortem/** - Tiger/Paper Tiger/Elephant risk classification
-16. **interview-synthesis/** ★ NEW - Customer interview → opportunity solution tree
+### Integration Skills (3)
+11. **linear-expert/** - Linear administration, GraphQL queries, Jira → Linear migration
+12. **notion-pm/** - Notion DBs for PRDs/OKRs/Roadmap/Decisions, REST API patterns
+13. **productboard-expert/** ★ NEW - Productboard administration, Insight inbox triage, Driver scoring, REST API
 
-### Execution Skills (21) — `execution/`
-17. **create-prd/** - 8-section PRD scaffolding with problem framing canvas and working backwards PR
-18. **prfaq/** ★ NEW - Amazon Working Backwards PR/FAQ as standalone skill
-19. **brainstorm-okrs/** - OKR brainstorming and validation (Wodtke framework)
-20. **north-star-metric/** ★ NEW - NSM + input metric tree definition
-21. **outcome-roadmap/** - Output→outcome roadmap transformation
-22. **roadmap-communication/** ★ NEW - Exec/customer/internal roadmap variants
-23. **prioritization-frameworks/** - 9-framework reference with multi-scorer
-24. **backlog-refinement/** ★ NEW - INVEST + DoR/DoD + splitting playbook
-25. **story-splitting/** ★ NEW - 9 vertical slicing patterns (Lawrence)
-26. **story-mapping/** - Jeff Patton user story mapping for release planning
-27. **job-stories/** - JTBD discovery canvas and When/Want/So backlog format
-28. **wwas/** - Why-What-Acceptance structured backlog items
-29. **cycle-time-analyzer/** ★ NEW - Flow metrics (lead time, cycle time, CFD)
-30. **dependency-map/** ★ NEW - Cross-team dependency tracking + critical path
-31. **status-update-generator/** ★ NEW - Weekly exec update from Jira/Linear data
-32. **summarize-meeting/** - Structured meeting summaries with action items
-33. **daci-framework/** - DACI decision facilitation and governance
-34. **beta-program/** ★ NEW - Closed beta playbook
-35. **launch-playbook/** ★ NEW - Internal + external launch coordination
-36. **release-notes/** - Release notes generation from tickets/changelogs
-37. **eol-communication/** - End-of-life product messaging and sunset communication
+### Discovery Skills (8) — `discovery/`
+14. **brainstorm-ideas/** - Product Trio ideation, Opportunity Solution Trees
+15. **brainstorm-experiments/** - Lean experiment design, XYZ hypotheses, pretotyping
+16. **identify-assumptions/** - Assumption mapping across 4-8 risk categories
+17. **pre-mortem/** - Tiger/Paper Tiger/Elephant risk classification
+18. **interview-synthesis/** - Customer interview → opportunity solution tree (Torres)
+19. **customer-interview-script/** ★ NEW - How to RUN a discovery interview (Portigal, Fitzpatrick)
+20. **value-proposition-canvas/** ★ NEW - Strategyzer VPC (Customer Profile + Value Map)
+21. **jtbd-workshop/** ★ NEW - Full Jobs-To-Be-Done workshop (Christensen, Ulwick, Moesta)
 
-### Career Skills (4) ★ NEW — `career/`
-38. **pm-interview-prep/** - APM/PM/Sr PM/Group PM interview rubrics + frameworks
-39. **pm-career-ladder/** - Rubrics, growth plans, promo packets
-40. **pm-onboarding/** - 30-60-90 day plan for new PMs
-41. **pm-1on1s/** - 1:1 templates by partner type (EM, designer, IC, manager)
+### Execution Skills (29) — `execution/`
+22. **create-prd/** - 8-section PRD scaffolding with problem framing canvas and working backwards PR
+23. **prfaq/** - Amazon Working Backwards PR/FAQ as standalone skill
+24. **ai-feature-prd/** ★ NEW - PRDs for AI/ML features (eval, guardrails, model selection, cost)
+25. **pricing-prd/** ★ NEW - Pricing experiments and pricing-page PRDs (tactical)
+26. **product-vision/** ★ NEW - Vision document (Pichler, Moore, Raskin, Cagan, Amazon WB)
+27. **brainstorm-okrs/** - OKR brainstorming and validation (Wodtke framework)
+28. **north-star-metric/** - NSM + input metric tree definition
+29. **quarterly-planning/** ★ NEW - Full Q1 cycle (kickoff → mid-Q → close) above OKRs
+30. **outcome-roadmap/** - Output → outcome roadmap transformation
+31. **roadmap-communication/** - Exec/customer/internal roadmap variants
+32. **prioritization-frameworks/** - 9-framework reference with multi-scorer
+33. **backlog-refinement/** - INVEST + DoR/DoD + splitting playbook
+34. **story-splitting/** - 9 vertical slicing patterns (Lawrence)
+35. **story-mapping/** - Jeff Patton user story mapping for release planning
+36. **job-stories/** - JTBD discovery canvas and When/Want/So backlog format
+37. **wwas/** - Why-What-Acceptance structured backlog items
+38. **customer-feedback-triage/** ★ NEW - Inbound feedback → categorize → score → backlog (Kano + RICE)
+39. **activation-funnel/** ★ NEW - AARRR funnel design + analyzer (12 real activation events)
+40. **feature-flag-strategy/** ★ NEW - Phased rollouts, kill-switches, flag debt (Fowler taxonomy)
+41. **cycle-time-analyzer/** - Flow metrics (lead time, cycle time, CFD, Little's Law)
+42. **dependency-map/** - Cross-team dependency tracking + critical path
+43. **status-update-generator/** - Weekly exec update from Jira/Linear data
+44. **summarize-meeting/** - Structured meeting summaries with action items
+45. **daci-framework/** - DACI decision facilitation and governance
+46. **beta-program/** - Closed beta playbook
+47. **launch-playbook/** - Internal + external launch coordination
+48. **post-mortem/** ★ NEW - Blameless incident RCA (Google SRE, Allspaw, Dekker)
+49. **release-notes/** - Release notes generation from tickets/changelogs
+50. **eol-communication/** - End-of-life product messaging and sunset communication
 
-### Integration Skills (2) ★ NEW
-42. **linear-expert/** - Linear administration, GraphQL queries, Jira → Linear migration
-42. **notion-pm/** - Notion DBs for PRDs/OKRs/Roadmap/Decisions, API patterns
+### Career Skills (4) — `career/`
+51. **pm-interview-prep/** - APM/PM/Sr PM/Group PM interview rubrics + frameworks
+52. **pm-career-ladder/** - Rubrics, growth plans, promo packets
+53. **pm-onboarding/** - 30-60-90 day plan for new PMs
+54. **pm-1on1s/** - 1:1 templates by partner type (EM, designer, IC, manager)
 
 **Key Features:**
 - **Atlassian MCP Server** integration for direct Jira/Confluence operations
@@ -299,7 +310,7 @@ career/pm-onboarding/ → 30-60-90 day plan → stakeholder mapping (senior-pm/)
 ---
 
 **Last Updated:** 2026-05-21
-**Skills Deployed:** 42/42 PM skills production-ready
+**Skills Deployed:** 54/54 PM skills production-ready
 **Python Tools:** 15+ CLI tools
 **Integrations:** Jira, Linear, Notion, Confluence, GitHub Projects, Atlassian MCP
 **Career Track:** 4 skills (unique to this library — no competitor covers PM career growth)

@@ -1,12 +1,12 @@
 ---
 title: Project Management Skills
-description: 42 PM skills — discovery, delivery, career growth — with Jira, Linear, Notion, and Confluence integration. The most-used domain in Claude Skills.
+description: 54 PM skills — discovery, delivery, career growth — with Jira, Linear, Notion, and Confluence integration. The most-used domain in Claude Skills.
 ---
 
 # Project Management Skills
 
 !!! success "★ The most-visited domain in Claude Skills"
-    **42 production-ready PM skills** spanning discovery, execution, career growth, and tool integrations. PMs from APM to CPO use these daily to ship faster with fewer meetings.
+    **54 production-ready PM skills** spanning discovery, execution, career growth, and tool integrations. PMs from APM to CPO use these daily to ship faster with fewer meetings.
 
 The PM domain is a complete operating system for product and project work — every artifact a PM produces (PRD, OKR, roadmap, status update, retro, decision log) has a skill that scaffolds it, with portable output to Jira, Linear, Notion, or Confluence.
 
@@ -19,7 +19,7 @@ The PM domain is a complete operating system for product and project work — ev
 
 <div class="grid cards" markdown>
 
--   :material-folder-multiple:{ .lg .middle } __42 skills, full lifecycle__
+-   :material-folder-multiple:{ .lg .middle } __54 skills, full lifecycle__
 
     ---
 

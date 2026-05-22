@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Flag Strategy - Claude Skills</title>
+  <meta name="description" content="PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming c">
+  <link rel="canonical" href="https://borghei.github.io/Claude-Skills/skills/project-management/feature-flag-strategy.html">
+  <meta property="og:title" content="Feature Flag Strategy - Claude Skills">
+  <meta property="og:description" content="PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming c">
+  <meta property="og:url" content="https://borghei.github.io/Claude-Skills/skills/project-management/feature-flag-strategy.html">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Feature Flag Strategy", "description": "PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.", "applicationCategory": "Project Management", "operatingSystem": "Any", "url": "https://borghei.github.io/Claude-Skills/skills/project-management/feature-flag-strategy.html", "author": {"@type": "Person", "name": "borghei"}, "license": "https://opensource.org/licenses/MIT"}</script>
+  <style>
+:root {
+  --bg: #faf9f5;
+  --bg-secondary: #f0eee6;
+  --text: #141413;
+  --text-muted: #5e5d59;
+  --accent: #d97757;
+  --accent-deep: #c6613f;
+  --border: rgba(20,20,19,0.1);
+  --border-strong: rgba(20,20,19,0.18);
+  --white: #ffffff;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', SFMono-Regular, ui-monospace, 'Cascadia Code', Menlo, monospace;
+  --max-width: 1200px;
+  --shadow-sm: 0 1px 2px rgba(20,20,19,0.04);
+  --shadow: 0 1px 3px rgba(20,20,19,0.06), 0 1px 2px rgba(20,20,19,0.04);
+  --shadow-md: 0 4px 12px rgba(20,20,19,0.08), 0 1px 3px rgba(20,20,19,0.06);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
+a:hover { color: var(--accent-deep); }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+code { font-family: var(--font-mono); font-size: 0.875em; }
+
+/* Navbar */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,249,245,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.navbar .container { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.nav-logo:hover { color: var(--text); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.gh-link { display: inline-flex; align-items: center; gap: 5px; }
+
+/* Breadcrumbs */
+.breadcrumbs { padding: 20px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.breadcrumbs a { color: var(--text-muted); }
+.breadcrumbs a:hover { color: var(--accent); }
+.breadcrumbs .sep { margin: 0 8px; opacity: 0.4; }
+
+/* Page header */
+.page-header { padding: 48px 0 32px; }
+.page-title {
+  font-family: var(--font-serif); font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em;
+  color: var(--text);
+}
+.page-subtitle { color: var(--text-muted); max-width: 700px; font-size: 1.05rem; line-height: 1.6; }
+
+/* Count badge (inline with title) */
+.count-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--accent); background: rgba(217,119,87,0.08);
+  padding: 2px 10px; border-radius: 20px; margin-left: 8px;
+  vertical-align: middle; font-weight: 500;
+}
+
+/* Search + Filter */
+.filter-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+.search-input {
+  flex: 1; min-width: 200px; padding: 10px 14px 10px 38px;
+  background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius); color: var(--text); font-family: var(--font-sans);
+  font-size: 0.9rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217,119,87,0.1); }
+.search-input::placeholder { color: var(--text-muted); }
+.search-wrap { position: relative; flex: 1; min-width: 200px; }
+.search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.filter-select {
+  padding: 10px 14px; background: var(--white); border: 1px solid var(--border-strong);
+  border-radius: var(--radius); color: var(--text); font-family: var(--font-sans);
+  font-size: 0.9rem; outline: none; cursor: pointer;
+}
+.filter-select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217,119,87,0.1); }
+
+/* Card grid */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 60px; }
+.skill-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  display: flex; flex-direction: column;
+}
+.skill-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.skill-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+.skill-card h3 a { color: var(--text); }
+.skill-card h3 a:hover { color: var(--accent); }
+.skill-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+
+/* Badges */
+.badge-bar { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 6px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono); font-size: 0.7rem; padding: 3px 9px;
+  border-radius: 5px; font-weight: 500; white-space: nowrap;
+}
+.badge-domain { background: rgba(217,119,87,0.1); border: 1px solid rgba(217,119,87,0.2); color: var(--accent-deep); }
+.badge-subdomain { background: rgba(20,20,19,0.04); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-version { background: rgba(20,20,19,0.03); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-tools { background: rgba(20,20,19,0.04); border: 1px solid var(--border); color: var(--text-muted); }
+.badge-refs { background: rgba(217,119,87,0.06); border: 1px solid rgba(217,119,87,0.15); color: var(--accent); }
+
+/* Tags */
+.skill-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.tag {
+  font-family: var(--font-mono); font-size: 0.65rem; padding: 2px 8px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-muted);
+}
+
+/* Example pills on domain summary cards */
+.example-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.example-pill {
+  font-family: var(--font-mono); font-size: 0.65rem; padding: 2px 7px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-muted);
+}
+
+/* Skill detail page */
+.skill-detail { padding-bottom: 80px; }
+.skill-detail h2 {
+  font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700;
+  margin: 40px 0 16px; padding-top: 16px;
+  border-top: 1px solid var(--border); color: var(--text);
+}
+.skill-detail h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 10px; }
+.skill-detail p, .skill-detail li { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+.skill-detail ul, .skill-detail ol { margin-left: 20px; margin-bottom: 16px; }
+.skill-detail li { margin-bottom: 6px; }
+.skill-detail pre {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 20px; overflow-x: auto;
+  font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.7;
+  color: var(--text); margin: 12px 0 20px;
+}
+.skill-detail code {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px;
+}
+.skill-detail pre code { background: none; padding: 0; }
+
+/* Platform tabs */
+.platform-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 0; }
+.tab-btn {
+  padding: 10px 18px; font-size: 0.85rem; font-weight: 500;
+  font-family: var(--font-sans); background: none; border: none;
+  border-bottom: 2px solid transparent; color: var(--text-muted);
+  cursor: pointer; transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-content pre {
+  border-top: none; border-radius: 0 0 var(--radius) var(--radius);
+  margin-top: 0;
+}
+
+/* Quick Start prompt cards */
+.prompt-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  padding: 20px; background: var(--bg-secondary);
+  border: 1px solid var(--border); border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+@media (max-width: 640px) { .prompt-cards { grid-template-columns: 1fr; } }
+.prompt-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.prompt-card-featured { border-color: var(--accent); border-width: 2px; }
+.prompt-card-header { display: flex; align-items: center; justify-content: space-between; }
+.prompt-card-header h3 { font-size: 1rem; font-weight: 700; margin: 0; color: var(--text); }
+.prompt-card-badge {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 8px;
+  border-radius: 4px; background: var(--bg-secondary);
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.badge-featured { background: rgba(217,119,87,0.12); color: var(--accent-deep); }
+.prompt-card-desc { font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex-grow: 1; }
+.copy-btn-featured { background: var(--accent-deep); }
+.prompt-details { margin-top: 4px; }
+.prompt-details summary {
+  font-size: 0.78rem; color: var(--text-muted); cursor: pointer;
+  padding: 4px 0; user-select: none;
+}
+.prompt-details summary:hover { color: var(--accent); }
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 16px; font-size: 0.82rem; font-weight: 600;
+  font-family: var(--font-sans);
+  background: var(--accent); color: var(--white);
+  border: none; border-radius: 6px; cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.copy-btn:hover { background: var(--accent-deep); }
+.copy-btn:active { transform: scale(0.97); }
+.copy-btn.copied { background: #2d8a4e; }
+.prompt-preview {
+  max-height: 200px; overflow-y: auto; padding: 16px 18px;
+  font-size: 0.8rem; line-height: 1.5; white-space: pre-wrap;
+  word-wrap: break-word; color: var(--text-muted);
+  background: var(--white); margin: 0; border: none;
+  font-family: var(--font-mono);
+}
+.prompt-hint {
+  padding: 10px 18px; font-size: 0.78rem; color: var(--text-muted);
+  background: var(--bg-secondary); margin: 0; border-top: 1px solid var(--border);
+}
+
+/* Tools list */
+.tool-item {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px;
+}
+.tool-item h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 3px; color: var(--text); }
+.tool-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+/* Related skills */
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
+
+/* Agents grid */
+.agents-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 60px; }
+.agent-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.agent-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.agent-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.agent-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+.agent-card .view-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; margin-top: 10px; color: var(--accent);
+}
+
+/* Commands grid */
+.commands-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding-bottom: 60px; }
+.command-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 22px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.command-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.command-card h3 {
+  font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600;
+  margin-bottom: 6px; color: var(--accent);
+}
+.command-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+.command-card .view-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; margin-top: 10px; color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: var(--radius); font-size: 0.875rem;
+  font-weight: 500; font-family: var(--font-sans);
+  border: 1px solid transparent; cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+.btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+.btn-primary:hover { background: #2a2a28; color: var(--bg); box-shadow: var(--shadow); }
+.btn-secondary { background: transparent; color: var(--text); border-color: var(--border-strong); }
+.btn-secondary:hover { background: var(--bg-secondary); color: var(--text); box-shadow: var(--shadow-sm); }
+
+/* Section heading */
+.section-heading {
+  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700;
+  margin-bottom: 20px; color: var(--text);
+}
+
+/* Footer */
+.footer {
+  padding: 36px 0; border-top: 1px solid var(--border); margin-top: 40px;
+  background: var(--bg);
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-links {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.85rem; color: var(--text-muted);
+}
+.footer-links a { color: var(--text-muted); }
+.footer-links a:hover { color: var(--accent); }
+.footer-sep { color: var(--border-strong); }
+.footer-credit { font-size: 0.85rem; color: var(--text-muted); }
+.footer-credit a { color: var(--text); font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid, .agents-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .commands-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 16px; }
+  .platform-tabs { overflow-x: auto; }
+  .tab-btn { padding: 8px 12px; font-size: 0.8rem; white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .skills-grid, .agents-grid, .related-grid { grid-template-columns: 1fr; }
+  .filter-bar { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <a href="https://borghei.github.io/Claude-Skills/" class="nav-logo">Claude Skills</a>
+    <div class="nav-links">
+      <a href="https://borghei.github.io/Claude-Skills/skills/" class="active">Skills</a>
+      <a href="https://borghei.github.io/Claude-Skills/agents/">Agents</a>
+      <a href="https://borghei.github.io/Claude-Skills/commands/">Commands</a>
+      <a href="https://github.com/borghei/Claude-Skills" target="_blank" rel="noopener" class="gh-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+    </div>
+  </div>
+</nav>
+<div class="breadcrumbs container"><a href="https://borghei.github.io/Claude-Skills/">Home</a><span class=sep>/</span><a href="https://borghei.github.io/Claude-Skills/skills/">Skills</a><span class=sep>/</span><a href="https://borghei.github.io/Claude-Skills/skills/project-management/">Project Management</a><span class=sep>/</span><span>Feature Flag Strategy</span></div>
+<main class="container">
+
+<article class="skill-detail">
+  <div class="page-header">
+    <h1 class="page-title">Feature Flag Strategy</h1>
+    <p class="page-subtitle">PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.</p>
+    <div class="badge-bar"><span class="badge badge-domain">Project Management</span> <span class="badge badge-subdomain">Execution</span> <span class="badge badge-version">v1.0.0</span> <span class="badge badge-refs">references</span></div>
+    <div class="skill-meta" style="margin-bottom:24px"><span class="tag">feature-flags</span><span class="tag">dark-launch</span><span class="tag">kill-switch</span><span class="tag">rollout</span><span class="tag">holdout</span><span class="tag">ab-test</span><span class="tag">launchdarkly</span><span class="tag">statsig</span></div>
+  </div>
+  <h2>How to Use</h2>
+<div class="platform-tabs">
+  <button class="tab-btn active" data-tab="quickstart">Quick Start</button>
+  <button class="tab-btn" data-tab="claude">Claude Code</button>
+  <button class="tab-btn" data-tab="codex">Codex</button>
+  <button class="tab-btn" data-tab="gemini">Gemini CLI</button>
+  <button class="tab-btn" data-tab="cursor">Cursor</button>
+  <button class="tab-btn" data-tab="manual">Manual</button>
+</div>
+<div class="tab-content active" id="tab-quickstart">
+  <div class="prompt-cards">
+    <div class="prompt-card">
+      <div class="prompt-card-header">
+        <h3>Try in Chat</h3>
+        <span class="prompt-card-badge">Quick</span>
+      </div>
+      <p class="prompt-card-desc">Paste into any AI chat for instant expertise. Works in one conversation -- no setup needed.</p>
+      <button class="copy-btn" onclick="copyPrompt(this)" data-prompt="You are an expert Feature Flag Strategy (Project Management domain).
+
+PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.
+
+A feature flag is a runtime switch that decouples deploying code from releasing a feature. Done well, flags turn high-stakes ship dates into low-stakes config changes -- launches become measured ramps, regressions become single-toggle rollbacks, and experiments live alongside production code. Done p
+
+## Your Key Capabilities
+- When to Use
+- When NOT to Use
+- Shape A: Linear ramp
+- Shape B: Segmented (audience-first)
+- Shape C: Geographic / regulatory-aware
+- Shape D: A/B split with holdout
+
+## Frameworks &amp; Templates You Know
+- This skill is template-based; no Python tool. Artifacts are markdown plans.
+- | Template | Purpose |
+- - `assets/rollout_plan_template.md` -- Per-feature rollout plan
+
+## How to Help
+When the user asks for help in this domain:
+1. Ask clarifying questions to understand their context
+2. Apply the relevant framework or workflow from your expertise
+3. Provide actionable, specific output (not generic advice)
+4. Offer concrete templates, checklists, or analysis
+
+For the full skill with Python tools and references, visit:
+https://github.com/borghei/Claude-Skills/tree/main/feature-flag-strategy
+
+---
+Start by asking the user what they need help with.">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> <span>Copy Prompt</span>
+      </button>
+      <details class="prompt-details">
+        <summary>Preview prompt</summary>
+        <pre class="prompt-preview">You are an expert Feature Flag Strategy (Project Management domain).
+
+PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.
+
+A feature flag is a runtime switch that decouples deploying code from releasing a feature. Done well, flags turn high-stakes ship dates into low-stakes config changes -- launches become measured ramps, regressions become single-toggle rollbacks, and experiments live alongside production code. Done p
+
+## Your Key Capabilities
+- When to Use
+- When NOT to Use
+- Shape A: Linear ramp
+- Shape B: Segmented (audience-first)
+- Shape C: Geographic / regulatory-aware
+- Shape D: A/B split with holdout
+
+## Frameworks &amp; Templates You Know
+- This skill is template-based; no Python tool. Artifacts are markdown plans.
+- | Template | Purpose |
+- - `assets/rollout_plan_template.md` -- Per-feature rollout plan
+
+## How to Help
+When the user asks for help in this domain:
+1. Ask clarifying questions to understand their context
+2. Apply the relevant framework or workflow from your expertise
+3. Provide actionable, specific output (not generic advice)
+4. Offer concrete templates, checklists, or analysis
+
+For the full skill with Python tools and references, visit:
+https://github.com/borghei/Claude-Skills/tree/main/feature-flag-strategy
+
+---
+Start by asking the user what they need help with.</pre>
+      </details>
+    </div>
+    <div class="prompt-card prompt-card-featured">
+      <div class="prompt-card-header">
+        <h3>Add to My AI</h3>
+        <span class="prompt-card-badge badge-featured">Full Skill</span>
+      </div>
+      <p class="prompt-card-desc">Creates a permanent Claude Project or Custom GPT with the complete skill. The AI will guide you through setup step by step.</p>
+      <button class="copy-btn copy-btn-featured" onclick="copyPrompt(this)" data-prompt="# Create a &quot;Feature Flag Strategy&quot; AI Skill
+
+I want you to help me set up a reusable AI skill that I can use in future conversations. Read the complete skill definition below, then help me install it.
+
+## Complete Skill Definition
+
+# Feature Flag Strategy (PM playbook)
+
+## Overview
+
+A feature flag is a runtime switch that decouples deploying code from releasing a feature. Done well, flags turn high-stakes ship dates into low-stakes config changes -- launches become measured ramps, regressions become single-toggle rollbacks, and experiments live alongside production code. Done poorly, flags become permanent technical debt: hundreds of dead toggles in code, conflicting flag states across environments, and nobody remembering what the flag controls.
+
+This skill is the **PM-facing** rollout playbook. It does not describe how to wire a flag library into your codebase (that is the engineering side, e.g. `engineering/feature-flag-architect/` if it exists, or your LaunchDarkly / Statsig / Optimizely / Unleash / OpenFeature install). It describes how a PM plans a phased rollout: what kind of flag this is, how it ramps, what the gate criteria are between stages, who can flip the kill-switch, when the flag retires, and how it is named so the team can find it six months later.
+
+The frameworks behind it are Martin Fowler&#x27;s &quot;Feature Toggles&quot; taxonomy (release vs experiment vs ops vs permission, each with very different lifespans), LaunchDarkly&#x27;s rollout best practices, Optimizely / Statsig experiment playbooks, and Reforge experimentation foundations.
+
+### When to Use
+
+- **Planning a launch larger than a small team can ship cold.** Anything customer-facing usually warrants a flag.
+- **Risk-y change to a high-traffic surface.** Search, checkout, auth, billing -- always behind a flag with a kill-switch.
+- **Experiments (A/B tests).** Experiment toggles are a special kind of flag with hold-out and statistical-significance gates.
+- **Permission rollouts.** New feature available only to enterprise tenants, beta participants, or a specific role.
+- **Operational levers.** Throttles, circuit breakers, degrade-modes -- flags that protect the system under load.
+- **Migration of a deterministic feature to AI.** Pair with `ai-feature-prd/` for the deployment ramp; pair with `engineering/llm-cost-optimizer/` for cost gates.
+
+### When NOT to Use
+
+- For one-time data migrations (use a script with a `--dry-run` flag, not a feature flag).
+- For configuration that changes between environments (use environment config, not a feature flag).
+- For permanent A/B variants that never converge (this is a personalization system, not a flag system).
+- For feature-flagging every change (cost of flags &gt; value when overused; reserve for genuinely risky surfaces).
+
+## Flag taxonomy (Fowler)
+
+Martin Fowler&#x27;s taxonomy classifies flags by **purpose** because lifespan and ownership differ dramatically.
+
+| Flag type | Purpose | Lifespan | Ownership | Examples |
+|---|---|---|---|---|
+| **Release toggle** | Deploy code before release; decouple ship from launch | Days to weeks; **must retire after launch** | Owning team (Eng + PM) | &quot;new_checkout_flow_v2&quot;, &quot;search_relevance_v3&quot; |
+| **Experiment toggle** | A/B test variants; decide based on stat-sig | Days to weeks; **must retire when experiment concludes** | Owning team + analytics | &quot;checkout_button_color_test&quot;, &quot;onboarding_v2_experiment&quot; |
+| **Ops toggle** | Operational control: throttle, circuit-break, degrade-mode | Permanent or long-lived | Infra / SRE | &quot;search_circuit_breaker&quot;, &quot;rate_limit_premium_tier&quot; |
+| **Permission toggle** | Gate features by user, plan, role, tenant | Permanent (lives with the product) | Product + Eng | &quot;enterprise_admin_panel&quot;, &quot;beta_program_access&quot; |
+
+The error mode is treating a release toggle as a permission toggle (&quot;we never turned it off, so it&#x27;s now permanent&quot;). The result is **flag debt**: thousands of dead branches in code, conflicting flag combinations, mystery behaviors.
+
+**Rule:** every release toggle and experiment toggle has a *retirement date* set at creation. Operationally, a flag without a retirement date is treated as a defect.
+
+## Rollout shapes
+
+The shape of a ramp tells the team how much risk they are absorbing per step.
+
+### Shape A: Linear ramp
+
+```
+0% -&gt; 1% -&gt; 5% -&gt; 10% -&gt; 25% -&gt; 50% -&gt; 100%
+```
+
+The default. Each step held for 1-3 days while metrics settle. Use for new features without strong segment hypotheses.
+
+### Shape B: Segmented (audience-first)
+
+```
+Internal employees -&gt; Friends-and-family -&gt; Beta opt-in -&gt; Free tier -&gt; Paid tier -&gt; All
+```
+
+Use when you have explicit risk gradients across segments -- enterprise customers wait until pro customers have validated; consumer flagship waits for ToS-aware beta opt-in.
+
+### Shape C: Geographic / regulatory-aware
+
+```
+Single low-risk region -&gt; Region cluster -&gt; Global, excluding regulated regions -&gt; Global, all regions
+```
+
+Use for features with regulatory variance (EU AI Act, GDPR-specific UI, payment-method constraints, age-verification rules).
+
+### Shape D: A/B split with holdout
+
+```
+Variant A (control): 50%
+Variant B (test): 45%
+Holdout (no exposure): 5%
+```
+
+Use for experiments. The holdout group is never exposed even after rollout, so the team can measure long-term lift weeks after the experiment concludes.
+
+### Shape E: Dark launch (shadow)
+
+```
+Code shipped to 100% -- no user-visible behavior
+Backend runs the new path in shadow; results discarded but logged
+```
+
+Use to validate performance, error rate, and side effects before any user sees the new behavior. Standard for high-traffic system changes; also standard for AI features (pair with `ai-feature-prd/` Section 11.3).
+
+### Shape F: Reverse ramp (sunset)
+
+```
+100% -&gt; 75% -&gt; 50% -&gt; 25% -&gt; 10% -&gt; 0%
+```
+
+Use for retiring a feature. The ramp gives users time to migrate; analytics monitor whether users are healthy on the new path. Pair with `eol-communication/`.
+
+### Shape G: Forced-upgrade (mobile)
+
+```
+Server-side flag check -&gt; app refuses to start on old client -&gt; user must upgrade
+```
+
+Special case for mobile when the new feature requires a client version. Always have a transition window; never flag-flip on day 1 of release.
+
+## Kill-switch decision tree
+
+A kill-switch is the on-call&#x27;s emergency control. Three rules:
+
+1. **Every release toggle has a kill-switch path.** &quot;Turn the flag off&quot; must be a single config change, not a code rollback.
+2. **The kill-switch threshold is pre-agreed.** Define it during planning, not in the heat of incident.
+3. **The on-call has authority to flip without escalation.** If the rollback requires VP sign-off, the system is too slow.
+
+### Decision tree
+
+```
+Incident detected.
+|
++-- Customer impact? -- No --&gt; Monitor; document; do not flip.
+|        |
+|        Yes
+|        |
+|        v
++-- Within feature-flagged surface? -- No --&gt; Standard incident response.
+|        |
+|        Yes
+|        |
+|        v
++-- Error rate &gt; threshold OR major-customer-blocked? -- No --&gt; Throttle / partial degrade.
+|        |
+|        Yes
+|        |
+|        v
++-- Flip kill-switch -- 0% rollout -- Notify owner + customers.
+         |
+         v
+   Post-incident: root cause; flag stays off until fix lands; never re-enable without re-ramp.
+```
+
+### Kill-switch thresholds (defaults to tune per surface)
+
+| Surface | Default threshold |
+|---|---|
+| Critical (checkout, auth, billing) | Error rate &gt; 0.5% sustained for 5 min |
+| Core (search, signup, dashboard) | Error rate &gt; 2% sustained for 10 min OR top-tier-customer blocked |
+| Non-critical | Error rate &gt; 5% sustained for 15 min |
+| Latency | p95 &gt; 2x baseline for 10 min |
+| Customer reports | &gt;= 3 independent reports of the same issue from paid customers |
+
+## Holdouts
+
+A holdout is a slice of users (typically 1-10%) who never see the feature, even after general availability. Two uses:
+
+**Short-term holdout** -- to measure the lift of the feature with statistical confidence over time. Required for any experiment where the team wants to attribute long-term impact.
+
+**Long-term (&quot;global&quot;) holdout** -- a slice that never sees *any* of the team&#x27;s experiments for a quarter. Allows leadership to attribute aggregate lift to the team. Reforge and most experimentation-mature orgs run a global holdout.
+
+### Holdout governance
+
+- **Size**: 1-10%; smaller holdouts have less statistical power but cost less in lost feature exposure.
+- **Composition**: random or stratified (by segment, geo, plan tier).
+- **Duration**: at least one full retention horizon (D30 or D60); often 1-2 quarters.
+- **Documentation**: holdout configuration in source control; never modified mid-experiment.
+- **Re-exposure**: when the holdout ends, members are merged back; the team should plan for the conversion event.
+
+## Flag debt and retirement
+
+Every feature flag is technical debt by default. A live flag has a maintenance cost (test matrix, code branches, config integrity). Successful teams treat flag retirement as a first-class engineering activity.
+
+### Retirement checklist (release toggle)
+
+- [ ] Feature is at 100% for at least 2 weeks with stable metrics.
+- [ ] No regression has been triaged that the flag would mitigate.
+- [ ] Flag owner has filed a retirement PR removing both branches of code.
+- [ ] Test matrix updated to remove the flag combinations.
+- [ ] Config entry removed from the flag service.
+- [ ] Documentation updated (runbook, customer-facing docs if any).
+- [ ] Final state archived (what the flag controlled, when it retired, who owned it).
+
+### Retirement signals
+
+- Flag has been at 100% for 30+ days -&gt; retire.
+- Flag has been at 0% for 30+ days and the feature is dead -&gt; retire.
+- Flag has not been flipped in 60+ days and no plan to flip -&gt; investigate and retire or convert to a permission/ops flag with explicit ownership.
+- Flag is referenced in fewer than 3 places in code -&gt; trivially retirable; remove.
+
+### Flag-debt audit cadence
+
+Run a flag audit at least quarterly:
+- List of all live flags.
+- For each: type, owner, last toggle date, retirement date.
+- Flag count delta vs last quarter.
+- &quot;Aged flag&quot; report: flags older than 90 days that are not Ops or Permission.
+
+## Naming conventions
+
+A flag name is read more often than it is written. Conventions:
+
+```
+&lt;scope&gt;__&lt;feature&gt;__&lt;purpose&gt;__&lt;version&gt;
+```
+
+Examples:
+- `web__checkout__new_flow__v2` (release toggle on web for new checkout flow v2)
+- `api__search__relevance__experiment_q3` (experiment toggle in API)
+- `infra__search__circuit_breaker` (ops toggle, permanent)
+- `product__enterprise_admin__permission` (permission toggle, permanent)
+
+Rules:
+- **Scope first** -- web / mobile / api / infra. Lets you search &quot;all checkout flags on web.&quot;
+- **Feature second** -- the system surface, not the marketing name.
+- **Purpose third** -- release / experiment / ops / permission. Often baked into name (`__test`, `__experiment`, `__permission`, `__rollout`).
+- **Version when applicable** -- experiments and major UX redesigns benefit from version suffixes.
+- **No team names in the flag name** -- teams reorg; flags outlive the team.
+- **No customer names** -- exception: enterprise-specific permission flags can include the tenant id.
+- **lowercase + underscores or double-underscores** -- avoid camelCase to keep search predictable.
+
+## Dependency chains
+
+A flag depends on another when feature A only makes sense if feature B is also enabled. Two rules:
+
+1. **The dependency is encoded explicitly** in the flag service (e.g., LaunchDarkly prerequisites) or in code with a clear check.
+2. **The rollout plan reflects the dependency** -- ramp the parent flag first, hold until stable, then ramp the child.
+
+Dependency chains beyond 2-3 levels become unmanageable. If a flag depends on three other flags, the rollout plan needs flattening.
+
+## Approval and audit trail
+
+Flag flips on critical surfaces should require:
+- **Pre-approved owner** -- who can flip without further sign-off (usually the team&#x27;s PM + the on-call engineer).
+- **Change log entry** -- automatic; every flip logged with who, when, what, why.
+- **Two-person rule** for high-tier surfaces -- billing, auth, data deletion. One person proposes, another approves before flip.
+- **Audit retention** -- 90+ days of flag-change history available to the on-call.
+
+## Workflow
+
+1. **Classify the flag** (release / experiment / ops / permission). The lifespan and ownership follow.
+2. **Pick the rollout shape** (A-G above) and the gate criteria between stages.
+3. **Define the kill-switch** thresholds and authority.
+4. **Set the retirement date** (release/experiment toggles only). Add it to the team&#x27;s flag-audit list.
+5. **Name the flag** using the convention.
+6. **Document the plan** in the `assets/rollout_plan_template.md`. Share with eng, on-call, sponsor.
+7. **Wire the flag** (engineering side; PM does not do this).
+8. **Ramp** through the stages, holding each step long enough for metrics to settle.
+9. **Monitor**. Watch the same dashboard for each step. Declare each step a &quot;green pass&quot; before advancing.
+10. **Retire** the flag when GA is stable. Add to next sprint&#x27;s retirement PRs.
+11. **Audit** flag inventory quarterly; remove stragglers.
+
+## Tools
+
+This skill is template-based; no Python tool. Artifacts are markdown plans.
+
+| Template | Purpose |
+|---|---|
+| `assets/rollout_plan_template.md` | Per-feature rollout plan with stages, gates, owners, dates |
+| `assets/kill_switch_decision_tree.md` | Pre-incident thresholds + authority + flip steps |
+| `assets/flag_debt_retirement_checklist.md` | Flag-retirement workflow + quarterly audit |
+| `assets/flag_naming_convention.md` | Naming sheet for the team |
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---|---|---|
+| Flag inventory has 200+ live flags | No retirement discipline; release toggles never deleted | Run a quarterly audit; mass-retire anything 100% &gt; 30 days; lock new flag creation behind a retirement-date requirement |
+| Rollback during incident requires a code revert | Flag is on but the rollback path is not wired | Every release toggle has a kill-switch path (single config change); rehearse the flip in non-prod once a quarter |
+| Mobile feature flag broke users on old app version | Flag flipped before client adoption; no version gate | Always gate mobile flags on minimum client version; transition window of at least one release cycle |
+| Two flags interact in unexpected ways | Implicit dependency; flag combinations not tested | Encode dependencies in the flag service; cover the cross-product in test matrix; flatten dependency chains &gt; 2 levels |
+| Experiment &quot;shipped&quot; but holdout was killed | Holdout retired with the experiment; no long-term measurement | Keep the holdout open for at least one retention horizon after launch; document re-exposure as a separate step |
+| Owner of a flag has left the company | No ownership succession on flags | Flag ownership is by team, not by individual; team owner reviews the flag list during onboarding |
+| Flag-flip incident: wrong person flipped | Permissions too loose; no two-person rule on critical flags | Critical surfaces require two-person approval; rotate the kill-switch authority to the on-call rota |
+| Feature ramped to 100% but metrics never validated | No gate criteria between stages | Pre-agree the gate metrics; do not advance without a &quot;green pass&quot; from the owner |
+
+## Success Criteria
+
+- Every release / experiment toggle has a documented type, owner, kill-switch threshold, and retirement date.
+- The rollout plan names the gate metric between each stage.
+- The kill-switch can be flipped by the on-call without escalation.
+- Mobile flags are gated on a minimum client version.
+- Quarterly flag audit runs; flag count is stable or decreasing over time.
+- Naming convention is enforced (linter or PR review).
+- Experiments include a holdout that survives launch.
+- Flag-debt retirement is part of every sprint, not a periodic cleanup.
+
+## Scope &amp; Limitations
+
+**In Scope:**
+- Flag taxonomy (release / experiment / ops / permission) and lifespan rules
+- Rollout shapes (linear, segmented, geo, A/B with holdout, dark launch, reverse, mobile forced-upgrade)
+- Kill-switch decision tree and pre-agreed thresholds
+- Holdout design (short-term and global)
+- Flag-debt retirement workflow + quarterly audit
+- Naming conventions and dependency-chain governance
+- Approval, audit-trail, and two-person-rule patterns
+
+**Out of Scope:**
+- Wiring flag SDKs into a codebase (engineering side; LaunchDarkly / Statsig / Optimizely / Unleash / OpenFeature)
+- Statistical analysis of experiments (pair with `discovery/brainstorm-experiments/` for design; data-analytics domain for stats)
+- Building the analytics dashboards that gate each rollout stage (BI tooling)
+- Customer communications around launches (use `launch-playbook/`, `prfaq/`, `release-notes/`)
+- End-of-life narrative (use `eol-communication/`)
+- Code rollback strategy (use git revert and deployment pipelines; flags reduce but do not eliminate the need)
+
+**Important Caveats:**
+- Flags reduce launch risk but do not eliminate it. A flag with a broken kill-switch is worse than no flag.
+- Flag debt is real and grows with team velocity. A team shipping 20 features/quarter without retirement discipline will have 100+ live flags in a year.
+- Permission and Ops flags are permanent; release and experiment flags are temporary. Conflating the two is the most common failure mode.
+- Holdouts are politically hard to maintain because someone always wants to &quot;give that group access too.&quot; Document the holdout policy explicitly with leadership sign-off.
+- On mobile, flags are not free -- forced-upgrade flows are user-hostile. Plan around adoption curves of older client versions.
+
+## Integration Points
+
+| Integration | Direction | Description |
+|---|---|---|
+| `launch-playbook/` | Pairs with | Rollout plan is the deployment ramp inside the broader launch playbook |
+| `cycle-time-analyzer/` | Pairs with | Cycle time of rollout stages is a flow metric; long-stuck ramps are a leading indicator of risk |
+| `prfaq/` | Pairs with | PR/FAQ explains the launch externally; the rollout plan explains it operationally |
+| `release-notes/` | Pairs with | Release notes are written for the GA step; the rollout plan is what produced them |
+| `eol-communication/` | Pairs with | Reverse-ramp (Shape F) is the operational side of a sunset narrative |
+| `ai-feature-prd/` | Pairs with | The AI PRD&#x27;s deployment ramp (Section 11.3) executes via this skill |
+| `discovery/brainstorm-experiments/` | Pairs with | Experiment toggles operationalize Lean experiments |
+| `discovery/pre-mortem/` | Pairs with | Pre-mortem risks inform kill-switch thresholds |
+| `engineering/feature-flag-architect/` (if it exists) | Pairs with | Engineering-side flag library design and code patterns |
+| `engineering/llm-cost-optimizer/` | Pairs with | AI ramp gate: cost budget per stage |
+| `status-update-generator/` | Feeds into | Rollout-stage pace + gates appear in weekly status |
+
+## References
+
+- `references/fowler-feature-toggle-taxonomy-guide.md` -- Martin Fowler&#x27;s &quot;Feature Toggles&quot; essay, lifespans, ownership patterns, and the operational discipline behind them
+- `references/rollout-shape-comparison-guide.md` -- Worked comparison of the 7 rollout shapes with example use cases and risk profiles
+- `assets/rollout_plan_template.md` -- Per-feature rollout plan
+- `assets/kill_switch_decision_tree.md` -- Pre-incident kill-switch playbook
+- `assets/flag_debt_retirement_checklist.md` -- Retirement workflow + audit
+- `assets/flag_naming_convention.md` -- Team naming sheet
+
+---
+
+## What I Need You to Do
+
+First, detect which platform I&#x27;m using (Claude.ai, ChatGPT, etc.) and follow the matching instructions below.
+
+### If I&#x27;m on Claude.ai:
+
+Walk me through these exact steps:
+
+1. **Create the Project:** Tell me to go to **claude.ai &gt; Projects &gt; Create project** and name it **&quot;Feature Flag Strategy&quot;**
+
+2. **Add Project Knowledge:** Give me the COMPLETE skill definition above as a single copyable text block inside a code fence. Tell me to click **&quot;Add content&quot; &gt; &quot;Add text content&quot;** inside the project, then paste that entire block. Do NOT say &quot;paste from above&quot; -- give me the actual text to copy right there.
+
+3. **Set Custom Instructions:** Tell me to open project settings and paste this exact instruction:
+   &quot;You are an expert Feature Flag Strategy in the Project Management domain. Use the project knowledge as your expertise. Follow the workflows, frameworks, and templates defined there. Always provide specific, actionable output.&quot;
+
+4. **Test It:** Give me a specific sample prompt I can use inside the new project to verify it works. Pick a real task from the skill&#x27;s workflows.
+
+### If I&#x27;m on ChatGPT:
+
+Walk me through these exact steps:
+
+1. **Create a Custom GPT:** Tell me to go to **chatgpt.com &gt; Explore GPTs &gt; Create**
+2. **Configure it:**
+   - Name: **&quot;Feature Flag Strategy&quot;**
+   - Description: &quot;PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.&quot;
+   - Instructions: Give me the COMPLETE skill definition above as a single copyable text block inside a code fence to paste into the Instructions field. Do NOT say &quot;paste from above.&quot;
+3. **Test It:** Give me a sample prompt to verify it works.
+
+### If I&#x27;m on another platform:
+Ask which tool I&#x27;m using and adapt the instructions accordingly.
+
+## Important
+- Always provide the full skill text in a ready-to-copy code block -- never tell me to &quot;scroll up&quot; or &quot;copy from above&quot;
+- Keep the setup steps simple and numbered
+- After setup, test it with me using a real workflow from the skill
+
+Source: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/feature-flag-strategy/SKILL.md">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> <span>Copy &amp; Create Skill</span>
+      </button>
+      <details class="prompt-details">
+        <summary>Preview prompt</summary>
+        <pre class="prompt-preview"># Create a &quot;Feature Flag Strategy&quot; AI Skill
+
+I want you to help me set up a reusable AI skill that I can use in future conversations. Read the complete skill definition below, then help me install it.
+
+## Complete Skill Definition
+
+# Feature Flag Strategy (PM playbook)
+
+## Overview
+
+A feature flag is a runtime switch that decouples deploying code from releasing a feature. Done well, flags turn high-stakes ship dates into low-stakes config changes -- launches become measured ramps, regressions become single-toggle rollbacks, and experiments live alongside production code. Done poorly, flags become permanent technical debt: hundreds of dead toggles in code, conflicting flag states across environments, and nobody remembering what the flag controls.
+
+This skill is the **PM-facing** rollout playbook. It does not describe how to wire a flag library into your codebase (that is the engineering side, e.g. `engineering/feature-flag-architect/` if it exists, or your LaunchDarkly / Statsig / Optimizely / Unleash / OpenFeature install). It describes how a PM plans a phased rollout: what kind of flag this is, how it ramps, what the gate criteria are between stages, who can flip the kill-switch, when the flag retires, and how it is named so the team can find it six months later.
+
+The frameworks behind it are Martin Fowler&#x27;s &quot;Feature Toggles&quot; taxonomy (release vs experiment vs ops vs permission, each with very different lifespans), LaunchDarkly&#x27;s rollout best practices, Optimizely / Statsig experiment playbooks, and Reforge experimentation foundations.
+
+### When to Use
+
+- **Planning a launch larger than a small team can ship cold.** Anything customer-facing usually warrants a flag.
+- **Risk-y change to a high-traffic surface.** Search, checkout, auth, billing -- always behind a flag with a kill-switch.
+- **Experiments (A/B tests).** Experiment toggles are a special kind of flag with hold-out and statistical-significance gates.
+- **Permission rollouts.** New feature available only to enterprise tenants, beta participants, or a specific role.
+- **Operational levers.** Throttles, circuit breakers, degrade-modes -- flags that protect the system under load.
+- **Migration of a deterministic feature to AI.** Pair with `ai-feature-prd/` for the deployment ramp; pair with `engineering/llm-cost-optimizer/` for cost gates.
+
+### When NOT to Use
+
+- For one-time data migrations (use a script with a `--dry-run` flag, not a feature flag).
+- For configuration that changes between environments (use environment config, not a feature flag).
+- For permanent A/B variants that never converge (this is a personalization system, not a flag system).
+- For feature-flagging every change (cost of flags &gt; value when overused; reserve for genuinely risky surfaces).
+
+## Flag taxonomy (Fowler)
+
+Martin Fowler&#x27;s taxonomy classifies flags by **purpose** because lifespan and ownership differ dramatically.
+
+| Flag type | Purpose | Lifespan | Ownership | Examples |
+|---|---|---|---|---|
+| **Release toggle** | Deploy code before release; decouple ship from launch | Days to weeks; **must retire after launch** | Owning team (Eng + PM) | &quot;new_checkout_flow_v2&quot;, &quot;search_relevance_v3&quot; |
+| **Experiment toggle** | A/B test variants; decide based on stat-sig | Days to weeks; **must retire when experiment concludes** | Owning team + analytics | &quot;checkout_button_color_test&quot;, &quot;onboarding_v2_experiment&quot; |
+| **Ops toggle** | Operational control: throttle, circuit-break, degrade-mode | Permanent or long-lived | Infra / SRE | &quot;search_circuit_breaker&quot;, &quot;rate_limit_premium_tier&quot; |
+| **Permission toggle** | Gate features by user, plan, role, tenant | Permanent (lives with the product) | Product + Eng | &quot;enterprise_admin_panel&quot;, &quot;beta_program_access&quot; |
+
+The error mode is treating a release toggle as a permission toggle (&quot;we never turned it off, so it&#x27;s now permanent&quot;). The result is **flag debt**: thousands of dead branches in code, conflicting flag combinations, mystery behaviors.
+
+**Rule:** every release toggle and experiment toggle has a *retirement date* set at creation. Operationally, a flag without a retirement date is treated as a defect.
+
+## Rollout shapes
+
+The shape of a ramp tells the team how much risk they are absorbing per step.
+
+### Shape A: Linear ramp
+
+```
+0% -&gt; 1% -&gt; 5% -&gt; 10% -&gt; 25% -&gt; 50% -&gt; 100%
+```
+
+The default. Each step held for 1-3 days while metrics settle. Use for new features without strong segment hypotheses.
+
+### Shape B: Segmented (audience-first)
+
+```
+Internal employees -&gt; Friends-and-family -&gt; Beta opt-in -&gt; Free tier -&gt; Paid tier -&gt; All
+```
+
+Use when you have explicit risk gradients across segments -- enterprise customers wait until pro customers have validated; consumer flagship waits for ToS-aware beta opt-in.
+
+### Shape C: Geographic / regulatory-aware
+
+```
+Single low-risk region -&gt; Region cluster -&gt; Global, excluding regulated regions -&gt; Global, all regions
+```
+
+Use for features with regulatory variance (EU AI Act, GDPR-specific UI, payment-method constraints, age-verification rules).
+
+### Shape D: A/B split with holdout
+
+```
+Variant A (control): 50%
+Variant B (test): 45%
+Holdout (no exposure): 5%
+```
+
+Use for experiments. The holdout group is never exposed even after rollout, so the team can measure long-term lift weeks after the experiment concludes.
+
+### Shape E: Dark launch (shadow)
+
+```
+Code shipped to 100% -- no user-visible behavior
+Backend runs the new path in shadow; results discarded but logged
+```
+
+Use to validate performance, error rate, and side effects before any user sees the new behavior. Standard for high-traffic system changes; also standard for AI features (pair with `ai-feature-prd/` Section 11.3).
+
+### Shape F: Reverse ramp (sunset)
+
+```
+100% -&gt; 75% -&gt; 50% -&gt; 25% -&gt; 10% -&gt; 0%
+```
+
+Use for retiring a feature. The ramp gives users time to migrate; analytics monitor whether users are healthy on the new path. Pair with `eol-communication/`.
+
+### Shape G: Forced-upgrade (mobile)
+
+```
+Server-side flag check -&gt; app refuses to start on old client -&gt; user must upgrade
+```
+
+Special case for mobile when the new feature requires a client version. Always have a transition window; never flag-flip on day 1 of release.
+
+## Kill-switch decision tree
+
+A kill-switch is the on-call&#x27;s emergency control. Three rules:
+
+1. **Every release toggle has a kill-switch path.** &quot;Turn the flag off&quot; must be a single config change, not a code rollback.
+2. **The kill-switch threshold is pre-agreed.** Define it during planning, not in the heat of incident.
+3. **The on-call has authority to flip without escalation.** If the rollback requires VP sign-off, the system is too slow.
+
+### Decision tree
+
+```
+Incident detected.
+|
++-- Customer impact? -- No --&gt; Monitor; document; do not flip.
+|        |
+|        Yes
+|        |
+|        v
++-- Within feature-flagged surface? -- No --&gt; Standard incident response.
+|        |
+|        Yes
+|        |
+|        v
++-- Error rate &gt; threshold OR major-customer-blocked? -- No --&gt; Throttle / partial degrade.
+|        |
+|        Yes
+|        |
+|        v
++-- Flip kill-switch -- 0% rollout -- Notify owner + customers.
+         |
+         v
+   Post-incident: root cause; flag stays off until fix lands; never re-enable without re-ramp.
+```
+
+### Kill-switch thresholds (defaults to tune per surface)
+
+| Surface | Default threshold |
+|---|---|
+| Critical (checkout, auth, billing) | Error rate &gt; 0.5% sustained for 5 min |
+| Core (search, signup, dashboard) | Error rate &gt; 2% sustained for 10 min OR top-tier-customer blocked |
+| Non-critical | Error rate &gt; 5% sustained for 15 min |
+| Latency | p95 &gt; 2x baseline for 10 min |
+| Customer reports | &gt;= 3 independent reports of the same issue from paid customers |
+
+## Holdouts
+
+A holdout is a slice of users (typically 1-10%) who never see the feature, even after general availability. Two uses:
+
+**Short-term holdout** -- to measure the lift of the feature with statistical confidence over time. Required for any experiment where the team wants to attribute long-term impact.
+
+**Long-term (&quot;global&quot;) holdout** -- a slice that never sees *any* of the team&#x27;s experiments for a quarter. Allows leadership to attribute aggregate lift to the team. Reforge and most experimentation-mature orgs run a global holdout.
+
+### Holdout governance
+
+- **Size**: 1-10%; smaller holdouts have less statistical power but cost less in lost feature exposure.
+- **Composition**: random or stratified (by segment, geo, plan tier).
+- **Duration**: at least one full retention horizon (D30 or D60); often 1-2 quarters.
+- **Documentation**: holdout configuration in source control; never modified mid-experiment.
+- **Re-exposure**: when the holdout ends, members are merged back; the team should plan for the conversion event.
+
+## Flag debt and retirement
+
+Every feature flag is technical debt by default. A live flag has a maintenance cost (test matrix, code branches, config integrity). Successful teams treat flag retirement as a first-class engineering activity.
+
+### Retirement checklist (release toggle)
+
+- [ ] Feature is at 100% for at least 2 weeks with stable metrics.
+- [ ] No regression has been triaged that the flag would mitigate.
+- [ ] Flag owner has filed a retirement PR removing both branches of code.
+- [ ] Test matrix updated to remove the flag combinations.
+- [ ] Config entry removed from the flag service.
+- [ ] Documentation updated (runbook, customer-facing docs if any).
+- [ ] Final state archived (what the flag controlled, when it retired, who owned it).
+
+### Retirement signals
+
+- Flag has been at 100% for 30+ days -&gt; retire.
+- Flag has been at 0% for 30+ days and the feature is dead -&gt; retire.
+- Flag has not been flipped in 60+ days and no plan to flip -&gt; investigate and retire or convert to a permission/ops flag with explicit ownership.
+- Flag is referenced in fewer than 3 places in code -&gt; trivially retirable; remove.
+
+### Flag-debt audit cadence
+
+Run a flag audit at least quarterly:
+- List of all live flags.
+- For each: type, owner, last toggle date, retirement date.
+- Flag count delta vs last quarter.
+- &quot;Aged flag&quot; report: flags older than 90 days that are not Ops or Permission.
+
+## Naming conventions
+
+A flag name is read more often than it is written. Conventions:
+
+```
+&lt;scope&gt;__&lt;feature&gt;__&lt;purpose&gt;__&lt;version&gt;
+```
+
+Examples:
+- `web__checkout__new_flow__v2` (release toggle on web for new checkout flow v2)
+- `api__search__relevance__experiment_q3` (experiment toggle in API)
+- `infra__search__circuit_breaker` (ops toggle, permanent)
+- `product__enterprise_admin__permission` (permission toggle, permanent)
+
+Rules:
+- **Scope first** -- web / mobile / api / infra. Lets you search &quot;all checkout flags on web.&quot;
+- **Feature second** -- the system surface, not the marketing name.
+- **Purpose third** -- release / experiment / ops / permission. Often baked into name (`__test`, `__experiment`, `__permission`, `__rollout`).
+- **Version when applicable** -- experiments and major UX redesigns benefit from version suffixes.
+- **No team names in the flag name** -- teams reorg; flags outlive the team.
+- **No customer names** -- exception: enterprise-specific permission flags can include the tenant id.
+- **lowercase + underscores or double-underscores** -- avoid camelCase to keep search predictable.
+
+## Dependency chains
+
+A flag depends on another when feature A only makes sense if feature B is also enabled. Two rules:
+
+1. **The dependency is encoded explicitly** in the flag service (e.g., LaunchDarkly prerequisites) or in code with a clear check.
+2. **The rollout plan reflects the dependency** -- ramp the parent flag first, hold until stable, then ramp the child.
+
+Dependency chains beyond 2-3 levels become unmanageable. If a flag depends on three other flags, the rollout plan needs flattening.
+
+## Approval and audit trail
+
+Flag flips on critical surfaces should require:
+- **Pre-approved owner** -- who can flip without further sign-off (usually the team&#x27;s PM + the on-call engineer).
+- **Change log entry** -- automatic; every flip logged with who, when, what, why.
+- **Two-person rule** for high-tier surfaces -- billing, auth, data deletion. One person proposes, another approves before flip.
+- **Audit retention** -- 90+ days of flag-change history available to the on-call.
+
+## Workflow
+
+1. **Classify the flag** (release / experiment / ops / permission). The lifespan and ownership follow.
+2. **Pick the rollout shape** (A-G above) and the gate criteria between stages.
+3. **Define the kill-switch** thresholds and authority.
+4. **Set the retirement date** (release/experiment toggles only). Add it to the team&#x27;s flag-audit list.
+5. **Name the flag** using the convention.
+6. **Document the plan** in the `assets/rollout_plan_template.md`. Share with eng, on-call, sponsor.
+7. **Wire the flag** (engineering side; PM does not do this).
+8. **Ramp** through the stages, holding each step long enough for metrics to settle.
+9. **Monitor**. Watch the same dashboard for each step. Declare each step a &quot;green pass&quot; before advancing.
+10. **Retire** the flag when GA is stable. Add to next sprint&#x27;s retirement PRs.
+11. **Audit** flag inventory quarterly; remove stragglers.
+
+## Tools
+
+This skill is template-based; no Python tool. Artifacts are markdown plans.
+
+| Template | Purpose |
+|---|---|
+| `assets/rollout_plan_template.md` | Per-feature rollout plan with stages, gates, owners, dates |
+| `assets/kill_switch_decision_tree.md` | Pre-incident thresholds + authority + flip steps |
+| `assets/flag_debt_retirement_checklist.md` | Flag-retirement workflow + quarterly audit |
+| `assets/flag_naming_convention.md` | Naming sheet for the team |
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---|---|---|
+| Flag inventory has 200+ live flags | No retirement discipline; release toggles never deleted | Run a quarterly audit; mass-retire anything 100% &gt; 30 days; lock new flag creation behind a retirement-date requirement |
+| Rollback during incident requires a code revert | Flag is on but the rollback path is not wired | Every release toggle has a kill-switch path (single config change); rehearse the flip in non-prod once a quarter |
+| Mobile feature flag broke users on old app version | Flag flipped before client adoption; no version gate | Always gate mobile flags on minimum client version; transition window of at least one release cycle |
+| Two flags interact in unexpected ways | Implicit dependency; flag combinations not tested | Encode dependencies in the flag service; cover the cross-product in test matrix; flatten dependency chains &gt; 2 levels |
+| Experiment &quot;shipped&quot; but holdout was killed | Holdout retired with the experiment; no long-term measurement | Keep the holdout open for at least one retention horizon after launch; document re-exposure as a separate step |
+| Owner of a flag has left the company | No ownership succession on flags | Flag ownership is by team, not by individual; team owner reviews the flag list during onboarding |
+| Flag-flip incident: wrong person flipped | Permissions too loose; no two-person rule on critical flags | Critical surfaces require two-person approval; rotate the kill-switch authority to the on-call rota |
+| Feature ramped to 100% but metrics never validated | No gate criteria between stages | Pre-agree the gate metrics; do not advance without a &quot;green pass&quot; from the owner |
+
+## Success Criteria
+
+- Every release / experiment toggle has a documented type, owner, kill-switch threshold, and retirement date.
+- The rollout plan names the gate metric between each stage.
+- The kill-switch can be flipped by the on-call without escalation.
+- Mobile flags are gated on a minimum client version.
+- Quarterly flag audit runs; flag count is stable or decreasing over time.
+- Naming convention is enforced (linter or PR review).
+- Experiments include a holdout that survives launch.
+- Flag-debt retirement is part of every sprint, not a periodic cleanup.
+
+## Scope &amp; Limitations
+
+**In Scope:**
+- Flag taxonomy (release / experiment / ops / permission) and lifespan rules
+- Rollout shapes (linear, segmented, geo, A/B with holdout, dark launch, reverse, mobile forced-upgrade)
+- Kill-switch decision tree and pre-agreed thresholds
+- Holdout design (short-term and global)
+- Flag-debt retirement workflow + quarterly audit
+- Naming conventions and dependency-chain governance
+- Approval, audit-trail, and two-person-rule patterns
+
+**Out of Scope:**
+- Wiring flag SDKs into a codebase (engineering side; LaunchDarkly / Statsig / Optimizely / Unleash / OpenFeature)
+- Statistical analysis of experiments (pair with `discovery/brainstorm-experiments/` for design; data-analytics domain for stats)
+- Building the analytics dashboards that gate each rollout stage (BI tooling)
+- Customer communications around launches (use `launch-playbook/`, `prfaq/`, `release-notes/`)
+- End-of-life narrative (use `eol-communication/`)
+- Code rollback strategy (use git revert and deployment pipelines; flags reduce but do not eliminate the need)
+
+**Important Caveats:**
+- Flags reduce launch risk but do not eliminate it. A flag with a broken kill-switch is worse than no flag.
+- Flag debt is real and grows with team velocity. A team shipping 20 features/quarter without retirement discipline will have 100+ live flags in a year.
+- Permission and Ops flags are permanent; release and experiment flags are temporary. Conflating the two is the most common failure mode.
+- Holdouts are politically hard to maintain because someone always wants to &quot;give that group access too.&quot; Document the holdout policy explicitly with leadership sign-off.
+- On mobile, flags are not free -- forced-upgrade flows are user-hostile. Plan around adoption curves of older client versions.
+
+## Integration Points
+
+| Integration | Direction | Description |
+|---|---|---|
+| `launch-playbook/` | Pairs with | Rollout plan is the deployment ramp inside the broader launch playbook |
+| `cycle-time-analyzer/` | Pairs with | Cycle time of rollout stages is a flow metric; long-stuck ramps are a leading indicator of risk |
+| `prfaq/` | Pairs with | PR/FAQ explains the launch externally; the rollout plan explains it operationally |
+| `release-notes/` | Pairs with | Release notes are written for the GA step; the rollout plan is what produced them |
+| `eol-communication/` | Pairs with | Reverse-ramp (Shape F) is the operational side of a sunset narrative |
+| `ai-feature-prd/` | Pairs with | The AI PRD&#x27;s deployment ramp (Section 11.3) executes via this skill |
+| `discovery/brainstorm-experiments/` | Pairs with | Experiment toggles operationalize Lean experiments |
+| `discovery/pre-mortem/` | Pairs with | Pre-mortem risks inform kill-switch thresholds |
+| `engineering/feature-flag-architect/` (if it exists) | Pairs with | Engineering-side flag library design and code patterns |
+| `engineering/llm-cost-optimizer/` | Pairs with | AI ramp gate: cost budget per stage |
+| `status-update-generator/` | Feeds into | Rollout-stage pace + gates appear in weekly status |
+
+## References
+
+- `references/fowler-feature-toggle-taxonomy-guide.md` -- Martin Fowler&#x27;s &quot;Feature Toggles&quot; essay, lifespans, ownership patterns, and the operational discipline behind them
+- `references/rollout-shape-comparison-guide.md` -- Worked comparison of the 7 rollout shapes with example use cases and risk profiles
+- `assets/rollout_plan_template.md` -- Per-feature rollout plan
+- `assets/kill_switch_decision_tree.md` -- Pre-incident kill-switch playbook
+- `assets/flag_debt_retirement_checklist.md` -- Retirement workflow + audit
+- `assets/flag_naming_convention.md` -- Team naming sheet
+
+---
+
+## What I Need You to Do
+
+First, detect which platform I&#x27;m using (Claude.ai, ChatGPT, etc.) and follow the matching instructions below.
+
+### If I&#x27;m on Claude.ai:
+
+Walk me through these exact steps:
+
+1. **Create the Project:** Tell me to go to **claude.ai &gt; Projects &gt; Create project** and name it **&quot;Feature Flag Strategy&quot;**
+
+2. **Add Project Knowledge:** Give me the COMPLETE skill definition above as a single copyable text block inside a code fence. Tell me to click **&quot;Add content&quot; &gt; &quot;Add text content&quot;** inside the project, then paste that entire block. Do NOT say &quot;paste from above&quot; -- give me the actual text to copy right there.
+
+3. **Set Custom Instructions:** Tell me to open project settings and paste this exact instruction:
+   &quot;You are an expert Feature Flag Strategy in the Project Management domain. Use the project knowledge as your expertise. Follow the workflows, frameworks, and templates defined there. Always provide specific, actionable output.&quot;
+
+4. **Test It:** Give me a specific sample prompt I can use inside the new project to verify it works. Pick a real task from the skill&#x27;s workflows.
+
+### If I&#x27;m on ChatGPT:
+
+Walk me through these exact steps:
+
+1. **Create a Custom GPT:** Tell me to go to **chatgpt.com &gt; Explore GPTs &gt; Create**
+2. **Configure it:**
+   - Name: **&quot;Feature Flag Strategy&quot;**
+   - Description: &quot;PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.&quot;
+   - Instructions: Give me the COMPLETE skill definition above as a single copyable text block inside a code fence to paste into the Instructions field. Do NOT say &quot;paste from above.&quot;
+3. **Test It:** Give me a sample prompt to verify it works.
+
+### If I&#x27;m on another platform:
+Ask which tool I&#x27;m using and adapt the instructions accordingly.
+
+## Important
+- Always provide the full skill text in a ready-to-copy code block -- never tell me to &quot;scroll up&quot; or &quot;copy from above&quot;
+- Keep the setup steps simple and numbered
+- After setup, test it with me using a real workflow from the skill
+
+Source: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/feature-flag-strategy/SKILL.md</pre>
+      </details>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-claude">
+  <pre><code># Add to your project
+cs install project-management/execution/feature-flag-strategy ./
+
+# Or copy directly
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/feature-flag-strategy your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-codex">
+  <pre><code># The skill is available in your Codex workspace at:
+.codex/skills/feature-flag-strategy/
+
+# Reference the SKILL.md in your Codex instructions
+# or copy it into your project:
+cp -r .codex/skills/feature-flag-strategy your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-gemini">
+  <pre><code># The skill is available in your Gemini CLI workspace at:
+.gemini/skills/feature-flag-strategy/
+
+# Reference the SKILL.md in your Gemini instructions
+# or copy it into your project:
+cp -r .gemini/skills/feature-flag-strategy your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-cursor">
+  <pre><code># Add to your .cursorrules or workspace settings:
+# Reference: project-management/execution/feature-flag-strategy/SKILL.md
+
+# Or copy the skill folder into your project:
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/feature-flag-strategy your-project/</code></pre>
+</div>
+<div class="tab-content" id="tab-manual">
+  <pre><code># Clone and copy
+git clone https://github.com/borghei/Claude-Skills.git
+cp -r Claude-Skills/project-management/execution/feature-flag-strategy your-project/
+
+# Or download just this skill
+curl -sL https://github.com/borghei/Claude-Skills/archive/main.tar.gz | tar xz --strip=1 Claude-Skills-main/project-management/execution/feature-flag-strategy</code></pre>
+</div>
+  
+  
+  <h2>Related Skills in Project Management</h2><div class="related-grid"><a href="https://borghei.github.io/Claude-Skills/skills/project-management/agile-coach.html" class="skill-card" style="text-decoration:none"><h3>Agile Coach</h3><p>Expert agile coaching for team transformation, framework selection, maturity assessment, and...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/atlassian-admin.html" class="skill-card" style="text-decoration:none"><h3>Atlassian Admin</h3><p>Atlassian Administrator for managing and organizing Atlassian products, users, customization of...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/atlassian-templates.html" class="skill-card" style="text-decoration:none"><h3>Atlassian Templates</h3><p>Atlassian Template and Files Creator/Modifier expert for creating, modifying, and managing Jira...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/confluence-expert.html" class="skill-card" style="text-decoration:none"><h3>Confluence Expert</h3><p>Atlassian Confluence expert for creating and managing spaces, knowledge bases, documentation,...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/delivery-manager.html" class="skill-card" style="text-decoration:none"><h3>Delivery Manager</h3><p>Expert delivery management for release planning, deployment coordination, incident response,...</p></a><a href="https://borghei.github.io/Claude-Skills/skills/project-management/brainstorm-experiments.html" class="skill-card" style="text-decoration:none"><h3>Brainstorm Experiments</h3><p>Experiment design expert using pretotyping and lean validation for both new product concepts and...</p></a></div>
+  <p style="margin-top:32px"><a href="https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/feature-flag-strategy/SKILL.md" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></p>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-links">
+      <a href="https://github.com/borghei/Claude-Skills" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">&middot;</span>
+      <span>MIT + Commons Clause</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="https://buymeacoffee.com/borghei" target="_blank" rel="noopener">Buy Me a Coffee</a>
+    </div>
+    <div class="footer-credit">Built by <a href="https://github.com/borghei" target="_blank" rel="noopener">borghei</a></div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active')});
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+function copyPrompt(btn){
+  var text=btn.getAttribute('data-prompt');
+  // Decode HTML entities
+  var ta=document.createElement('textarea');
+  ta.innerHTML=text;
+  text=ta.value;
+  navigator.clipboard.writeText(text).then(function(){
+    btn.classList.add('copied');
+    btn.querySelector('span').textContent='Copied!';
+    setTimeout(function(){
+      btn.classList.remove('copied');
+      btn.querySelector('span').textContent='Copy Prompt';
+    },2000);
+  });
+}
+</script>
+</body>
+</html>

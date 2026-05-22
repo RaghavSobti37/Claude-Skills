@@ -1,13 +1,13 @@
 {
   "name": "claude-skills",
-  "description": "The Universal AI Skills Library — 282 production-ready skills across 15 domains. Project Management is the most-used domain.",
-  "version": "4.3.0",
+  "description": "The Universal AI Skills Library — 294 production-ready skills across 15 domains. Project Management is the most-used domain (54 skills).",
+  "version": "4.4.0",
   "repository": "https://github.com/borghei/Claude-Skills",
   "website": "https://borghei.github.io/Claude-Skills",
   "author": "borghei",
   "license": "MIT + Commons Clause",
-  "total_skills": 282,
-  "updated": "2026-05-21",
+  "total_skills": 294,
+  "updated": "2026-05-22",
   "domains": {
     "business-growth": {
       "count": 16,
@@ -42,8 +42,8 @@
       "tools": 15
     },
     "project-management": {
-      "count": 42,
-      "tools": 59
+      "count": 54,
+      "tools": 61
     },
     "ra-qm-team": {
       "count": 21,
@@ -5087,6 +5087,247 @@
         "real-estate"
       ],
       "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "customer-interview-script",
+      "description": "Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres, Fitzpatrick, and Lewis Lin.",
+      "path": "project-management/discovery/customer-interview-script/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "discovery",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "customer-interviews",
+        "discovery",
+        "jobs-to-be-done",
+        "mom-test"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "jtbd-workshop",
+      "description": "Run a full Jobs-To-Be-Done discovery workshop with switch interviews, forces-of-progress mapping, and outcome statement generation across 2hr, 4hr, and 8hr formats.",
+      "path": "project-management/discovery/jtbd-workshop/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "discovery",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "jobs-to-be-done",
+        "switch-interviews",
+        "forces-of-progress",
+        "odi"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "value-proposition-canvas",
+      "description": "Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution and product-market dimensions.",
+      "path": "project-management/discovery/value-proposition-canvas/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "discovery",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "value-proposition",
+        "jobs-to-be-done",
+        "strategyzer",
+        "product-market-fit"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "activation-funnel",
+      "description": "Design and analyze activation funnels (AARRR / AAARRR Pirate Metrics) with conversion + drop-off math, bottleneck detection, and Mermaid funnel diagrams. Includes a stdlib Python tool that emits all 6 shared PM output formats.",
+      "path": "project-management/execution/activation-funnel/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "aarrr",
+        "pirate-metrics",
+        "activation",
+        "conversion-funnel",
+        "growth",
+        "north-star"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "ai-feature-prd",
+      "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Extends the standard 8-section PRD with 3 AI-specific sections covering model selection, evals, guardrails, data flow, deployment, failure modes, human-in-the-loop, AI metrics, ethical review, and cost monitoring.",
+      "path": "project-management/execution/ai-feature-prd/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "ai-prd",
+        "ml-prd",
+        "llm-product",
+        "evals",
+        "guardrails",
+        "responsible-ai"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "customer-feedback-triage",
+      "description": "Inbound customer-feedback triage system. Categorize, deduplicate, score, and respond to feature requests from support, sales, NPS, in-app feedback, and exec asks. Feeds a clean signal into prioritization-frameworks.",
+      "path": "project-management/execution/customer-feedback-triage/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "kano-model",
+        "jtbd",
+        "rice",
+        "request-management",
+        "marty-cagan"
+      ],
+      "tools": 1,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "feature-flag-strategy",
+      "description": "PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.",
+      "path": "project-management/execution/feature-flag-strategy/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "feature-flags",
+        "dark-launch",
+        "kill-switch",
+        "rollout",
+        "holdout",
+        "ab-test",
+        "launchdarkly",
+        "statsig"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "post-mortem",
+      "description": "Blameless post-mortem expert for incidents, outages, regressions, customer escalations, missed launches, and failed experiments. Pairs Google SRE practice with Allspaw / Dekker / Perrow systems thinking.",
+      "path": "project-management/execution/post-mortem/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "post-mortem",
+        "incident-management",
+        "rca",
+        "blameless",
+        "5-whys"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pricing-prd",
+      "description": "Tactical PM PRD for pricing experiments and pricing-page launches. Pairs with business-growth/pricing-strategy. Covers packaging, willingness-to-pay, grandfathering, A/B design, rollback, regional pricing, and UX.",
+      "path": "project-management/execution/pricing-prd/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "pricing-prd",
+        "ab-testing",
+        "packaging",
+        "van-westendorp",
+        "monetizing-innovation"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "product-vision",
+      "description": "Write the Product Vision document -- the narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's strategic narrative, and Cagan's 10-year framing.",
+      "path": "project-management/execution/product-vision/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "product-vision",
+        "strategic-narrative",
+        "working-backwards",
+        "vision-board"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "quarterly-planning",
+      "description": "Full quarterly planning cycle -- kickoff, mid-quarter check-in, and close -- using Wodtke's Radical Focus, Cagan strategy, and Reforge cycle frameworks.",
+      "path": "project-management/execution/quarterly-planning/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "execution",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "quarterly-planning",
+        "okrs",
+        "product-strategy",
+        "radical-focus"
+      ],
+      "tools": 0,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "productboard-expert",
+      "description": "Productboard expert for workspace administration, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API patterns, and two-way integration with Jira/Linear/Azure DevOps. Use for Productboard setup, prioritization workflows, and programmatic operations against the API.",
+      "path": "project-management/productboard-expert/SKILL.md",
+      "domain": "project-management",
+      "category": "project-management",
+      "subdomain": "",
+      "version": "1.0.0",
+      "license": "MIT + Commons Clause",
+      "tags": [
+        "productboard",
+        "rest-api",
+        "insights",
+        "drivers",
+        "features",
+        "releases"
+      ],
+      "tools": 0,
       "has_references": true,
       "has_assets": true
     }

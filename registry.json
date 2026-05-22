@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-21T21:22:34+00:00",
+  "generated_at": "2026-05-22T08:29:49+00:00",
   "repository": "claude-skills",
-  "skill_count": 282,
+  "skill_count": 294,
   "domain_count": 15,
   "domains": [
     "business-growth",
@@ -2948,6 +2948,17 @@
       "has_references": true
     },
     {
+      "name": "customer-interview-script",
+      "domain": "project-management",
+      "description": "Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres, Fitzpatrick, and Lewis Lin.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/discovery/customer-interview-script",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
       "name": "identify-assumptions",
       "domain": "project-management",
       "description": "Assumption mapping expert that identifies, categorizes, and prioritizes product assumptions across 4-8 risk categories using devil's advocate analysis.",
@@ -2970,6 +2981,17 @@
       "has_references": true
     },
     {
+      "name": "jtbd-workshop",
+      "domain": "project-management",
+      "description": "Run a full Jobs-To-Be-Done discovery workshop with switch interviews, forces-of-progress mapping, and outcome statement generation across 2hr, 4hr, and 8hr formats.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/discovery/jtbd-workshop",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
       "name": "pre-mortem",
       "domain": "project-management",
       "description": "Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen.",
@@ -2978,6 +3000,39 @@
       "updated": "2026-03-04",
       "path": "project-management/discovery/pre-mortem",
       "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "value-proposition-canvas",
+      "domain": "project-management",
+      "description": "Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution and product-market dimensions.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/discovery/value-proposition-canvas",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "activation-funnel",
+      "domain": "project-management",
+      "description": "Design and analyze activation funnels (AARRR / AAARRR Pirate Metrics) with conversion + drop-off math, bottleneck detection, and Mermaid funnel diagrams. Includes a stdlib Python tool that emits all 6 shared PM output formats.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/activation-funnel",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "ai-feature-prd",
+      "domain": "project-management",
+      "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Extends the standard 8-section PRD with 3 AI-specific sections covering model selection, evals, guardrails, data flow, deployment, failure modes, human-in-the-loop, AI metrics, ethical review, and cost monitoring.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/ai-feature-prd",
+      "has_scripts": false,
       "has_references": true
     },
     {
@@ -3021,6 +3076,24 @@
       "version": "1.0.0",
       "updated": "2026-03-04",
       "path": "project-management/execution/create-prd",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "customer-feedback-triage",
+      "domain": "project-management",
+      "description": "Inbound customer-feedback triage system. Categorize, deduplicate, score, and respond to feature requests from support, sales, NPS, in-app feedback, and exec asks. Feeds a clean signal into prioritization-frameworks.",
+      "tags": [
+        "feedback",
+        "triage",
+        "kano",
+        "requests",
+        "voice-of-customer",
+        "intake"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/customer-feedback-triage",
       "has_scripts": true,
       "has_references": true
     },
@@ -3069,6 +3142,17 @@
       "has_references": false
     },
     {
+      "name": "feature-flag-strategy",
+      "domain": "project-management",
+      "description": "PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/feature-flag-strategy",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
       "name": "job-stories",
       "domain": "project-management",
       "description": "Jobs-to-Be-Done story writing that focuses on user situations and motivations rather than personas.",
@@ -3113,6 +3197,25 @@
       "has_references": true
     },
     {
+      "name": "post-mortem",
+      "domain": "project-management",
+      "description": "Blameless post-mortem expert for incidents, outages, regressions, customer escalations, missed launches, and failed experiments. Pairs Google SRE practice with Allspaw / Dekker / Perrow systems thinking.",
+      "tags": [
+        "post-mortem",
+        "rca",
+        "blameless",
+        "incident",
+        "sre",
+        "five-whys",
+        "causal-tree"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/post-mortem",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
       "name": "prfaq",
       "domain": "project-management",
       "description": "Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written. Produces a press release, an internal FAQ, and an external FAQ as a single decision artifact.",
@@ -3120,6 +3223,24 @@
       "version": "1.0.0",
       "updated": "2026-05-21",
       "path": "project-management/execution/prfaq",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "pricing-prd",
+      "domain": "project-management",
+      "description": "Tactical PM PRD for pricing experiments and pricing-page launches. Pairs with business-growth/pricing-strategy. Covers packaging, willingness-to-pay, grandfathering, A/B design, rollback, regional pricing, and UX.",
+      "tags": [
+        "pricing",
+        "prd",
+        "packaging",
+        "ab-test",
+        "grandfathering",
+        "monetization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/pricing-prd",
       "has_scripts": false,
       "has_references": true
     },
@@ -3132,6 +3253,28 @@
       "updated": "2026-03-04",
       "path": "project-management/execution/prioritization-frameworks",
       "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "product-vision",
+      "domain": "project-management",
+      "description": "Write the Product Vision document -- the narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's strategic narrative, and Cagan's 10-year framing.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/product-vision",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "quarterly-planning",
+      "domain": "project-management",
+      "description": "Full quarterly planning cycle -- kickoff, mid-quarter check-in, and close -- using Wodtke's Radical Focus, Cagan strategy, and Reforge cycle frameworks.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/execution/quarterly-planning",
+      "has_scripts": false,
       "has_references": true
     },
     {
@@ -3262,6 +3405,26 @@
       "version": "1.0.0",
       "updated": "2026-05-21",
       "path": "project-management/notion-pm",
+      "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "productboard-expert",
+      "domain": "project-management",
+      "description": "Productboard expert for workspace administration, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API patterns, and two-way integration with Jira/Linear/Azure DevOps. Use for Productboard setup, prioritization workflows, and programmatic operations against the API.",
+      "tags": [
+        "productboard",
+        "prioritization",
+        "insights",
+        "drivers",
+        "roadmap",
+        "salesforce",
+        "intercom",
+        "slack"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "path": "project-management/productboard-expert",
       "has_scripts": false,
       "has_references": true
     },

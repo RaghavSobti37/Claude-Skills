@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-21T21:22:49+00:00",
-  "skill_count": 282,
+  "generated_at": "2026-05-22T08:29:49+00:00",
+  "skill_count": 294,
   "domain_count": 15,
   "skills": [
     {
@@ -2065,10 +2065,11 @@
       "path": "engineering/threat-detection",
       "files": [
         "SKILL.md",
+        "examples/access.log",
         "references/threat-indicators.md",
         "scripts/threat_signal_analyzer.py"
       ],
-      "size_bytes": 24700,
+      "size_bytes": 32301,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -5189,6 +5190,26 @@
       "has_assets": true
     },
     {
+      "name": "customer-interview-script",
+      "domain": "project-management",
+      "description": "Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres, Fitzpatrick, and Lewis Lin.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/discovery/customer-interview-script",
+      "files": [
+        "SKILL.md",
+        "assets/interview_script_template.md",
+        "assets/question_bank.md",
+        "references/interviewing-methodology-guide.md"
+      ],
+      "size_bytes": 45660,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "identify-assumptions",
       "domain": "project-management",
       "description": "Assumption mapping expert that identifies, categorizes, and prioritizes product assumptions across 4-8 risk categories using devil's advocate analysis.",
@@ -5230,6 +5251,30 @@
       "has_assets": true
     },
     {
+      "name": "jtbd-workshop",
+      "domain": "project-management",
+      "description": "Run a full Jobs-To-Be-Done discovery workshop with switch interviews, forces-of-progress mapping, and outcome statement generation across 2hr, 4hr, and 8hr formats.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/discovery/jtbd-workshop",
+      "files": [
+        "SKILL.md",
+        "assets/forces_of_progress_canvas.md",
+        "assets/pre_work_email.md",
+        "assets/switch_interview_script.md",
+        "assets/workshop_agenda_2hr.md",
+        "assets/workshop_agenda_4hr.md",
+        "assets/workshop_agenda_8hr.md",
+        "references/jtbd-method-guide.md"
+      ],
+      "size_bytes": 64674,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "pre-mortem",
       "domain": "project-management",
       "description": "Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen.",
@@ -5246,6 +5291,74 @@
       ],
       "size_bytes": 40836,
       "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "value-proposition-canvas",
+      "domain": "project-management",
+      "description": "Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution and product-market dimensions.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/discovery/value-proposition-canvas",
+      "files": [
+        "SKILL.md",
+        "assets/customer_profile_worksheet.md",
+        "assets/fit_validation_checklist.md",
+        "assets/value_map_worksheet.md",
+        "assets/vpc_template.md",
+        "references/value-proposition-design-guide.md"
+      ],
+      "size_bytes": 49143,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "activation-funnel",
+      "domain": "project-management",
+      "description": "Design and analyze activation funnels (AARRR / AAARRR Pirate Metrics) with conversion + drop-off math, bottleneck detection, and Mermaid funnel diagrams. Includes a stdlib Python tool that emits all 6 shared PM output formats.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/activation-funnel",
+      "files": [
+        "SKILL.md",
+        "assets/activation_metric_worksheet.md",
+        "assets/funnel_design_canvas.md",
+        "assets/sample_funnel.json",
+        "references/activation-aha-moment-patterns.md",
+        "references/pirate-metrics-deep-dive.md",
+        "scripts/funnel_analyzer.py"
+      ],
+      "size_bytes": 67087,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "ai-feature-prd",
+      "domain": "project-management",
+      "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Extends the standard 8-section PRD with 3 AI-specific sections covering model selection, evals, guardrails, data flow, deployment, failure modes, human-in-the-loop, AI metrics, ethical review, and cost monitoring.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/ai-feature-prd",
+      "files": [
+        "SKILL.md",
+        "assets/ai_feature_prd_template.md",
+        "assets/eval_spec_template.md",
+        "assets/failure_mode_taxonomy.md",
+        "assets/guardrail_checklist.md",
+        "references/ai-pm-frameworks-guide.md",
+        "references/eval-design-guide.md"
+      ],
+      "size_bytes": 73375,
+      "has_scripts": false,
       "has_references": true,
       "has_assets": true
     },
@@ -5332,6 +5445,36 @@
       "has_assets": true
     },
     {
+      "name": "customer-feedback-triage",
+      "domain": "project-management",
+      "description": "Inbound customer-feedback triage system. Categorize, deduplicate, score, and respond to feature requests from support, sales, NPS, in-app feedback, and exec asks. Feeds a clean signal into prioritization-frameworks.",
+      "tags": [
+        "feedback",
+        "triage",
+        "kano",
+        "requests",
+        "voice-of-customer",
+        "intake"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/customer-feedback-triage",
+      "files": [
+        "SKILL.md",
+        "assets/kano_quick_reference.md",
+        "assets/response_templates.md",
+        "assets/triage_template.md",
+        "references/customer-feedback-triage-guide.md",
+        "references/kano-model-deep-dive.md",
+        "scripts/feedback_triage.py"
+      ],
+      "size_bytes": 84043,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "cycle-time-analyzer",
       "domain": "project-management",
       "description": "Flow metrics analyzer (lead time, cycle time, throughput, WIP, aging WIP) for sprint and team health, with cumulative flow diagrams.",
@@ -5405,6 +5548,29 @@
       "has_scripts": false,
       "has_references": false,
       "has_assets": false
+    },
+    {
+      "name": "feature-flag-strategy",
+      "domain": "project-management",
+      "description": "PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/feature-flag-strategy",
+      "files": [
+        "SKILL.md",
+        "assets/flag_debt_retirement_checklist.md",
+        "assets/flag_naming_convention.md",
+        "assets/kill_switch_decision_tree.md",
+        "assets/rollout_plan_template.md",
+        "references/fowler-feature-toggle-taxonomy-guide.md",
+        "references/rollout-shape-comparison-guide.md"
+      ],
+      "size_bytes": 62722,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
     },
     {
       "name": "job-stories",
@@ -5492,6 +5658,37 @@
       "has_assets": true
     },
     {
+      "name": "post-mortem",
+      "domain": "project-management",
+      "description": "Blameless post-mortem expert for incidents, outages, regressions, customer escalations, missed launches, and failed experiments. Pairs Google SRE practice with Allspaw / Dekker / Perrow systems thinking.",
+      "tags": [
+        "post-mortem",
+        "rca",
+        "blameless",
+        "incident",
+        "sre",
+        "five-whys",
+        "causal-tree"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/post-mortem",
+      "files": [
+        "SKILL.md",
+        "assets/action_item_tracker.md",
+        "assets/incident_timeline_worksheet.md",
+        "assets/post_mortem_template.md",
+        "assets/what_went_well_prompts.md",
+        "references/5-whys-vs-causal-tree.md",
+        "references/blameless-culture-guide.md"
+      ],
+      "size_bytes": 56625,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
       "name": "prfaq",
       "domain": "project-management",
       "description": "Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written. Produces a press release, an internal FAQ, and an external FAQ as a single decision artifact.",
@@ -5506,6 +5703,36 @@
         "references/working-backwards-guide.md"
       ],
       "size_bytes": 30401,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "pricing-prd",
+      "domain": "project-management",
+      "description": "Tactical PM PRD for pricing experiments and pricing-page launches. Pairs with business-growth/pricing-strategy. Covers packaging, willingness-to-pay, grandfathering, A/B design, rollback, regional pricing, and UX.",
+      "tags": [
+        "pricing",
+        "prd",
+        "packaging",
+        "ab-test",
+        "grandfathering",
+        "monetization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/pricing-prd",
+      "files": [
+        "SKILL.md",
+        "assets/grandfathering_communication_template.md",
+        "assets/pricing_experiment_design.md",
+        "assets/pricing_page_checklist.md",
+        "assets/pricing_prd_template.md",
+        "references/packaging-frameworks.md",
+        "references/pricing-experimentation-guide.md"
+      ],
+      "size_bytes": 71710,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5527,6 +5754,50 @@
       ],
       "size_bytes": 41823,
       "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "product-vision",
+      "domain": "project-management",
+      "description": "Write the Product Vision document -- the narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's strategic narrative, and Cagan's 10-year framing.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/product-vision",
+      "files": [
+        "SKILL.md",
+        "assets/elevator_pitch_template.md",
+        "assets/narrative_vision_template.md",
+        "assets/vision_board_template.md",
+        "assets/vision_review_checklist.md",
+        "references/vision-frameworks-guide.md"
+      ],
+      "size_bytes": 51937,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "quarterly-planning",
+      "domain": "project-management",
+      "description": "Full quarterly planning cycle -- kickoff, mid-quarter check-in, and close -- using Wodtke's Radical Focus, Cagan strategy, and Reforge cycle frameworks.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/execution/quarterly-planning",
+      "files": [
+        "SKILL.md",
+        "assets/close_retro_template.md",
+        "assets/kickoff_agenda_template.md",
+        "assets/mid_quarter_check_in_template.md",
+        "assets/quarterly_review_deck_outline.md",
+        "references/quarterly-planning-guide.md"
+      ],
+      "size_bytes": 52159,
+      "has_scripts": false,
       "has_references": true,
       "has_assets": true
     },
@@ -5753,6 +6024,37 @@
         "references/notion-database-design-for-pm.md"
       ],
       "size_bytes": 59531,
+      "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "productboard-expert",
+      "domain": "project-management",
+      "description": "Productboard expert for workspace administration, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API patterns, and two-way integration with Jira/Linear/Azure DevOps. Use for Productboard setup, prioritization workflows, and programmatic operations against the API.",
+      "tags": [
+        "productboard",
+        "prioritization",
+        "insights",
+        "drivers",
+        "roadmap",
+        "salesforce",
+        "intercom",
+        "slack"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-22",
+      "author": "borghei",
+      "path": "project-management/productboard-expert",
+      "files": [
+        "SKILL.md",
+        "assets/productboard-driver-template.md",
+        "assets/productboard-feature-template.md",
+        "assets/productboard-insight-triage-workflow.md",
+        "references/productboard-api-patterns.md",
+        "references/productboard-vs-jira-vs-linear.md"
+      ],
+      "size_bytes": 74011,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true

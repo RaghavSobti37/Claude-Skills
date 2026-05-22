@@ -5,7 +5,36 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.3.0] - 2026-05-21
+## [4.4.0] - 2026-05-22
+
+### Added
+
+**Project Management domain expanded to 54 skills (still the most-used domain).**
+
+- **12 new PM skills:**
+  - `discovery/customer-interview-script` — how to RUN a discovery interview (Portigal, Fitzpatrick, Torres, Mom Test)
+  - `discovery/value-proposition-canvas` — Strategyzer VPC (Customer Profile + Value Map)
+  - `discovery/jtbd-workshop` — full Jobs-To-Be-Done workshop (Christensen, Ulwick, Moesta, Klement)
+  - `execution/ai-feature-prd` — PRDs specific to AI/ML features (Karpathy Software 2.0, Anthropic RSP, NIST AI RMF, eval-spec, guardrails, model selection, cost monitoring). Targets the "AI PM" SEO cluster.
+  - `execution/activation-funnel` — AARRR funnel design + analyzer (McClure, Ellis activation, Andrew Chen, Balfour Four Fits). Python tool `funnel_analyzer.py` outputs in all 6 SHARED_OUTPUT_SCHEMA formats including Mermaid flowchart with per-arrow conversion %.
+  - `execution/feature-flag-strategy` — phased rollouts, kill-switches, flag debt (Fowler 4-category toggle taxonomy: release / experiment / ops / permission)
+  - `execution/post-mortem` — blameless incident RCA (Google SRE, Allspaw, Dekker, Perrow). Companion to existing `pre-mortem/`.
+  - `execution/customer-feedback-triage` — inbound feedback → cluster → categorize (Kano) → score (RICE + segment) → backlog. Python tool `feedback_triage.py` clusters via Jaccard at 0.12 threshold.
+  - `execution/pricing-prd` — pricing experiments and pricing-page PRDs (Ramanujam Monetizing Innovation, Campbell, Van Westendorp PSM, Weinberg)
+  - `execution/product-vision` — vision document (Pichler, Moore, Raskin strategic narrative, Cagan, Amazon Working Backwards)
+  - `execution/quarterly-planning` — full Q1 cycle (kickoff → mid-Q → close) above OKRs (Wodtke, Cagan, Reforge, RAD ritual)
+  - `productboard-expert/` — Productboard administration, Insight inbox triage, Driver scoring, REST API patterns
+
+### Changed
+
+- PM count updated everywhere: 42 → **54**. Library total: 282 → **294** skills, ~700 → **~720+** Python tools.
+- PM domain card on `site/index.html` updated with new tags (ai-prd, productboard) and expanded description.
+- Skill-count badge on README updated to 294.
+- `docs/skills/index.md` Project Management row updated to 54 skills, 70+ tools.
+- `docs/skills/project-management.md` retained (count refresh).
+- `project-management/CLAUDE.md` skill registry rewritten with corrected numbering (1-54) and new sub-domain breakdown: Role-Based (10), Integrations (3), Discovery (8), Execution (29), Career (4).
+
+
 
 ### Added
 

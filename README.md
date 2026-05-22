@@ -6,7 +6,7 @@
 <p align="center"><b>AI skills for every team, not just engineering.</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-282-brightgreen.svg" alt="282 Skills">
+  <img src="https://img.shields.io/badge/Skills-294-brightgreen.svg" alt="294 Skills">
   <img src="https://img.shields.io/badge/Domains-15-blue.svg" alt="15 Domains">
   <img src="https://img.shields.io/badge/Expert_Agents-67-purple.svg" alt="67 Expert Agents">
   <img src="https://img.shields.io/badge/AI_Assistants-11-orange.svg" alt="11 AI Assistants">
@@ -43,9 +43,9 @@ See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the Claude Code plugin, MCP
 - **Scripts that actually run, not just prompt templates.** 700+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
 - **Call one persona, get a stack of skills behind it.** `startup-cto`, `growth-marketer`, `solo-founder`, `cs-cto-advisor`, `cs-fintech-advisor`, and 70 more. 74 expert identities ready out of the box.
 - **Works with your AI assistant.** Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose, OpenCode, and ChatGPT / Claude.ai.
-- **Discovery → delivery → career for product teams.** Project Management is the deepest domain (42 skills): PRDs, OKRs, status updates, story splitting, interview prep, with Jira / Linear / Notion / Confluence integrations.
+- **Discovery → delivery → career for product teams.** Project Management is the deepest domain (54 skills): PRDs, OKRs, status updates, story splitting, interview prep, with Jira / Linear / Notion / Confluence integrations.
 
-*Supporting evidence:* 282 skills · 700+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
+*Supporting evidence:* 294 skills · 700+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
 
 ---
 
@@ -150,7 +150,7 @@ Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Fo
 ---
 
 <p align="center">
-  <strong>282 skills · 700+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
+  <strong>294 skills · 700+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
   <a href="https://borghei.me">borghei.me</a>
 </p>
 

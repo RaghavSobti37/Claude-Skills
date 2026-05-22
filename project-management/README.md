@@ -8,7 +8,7 @@
 
 ## Why PMs choose this
 
-- **42 production-ready skills** covering every stage: discovery, definition, execution, delivery, launch, career growth
+- **54 production-ready skills** covering every stage: discovery, definition, execution, delivery, launch, career growth
 - **Portable artifacts** — generate once, push to Jira, Linear, Notion, Confluence, or GitHub Projects
 - **Real automation, not prompts** — 15+ Python tools you can pipe into CI, scripts, MCP servers
 - **Exec-ready outputs** — PRDs, roadmaps, status updates that don't read like AI slop
@@ -88,9 +88,9 @@ Examples of what these skills produce. *(Click to enlarge — screenshots coming
 
 ---
 
-## Complete catalog (42 skills)
+## Complete catalog (54 skills)
 
-### Role-Based Skills (11)
+### Role-Based Skills (10)
 
 | Skill | Focus | Python Tools |
 |---|---|---|
@@ -104,9 +104,16 @@ Examples of what these skills produce. *(Click to enlarge — screenshots coming
 | [`atlassian-admin/`](atlassian-admin/) | Suite administration | — |
 | [`atlassian-templates/`](atlassian-templates/) | Ready-to-use Jira/Confluence templates | — |
 | [`sprint-retrospective/`](sprint-retrospective/) | Data-driven retros | — |
-| [`packaged-skills/`](packaged-skills/) | Bundled skill packages | — |
 
-### Discovery Skills (5) — `discovery/`
+### Integration Skills (3)
+
+| Skill | Focus |
+|---|---|
+| [`linear-expert/`](linear-expert/) | Linear admin, GraphQL queries, Jira → Linear migration |
+| [`notion-pm/`](notion-pm/) | Notion DBs for PRDs/OKRs/Roadmap/Decisions, API patterns |
+| [`productboard-expert/`](productboard-expert/) ★ NEW | Productboard admin, Insight inbox triage, Driver scoring, REST API |
+
+### Discovery Skills (8) — `discovery/`
 
 | Skill | Focus | Framework |
 |---|---|---|
@@ -114,35 +121,46 @@ Examples of what these skills produce. *(Click to enlarge — screenshots coming
 | [`brainstorm-experiments/`](discovery/brainstorm-experiments/) | Lean experiment design | XYZ Hypothesis (Savoia) |
 | [`identify-assumptions/`](discovery/identify-assumptions/) | Assumption mapping | Torres 4-8 risk categories |
 | [`pre-mortem/`](discovery/pre-mortem/) | Pre-launch risk analysis | Tiger/Paper Tiger/Elephant (Klein) |
-| [`interview-synthesis/`](discovery/interview-synthesis/) ★ NEW | Interview → opportunity tree | Torres + Portigal + Klement |
+| [`interview-synthesis/`](discovery/interview-synthesis/) | Interview → opportunity tree | Torres + Portigal + Klement |
+| [`customer-interview-script/`](discovery/customer-interview-script/) ★ NEW | How to RUN a discovery interview | Portigal + Fitzpatrick + Torres |
+| [`value-proposition-canvas/`](discovery/value-proposition-canvas/) ★ NEW | Strategyzer VPC (Customer Profile + Value Map) | Osterwalder + Strategyzer |
+| [`jtbd-workshop/`](discovery/jtbd-workshop/) ★ NEW | Full Jobs-To-Be-Done workshop | Christensen + Ulwick + Moesta + Klement |
 
-### Execution Skills (21) — `execution/`
+### Execution Skills (29) — `execution/`
 
 | Skill | Focus | Framework |
 |---|---|---|
 | [`create-prd/`](execution/create-prd/) | 8-section PRD scaffolding | PRD canonical |
-| [`prfaq/`](execution/prfaq/) ★ NEW | Working Backwards PR/FAQ | Amazon Bezos PRFAQ |
+| [`prfaq/`](execution/prfaq/) | Working Backwards PR/FAQ | Amazon Bezos PRFAQ |
+| [`ai-feature-prd/`](execution/ai-feature-prd/) ★ NEW | PRDs for AI/ML features | Karpathy + Anthropic RSP + Reforge AI PM |
+| [`pricing-prd/`](execution/pricing-prd/) ★ NEW | Pricing experiments and pricing-page PRDs | Ramanujam + Campbell + Westendorp PSM |
+| [`product-vision/`](execution/product-vision/) ★ NEW | Vision document (above NSM) | Pichler + Moore + Raskin + Cagan |
 | [`brainstorm-okrs/`](execution/brainstorm-okrs/) | OKR brainstorming | Wodtke "Radical Focus" |
-| [`north-star-metric/`](execution/north-star-metric/) ★ NEW | NSM + input metric tree | Ellis + Amplitude framework |
+| [`north-star-metric/`](execution/north-star-metric/) | NSM + input metric tree | Ellis + Amplitude framework |
+| [`quarterly-planning/`](execution/quarterly-planning/) ★ NEW | Full Q1 cycle (kickoff → mid-Q → close) | Wodtke + Cagan + Reforge + RAD |
 | [`outcome-roadmap/`](execution/outcome-roadmap/) | Output → outcome roadmap | Now/Next/Later |
-| [`roadmap-communication/`](execution/roadmap-communication/) ★ NEW | Exec/customer/internal variants | Cagan right-sizing |
+| [`roadmap-communication/`](execution/roadmap-communication/) | Exec/customer/internal variants | Cagan right-sizing |
 | [`prioritization-frameworks/`](execution/prioritization-frameworks/) | 9-framework scoring | RICE, ICE, Opportunity, MoSCoW, Weighted |
-| [`backlog-refinement/`](execution/backlog-refinement/) ★ NEW | INVEST + DoR/DoD + splitting | INVEST (Wake) |
-| [`story-splitting/`](execution/story-splitting/) ★ NEW | Vertical slicing patterns | Lawrence 9 patterns |
+| [`backlog-refinement/`](execution/backlog-refinement/) | INVEST + DoR/DoD + splitting | INVEST (Wake) |
+| [`story-splitting/`](execution/story-splitting/) | Vertical slicing patterns | Lawrence 9 patterns |
 | [`story-mapping/`](execution/story-mapping/) | User story mapping | Jeff Patton |
 | [`job-stories/`](execution/job-stories/) | JTBD backlog format | When/Want/So (Klement) |
 | [`wwas/`](execution/wwas/) | Why-What-Acceptance backlog | WWAS |
-| [`cycle-time-analyzer/`](execution/cycle-time-analyzer/) ★ NEW | Flow metrics, CFD, Little's Law | Vacanti Kanban metrics |
-| [`dependency-map/`](execution/dependency-map/) ★ NEW | Cross-team blockers, critical path | CPM + DSM + Conway's Law |
-| [`status-update-generator/`](execution/status-update-generator/) ★ NEW | Weekly exec update | SBNR + traffic-light |
+| [`customer-feedback-triage/`](execution/customer-feedback-triage/) ★ NEW | Inbound feedback → categorize → score → backlog | Kano + Cagan request-to-opportunity |
+| [`activation-funnel/`](execution/activation-funnel/) ★ NEW | AARRR funnel design + analyzer | McClure + Ellis + Chen + Reforge |
+| [`feature-flag-strategy/`](execution/feature-flag-strategy/) ★ NEW | Phased rollouts, kill-switches, flag debt | Fowler toggle taxonomy + Reforge |
+| [`cycle-time-analyzer/`](execution/cycle-time-analyzer/) | Flow metrics, CFD, Little's Law | Vacanti Kanban metrics |
+| [`dependency-map/`](execution/dependency-map/) | Cross-team blockers, critical path | CPM + DSM + Conway's Law |
+| [`status-update-generator/`](execution/status-update-generator/) | Weekly exec update | SBNR + traffic-light |
 | [`summarize-meeting/`](execution/summarize-meeting/) | Meeting summaries | Action items + decisions |
 | [`daci-framework/`](execution/daci-framework/) | Decision facilitation | DACI |
-| [`beta-program/`](execution/beta-program/) ★ NEW | Closed beta playbook | Kano + cohort design |
-| [`launch-playbook/`](execution/launch-playbook/) ★ NEW | Launch coordination | Alpha/beta/GA + RACI |
+| [`beta-program/`](execution/beta-program/) | Closed beta playbook | Kano + cohort design |
+| [`launch-playbook/`](execution/launch-playbook/) | Launch coordination | Alpha/beta/GA + RACI |
+| [`post-mortem/`](execution/post-mortem/) ★ NEW | Blameless incident RCA | Google SRE + Allspaw + Dekker + Perrow |
 | [`release-notes/`](execution/release-notes/) | Release notes from tickets | Category-based |
 | [`eol-communication/`](execution/eol-communication/) | End-of-life messaging | Sunset playbook |
 
-### Career Skills (4) ★ NEW — `career/`
+### Career Skills (4) — `career/`
 
 | Skill | Focus | Framework |
 |---|---|---|
@@ -151,14 +169,7 @@ Examples of what these skills produce. *(Click to enlarge — screenshots coming
 | [`pm-onboarding/`](career/pm-onboarding/) | 30-60-90 day plan | Watkins "First 90 Days" + STARS |
 | [`pm-1on1s/`](career/pm-1on1s/) | 1:1 templates by partner type | Radical Candor + GROW + Manager Tools |
 
-### Integration Skills (2) ★ NEW
-
-| Skill | Focus |
-|---|---|
-| [`linear-expert/`](linear-expert/) | Linear admin, GraphQL queries, Jira → Linear migration |
-| [`notion-pm/`](notion-pm/) | Notion DBs for PRDs/OKRs/Roadmap/Decisions, API patterns |
-
-★ NEW = added in this expansion
+★ NEW = added in the 2026-05-22 expansion (12 new skills: 3 discovery, 8 execution, 1 integration)
 
 ---
 
@@ -229,7 +240,7 @@ python scrum-master/scripts/retrospective_analyzer.py --demo
 ### Quick Install (Recommended)
 
 ```bash
-# Install all PM skills (42)
+# Install all PM skills (54)
 npx @borghei/claude-skills add pm-starter-pack
 
 # Install individual skills
@@ -302,6 +313,6 @@ python execution/status-update-generator/scripts/status_generator.py --format co
 ---
 
 **Last Updated:** 2026-05-21
-**Skills Deployed:** 42 production-ready PM skills
+**Skills Deployed:** 54 production-ready PM skills
 **Python Tools:** 15+ CLI tools (standard library only)
 **Integrations:** Jira, Linear, Notion, Confluence, GitHub Projects, Atlassian MCP
