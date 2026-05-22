@@ -1,6 +1,6 @@
 ---
 title: Project Management Skills
-description: 54 PM skills — discovery, delivery, career growth — with Jira, Linear, Notion, and Confluence integration. The most-used domain in Claude Skills.
+description: 54 PM skills with worked examples, red-flag libraries, MCP tools, runnable pipelines, live data adapters, and a deterministic eval harness. The most-used domain in Claude Skills.
 ---
 
 # Project Management Skills
@@ -8,7 +8,17 @@ description: 54 PM skills — discovery, delivery, career growth — with Jira, 
 !!! success "★ The most-visited domain in Claude Skills"
     **54 production-ready PM skills** spanning discovery, execution, career growth, and tool integrations. PMs from APM to CPO use these daily to ship faster with fewer meetings.
 
-The PM domain is a complete operating system for product and project work — every artifact a PM produces (PRD, OKR, roadmap, status update, retro, decision log) has a skill that scaffolds it, with portable output to Jira, Linear, Notion, or Confluence.
+The PM domain is a complete operating system for product and project work. Every artifact a PM produces (PRD, OKR, roadmap, status update, retro, decision log) has a skill that scaffolds it, with portable output to Jira, Linear, Notion, Productboard, or Confluence.
+
+!!! tip "Production toolkit, not just docs"
+    Every PM skill ships with:
+
+    - **A worked example** — realistic scenario + full generated artifact you can copy
+    - **A red-flag library** — 10-12 concrete anti-patterns with bad/good quoted examples
+    - **A deterministic scoring rubric** (for 12 artifact-generating skills) — paste your draft, get 0-100 with specific failures
+    - **MCP integration** (for 15 PM skills) — callable from any AI conversation
+    - **Live data adapters** for Jira / Linear / Notion — `jira_to_json.py | status_generator.py`
+    - **5 chain pipelines** — run multi-skill flows with one command
 
 [:material-folder-open: Browse on GitHub](https://github.com/borghei/Claude-Skills/tree/main/project-management){ .md-button .md-button--primary }
 [:material-rocket-launch: Install pm-starter-pack](https://github.com/borghei/Claude-Skills/blob/main/bundles.json){ .md-button }
