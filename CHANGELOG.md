@@ -5,6 +5,35 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.5.0] - 2026-05-22 (later)
+
+### Added (Tier 1 of PM depth investment)
+
+**Worked examples in every PM skill (54 files, ~13,000 lines).** Until now, PM skills had frameworks (references/) and blank templates (assets/) but no finished artifact. PMs copy-paste-and-modify; that fails when there's nothing to copy. Now every skill has `examples/<scenario>.md` with a realistic company, the workflow applied, and the full generated artifact. Recurring fictional cast (Acme Analytics, Wayfinder, Northwind, Helix Platform, Pylon) means scenarios cross-reference each other naturally.
+
+Highlight examples:
+- `execution/create-prd/examples/shared-dashboards-prd.md` — full 8-section PRD
+- `execution/ai-feature-prd/examples/ai-meeting-notes-summarizer.md` — AI PRD with eval spec, guardrails, model fallback
+- `execution/post-mortem/examples/payment-processing-outage.md` — blameless RCA for a 47-min outage
+- `execution/status-update-generator/examples/acme-search-platform-weekly.md` — Yellow-status weekly exec update
+- `execution/activation-funnel/examples/freemium-saas-day-7-retention-diagnosis.md` — AARRR funnel diagnosis
+- `discovery/interview-synthesis/examples/wayfinder-8-interview-synthesis.md` — 8 interviews → opportunity tree
+- `career/pm-interview-prep/examples/stripe-circles-new-market-product.md` — full CIRCLES answer
+
+**Live data adapters (`tools/adapters/`).** Three stdlib-only scripts that pull from Jira / Linear / Notion APIs and emit JSON in the shapes PM Python tools expect:
+- `jira_to_json.py` — Jira REST v3 with JQL; output formats: raw / status-update / cycle-time / dependency-map
+- `linear_to_json.py` — Linear GraphQL; output formats: same set
+- `notion_to_json.py` — Notion REST query; output formats: raw / prds / okrs / roadmap / feedback
+
+Pipe directly: `jira_to_json.py --format cycle-time | flow_metrics.py --input -`. Auth via env vars (`JIRA_TOKEN`, `LINEAR_API_KEY`, `NOTION_TOKEN`).
+
+**15 PM skills wrapped as MCP tools** in `scripts/mcp_server.py`:
+`pm_create_prd`, `pm_status_update`, `pm_funnel_analyze`, `pm_flow_metrics`, `pm_dependency_map`, `pm_feedback_triage`, `pm_nsm_tree`, `pm_refinement_score`, `pm_interview_synthesize`, `pm_prioritize`, `pm_okr_validate`, `pm_roadmap_transform`, `pm_pre_mortem`, `pm_release_notes`, `pm_stakeholder_map`. Each accepts `format` (markdown / json / mermaid / confluence / notion / linear) and `input` (JSON object, JSON string, or file path). Smoke-tested end-to-end through the MCP JSON-RPC interface.
+
+### Changed
+
+- PM README updated with new "Live data adapters" and "MCP tools" sections, plus a Worked-examples highlight table.
+
 ## [4.4.0] - 2026-05-22
 
 ### Added

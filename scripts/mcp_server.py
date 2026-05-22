@@ -21,6 +21,7 @@ Add to Claude Code settings (~/.claude/settings.json) or project .mcp.json:
 """
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -383,6 +384,237 @@ def tool_skill_stats(args: dict) -> str:
     }, indent=2)
 
 
+# ---------------------------------------------------------------------------
+# PM skill tool wrappers
+# ---------------------------------------------------------------------------
+
+# Maps an MCP tool name -> (script_relative_path, accepts_input_json, extra_flags)
+PM_TOOLS = {
+    "pm_create_prd": (
+        "project-management/execution/create-prd/scripts/prd_scaffolder.py",
+        False,  # uses --product-name --objective --segments rather than --input JSON
+        {"product_name": "--product-name", "objective": "--objective", "segments": "--segments"},
+    ),
+    "pm_status_update": (
+        "project-management/execution/status-update-generator/scripts/status_generator.py",
+        True, {"period": "--period", "status": "--status"},
+    ),
+    "pm_funnel_analyze": (
+        "project-management/execution/activation-funnel/scripts/funnel_analyzer.py",
+        True, {},
+    ),
+    "pm_flow_metrics": (
+        "project-management/execution/cycle-time-analyzer/scripts/flow_metrics.py",
+        True, {},
+    ),
+    "pm_dependency_map": (
+        "project-management/execution/dependency-map/scripts/dependency_graph.py",
+        True, {},
+    ),
+    "pm_feedback_triage": (
+        "project-management/execution/customer-feedback-triage/scripts/feedback_triage.py",
+        True, {},
+    ),
+    "pm_nsm_tree": (
+        "project-management/execution/north-star-metric/scripts/metric_tree_builder.py",
+        True, {"nsm": "--nsm"},
+    ),
+    "pm_refinement_score": (
+        "project-management/execution/backlog-refinement/scripts/refinement_scorer.py",
+        True, {"threshold": "--threshold"},
+    ),
+    "pm_interview_synthesize": (
+        "project-management/discovery/interview-synthesis/scripts/interview_synthesizer.py",
+        True, {"outcome": "--outcome", "min_strength": "--min-strength"},
+    ),
+    "pm_prioritize": (
+        "project-management/execution/prioritization-frameworks/scripts/prioritization_scorer.py",
+        True, {"framework": "--framework"},
+    ),
+    "pm_okr_validate": (
+        "project-management/execution/brainstorm-okrs/scripts/okr_validator.py",
+        True, {},
+    ),
+    "pm_roadmap_transform": (
+        "project-management/execution/outcome-roadmap/scripts/roadmap_transformer.py",
+        True, {},
+    ),
+    "pm_pre_mortem": (
+        "project-management/discovery/pre-mortem/scripts/risk_categorizer.py",
+        True, {},
+    ),
+    "pm_release_notes": (
+        "project-management/execution/release-notes/scripts/release_notes_generator.py",
+        True, {"product_name": "--product-name", "version": "--version"},
+    ),
+    "pm_stakeholder_map": (
+        "project-management/senior-pm/scripts/stakeholder_mapper.py",
+        True, {},
+    ),
+}
+
+
+def _run_pm_tool(tool_key: str, args: dict) -> str:
+    """Generic dispatch for any PM_TOOLS entry."""
+    spec = PM_TOOLS.get(tool_key)
+    if not spec:
+        return json.dumps({"error": f"Unknown PM tool: {tool_key}"})
+    script_rel, accepts_input, extra_flags = spec
+    script_path = REPO_ROOT / script_rel
+    if not script_path.exists():
+        return json.dumps({"error": f"Script not found: {script_rel}"})
+
+    cmd = [sys.executable, str(script_path)]
+    cleanup_path: Path | None = None
+
+    # Format flag — shared across all PM tools
+    fmt = (args.get("format") or "markdown").strip()
+    cmd.extend(["--format", fmt])
+
+    # Input handling
+    inp = args.get("input")
+    if accepts_input:
+        if inp is None:
+            cmd.append("--demo")
+        elif isinstance(inp, (dict, list)):
+            # Write to a tempfile and pass --input <path>
+            import tempfile
+            fd, tmp_path = tempfile.mkstemp(suffix=".json", prefix="pm-mcp-")
+            try:
+                with os.fdopen(fd, "w", encoding="utf-8") as f:
+                    json.dump(inp, f)
+                cmd.extend(["--input", tmp_path])
+                cleanup_path = Path(tmp_path)
+            except Exception as e:
+                return json.dumps({"error": f"Failed writing temp input: {e}"})
+        elif isinstance(inp, str):
+            # Treat as path or as inline JSON string
+            if os.path.exists(inp):
+                cmd.extend(["--input", inp])
+            else:
+                try:
+                    parsed = json.loads(inp)
+                    import tempfile
+                    fd, tmp_path = tempfile.mkstemp(suffix=".json", prefix="pm-mcp-")
+                    with os.fdopen(fd, "w", encoding="utf-8") as f:
+                        json.dump(parsed, f)
+                    cmd.extend(["--input", tmp_path])
+                    cleanup_path = Path(tmp_path)
+                except json.JSONDecodeError:
+                    return json.dumps({"error": "input must be a JSON object, JSON string, or file path"})
+
+    # Extra named flags
+    for arg_key, cli_flag in extra_flags.items():
+        v = args.get(arg_key)
+        if v is not None:
+            cmd.extend([cli_flag, str(v)])
+
+    # For non-input tools (e.g., create-prd), if no required args provided -> use --demo if it exists
+    if not accepts_input and not any(extra_flags.get(k) and k in args for k in extra_flags):
+        cmd.append("--demo")
+
+    try:
+        proc = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=30, cwd=str(REPO_ROOT),
+        )
+        out = (proc.stdout or "").strip()
+        err = (proc.stderr or "").strip()
+        if proc.returncode != 0:
+            return json.dumps({"error": f"Tool exited {proc.returncode}", "stderr": err[:500]})
+        return out or json.dumps({"warning": "no output", "stderr": err[:200]})
+    except subprocess.TimeoutExpired:
+        return json.dumps({"error": "Tool timed out after 30s"})
+    except Exception as exc:
+        return json.dumps({"error": f"Exec failed: {exc}"})
+    finally:
+        if cleanup_path and cleanup_path.exists():
+            try: cleanup_path.unlink()
+            except OSError: pass
+
+
+# Generate a handler per PM tool — closure binds tool_key
+def _make_pm_handler(tool_key):
+    def handler(args):
+        return _run_pm_tool(tool_key, args)
+    return handler
+
+
+# Append PM tool definitions to TOOLS list
+_SHARED_FORMAT_PROP = {
+    "type": "string",
+    "enum": ["json", "markdown", "mermaid", "confluence", "notion", "linear"],
+    "description": "Output format (default: markdown)",
+}
+
+PM_TOOL_DEFS = [
+    ("pm_create_prd",
+     "Scaffold an 8-section PRD. Provide product_name, objective, and segments.",
+     {"product_name": {"type": "string"}, "objective": {"type": "string"},
+      "segments": {"type": "string", "description": "Comma-separated segment list"},
+      "format": _SHARED_FORMAT_PROP},
+     ["product_name", "objective", "segments"]),
+    ("pm_status_update",
+     "Generate a weekly executive status update from structured input.",
+     {"input": {"type": ["object", "string", "null"], "description": "Status data JSON; omit for demo"},
+      "period": {"type": "string"}, "status": {"type": "string", "enum": ["green", "yellow", "red"]},
+      "format": _SHARED_FORMAT_PROP},
+     []),
+    ("pm_funnel_analyze",
+     "Analyze an AARRR / activation funnel and flag bottlenecks.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_flow_metrics",
+     "Compute lead time, cycle time, throughput, and CFD for issue history.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_dependency_map",
+     "Build a cross-team dependency graph and critical path.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_feedback_triage",
+     "Cluster, categorize (Kano), and score inbound customer feedback.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_nsm_tree",
+     "Build a North Star Metric + input metric tree.",
+     {"input": {"type": ["object", "string", "null"]}, "nsm": {"type": "string"},
+      "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_refinement_score",
+     "Score backlog items against INVEST and Definition of Ready.",
+     {"input": {"type": ["object", "string", "null"]}, "threshold": {"type": "number"},
+      "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_interview_synthesize",
+     "Synthesize customer interviews into an opportunity solution tree.",
+     {"input": {"type": ["object", "string", "null"]}, "outcome": {"type": "string"},
+      "min_strength": {"type": "number"}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_prioritize",
+     "Score backlog items using RICE, ICE, MoSCoW, Opportunity Score, or Weighted.",
+     {"input": {"type": ["object", "string", "null"]},
+      "framework": {"type": "string", "enum": ["rice", "ice", "moscow", "opportunity", "weighted"]},
+      "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_okr_validate",
+     "Validate OKRs against SMART + Wodtke confidence model.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_roadmap_transform",
+     "Transform an output-heavy roadmap into an outcome-driven Now/Next/Later.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_pre_mortem",
+     "Classify pre-launch risks into Tiger / Paper Tiger / Elephant (Klein).",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_release_notes",
+     "Generate user-facing release notes from shipped tickets.",
+     {"input": {"type": ["object", "string", "null"]}, "product_name": {"type": "string"},
+      "version": {"type": "string"}, "format": _SHARED_FORMAT_PROP}, []),
+    ("pm_stakeholder_map",
+     "Plot stakeholders on a Power/Interest grid (Mendelow) and recommend a comms plan.",
+     {"input": {"type": ["object", "string", "null"]}, "format": _SHARED_FORMAT_PROP}, []),
+]
+
+for _name, _desc, _props, _req in PM_TOOL_DEFS:
+    TOOLS.append({
+        "name": _name,
+        "description": _desc,
+        "inputSchema": {"type": "object", "properties": _props,
+                        **({"required": _req} if _req else {})},
+    })
+
+
 # Tool dispatch table
 TOOL_HANDLERS = {
     "search_skills": tool_search_skills,
@@ -392,6 +624,10 @@ TOOL_HANDLERS = {
     "get_persona": tool_get_persona,
     "skill_stats": tool_skill_stats,
 }
+
+# Auto-register all PM tool handlers
+for _name in PM_TOOLS:
+    TOOL_HANDLERS[_name] = _make_pm_handler(_name)
 
 # ---------------------------------------------------------------------------
 # JSON-RPC helpers

@@ -175,10 +175,59 @@ Examples of what these skills produce. *(Click to enlarge — screenshots coming
 
 ## Worked examples
 
-End-to-end scenarios in [`examples/`](examples/):
+**Every skill ships with a worked example.** Inside each skill folder is `examples/<scenario>.md` with a realistic scenario, the skill's workflow applied, and the finished artifact (full PRD, full post-mortem, full status update, etc.) PMs can copy and adapt.
+
+Plus end-to-end multi-skill scenarios in the top-level [`examples/`](examples/):
 
 - [`feature-end-to-end.md`](examples/feature-end-to-end.md) — Idea → release notes in 6 commands
 - More scenarios in [`examples/README.md`](examples/README.md)
+
+A few highlight per-skill examples:
+
+| Skill | Example artifact |
+|---|---|
+| [`execution/create-prd/`](execution/create-prd/examples/) | Full 8-section PRD for "Shared Dashboards" |
+| [`execution/ai-feature-prd/`](execution/ai-feature-prd/examples/) | PRD for "AI Meeting Notes Summarizer" (eval spec + guardrails + model fallback) |
+| [`execution/post-mortem/`](execution/post-mortem/examples/) | Blameless RCA for a 47-minute payment outage |
+| [`execution/status-update-generator/`](execution/status-update-generator/examples/) | Weekly exec update for "Acme Search Platform" |
+| [`execution/activation-funnel/`](execution/activation-funnel/examples/) | AARRR diagnosis for a freemium SaaS with poor day-7 retention |
+| [`discovery/interview-synthesis/`](discovery/interview-synthesis/examples/) | 8-interview synthesis → opportunity solution tree |
+| [`career/pm-interview-prep/`](career/pm-interview-prep/examples/) | Full CIRCLES answer for a Stripe product-sense question |
+
+---
+
+## Live data adapters
+
+PM tools all consume JSON. To remove the "first get the data" friction, ship adapters that pull from real APIs:
+
+```bash
+# Jira -> status-update-generator
+python tools/adapters/jira_to_json.py --jql "sprint in openSprints()" --format status-update \
+  | python project-management/execution/status-update-generator/scripts/status_generator.py --input -
+
+# Linear -> cycle-time-analyzer
+python tools/adapters/linear_to_json.py --team ENG --cycle previous --format cycle-time \
+  | python project-management/execution/cycle-time-analyzer/scripts/flow_metrics.py --input -
+
+# Notion -> customer-feedback-triage
+python tools/adapters/notion_to_json.py --database-id <uuid> --format feedback \
+  | python project-management/execution/customer-feedback-triage/scripts/feedback_triage.py --input -
+```
+
+Stdlib only, env-var auth (`JIRA_TOKEN`, `LINEAR_API_KEY`, `NOTION_TOKEN`). See [`tools/adapters/README.md`](../tools/adapters/README.md).
+
+---
+
+## MCP tools (call PM skills directly from Claude Code)
+
+15 PM skills are exposed as Claude Code MCP tools — callable inside any AI conversation without manually running Python:
+
+`pm_create_prd` · `pm_status_update` · `pm_funnel_analyze` · `pm_flow_metrics` · `pm_dependency_map` · `pm_feedback_triage` · `pm_nsm_tree` · `pm_refinement_score` · `pm_interview_synthesize` · `pm_prioritize` · `pm_okr_validate` · `pm_roadmap_transform` · `pm_pre_mortem` · `pm_release_notes` · `pm_stakeholder_map`
+
+Wire up via `.mcp.json`:
+```json
+{ "mcpServers": { "claude-skills": { "command": "python3", "args": ["scripts/mcp_server.py"] } } }
+```
 
 ---
 
@@ -188,8 +237,9 @@ End-to-end scenarios in [`examples/`](examples/):
 |---|---|---|
 | **Jira** | [`jira-expert/`](jira-expert/) | Issues, sprints, JQL, automation |
 | **Confluence** | [`confluence-expert/`](confluence-expert/) | Pages, spaces, templates |
-| **Linear** ★ NEW | [`linear-expert/`](linear-expert/) | Issues, cycles, projects, initiatives |
-| **Notion** ★ NEW | [`notion-pm/`](notion-pm/) | DB-driven PRDs, OKRs, roadmaps |
+| **Linear** | [`linear-expert/`](linear-expert/) | Issues, cycles, projects, initiatives |
+| **Notion** | [`notion-pm/`](notion-pm/) | DB-driven PRDs, OKRs, roadmaps |
+| **Productboard** | [`productboard-expert/`](productboard-expert/) | Insights, Features, Drivers, Releases |
 | **GitHub Projects** | (any execution skill) | Issues via `gh` CLI |
 | **Atlassian MCP** | (any) | Direct MCP server integration |
 
