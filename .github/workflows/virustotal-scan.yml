@@ -41,8 +41,10 @@ jobs:
       - name: Create archive for scanning
         run: |
           TAG="${{ steps.tag.outputs.tag }}"
-          ARCHIVE="claude-skills-${TAG}.tar.gz"
-          # Package only skill content (exclude .git, docs, etc.)
+          # Write the archive OUTSIDE the working directory to avoid the
+          # "tar: file changed as we read it" failure caused by tar reading
+          # its own growing output file.
+          ARCHIVE="/tmp/claude-skills-${TAG}.tar.gz"
           tar czf "$ARCHIVE" \
             --exclude='.git' \
             --exclude='documentation' \
