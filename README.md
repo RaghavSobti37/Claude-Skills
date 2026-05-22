@@ -40,12 +40,12 @@ See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the Claude Code plugin, MCP
 **Ship a SOC 2 audit. Run a sprint retro. Draft a board update. Spin up a fintech compliance program.** Real workflows you can finish today, not prompt templates that need a prompt engineer to drive them.
 
 - **The only OSS skills library covering regulated industries.** SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR. 18 compliance frameworks with checklists, gap analyses, and audit-ready outputs.
-- **Scripts that actually run, not just prompt templates.** 700+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
+- **Scripts that actually run, not just prompt templates.** 720+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
 - **Call one persona, get a stack of skills behind it.** `startup-cto`, `growth-marketer`, `solo-founder`, `cs-cto-advisor`, `cs-fintech-advisor`, and 70 more. 74 expert identities ready out of the box.
 - **Works with your AI assistant.** Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose, OpenCode, and ChatGPT / Claude.ai.
-- **Discovery → delivery → career for product teams.** Project Management is the deepest domain (54 skills): PRDs, OKRs, status updates, story splitting, interview prep, with Jira / Linear / Notion / Confluence integrations.
+- **Discovery → delivery → career for product teams.** Project Management is the deepest domain — 54 skills, and every one ships with a worked example, an anti-pattern library, and a deterministic scoring rubric. 15 PM skills callable as MCP tools. 5 chain pipelines, 3 live data adapters. Jira / Linear / Notion / Productboard / Confluence.
 
-*Supporting evidence:* 294 skills · 700+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
+*Supporting evidence:* 294 skills · 720+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
 
 ---
 
@@ -150,7 +150,7 @@ Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Fo
 ---
 
 <p align="center">
-  <strong>294 skills · 700+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
+  <strong>294 skills · 720+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
   <a href="https://borghei.me">borghei.me</a>
 </p>
 
