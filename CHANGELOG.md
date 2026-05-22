@@ -5,6 +5,45 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.7.0] - 2026-05-22 (Tier 3 of PM depth)
+
+### Added
+
+**Output evaluation harness for artifact-generating PM skills (`evals/`).** Deterministic scoring (no LLM) for any markdown artifact, scored 0-100 against the skill's red-flags + success criteria.
+
+Framework:
+- `evals/engine.py` — generic check evaluator. 13 supported check types: regex, regex_not, section_present, section_word_count, section_sentence_count, keyword_any, keyword_all, keyword_none, has_table, has_list, url_count, length_in_range, line_count_range.
+- `evals/run.py` — runner. Supports `--all`, `--skill <name>`, `--artifact <path>`, `--format markdown|json`, `--threshold <int>`, `--output <file>`.
+- `evals/README.md` — framework documentation.
+
+12 rubrics (190+ criteria total, each anchored to a specific red-flag or success-criterion item):
+- create-prd · prfaq · ai-feature-prd · brainstorm-okrs · status-update-generator
+- post-mortem · north-star-metric · product-vision · pricing-prd
+- roadmap-communication · release-notes · customer-feedback-triage
+
+Smoke-test (all 12 worked examples scored against their own rubric):
+
+| Skill | Score |
+|---|---|
+| ai-feature-prd | 100 |
+| customer-feedback-triage | 100 |
+| north-star-metric | 100 |
+| post-mortem | 100 |
+| product-vision | 100 |
+| status-update-generator | 100 |
+| brainstorm-okrs | 95 |
+| pricing-prd | 95 |
+| prfaq | 94 |
+| roadmap-communication | 94 |
+| release-notes | 90 |
+| create-prd | 89 |
+
+12/12 pass at threshold 70. High scores reflect that the worked examples were authored as exemplars; the rubrics are calibrated to catch realistic failures (drafts with missing sections, blame language, output-as-KR, watermelon status, etc.).
+
+### Changed
+
+- PM README updated with new "Output evaluation harness" section.
+
 ## [4.6.0] - 2026-05-22 (Tier 2 of PM depth)
 
 ### Added

@@ -196,6 +196,27 @@ A few highlight per-skill examples:
 
 ---
 
+## Output evaluation harness
+
+Twelve of the artifact-generating PM skills now have **deterministic eval rubrics** at [`evals/`](../evals/) — scores any markdown artifact 0-100 against the skill's red flags and success criteria. No LLM in the loop, stdlib only.
+
+```bash
+# Score all worked examples
+python evals/run.py --all --threshold 70
+
+# Score one skill against its own example
+python evals/run.py --skill post-mortem
+
+# Score a custom artifact
+python evals/run.py --skill create-prd --artifact ./my-prd.md
+```
+
+Skills with rubrics: `create-prd`, `prfaq`, `ai-feature-prd`, `brainstorm-okrs`, `status-update-generator`, `post-mortem`, `north-star-metric`, `product-vision`, `pricing-prd`, `roadmap-communication`, `release-notes`, `customer-feedback-triage`.
+
+Use case: PMs paste their drafted artifact and get back specific failures ("Summary is 12 sentences, need 2-5", "Section 5 Market Segments not found", "Found forbidden buzzword: synergy"). Faster than a human review, catches form failures consistently.
+
+---
+
 ## Red flags (anti-pattern library) per skill
 
 Every PM skill now ships with a `references/red-flags.md` file: 10-12 concrete anti-patterns with paired *bad* and *good* artifact snippets, plus a "How to catch it" check question. Use it before sharing your output to scan for the most common failures.
