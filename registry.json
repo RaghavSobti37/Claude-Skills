@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-22T08:29:49+00:00",
+  "generated_at": "2026-05-27T16:31:19+00:00",
   "repository": "claude-skills",
-  "skill_count": 294,
-  "domain_count": 15,
+  "skill_count": 337,
+  "domain_count": 16,
   "domains": [
     "business-growth",
     "c-level-advisor",
@@ -18,6 +18,7 @@
     "product-team",
     "project-management",
     "ra-qm-team",
+    "research",
     "sales-success",
     "vertical-advisors"
   ],
@@ -146,6 +147,26 @@
       "has_references": true
     },
     {
+      "name": "azure-cloud-architect",
+      "domain": "engineering",
+      "description": "Design, review, and validate Azure cloud architectures. Use when picking the right Azure compute (AKS / App Service / Container Apps / Functions / VMs / VMSS), data store (SQL DB / Cosmos / Postgres Flexible / Storage), networking (VNet / Private Endpoint / Front Door / Application Gateway), identity (Entra ID / Managed Identity / RBAC scopes), or applying the Azure Well-Architected Framework (Reliability, Security, Cost Optimization, Operational Excellence, Performance Efficiency) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on Azure-specific services, pricing, and operational defaults.",
+      "tags": [
+        "azure",
+        "cloud-architecture",
+        "well-architected-framework",
+        "aks",
+        "app-service",
+        "entra-id",
+        "networking",
+        "cost-optimization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/azure-cloud-architect",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "browser-automation",
       "domain": "engineering",
       "description": "This skill should be used when the user asks to \"build web automation scripts\", \"check browser automation for detection\", \"generate web scraping code\", \"create form filling automation\", or \"build anti-detection browser scripts\".",
@@ -172,6 +193,25 @@
       "path": "engineering/changelog-generator",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "chaos-engineering",
+      "domain": "engineering",
+      "description": "Chaos engineering practice: hypothesis-driven fault injection to surface weakness before users do. Use when designing a chaos experiment, planning a gameday, picking what to inject (network, host, dependency, resource, state), computing the blast radius of an experiment, building a chaos maturity model for a team, or running a post-incident game to verify the same failure doesn't recur. Covers the four chaos maturity levels, the experiment design loop (steady-state → hypothesis → variables → blast-radius → run → learn), and the catalog of fault types per layer.",
+      "tags": [
+        "chaos-engineering",
+        "resilience",
+        "fault-injection",
+        "gameday",
+        "sre",
+        "reliability",
+        "blast-radius"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/chaos-engineering",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "ci-cd-pipeline-builder",
@@ -253,6 +293,27 @@
       "path": "engineering/context-engine",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "data-quality-auditor",
+      "domain": "engineering",
+      "description": "Audit data quality across pipelines, warehouses, and operational stores. Use when designing a DQ program from scratch, defining DQ dimensions (completeness, accuracy, consistency, timeliness, validity, uniqueness) for a dataset, building rule-based checks (Great Expectations / dbt tests / Soda / custom), detecting schema drift, monitoring freshness SLAs, responding to a DQ incident, or auditing an existing pipeline for missing DQ coverage. Complements our `senior-data-engineer` skill (which covers pipeline design / ETL / Spark) by going deep on audit-grade quality, not throughput.",
+      "tags": [
+        "data-quality",
+        "dq",
+        "freshness",
+        "schema-drift",
+        "great-expectations",
+        "dbt-tests",
+        "soda",
+        "data-observability",
+        "data-engineering"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/data-quality-auditor",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "database-designer",
@@ -364,6 +425,25 @@
       "has_references": false
     },
     {
+      "name": "feature-flags-architect",
+      "domain": "engineering",
+      "description": "Feature flag strategy, lifecycle, and operations for production systems. Use when designing a flag taxonomy, planning a gradual rollout, building kill switches for risky changes, auditing flag debt in a codebase, defining flag governance (who can flip what, when, and how), running progressive delivery experiments, or recovering from a bad release via flag-based rollback. Covers the four flag types (release, ops, experiment, permission), rollout ramp patterns, blast-radius math, kill-switch runbooks, and the flag-debt cleanup loop that prevents flag rot.",
+      "tags": [
+        "feature-flags",
+        "progressive-delivery",
+        "rollouts",
+        "kill-switches",
+        "release-engineering",
+        "experimentation",
+        "flag-governance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/feature-flags-architect",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "focused-fix",
       "domain": "engineering",
       "description": "This skill should be used when the user asks to \"fix a bug with minimal changes\", \"analyze change scope for a bugfix\", \"find the minimal set of files to change\", \"do a focused bugfix\", or \"scope a minimal repair\".",
@@ -377,6 +457,28 @@
       "version": "1.0.0",
       "updated": "2026-04-02",
       "path": "engineering/focused-fix",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "gcp-cloud-architect",
+      "domain": "engineering",
+      "description": "Design, review, and validate Google Cloud (GCP) architectures. Use when picking the right GCP compute (GKE / Cloud Run / Cloud Functions / GCE / Cloud Run Jobs), data store (Cloud SQL / Spanner / Firestore / BigQuery / Bigtable / Cloud Storage), networking (VPC / Private Service Connect / Cloud Load Balancing / Cloud Armor), identity (IAM / Workload Identity Federation / Service Accounts), or applying the Google Cloud Architecture Framework (Operational Excellence, Security, Reliability, Cost Optimization, Performance Optimization) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on GCP-specific services, pricing, and operational defaults.",
+      "tags": [
+        "gcp",
+        "google-cloud",
+        "architecture",
+        "cloud-architecture-framework",
+        "gke",
+        "cloud-run",
+        "bigquery",
+        "iam",
+        "networking",
+        "cost-optimization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/gcp-cloud-architect",
       "has_scripts": true,
       "has_references": true
     },
@@ -450,6 +552,25 @@
       "updated": "2026-03-31",
       "path": "engineering/interview-system-designer",
       "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "kubernetes-operator",
+      "domain": "engineering",
+      "description": "Design, build, and operate Kubernetes operators using the operator pattern. Use when extending Kubernetes with a custom controller for a domain object (database, message queue, ML pipeline, internal platform primitive), deciding between operator-SDK / Kubebuilder / controller-runtime / metacontroller, designing CRDs with proper schema and conversion, implementing reconciliation loops that are idempotent and converge, building status subresources for observability, or auditing an existing operator for anti-patterns (leaky abstractions, missing finalizers, no leader election, status as spec).",
+      "tags": [
+        "kubernetes",
+        "operator-pattern",
+        "crd",
+        "controller-runtime",
+        "kubebuilder",
+        "platform-engineering",
+        "sre"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "engineering/kubernetes-operator",
+      "has_scripts": true,
       "has_references": true
     },
     {
@@ -1149,6 +1270,26 @@
       "has_references": false
     },
     {
+      "name": "aeo",
+      "domain": "marketing",
+      "description": "Answer Engine Optimization (AEO): optimize content to be cited by LLMs (ChatGPT, Claude, Perplexity, Gemini, Copilot) when they answer user questions. Use when designing content strategy for the LLM-citation era, auditing existing content for LLM citability, structuring Q&A schema for AI surfaces, tracking which content gets cited and where, or measuring AEO performance against competitors. Distinct from our `ai-seo` skill — that one is about ranking in AI search results (Perplexity, Google AI Overviews); this one is about being the source LLMs cite in their answers.",
+      "tags": [
+        "aeo",
+        "answer-engine-optimization",
+        "llm-citation",
+        "generative-search",
+        "ai-content",
+        "schema-qa",
+        "geo",
+        "llm-seo"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "marketing/aeo",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "ai-seo",
       "domain": "marketing",
       "description": "Optimize content for AI search engines including Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Microsoft Copilot. Covers generative engine optimization (GEO), AI citability audits, content structuring for extraction, schema markup, bot access configuration, and monitoring. Use when optimizing for AI search, AI overviews, generative search, LLM visibility, semantic search, entity optimization, or when user mentions AI SEO, GEO, Perplexity citations, ChatGPT visibility, or AI-generated answers.",
@@ -1674,6 +1815,63 @@
       "has_references": false
     },
     {
+      "name": "chief-ai-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "AI leadership advisor for Chief AI Officers on AI strategy, governance, risk management, investment planning, organizational design, and the AI/ML talent stack. Use when defining an AI strategy, building an AI governance program, evaluating build-vs-buy for AI capability, scoring AI maturity, drafting an AI risk register, or planning AI investment across the portfolio.",
+      "tags": [
+        "ai",
+        "strategy",
+        "governance",
+        "risk",
+        "mlops",
+        "org-design",
+        "investment"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "c-level-advisor/chief-ai-officer-advisor",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "chief-customer-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "Customer leadership advisor for Chief Customer Officers on customer experience strategy, retention and expansion, voice-of-customer programs, CX organizational design, and customer outcomes accountability. Use when defining a CX strategy, scoring CX maturity, planning churn interventions, designing a VoC program, or preparing the customer section of a board update.",
+      "tags": [
+        "customer-experience",
+        "retention",
+        "expansion",
+        "voc",
+        "csm",
+        "churn",
+        "nps"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "c-level-advisor/chief-customer-officer-advisor",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "chief-data-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "Data leadership advisor for Chief Data Officers on data strategy, governance, quality, monetization, platform decisions, and team design. Use when defining a data strategy, scoring data maturity, auditing a data governance program, evaluating a data platform stack, designing the data org, or preparing the data section of a board update.",
+      "tags": [
+        "data",
+        "governance",
+        "quality",
+        "platform",
+        "monetization",
+        "dmbok",
+        "dama"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "c-level-advisor/chief-data-officer-advisor",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "chief-of-staff",
       "domain": "c-level-advisor",
       "description": "C-suite orchestration layer that routes founder questions to the right advisor role(s), triggers multi-role board meetings for complex decisions, synthesizes outputs, tracks decisions, and manages cross-functional alignment. Every C-suite interaction starts here. Use when coordinating executive decisions, routing strategic questions, managing board meetings, synthesizing multi-perspective advice, tracking decision history, resolving inter-department conflicts, or when user mentions chief of staff, orchestrator, c-suite coordinator, executive routing, board coordination, decision synthesis, advisor routing, multi-agent coordination, or strategic orchestration.",
@@ -1851,6 +2049,25 @@
       "has_references": false
     },
     {
+      "name": "general-counsel-advisor",
+      "domain": "c-level-advisor",
+      "description": "Legal leadership advisor for General Counsels and senior legal leaders on legal strategy, risk management, contract and commercial governance, regulatory tracking, litigation management, and legal-team operating model. Use when defining a legal strategy, scoring legal risk, auditing the contract portfolio, building a regulatory calendar, or preparing the legal section of a board update.",
+      "tags": [
+        "legal",
+        "gc",
+        "contracts",
+        "regulatory",
+        "litigation",
+        "governance",
+        "risk"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "c-level-advisor/general-counsel-advisor",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "internal-narrative",
       "domain": "c-level-advisor",
       "description": "Build and maintain one coherent company story across all stakeholder audiences -- employees, investors, customers, candidates, and partners. Covers narrative construction, audience translation, contradiction detection, all-hands design, investor updates, crisis communication, and change management communications. Use when preparing all-hands meetings, investor updates, board presentations, recruiting narratives, crisis communications, or any time narrative consistency matters.",
@@ -1915,6 +2132,143 @@
       "path": "c-level-advisor/strategic-alignment",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "vpe-advisor",
+      "domain": "c-level-advisor",
+      "description": "VP of Engineering advisor for engineering leaders on organizational design, productivity, quality, delivery, capacity planning, and culture. Complements cto-advisor (technical strategy) with the people-process-delivery half of the engineering leadership mandate. Use when scoring engineering org health, designing the engineering org, planning capacity, building the productivity dashboard, or preparing the eng section of the board update.",
+      "tags": [
+        "engineering",
+        "vpe",
+        "leadership",
+        "productivity",
+        "dora",
+        "space",
+        "capacity",
+        "hiring",
+        "retention"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "c-level-advisor/vpe-advisor",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "ai-act-readiness",
+      "domain": "ra-qm-team",
+      "description": "EU AI Act readiness assessment + sprint playbook. Use when preparing for the Aug 2026 high-risk AI system requirements deadline, when notified-body conformity assessment is scheduled, when GPAI (general-purpose AI) obligations apply, or when annual readiness assessment is due. Pairs with our deep eu-ai-act-specialist skill — that one builds the program; this one preps for the specific assessment.",
+      "tags": [
+        "eu-ai-act",
+        "ai-readiness",
+        "high-risk-ai",
+        "gpai",
+        "conformity-assessment",
+        "compliance",
+        "ai-governance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/ai-act-readiness",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "aims-audit",
+      "domain": "ra-qm-team",
+      "description": "ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when ISO 42001 certification audit is scheduled (Stage 1 documentation review OR Stage 2 onsite), when surveillance audit is due, when internal AIMS audit is being conducted, or when preparing AI Impact Assessment (AIIA) for new AI systems. Pairs with our iso42001-ai-management skill — that one builds the AIMS; this one preps for the certification or surveillance audit.",
+      "tags": [
+        "iso42001",
+        "aims",
+        "ai-management-system",
+        "audit-prep",
+        "certification",
+        "ai-governance",
+        "ai-impact-assessment"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/aims-audit",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "compliance-readiness",
+      "domain": "ra-qm-team",
+      "description": "Cross-framework compliance readiness orchestrator. Use when preparing for multi-framework certification (SOC 2 + ISO 27001 + NIST CSF together), when building a shared-evidence strategy that satisfies multiple frameworks simultaneously, when sequencing certifications (which to do first), or when mapping a single control to its expression across multiple frameworks. Sits above the framework-specific audit-prep skills and the deep framework-specialist skills.",
+      "tags": [
+        "compliance-readiness",
+        "multi-framework",
+        "shared-evidence",
+        "control-mapping",
+        "soc2",
+        "iso27001",
+        "nist",
+        "gdpr",
+        "hipaa"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/compliance-readiness",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "fda-qsr-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for medical device companies. Use when an FDA inspection is announced, when preparing for the new QMSR (Quality Management System Regulation, 2026), when 483 / Warning Letter response is needed, or when annual readiness assessment surfaces gaps. Pairs with our fda-consultant-specialist for program-building; this skill is the audit-event playbook.",
+      "tags": [
+        "fda",
+        "qsr",
+        "qmsr",
+        "21-cfr-820",
+        "medical-devices",
+        "audit-prep",
+        "483-response",
+        "warning-letter"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/fda-qsr-audit-prep",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "gdpr-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "GDPR audit-prep playbook: 4/8/12-week sprint to prepare for a supervisory authority inquiry, a customer-side DPA audit, or an internal compliance review. Use when an audit is on the calendar, when readiness assessment surfaced gaps, or when ROPA (Records of Processing Activities) needs rapid completion. Pairs with our deep gdpr-dsgvo-expert skill (the program-building one) — this is the operational audit-prep variant.",
+      "tags": [
+        "gdpr",
+        "audit-prep",
+        "ropa",
+        "dpia",
+        "data-protection",
+        "dpo-engagement",
+        "eu-privacy"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/gdpr-audit-prep",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "soc2-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "SOC 2 audit-prep playbook: the 4/8/12-week sprint to get from \"we have most of the controls\" to \"audit-ready\" for a Type I or Type II observation. Use when the audit is scheduled and you need a punch list, when readiness assessment surfaced gaps and you need a sprint plan, or when evidence collection is missing or stale. Lighter operational complement to our deep soc2-compliance-expert skill — that one builds the program; this one preps for the specific audit event.",
+      "tags": [
+        "soc2",
+        "audit-prep",
+        "trust-services-criteria",
+        "evidence-collection",
+        "sprint-planning",
+        "compliance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "ra-qm-team/audit-prep/soc2-audit-prep",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "capa-officer",
@@ -2263,6 +2617,27 @@
       "has_references": true
     },
     {
+      "name": "channel-economics",
+      "domain": "business-growth",
+      "description": "Channel economics: design and analyze the financial structure of go-to-market channels (direct sales, resellers, distributors, marketplaces, embedded partners, MSPs, integrators). Use when picking the right channel mix for a product, modeling partner margin / TCO, designing partner tiers with rebate structures, analyzing channel conflict, or building the financial model that justifies (or kills) a partnership. Pairs with our partnerships-architect (partnership type / strategy) and deal-desk (partner-deal mechanics) — this one is the spreadsheet behind those conversations.",
+      "tags": [
+        "channel-economics",
+        "channel-strategy",
+        "partner-program",
+        "margin-analysis",
+        "gtm",
+        "reseller",
+        "distributor",
+        "marketplace",
+        "msp"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "business-growth/channel-economics",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "churn-prevention",
       "domain": "business-growth",
       "description": "SaaS churn reduction covering cancel flow design, dynamic save offers, exit survey architecture, dunning sequences, payment recovery, win-back campaigns, and churn impact modeling.",
@@ -2279,6 +2654,25 @@
       "path": "business-growth/churn-prevention",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "commercial-policy",
+      "domain": "business-growth",
+      "description": "Commercial policy: the written governance framework that defines what commercial terms sales can offer, what triggers approval, and what's off-limits. Use when authoring or refreshing a company commercial-policy charter, defining discount / contract / payment / termination / liability policies, auditing existing deals for policy compliance, drafting commercial-policy training for sales, or generating a tailored policy for a new region or vertical. Sits above deal-desk (which enforces) and pricing-strategy (which sets prices) — this is the policy layer that reflects how the company decides to do business.",
+      "tags": [
+        "commercial-policy",
+        "governance",
+        "contract-policy",
+        "pricing-policy",
+        "sales-governance",
+        "deal-policy",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "business-growth/commercial-policy",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "competitive-teardown",
@@ -2327,6 +2721,25 @@
       "version": "1.0.0",
       "updated": "2026-02-06",
       "path": "business-growth/customer-success-manager",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "deal-desk",
+      "domain": "business-growth",
+      "description": "Deal desk: the cross-functional function that reviews, approves, and structures non-standard sales deals. Use when standing up a deal-desk function from scratch, defining the deal-desk charter and SLA, building approval-threshold matrices (discount %, contract length, custom terms, payment terms, custom SLAs), designing a deal-review packet template, routing deals through the right approvers, analyzing deal velocity to find bottlenecks, or auditing recent deals for policy compliance. Pairs with our existing pricing-strategy (sets the prices) and revenue-operations (measures the funnel) skills — this one runs the operational machinery between those two.",
+      "tags": [
+        "deal-desk",
+        "sales-operations",
+        "discount-approval",
+        "commercial-operations",
+        "contract-review",
+        "deal-velocity",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "business-growth/deal-desk",
       "has_scripts": true,
       "has_references": true
     },
@@ -2385,6 +2798,25 @@
       "path": "business-growth/page-cro",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "partnerships-architect",
+      "domain": "business-growth",
+      "description": "Design strategic partnerships — technology / channel / strategic / co-marketing — and the programs that scale them. Use when evaluating a potential partner, picking the right partnership type (tech integration vs reseller vs OEM vs strategic alliance), designing a partner program from scratch, structuring a specific partnership deal, modeling ROI on a partnership investment, or auditing an existing partner portfolio for ROI / strategic fit. Pairs with our channel-economics (financial mechanics) and deal-desk (per-deal approval) — this skill is the strategy layer above both.",
+      "tags": [
+        "partnerships",
+        "strategic-alliances",
+        "channel-strategy",
+        "tech-partnerships",
+        "partner-program",
+        "partnership-design",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "business-growth/partnerships-architect",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "paywall-upgrade-cro",
@@ -2813,7 +3245,7 @@
       "updated": "2026-03-31",
       "path": "project-management/agile-coach",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "atlassian-admin",
@@ -2830,7 +3262,7 @@
       "updated": "2026-03-31",
       "path": "project-management/atlassian-admin",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "atlassian-templates",
@@ -2846,7 +3278,7 @@
       "updated": "2026-03-31",
       "path": "project-management/atlassian-templates",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "pm-1on1s",
@@ -2923,7 +3355,7 @@
       "updated": "2026-03-31",
       "path": "project-management/delivery-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "brainstorm-experiments",
@@ -2989,6 +3421,28 @@
       "updated": "2026-05-22",
       "path": "project-management/discovery/jtbd-workshop",
       "has_scripts": false,
+      "has_references": true
+    },
+    {
+      "name": "metrics-dashboard",
+      "domain": "project-management",
+      "description": "Design a product metrics dashboard — North Star + input metrics + guardrails — that the team actually uses to make decisions. Distinct from north-star-metric (defines THE one number) by focusing on the full dashboard architecture: layers, owners, cadence, visualization, and the discipline that prevents 30-chart dashboards.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/discovery/metrics-dashboard",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "opportunity-solution-tree",
+      "domain": "project-management",
+      "description": "Opportunity Solution Tree (Teresa Torres) — a continuous discovery artifact mapping desired outcomes → opportunities → solutions → assumption tests. Use when prioritizing discovery work, structuring weekly customer interviews, mapping multiple solutions to one problem, or auditing whether your roadmap actually moves outcomes.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/discovery/opportunity-solution-tree",
+      "has_scripts": true,
       "has_references": true
     },
     {
@@ -3117,7 +3571,7 @@
       "updated": "2026-04-10",
       "path": "project-management/execution/daci-framework",
       "has_scripts": false,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "dependency-map",
@@ -3139,7 +3593,7 @@
       "updated": "2026-04-10",
       "path": "project-management/execution/eol-communication",
       "has_scripts": false,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "feature-flag-strategy",
@@ -3300,6 +3754,28 @@
       "has_references": true
     },
     {
+      "name": "sprint-plan",
+      "domain": "project-management",
+      "description": "Plan a sprint that ships — capacity, commitment vs stretch, dependencies, risk-identification, and the pre-sprint discipline that prevents mid-sprint surprises. Distinct from scrum-master (process facilitation) by focusing on the planning artifact itself.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/execution/sprint-plan",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "stakeholder-map",
+      "domain": "project-management",
+      "description": "Map stakeholders by power × interest (or influence × support), design a communication plan, and run the stakeholder-management discipline that prevents surprise objections. Use when launching a major initiative, navigating an enterprise deal, planning a re-org, or pre-empting political resistance to a roadmap change.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/execution/stakeholder-map",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "status-update-generator",
       "domain": "project-management",
       "description": "Generate weekly executive status updates from Jira/Linear data exports. Produces a structured \"highlights / blockers / risks / asks / what's next\" briefing in markdown, Confluence, Notion, Linear, JSON, or Mermaid.",
@@ -3319,7 +3795,7 @@
       "updated": "2026-04-10",
       "path": "project-management/execution/story-mapping",
       "has_scripts": false,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "story-splitting",
@@ -3344,6 +3820,17 @@
       "has_references": true
     },
     {
+      "name": "test-scenarios",
+      "domain": "project-management",
+      "description": "Generate complete test scenario coverage from a feature spec: happy paths, edge cases, error handling, accessibility, security, and performance scenarios. Includes a coverage analyzer that flags gaps before QA writes the test plan. Distinct from automated test generation — this is the WHAT to test before HOW.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/execution/test-scenarios",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "wwas",
       "domain": "project-management",
       "description": "Why-What-Acceptance backlog format that connects every work item to strategic business objectives.",
@@ -3351,6 +3838,28 @@
       "version": "1.0.0",
       "updated": "2026-03-04",
       "path": "project-management/execution/wwas",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "gtm-strategy",
+      "domain": "project-management",
+      "description": "Go-to-market strategy: ICP × motion × channels × messaging × success metrics × launch plan. Distinct from individual marketing or sales skills by being the integrated cross-functional strategy spanning product, marketing, sales, CS, and finance. Use when launching a new product, entering a new segment, or auditing why an existing GTM isn't working.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/gtm/gtm-strategy",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "ideal-customer-profile",
+      "domain": "project-management",
+      "description": "Define a sharp Ideal Customer Profile (ICP) — firmographics + behavioral signals + JTBD + trigger event + buyer persona — that marketing, sales, and product can all use. Use when defining a new ICP, refining an existing one based on actual closed customers, or auditing why pipeline / conversion is poor.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/gtm/ideal-customer-profile",
       "has_scripts": true,
       "has_references": true
     },
@@ -3443,7 +3952,7 @@
       "updated": "2026-03-31",
       "path": "project-management/program-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "scrum-master",
@@ -3495,6 +4004,61 @@
       "has_references": true
     },
     {
+      "name": "ansoff-matrix",
+      "domain": "project-management",
+      "description": "Ansoff Matrix — 4-quadrant framework for growth strategy options: market penetration, market development, product development, and diversification. Use when evaluating growth bets, prioritizing investment across quadrants, and explicitly acknowledging the risk ladder from \"more of what we know\" to \"new product in new market\".",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/strategy-frameworks/ansoff-matrix",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "business-model-canvas",
+      "domain": "project-management",
+      "description": "Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 building blocks. Use when designing or refreshing a business model, auditing an existing canvas for gaps, exploring monetization alternatives, or aligning leadership on the business model assumptions that everything else depends on.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/strategy-frameworks/business-model-canvas",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "lean-canvas",
+      "domain": "project-management",
+      "description": "Lean Canvas (Ash Maurya) — startup-focused adaptation of the Business Model Canvas, optimized for capturing assumptions and unfair advantages in early-stage products. Use when at the idea, pre-PMF, or pivot stage; when BMC is too operational; when you need a 1-page model in 20 minutes.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/strategy-frameworks/lean-canvas",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "porters-five-forces",
+      "domain": "project-management",
+      "description": "Porter's Five Forces — analyze the competitive intensity and attractiveness of an industry. Use when evaluating a new market entry, understanding why margins are under pressure, designing a defensive strategy, or auditing strategic positioning at industry level.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/strategy-frameworks/porters-five-forces",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "swot-analysis",
+      "domain": "project-management",
+      "description": "SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) — the foundational strategic-positioning exercise. Use when assessing a new market entry, a strategic pivot, a competitive response, an org restructure, or as input to annual strategic planning. Includes a validator that flags generic, ungrounded, or one-sided SWOTs.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "project-management/strategy-frameworks/swot-analysis",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "ab-test-setup",
       "domain": "product-team",
       "description": "Design and implement statistically rigorous A/B tests and experiments. Covers hypothesis formulation, sample size calculation, metric selection, traffic allocation, implementation patterns (client-side and server-side), statistical analysis, and common pitfalls. Use when planning experiments, calculating sample sizes, designing test variants, analyzing results, or when someone says \"let's test that.",
@@ -3528,6 +4092,28 @@
       "has_references": true
     },
     {
+      "name": "apple-hig-expert",
+      "domain": "product-team",
+      "description": "Apple Human Interface Guidelines expert for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS. Covers platform-native patterns, navigation, typography, controls, gestures, accessibility, and the platform-specific conventions that make apps feel native. Use when designing or reviewing an Apple platform app, auditing for HIG compliance, picking the right native components, or validating accessibility against Apple's requirements.",
+      "tags": [
+        "apple",
+        "ios",
+        "ipados",
+        "macos",
+        "watchos",
+        "tvos",
+        "visionos",
+        "hig",
+        "design",
+        "accessibility"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "product-team/apple-hig-expert",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
       "name": "design-system-lead",
       "domain": "product-team",
       "description": "Expert design systems leadership covering component libraries, design tokens, documentation, and design-development collaboration. Use when architecting a design token system, building a component library, defining governance and contribution processes, measuring design system adoption, or generating cross-platform tokens (CSS, SCSS, iOS, Android).",
@@ -3543,6 +4129,26 @@
       "path": "product-team/design-system-lead",
       "has_scripts": true,
       "has_references": false
+    },
+    {
+      "name": "product-analytics",
+      "domain": "product-team",
+      "description": "Product analytics framework for PMs and analytics engineers on instrumenting products, defining metrics, building activation/retention funnels, running cohort analyses, and translating product data into decisions. Use when designing a product metric tree, instrumenting a new feature, auditing existing instrumentation, defining North Star + counter-metrics, or building an analytics roadmap.",
+      "tags": [
+        "analytics",
+        "metrics",
+        "north-star",
+        "retention",
+        "activation",
+        "funnel",
+        "cohort",
+        "instrumentation"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "product-team/product-analytics",
+      "has_scripts": true,
+      "has_references": true
     },
     {
       "name": "product-designer",
@@ -3592,6 +4198,61 @@
       "version": "1.0.0",
       "updated": "2026-03-31",
       "path": "product-team/product-strategist",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "research-summarizer",
+      "domain": "product-team",
+      "description": "User research synthesis and communication skill for PMs, researchers, and design leads. Takes raw research artifacts (interview transcripts, survey results, observations, support tickets, win/loss notes) and produces structured insights, themed findings, and decision-ready briefs. Use when synthesizing a batch of user interviews, building a findings brief, separating signal from anecdote, or communicating research to stakeholders who didn't participate.",
+      "tags": [
+        "user-research",
+        "synthesis",
+        "insights",
+        "qualitative",
+        "ux",
+        "communication"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "product-team/research-summarizer",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "roadmap-communicator",
+      "domain": "product-team",
+      "description": "Roadmap communication skill for PMs and product leaders. Helps translate a single internal roadmap into audience-appropriate formats (exec deck, customer one-pager, eng commit list, sales narrative, board section) and applies confidence-band discipline so promises match reality. Use when preparing a roadmap readout, translating roadmap for a specific audience, or auditing roadmap commitments for over-promise risk.",
+      "tags": [
+        "roadmap",
+        "communication",
+        "prd",
+        "now-next-later",
+        "themes",
+        "board",
+        "customer"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "product-team/roadmap-communicator",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "spec-to-repo",
+      "domain": "product-team",
+      "description": "Translate product specs (PRDs, user stories, feature briefs) into a clean, ship-ready repo structure: ticket decomposition, branch strategy, PR sequencing, and definition-of-done. Use when planning the implementation of a feature, breaking a PRD into engineering tickets, designing the branch/PR sequence, or auditing existing decomposition for shipping risk.",
+      "tags": [
+        "prd",
+        "ticket-decomposition",
+        "branch-strategy",
+        "pr",
+        "definition-of-done",
+        "delivery"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "product-team/spec-to-repo",
       "has_scripts": true,
       "has_references": true
     },
@@ -4143,6 +4804,81 @@
       "version": "1.0.0",
       "updated": "2026-05-04",
       "path": "vertical-advisors/proptech",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "dossier",
+      "domain": "research",
+      "description": "Build structured intelligence dossiers on companies, people, markets, or domains. Covers dossier frameworks, source triangulation, reliability scoring, and fact/inference discipline. Use when preparing a deal-prep dossier, executive briefing, market-entry analysis, due-diligence overview, or board-ready intelligence document.",
+      "tags": [
+        "dossier",
+        "intelligence",
+        "due-diligence",
+        "market-entry",
+        "briefing",
+        "research"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "research/dossier",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "grants",
+      "domain": "research",
+      "description": "Grant writing and proposal architecture skill for researchers, founders, and nonprofits. Covers funder fit, proposal structure, budget design, narrative discipline, and success-factor scoring. Use when writing a grant proposal, evaluating funder fit before applying, auditing a draft for competitiveness, or planning a budget that survives review.",
+      "tags": [
+        "grants",
+        "proposals",
+        "funding",
+        "nih",
+        "nsf",
+        "foundation",
+        "research",
+        "budget"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "research/grants",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "litreview",
+      "domain": "research",
+      "description": "Literature review skill for academic, R&D, and professional research. Covers search strategy, source assessment (quality, relevance, recency), thematic synthesis, citation management, and the discipline of reproducible reviews. Use when conducting a systematic literature review, building a research bibliography, or preparing a research-grounded report.",
+      "tags": [
+        "literature-review",
+        "research",
+        "citation",
+        "synthesis",
+        "prisma",
+        "academic"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "research/litreview",
+      "has_scripts": true,
+      "has_references": true
+    },
+    {
+      "name": "patent",
+      "domain": "research",
+      "description": "Patent research and IP landscape skill. Covers prior-art search strategy, claim mapping, landscape analysis, freedom-to-operate assessment, and patentability scoring. Use when conducting a prior-art search, mapping the IP landscape of a technology area, evaluating patentability of an invention, or running an FTO analysis before product launch.",
+      "tags": [
+        "patent",
+        "ip",
+        "prior-art",
+        "freedom-to-operate",
+        "patentability",
+        "claims",
+        "landscape"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "path": "research/patent",
       "has_scripts": true,
       "has_references": true
     }

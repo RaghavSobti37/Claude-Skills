@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-22T08:36:40+00:00",
-  "skill_count": 294,
-  "domain_count": 15,
+  "generated_at": "2026-05-27T16:31:19+00:00",
+  "skill_count": 337,
+  "domain_count": 16,
   "skills": [
     {
       "name": "a11y-audit",
@@ -235,6 +235,38 @@
       "has_assets": true
     },
     {
+      "name": "azure-cloud-architect",
+      "domain": "engineering",
+      "description": "Design, review, and validate Azure cloud architectures. Use when picking the right Azure compute (AKS / App Service / Container Apps / Functions / VMs / VMSS), data store (SQL DB / Cosmos / Postgres Flexible / Storage), networking (VNet / Private Endpoint / Front Door / Application Gateway), identity (Entra ID / Managed Identity / RBAC scopes), or applying the Azure Well-Architected Framework (Reliability, Security, Cost Optimization, Operational Excellence, Performance Efficiency) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on Azure-specific services, pricing, and operational defaults.",
+      "tags": [
+        "azure",
+        "cloud-architecture",
+        "well-architected-framework",
+        "aks",
+        "app-service",
+        "entra-id",
+        "networking",
+        "cost-optimization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/azure-cloud-architect",
+      "files": [
+        "SKILL.md",
+        "references/azure-cost-optimization.md",
+        "references/azure-services-reference.md",
+        "references/azure-well-architected.md",
+        "scripts/azure_architecture_validator.py",
+        "scripts/azure_cost_estimator.py",
+        "scripts/azure_waf_scorer.py"
+      ],
+      "size_bytes": 120092,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "browser-automation",
       "domain": "engineering",
       "description": "This skill should be used when the user asks to \"build web automation scripts\", \"check browser automation for detection\", \"generate web scraping code\", \"create form filling automation\", or \"build anti-detection browser scripts\".",
@@ -279,6 +311,37 @@
       "size_bytes": 52595,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "chaos-engineering",
+      "domain": "engineering",
+      "description": "Chaos engineering practice: hypothesis-driven fault injection to surface weakness before users do. Use when designing a chaos experiment, planning a gameday, picking what to inject (network, host, dependency, resource, state), computing the blast radius of an experiment, building a chaos maturity model for a team, or running a post-incident game to verify the same failure doesn't recur. Covers the four chaos maturity levels, the experiment design loop (steady-state → hypothesis → variables → blast-radius → run → learn), and the catalog of fault types per layer.",
+      "tags": [
+        "chaos-engineering",
+        "resilience",
+        "fault-injection",
+        "gameday",
+        "sre",
+        "reliability",
+        "blast-radius"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/chaos-engineering",
+      "files": [
+        "SKILL.md",
+        "references/chaos-principles-and-maturity.md",
+        "references/fault-injection-catalog.md",
+        "references/gameday-playbook.md",
+        "scripts/blast_radius_calculator.py",
+        "scripts/chaos_experiment_designer.py",
+        "scripts/gameday_planner.py"
+      ],
+      "size_bytes": 124771,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -425,6 +488,39 @@
       "size_bytes": 67103,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "data-quality-auditor",
+      "domain": "engineering",
+      "description": "Audit data quality across pipelines, warehouses, and operational stores. Use when designing a DQ program from scratch, defining DQ dimensions (completeness, accuracy, consistency, timeliness, validity, uniqueness) for a dataset, building rule-based checks (Great Expectations / dbt tests / Soda / custom), detecting schema drift, monitoring freshness SLAs, responding to a DQ incident, or auditing an existing pipeline for missing DQ coverage. Complements our `senior-data-engineer` skill (which covers pipeline design / ETL / Spark) by going deep on audit-grade quality, not throughput.",
+      "tags": [
+        "data-quality",
+        "dq",
+        "freshness",
+        "schema-drift",
+        "great-expectations",
+        "dbt-tests",
+        "soda",
+        "data-observability",
+        "data-engineering"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/data-quality-auditor",
+      "files": [
+        "SKILL.md",
+        "references/data-quality-dimensions.md",
+        "references/dq-check-catalog.md",
+        "references/dq-incident-response.md",
+        "scripts/dq_check_runner.py",
+        "scripts/freshness_monitor.py",
+        "scripts/schema_drift_detector.py"
+      ],
+      "size_bytes": 82578,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -649,6 +745,37 @@
       "has_assets": false
     },
     {
+      "name": "feature-flags-architect",
+      "domain": "engineering",
+      "description": "Feature flag strategy, lifecycle, and operations for production systems. Use when designing a flag taxonomy, planning a gradual rollout, building kill switches for risky changes, auditing flag debt in a codebase, defining flag governance (who can flip what, when, and how), running progressive delivery experiments, or recovering from a bad release via flag-based rollback. Covers the four flag types (release, ops, experiment, permission), rollout ramp patterns, blast-radius math, kill-switch runbooks, and the flag-debt cleanup loop that prevents flag rot.",
+      "tags": [
+        "feature-flags",
+        "progressive-delivery",
+        "rollouts",
+        "kill-switches",
+        "release-engineering",
+        "experimentation",
+        "flag-governance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/feature-flags-architect",
+      "files": [
+        "SKILL.md",
+        "references/flag-debt-and-cleanup.md",
+        "references/flag-types-and-patterns.md",
+        "references/rollout-and-kill-switch-playbook.md",
+        "scripts/flag_audit.py",
+        "scripts/kill_switch_runbook.py",
+        "scripts/rollout_simulator.py"
+      ],
+      "size_bytes": 115223,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "focused-fix",
       "domain": "engineering",
       "description": "This skill should be used when the user asks to \"fix a bug with minimal changes\", \"analyze change scope for a bugfix\", \"find the minimal set of files to change\", \"do a focused bugfix\", or \"scope a minimal repair\".",
@@ -673,6 +800,40 @@
         "scripts/change_scope_analyzer.py"
       ],
       "size_bytes": 42564,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "gcp-cloud-architect",
+      "domain": "engineering",
+      "description": "Design, review, and validate Google Cloud (GCP) architectures. Use when picking the right GCP compute (GKE / Cloud Run / Cloud Functions / GCE / Cloud Run Jobs), data store (Cloud SQL / Spanner / Firestore / BigQuery / Bigtable / Cloud Storage), networking (VPC / Private Service Connect / Cloud Load Balancing / Cloud Armor), identity (IAM / Workload Identity Federation / Service Accounts), or applying the Google Cloud Architecture Framework (Operational Excellence, Security, Reliability, Cost Optimization, Performance Optimization) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on GCP-specific services, pricing, and operational defaults.",
+      "tags": [
+        "gcp",
+        "google-cloud",
+        "architecture",
+        "cloud-architecture-framework",
+        "gke",
+        "cloud-run",
+        "bigquery",
+        "iam",
+        "networking",
+        "cost-optimization"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/gcp-cloud-architect",
+      "files": [
+        "SKILL.md",
+        "references/gcp-cost-optimization.md",
+        "references/gcp-services-reference.md",
+        "references/gcp-well-architected.md",
+        "scripts/gcp_architecture_validator.py",
+        "scripts/gcp_caf_scorer.py",
+        "scripts/gcp_cost_estimator.py"
+      ],
+      "size_bytes": 112989,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -827,6 +988,37 @@
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
+    },
+    {
+      "name": "kubernetes-operator",
+      "domain": "engineering",
+      "description": "Design, build, and operate Kubernetes operators using the operator pattern. Use when extending Kubernetes with a custom controller for a domain object (database, message queue, ML pipeline, internal platform primitive), deciding between operator-SDK / Kubebuilder / controller-runtime / metacontroller, designing CRDs with proper schema and conversion, implementing reconciliation loops that are idempotent and converge, building status subresources for observability, or auditing an existing operator for anti-patterns (leaky abstractions, missing finalizers, no leader election, status as spec).",
+      "tags": [
+        "kubernetes",
+        "operator-pattern",
+        "crd",
+        "controller-runtime",
+        "kubebuilder",
+        "platform-engineering",
+        "sre"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "engineering/kubernetes-operator",
+      "files": [
+        "SKILL.md",
+        "references/controller-runtime-patterns.md",
+        "references/operator-anti-patterns.md",
+        "references/operator-pattern-and-crds.md",
+        "scripts/crd_validator.py",
+        "scripts/operator_scaffold.py",
+        "scripts/reconciliation_audit.py"
+      ],
+      "size_bytes": 129767,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
     },
     {
       "name": "llm-cost-optimizer",
@@ -2065,10 +2257,11 @@
       "path": "engineering/threat-detection",
       "files": [
         "SKILL.md",
+        "examples/access.log",
         "references/threat-indicators.md",
         "scripts/threat_signal_analyzer.py"
       ],
-      "size_bytes": 24700,
+      "size_bytes": 32301,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -2119,6 +2312,38 @@
       "size_bytes": 40492,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "aeo",
+      "domain": "marketing",
+      "description": "Answer Engine Optimization (AEO): optimize content to be cited by LLMs (ChatGPT, Claude, Perplexity, Gemini, Copilot) when they answer user questions. Use when designing content strategy for the LLM-citation era, auditing existing content for LLM citability, structuring Q&A schema for AI surfaces, tracking which content gets cited and where, or measuring AEO performance against competitors. Distinct from our `ai-seo` skill — that one is about ranking in AI search results (Perplexity, Google AI Overviews); this one is about being the source LLMs cite in their answers.",
+      "tags": [
+        "aeo",
+        "answer-engine-optimization",
+        "llm-citation",
+        "generative-search",
+        "ai-content",
+        "schema-qa",
+        "geo",
+        "llm-seo"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "marketing/aeo",
+      "files": [
+        "SKILL.md",
+        "references/aeo-fundamentals.md",
+        "references/citation-tracking-and-measurement.md",
+        "references/llm-content-structuring.md",
+        "scripts/aeo_content_auditor.py",
+        "scripts/citation_extractor.py",
+        "scripts/schema_qa_generator.py"
+      ],
+      "size_bytes": 73077,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -3057,6 +3282,99 @@
       "has_assets": false
     },
     {
+      "name": "chief-ai-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "AI leadership advisor for Chief AI Officers on AI strategy, governance, risk management, investment planning, organizational design, and the AI/ML talent stack. Use when defining an AI strategy, building an AI governance program, evaluating build-vs-buy for AI capability, scoring AI maturity, drafting an AI risk register, or planning AI investment across the portfolio.",
+      "tags": [
+        "ai",
+        "strategy",
+        "governance",
+        "risk",
+        "mlops",
+        "org-design",
+        "investment"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "c-level-advisor/chief-ai-officer-advisor",
+      "files": [
+        "SKILL.md",
+        "references/ai-org-and-talent.md",
+        "references/ai-risk-and-governance.md",
+        "references/ai-strategy-framework.md",
+        "scripts/ai_investment_planner.py",
+        "scripts/ai_maturity_assessor.py",
+        "scripts/ai_risk_register_generator.py"
+      ],
+      "size_bytes": 87074,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "chief-customer-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "Customer leadership advisor for Chief Customer Officers on customer experience strategy, retention and expansion, voice-of-customer programs, CX organizational design, and customer outcomes accountability. Use when defining a CX strategy, scoring CX maturity, planning churn interventions, designing a VoC program, or preparing the customer section of a board update.",
+      "tags": [
+        "customer-experience",
+        "retention",
+        "expansion",
+        "voc",
+        "csm",
+        "churn",
+        "nps"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "c-level-advisor/chief-customer-officer-advisor",
+      "files": [
+        "SKILL.md",
+        "references/customer-experience-strategy.md",
+        "references/retention-and-expansion-frameworks.md",
+        "references/voice-of-customer-program.md",
+        "scripts/churn_intervention_planner.py",
+        "scripts/cx_maturity_scorer.py",
+        "scripts/voc_program_designer.py"
+      ],
+      "size_bytes": 73864,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "chief-data-officer-advisor",
+      "domain": "c-level-advisor",
+      "description": "Data leadership advisor for Chief Data Officers on data strategy, governance, quality, monetization, platform decisions, and team design. Use when defining a data strategy, scoring data maturity, auditing a data governance program, evaluating a data platform stack, designing the data org, or preparing the data section of a board update.",
+      "tags": [
+        "data",
+        "governance",
+        "quality",
+        "platform",
+        "monetization",
+        "dmbok",
+        "dama"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "c-level-advisor/chief-data-officer-advisor",
+      "files": [
+        "SKILL.md",
+        "references/data-governance-and-quality.md",
+        "references/data-strategy-framework.md",
+        "references/data-team-and-platform.md",
+        "scripts/data_governance_audit.py",
+        "scripts/data_maturity_assessor.py",
+        "scripts/data_platform_evaluator.py"
+      ],
+      "size_bytes": 77955,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "chief-of-staff",
       "domain": "c-level-advisor",
       "description": "C-suite orchestration layer that routes founder questions to the right advisor role(s), triggers multi-role board meetings for complex decisions, synthesizes outputs, tracks decisions, and manages cross-functional alignment. Every C-suite interaction starts here. Use when coordinating executive decisions, routing strategic questions, managing board meetings, synthesizing multi-perspective advice, tracking decision history, resolving inter-department conflicts, or when user mentions chief of staff, orchestrator, c-suite coordinator, executive routing, board coordination, decision synthesis, advisor routing, multi-agent coordination, or strategic orchestration.",
@@ -3368,6 +3686,37 @@
       "has_assets": false
     },
     {
+      "name": "general-counsel-advisor",
+      "domain": "c-level-advisor",
+      "description": "Legal leadership advisor for General Counsels and senior legal leaders on legal strategy, risk management, contract and commercial governance, regulatory tracking, litigation management, and legal-team operating model. Use when defining a legal strategy, scoring legal risk, auditing the contract portfolio, building a regulatory calendar, or preparing the legal section of a board update.",
+      "tags": [
+        "legal",
+        "gc",
+        "contracts",
+        "regulatory",
+        "litigation",
+        "governance",
+        "risk"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "c-level-advisor/general-counsel-advisor",
+      "files": [
+        "SKILL.md",
+        "references/contract-and-commercial-governance.md",
+        "references/legal-strategy-and-risk.md",
+        "references/regulatory-and-litigation-management.md",
+        "scripts/contract_portfolio_analyzer.py",
+        "scripts/legal_risk_register.py",
+        "scripts/regulatory_calendar_generator.py"
+      ],
+      "size_bytes": 66520,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "internal-narrative",
       "domain": "c-level-advisor",
       "description": "Build and maintain one coherent company story across all stakeholder audiences -- employees, investors, customers, candidates, and partners. Covers narrative construction, audience translation, contradiction detection, all-hands design, investor updates, crisis communication, and change management communications. Use when preparing all-hands meetings, investor updates, board presentations, recruiting narratives, crisis communications, or any time narrative consistency matters.",
@@ -3485,6 +3834,217 @@
       "size_bytes": 49058,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "vpe-advisor",
+      "domain": "c-level-advisor",
+      "description": "VP of Engineering advisor for engineering leaders on organizational design, productivity, quality, delivery, capacity planning, and culture. Complements cto-advisor (technical strategy) with the people-process-delivery half of the engineering leadership mandate. Use when scoring engineering org health, designing the engineering org, planning capacity, building the productivity dashboard, or preparing the eng section of the board update.",
+      "tags": [
+        "engineering",
+        "vpe",
+        "leadership",
+        "productivity",
+        "dora",
+        "space",
+        "capacity",
+        "hiring",
+        "retention"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "c-level-advisor/vpe-advisor",
+      "files": [
+        "SKILL.md",
+        "references/eng-productivity-and-quality.md",
+        "references/eng-strategy-and-roadmap.md",
+        "references/engineering-org-design.md",
+        "scripts/eng_capacity_planner.py",
+        "scripts/eng_org_health_scorer.py",
+        "scripts/eng_productivity_dashboard.py"
+      ],
+      "size_bytes": 77227,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "ai-act-readiness",
+      "domain": "ra-qm-team",
+      "description": "EU AI Act readiness assessment + sprint playbook. Use when preparing for the Aug 2026 high-risk AI system requirements deadline, when notified-body conformity assessment is scheduled, when GPAI (general-purpose AI) obligations apply, or when annual readiness assessment is due. Pairs with our deep eu-ai-act-specialist skill — that one builds the program; this one preps for the specific assessment.",
+      "tags": [
+        "eu-ai-act",
+        "ai-readiness",
+        "high-risk-ai",
+        "gpai",
+        "conformity-assessment",
+        "compliance",
+        "ai-governance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/ai-act-readiness",
+      "files": [
+        "SKILL.md",
+        "references/ai-act-readiness-checklist.md",
+        "references/high-risk-system-readiness-playbook.md",
+        "scripts/ai_act_readiness_score.py",
+        "scripts/gpai_obligation_checker.py"
+      ],
+      "size_bytes": 46098,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "aims-audit",
+      "domain": "ra-qm-team",
+      "description": "ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when ISO 42001 certification audit is scheduled (Stage 1 documentation review OR Stage 2 onsite), when surveillance audit is due, when internal AIMS audit is being conducted, or when preparing AI Impact Assessment (AIIA) for new AI systems. Pairs with our iso42001-ai-management skill — that one builds the AIMS; this one preps for the certification or surveillance audit.",
+      "tags": [
+        "iso42001",
+        "aims",
+        "ai-management-system",
+        "audit-prep",
+        "certification",
+        "ai-governance",
+        "ai-impact-assessment"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/aims-audit",
+      "files": [
+        "SKILL.md",
+        "references/aims-internal-audit-playbook.md",
+        "references/iso42001-aims-readiness-checklist.md",
+        "scripts/ai_impact_assessment_checker.py",
+        "scripts/aims_readiness_score.py"
+      ],
+      "size_bytes": 42959,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "compliance-readiness",
+      "domain": "ra-qm-team",
+      "description": "Cross-framework compliance readiness orchestrator. Use when preparing for multi-framework certification (SOC 2 + ISO 27001 + NIST CSF together), when building a shared-evidence strategy that satisfies multiple frameworks simultaneously, when sequencing certifications (which to do first), or when mapping a single control to its expression across multiple frameworks. Sits above the framework-specific audit-prep skills and the deep framework-specialist skills.",
+      "tags": [
+        "compliance-readiness",
+        "multi-framework",
+        "shared-evidence",
+        "control-mapping",
+        "soc2",
+        "iso27001",
+        "nist",
+        "gdpr",
+        "hipaa"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/compliance-readiness",
+      "files": [
+        "SKILL.md",
+        "references/control-mapping-soc2-iso27001-nist.md",
+        "references/multi-framework-readiness-matrix.md",
+        "references/shared-evidence-strategy.md",
+        "scripts/multi_framework_scorer.py",
+        "scripts/readiness_roadmap_generator.py",
+        "scripts/shared_evidence_finder.py"
+      ],
+      "size_bytes": 65844,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "fda-qsr-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for medical device companies. Use when an FDA inspection is announced, when preparing for the new QMSR (Quality Management System Regulation, 2026), when 483 / Warning Letter response is needed, or when annual readiness assessment surfaces gaps. Pairs with our fda-consultant-specialist for program-building; this skill is the audit-event playbook.",
+      "tags": [
+        "fda",
+        "qsr",
+        "qmsr",
+        "21-cfr-820",
+        "medical-devices",
+        "audit-prep",
+        "483-response",
+        "warning-letter"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/fda-qsr-audit-prep",
+      "files": [
+        "SKILL.md",
+        "references/483-warning-letter-prevention.md",
+        "references/fda-qsr-pre-inspection-checklist.md",
+        "scripts/dhf_completeness_checker.py",
+        "scripts/qsr_readiness_score.py"
+      ],
+      "size_bytes": 48347,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "gdpr-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "GDPR audit-prep playbook: 4/8/12-week sprint to prepare for a supervisory authority inquiry, a customer-side DPA audit, or an internal compliance review. Use when an audit is on the calendar, when readiness assessment surfaced gaps, or when ROPA (Records of Processing Activities) needs rapid completion. Pairs with our deep gdpr-dsgvo-expert skill (the program-building one) — this is the operational audit-prep variant.",
+      "tags": [
+        "gdpr",
+        "audit-prep",
+        "ropa",
+        "dpia",
+        "data-protection",
+        "dpo-engagement",
+        "eu-privacy"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/gdpr-audit-prep",
+      "files": [
+        "SKILL.md",
+        "references/dpo-engagement-playbook.md",
+        "references/gdpr-pre-audit-checklist.md",
+        "scripts/gdpr_readiness_score.py",
+        "scripts/ropa_completeness_checker.py"
+      ],
+      "size_bytes": 44497,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "soc2-audit-prep",
+      "domain": "ra-qm-team",
+      "description": "SOC 2 audit-prep playbook: the 4/8/12-week sprint to get from \"we have most of the controls\" to \"audit-ready\" for a Type I or Type II observation. Use when the audit is scheduled and you need a punch list, when readiness assessment surfaced gaps and you need a sprint plan, or when evidence collection is missing or stale. Lighter operational complement to our deep soc2-compliance-expert skill — that one builds the program; this one preps for the specific audit event.",
+      "tags": [
+        "soc2",
+        "audit-prep",
+        "trust-services-criteria",
+        "evidence-collection",
+        "sprint-planning",
+        "compliance"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "ra-qm-team/audit-prep/soc2-audit-prep",
+      "files": [
+        "SKILL.md",
+        "references/evidence-collection-sprint-plan.md",
+        "references/soc2-pre-audit-punch-list.md",
+        "scripts/evidence_gap_finder.py",
+        "scripts/soc2_readiness_score.py"
+      ],
+      "size_bytes": 49514,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -4053,6 +4613,39 @@
       "has_assets": false
     },
     {
+      "name": "channel-economics",
+      "domain": "business-growth",
+      "description": "Channel economics: design and analyze the financial structure of go-to-market channels (direct sales, resellers, distributors, marketplaces, embedded partners, MSPs, integrators). Use when picking the right channel mix for a product, modeling partner margin / TCO, designing partner tiers with rebate structures, analyzing channel conflict, or building the financial model that justifies (or kills) a partnership. Pairs with our partnerships-architect (partnership type / strategy) and deal-desk (partner-deal mechanics) — this one is the spreadsheet behind those conversations.",
+      "tags": [
+        "channel-economics",
+        "channel-strategy",
+        "partner-program",
+        "margin-analysis",
+        "gtm",
+        "reseller",
+        "distributor",
+        "marketplace",
+        "msp"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "business-growth/channel-economics",
+      "files": [
+        "SKILL.md",
+        "references/channel-conflict-resolution.md",
+        "references/channel-models-direct-partner-marketplace.md",
+        "references/margin-and-tco-frameworks.md",
+        "scripts/channel_margin_calculator.py",
+        "scripts/channel_mix_optimizer.py",
+        "scripts/partner_tier_economics.py"
+      ],
+      "size_bytes": 88526,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "churn-prevention",
       "domain": "business-growth",
       "description": "SaaS churn reduction covering cancel flow design, dynamic save offers, exit survey architecture, dunning sequences, payment recovery, win-back campaigns, and churn impact modeling.",
@@ -4077,6 +4670,37 @@
       "size_bytes": 50792,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "commercial-policy",
+      "domain": "business-growth",
+      "description": "Commercial policy: the written governance framework that defines what commercial terms sales can offer, what triggers approval, and what's off-limits. Use when authoring or refreshing a company commercial-policy charter, defining discount / contract / payment / termination / liability policies, auditing existing deals for policy compliance, drafting commercial-policy training for sales, or generating a tailored policy for a new region or vertical. Sits above deal-desk (which enforces) and pricing-strategy (which sets prices) — this is the policy layer that reflects how the company decides to do business.",
+      "tags": [
+        "commercial-policy",
+        "governance",
+        "contract-policy",
+        "pricing-policy",
+        "sales-governance",
+        "deal-policy",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "business-growth/commercial-policy",
+      "files": [
+        "SKILL.md",
+        "references/commercial-policy-charter.md",
+        "references/contract-and-commercial-guardrails.md",
+        "references/discount-and-terms-policy.md",
+        "scripts/commercial_policy_generator.py",
+        "scripts/policy_compliance_checker.py",
+        "scripts/terms_deviation_analyzer.py"
+      ],
+      "size_bytes": 86143,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -4175,6 +4799,37 @@
       "has_assets": true
     },
     {
+      "name": "deal-desk",
+      "domain": "business-growth",
+      "description": "Deal desk: the cross-functional function that reviews, approves, and structures non-standard sales deals. Use when standing up a deal-desk function from scratch, defining the deal-desk charter and SLA, building approval-threshold matrices (discount %, contract length, custom terms, payment terms, custom SLAs), designing a deal-review packet template, routing deals through the right approvers, analyzing deal velocity to find bottlenecks, or auditing recent deals for policy compliance. Pairs with our existing pricing-strategy (sets the prices) and revenue-operations (measures the funnel) skills — this one runs the operational machinery between those two.",
+      "tags": [
+        "deal-desk",
+        "sales-operations",
+        "discount-approval",
+        "commercial-operations",
+        "contract-review",
+        "deal-velocity",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "business-growth/deal-desk",
+      "files": [
+        "SKILL.md",
+        "references/approval-thresholds-and-routing.md",
+        "references/deal-desk-charter-and-process.md",
+        "references/discount-and-concession-playbook.md",
+        "scripts/deal_review_packet.py",
+        "scripts/deal_velocity_analyzer.py",
+        "scripts/discount_authority_router.py"
+      ],
+      "size_bytes": 101593,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "form-cro",
       "domain": "business-growth",
       "description": "Form optimization for lead capture, contact, demo request, application, and checkout forms. Covers field-cost analysis, multi-step form design, validation UX, mobile optimization, and A/B testing frameworks.",
@@ -4264,6 +4919,37 @@
       "size_bytes": 54939,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "partnerships-architect",
+      "domain": "business-growth",
+      "description": "Design strategic partnerships — technology / channel / strategic / co-marketing — and the programs that scale them. Use when evaluating a potential partner, picking the right partnership type (tech integration vs reseller vs OEM vs strategic alliance), designing a partner program from scratch, structuring a specific partnership deal, modeling ROI on a partnership investment, or auditing an existing partner portfolio for ROI / strategic fit. Pairs with our channel-economics (financial mechanics) and deal-desk (per-deal approval) — this skill is the strategy layer above both.",
+      "tags": [
+        "partnerships",
+        "strategic-alliances",
+        "channel-strategy",
+        "tech-partnerships",
+        "partner-program",
+        "partnership-design",
+        "gtm"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "business-growth/partnerships-architect",
+      "files": [
+        "SKILL.md",
+        "references/partner-program-design.md",
+        "references/partnership-deal-structures.md",
+        "references/partnership-types.md",
+        "scripts/partner_evaluation_scorer.py",
+        "scripts/partner_program_designer.py",
+        "scripts/partnership_roi_modeler.py"
+      ],
+      "size_bytes": 91261,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -4948,13 +5634,15 @@
       "path": "project-management/agile-coach",
       "files": [
         "SKILL.md",
+        "examples/wayfinder-waterfall-to-agile-assessment.md",
+        "references/red-flags.md",
         "scripts/agile_maturity_scorer.py",
         "scripts/team_health_checker.py",
         "scripts/velocity_analyzer.py"
       ],
-      "size_bytes": 40926,
+      "size_bytes": 65405,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -4974,13 +5662,15 @@
       "path": "project-management/atlassian-admin",
       "files": [
         "SKILL.md",
+        "examples/scaling-jira-50-to-500-users.md",
+        "references/red-flags.md",
         "scripts/license_analyzer.py",
         "scripts/permission_auditor.py",
         "scripts/system_health_checker.py"
       ],
-      "size_bytes": 44287,
+      "size_bytes": 69786,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -4999,13 +5689,15 @@
       "path": "project-management/atlassian-templates",
       "files": [
         "SKILL.md",
+        "examples/unified-prd-epic-story-rollout.md",
+        "references/red-flags.md",
         "scripts/template_scaffolder.py",
         "scripts/template_usage_analyzer.py",
         "scripts/template_validator.py"
       ],
-      "size_bytes": 45870,
+      "size_bytes": 70845,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -5022,9 +5714,11 @@
         "assets/1on1_notes_template.md",
         "assets/kickoff_template.md",
         "assets/manager_1on1_agenda.md",
-        "references/1on1-playbook.md"
+        "examples/sr-pm-first-month-with-em-partner.md",
+        "references/1on1-playbook.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 30833,
+      "size_bytes": 55916,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5043,9 +5737,11 @@
         "assets/gap_analysis.md",
         "assets/growth_plan.md",
         "assets/promo_packet.md",
-        "references/ladder-rubric-detail.md"
+        "examples/maria-chen-apm-to-pm-promo-packet.md",
+        "references/ladder-rubric-detail.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 38410,
+      "size_bytes": 64407,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5064,10 +5760,12 @@
         "assets/mock_feedback_form.md",
         "assets/self_assessment.md",
         "assets/story_worksheet.md",
+        "examples/stripe-circles-new-market-product.md",
         "references/framework-deep-dive.md",
-        "references/question-bank.md"
+        "references/question-bank.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 43364,
+      "size_bytes": 71603,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5087,9 +5785,11 @@
         "assets/first_prd_template.md",
         "assets/onboarding_1on1_questions.md",
         "assets/stakeholder_map.md",
-        "references/first-90-days-playbook.md"
+        "examples/fintech-series-b-new-pm-30-60-90.md",
+        "references/first-90-days-playbook.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 39866,
+      "size_bytes": 67703,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5110,12 +5810,14 @@
       "path": "project-management/confluence-expert",
       "files": [
         "SKILL.md",
+        "examples/product-team-confluence-space-buildout.md",
+        "references/red-flags.md",
         "references/templates.md",
         "scripts/content_health_auditor.py",
         "scripts/label_taxonomy_analyzer.py",
         "scripts/space_structure_analyzer.py"
       ],
-      "size_bytes": 51847,
+      "size_bytes": 79692,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -5137,13 +5839,15 @@
       "path": "project-management/delivery-manager",
       "files": [
         "SKILL.md",
+        "examples/black-friday-multi-team-release.md",
+        "references/red-flags.md",
         "scripts/delivery_metrics_tracker.py",
         "scripts/dependency_mapper.py",
         "scripts/risk_register.py"
       ],
-      "size_bytes": 43172,
+      "size_bytes": 72453,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -5158,10 +5862,12 @@
       "files": [
         "SKILL.md",
         "assets/experiment_plan_template.md",
+        "examples/ai-summarization-willingness-to-pay-experiment.md",
         "references/experiment-methods.md",
+        "references/red-flags.md",
         "scripts/experiment_designer.py"
       ],
-      "size_bytes": 35083,
+      "size_bytes": 62117,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5178,12 +5884,14 @@
       "files": [
         "SKILL.md",
         "assets/ideation_workshop_template.md",
+        "examples/b2b-onboarding-redesign-trio-session.md",
         "references/ideation-frameworks.md",
+        "references/red-flags.md",
         "scripts/idea_scorer.py",
         "scripts/opportunity_tree_builder.py",
         "scripts/scamper_generator.py"
       ],
-      "size_bytes": 39266,
+      "size_bytes": 67575,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5201,9 +5909,11 @@
         "SKILL.md",
         "assets/interview_script_template.md",
         "assets/question_bank.md",
-        "references/interviewing-methodology-guide.md"
+        "examples/churn-investigation-filled-script.md",
+        "references/interviewing-methodology-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 45660,
+      "size_bytes": 75777,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5220,10 +5930,12 @@
       "files": [
         "SKILL.md",
         "assets/assumption_map_template.md",
+        "examples/shared-dashboards-assumption-mapping.md",
         "references/assumption-mapping-guide.md",
+        "references/red-flags.md",
         "scripts/assumption_tracker.py"
       ],
-      "size_bytes": 37994,
+      "size_bytes": 66130,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5241,10 +5953,12 @@
         "SKILL.md",
         "assets/interview_input_template.json",
         "assets/opportunity_tree_template.md",
+        "examples/wayfinder-8-interview-synthesis.md",
+        "references/red-flags.md",
         "references/synthesis-methodology-guide.md",
         "scripts/interview_synthesizer.py"
       ],
-      "size_bytes": 49175,
+      "size_bytes": 78023,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5266,10 +5980,54 @@
         "assets/workshop_agenda_2hr.md",
         "assets/workshop_agenda_4hr.md",
         "assets/workshop_agenda_8hr.md",
-        "references/jtbd-method-guide.md"
+        "examples/calendar-tool-4hr-workshop-output.md",
+        "references/jtbd-method-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 64674,
+      "size_bytes": 94205,
       "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "metrics-dashboard",
+      "domain": "project-management",
+      "description": "Design a product metrics dashboard — North Star + input metrics + guardrails — that the team actually uses to make decisions. Distinct from north-star-metric (defines THE one number) by focusing on the full dashboard architecture: layers, owners, cadence, visualization, and the discipline that prevents 30-chart dashboards.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/discovery/metrics-dashboard",
+      "files": [
+        "SKILL.md",
+        "assets/dashboard_spec_template.md",
+        "references/dashboard-anti-patterns.md",
+        "references/dashboard-architecture.md",
+        "scripts/dashboard_designer.py"
+      ],
+      "size_bytes": 30465,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "opportunity-solution-tree",
+      "domain": "project-management",
+      "description": "Opportunity Solution Tree (Teresa Torres) — a continuous discovery artifact mapping desired outcomes → opportunities → solutions → assumption tests. Use when prioritizing discovery work, structuring weekly customer interviews, mapping multiple solutions to one problem, or auditing whether your roadmap actually moves outcomes.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/discovery/opportunity-solution-tree",
+      "files": [
+        "SKILL.md",
+        "assets/ost_template.md",
+        "references/ost-anti-patterns.md",
+        "references/ost-fundamentals.md",
+        "scripts/ost_validator.py"
+      ],
+      "size_bytes": 31509,
+      "has_scripts": true,
       "has_references": true,
       "has_assets": true
     },
@@ -5285,10 +6043,12 @@
       "files": [
         "SKILL.md",
         "assets/pre_mortem_template.md",
+        "examples/shared-dashboards-v1-pre-mortem.md",
         "references/pre-mortem-guide.md",
+        "references/red-flags.md",
         "scripts/risk_categorizer.py"
       ],
-      "size_bytes": 40836,
+      "size_bytes": 72421,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5308,9 +6068,11 @@
         "assets/fit_validation_checklist.md",
         "assets/value_map_worksheet.md",
         "assets/vpc_template.md",
+        "examples/dev-tools-platform-engineer-vpc.md",
+        "references/red-flags.md",
         "references/value-proposition-design-guide.md"
       ],
-      "size_bytes": 49143,
+      "size_bytes": 79418,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5329,11 +6091,13 @@
         "assets/activation_metric_worksheet.md",
         "assets/funnel_design_canvas.md",
         "assets/sample_funnel.json",
+        "examples/freemium-saas-day-7-retention-diagnosis.md",
         "references/activation-aha-moment-patterns.md",
         "references/pirate-metrics-deep-dive.md",
+        "references/red-flags.md",
         "scripts/funnel_analyzer.py"
       ],
-      "size_bytes": 67087,
+      "size_bytes": 96437,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5353,10 +6117,12 @@
         "assets/eval_spec_template.md",
         "assets/failure_mode_taxonomy.md",
         "assets/guardrail_checklist.md",
+        "examples/ai-meeting-notes-summarizer.md",
         "references/ai-pm-frameworks-guide.md",
-        "references/eval-design-guide.md"
+        "references/eval-design-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 73375,
+      "size_bytes": 103193,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5373,10 +6139,12 @@
       "files": [
         "SKILL.md",
         "assets/refinement_checklist.md",
+        "examples/refining-12-stories.md",
         "references/invest-and-splitting-guide.md",
+        "references/red-flags.md",
         "scripts/refinement_scorer.py"
       ],
-      "size_bytes": 52238,
+      "size_bytes": 77688,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5396,9 +6164,11 @@
         "assets/exit-memo.md",
         "assets/recruitment-script.md",
         "assets/weekly-cadence-template.md",
-        "references/beta-program-guide.md"
+        "examples/shared-dashboards-closed-beta.md",
+        "references/beta-program-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 43926,
+      "size_bytes": 69039,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5415,10 +6185,12 @@
       "files": [
         "SKILL.md",
         "assets/okr_template.md",
+        "examples/q3-okrs-shared-dashboards-launch.md",
         "references/okr-best-practices.md",
+        "references/red-flags.md",
         "scripts/okr_validator.py"
       ],
-      "size_bytes": 38330,
+      "size_bytes": 60529,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5435,10 +6207,12 @@
       "files": [
         "SKILL.md",
         "assets/prd_template.md",
+        "examples/shared-dashboards-prd.md",
         "references/prd-writing-guide.md",
+        "references/red-flags.md",
         "scripts/prd_scaffolder.py"
       ],
-      "size_bytes": 32553,
+      "size_bytes": 58975,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5464,11 +6238,13 @@
         "assets/kano_quick_reference.md",
         "assets/response_templates.md",
         "assets/triage_template.md",
+        "examples/triaging-30-requests.md",
         "references/customer-feedback-triage-guide.md",
         "references/kano-model-deep-dive.md",
+        "references/red-flags.md",
         "scripts/feedback_triage.py"
       ],
-      "size_bytes": 84043,
+      "size_bytes": 110768,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5485,10 +6261,12 @@
       "files": [
         "SKILL.md",
         "assets/flow-metrics-dashboard.md",
+        "examples/wayfinder-flow-analysis.md",
         "references/flow-metrics-guide.md",
+        "references/red-flags.md",
         "scripts/flow_metrics.py"
       ],
-      "size_bytes": 53829,
+      "size_bytes": 78132,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5503,11 +6281,13 @@
       "author": "borghei",
       "path": "project-management/execution/daci-framework",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "examples/choosing-payment-processor.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 9610,
+      "size_bytes": 32945,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -5523,10 +6303,12 @@
         "SKILL.md",
         "assets/dependency-template.json",
         "assets/weekly-sync-agenda.md",
+        "examples/q4-launch-cross-team-deps.md",
         "references/dependency-management-guide.md",
+        "references/red-flags.md",
         "scripts/dependency_graph.py"
       ],
-      "size_bytes": 52444,
+      "size_bytes": 76626,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5541,11 +6323,13 @@
       "author": "borghei",
       "path": "project-management/execution/eol-communication",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "examples/sunsetting-classic-reports.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 9731,
+      "size_bytes": 38406,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -5563,10 +6347,12 @@
         "assets/flag_naming_convention.md",
         "assets/kill_switch_decision_tree.md",
         "assets/rollout_plan_template.md",
+        "examples/pricing-page-redesign-rollout.md",
         "references/fowler-feature-toggle-taxonomy-guide.md",
+        "references/red-flags.md",
         "references/rollout-shape-comparison-guide.md"
       ],
-      "size_bytes": 62722,
+      "size_bytes": 89386,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5583,12 +6369,14 @@
       "files": [
         "SKILL.md",
         "assets/job_story_template.md",
+        "examples/wayfinder-onboarding-job-stories.md",
         "references/jtbd-guide.md",
+        "references/red-flags.md",
         "scripts/invest_validator.py",
         "scripts/story_converter.py",
         "scripts/story_quality_checker.py"
       ],
-      "size_bytes": 50836,
+      "size_bytes": 79445,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5609,9 +6397,11 @@
         "assets/launch-run-of-show.md",
         "assets/post-launch-retro.md",
         "assets/rollback-plan.md",
-        "references/launch-coordination-guide.md"
+        "examples/shared-dashboards-ga-launch.md",
+        "references/launch-coordination-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 47112,
+      "size_bytes": 75004,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5628,10 +6418,12 @@
       "files": [
         "SKILL.md",
         "assets/nsm_spec_template.md",
+        "examples/acme-analytics-nsm.md",
         "references/nsm-framework-guide.md",
+        "references/red-flags.md",
         "scripts/metric_tree_builder.py"
       ],
-      "size_bytes": 46284,
+      "size_bytes": 74021,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5648,10 +6440,12 @@
       "files": [
         "SKILL.md",
         "assets/outcome_roadmap_template.md",
+        "examples/output-to-outcome-transformation.md",
         "references/outcome-roadmap-guide.md",
+        "references/red-flags.md",
         "scripts/roadmap_transformer.py"
       ],
-      "size_bytes": 37096,
+      "size_bytes": 64934,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5679,10 +6473,12 @@
         "assets/incident_timeline_worksheet.md",
         "assets/post_mortem_template.md",
         "assets/what_went_well_prompts.md",
+        "examples/payment-processing-outage.md",
         "references/5-whys-vs-causal-tree.md",
-        "references/blameless-culture-guide.md"
+        "references/blameless-culture-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 56625,
+      "size_bytes": 88790,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5699,9 +6495,11 @@
       "files": [
         "SKILL.md",
         "assets/prfaq_template.md",
+        "examples/shared-dashboards-prfaq.md",
+        "references/red-flags.md",
         "references/working-backwards-guide.md"
       ],
-      "size_bytes": 30401,
+      "size_bytes": 59496,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5728,10 +6526,12 @@
         "assets/pricing_experiment_design.md",
         "assets/pricing_page_checklist.md",
         "assets/pricing_prd_template.md",
+        "examples/usage-based-tier-pricing-prd.md",
         "references/packaging-frameworks.md",
-        "references/pricing-experimentation-guide.md"
+        "references/pricing-experimentation-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 71710,
+      "size_bytes": 104615,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5748,10 +6548,12 @@
       "files": [
         "SKILL.md",
         "assets/prioritization_matrix_template.md",
+        "examples/rice-vs-ice-q3-backlog.md",
         "references/prioritization-guide.md",
+        "references/red-flags.md",
         "scripts/prioritization_scorer.py"
       ],
-      "size_bytes": 41823,
+      "size_bytes": 62766,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5771,9 +6573,11 @@
         "assets/narrative_vision_template.md",
         "assets/vision_board_template.md",
         "assets/vision_review_checklist.md",
+        "examples/helix-platform-vision.md",
+        "references/red-flags.md",
         "references/vision-frameworks-guide.md"
       ],
-      "size_bytes": 51937,
+      "size_bytes": 72434,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5793,9 +6597,11 @@
         "assets/kickoff_agenda_template.md",
         "assets/mid_quarter_check_in_template.md",
         "assets/quarterly_review_deck_outline.md",
-        "references/quarterly-planning-guide.md"
+        "examples/northwind-q4-planning-cycle.md",
+        "references/quarterly-planning-guide.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 52159,
+      "size_bytes": 71554,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5812,10 +6618,12 @@
       "files": [
         "SKILL.md",
         "assets/release_notes_template.md",
+        "examples/wayfinder-v2-1-release-notes.md",
+        "references/red-flags.md",
         "references/release-notes-guide.md",
         "scripts/release_notes_generator.py"
       ],
-      "size_bytes": 30715,
+      "size_bytes": 51132,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5834,10 +6642,54 @@
         "assets/customer_roadmap_template.md",
         "assets/executive_roadmap_template.md",
         "assets/internal_roadmap_template.md",
+        "examples/pylon-roadmap-three-ways.md",
+        "references/red-flags.md",
         "references/roadmap-communication-guide.md"
       ],
-      "size_bytes": 34676,
+      "size_bytes": 56214,
       "has_scripts": false,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "sprint-plan",
+      "domain": "project-management",
+      "description": "Plan a sprint that ships — capacity, commitment vs stretch, dependencies, risk-identification, and the pre-sprint discipline that prevents mid-sprint surprises. Distinct from scrum-master (process facilitation) by focusing on the planning artifact itself.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/execution/sprint-plan",
+      "files": [
+        "SKILL.md",
+        "assets/sprint_plan_template.md",
+        "references/capacity-math.md",
+        "references/sprint-anti-patterns.md",
+        "scripts/sprint_planner.py"
+      ],
+      "size_bytes": 32611,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "stakeholder-map",
+      "domain": "project-management",
+      "description": "Map stakeholders by power × interest (or influence × support), design a communication plan, and run the stakeholder-management discipline that prevents surprise objections. Use when launching a major initiative, navigating an enterprise deal, planning a re-org, or pre-empting political resistance to a roadmap change.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/execution/stakeholder-map",
+      "files": [
+        "SKILL.md",
+        "assets/stakeholder_map_template.md",
+        "references/stakeholder-anti-patterns.md",
+        "references/stakeholder-mapping-framework.md",
+        "scripts/stakeholder_analyzer.py"
+      ],
+      "size_bytes": 30932,
+      "has_scripts": true,
       "has_references": true,
       "has_assets": true
     },
@@ -5853,10 +6705,12 @@
       "files": [
         "SKILL.md",
         "assets/weekly_status_template.md",
+        "examples/acme-search-platform-weekly.md",
+        "references/red-flags.md",
         "references/status-update-style-guide.md",
         "scripts/status_generator.py"
       ],
-      "size_bytes": 45860,
+      "size_bytes": 64305,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5871,11 +6725,13 @@
       "author": "borghei",
       "path": "project-management/execution/story-mapping",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "examples/wayfinder-mobile-onboarding-story-map.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 12541,
+      "size_bytes": 32912,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -5890,9 +6746,11 @@
       "files": [
         "SKILL.md",
         "assets/before-after-examples.md",
+        "examples/import-data-epic-nine-patterns.md",
+        "references/red-flags.md",
         "references/splitting-patterns-guide.md"
       ],
-      "size_bytes": 39036,
+      "size_bytes": 60055,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -5909,12 +6767,35 @@
       "files": [
         "SKILL.md",
         "assets/meeting_summary_template.md",
+        "examples/product-review-may-22.md",
         "references/meeting-facilitation-guide.md",
+        "references/red-flags.md",
         "scripts/action_item_tracker.py",
         "scripts/decision_log_builder.py",
         "scripts/meeting_effectiveness_scorer.py"
       ],
-      "size_bytes": 40568,
+      "size_bytes": 59295,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "test-scenarios",
+      "domain": "project-management",
+      "description": "Generate complete test scenario coverage from a feature spec: happy paths, edge cases, error handling, accessibility, security, and performance scenarios. Includes a coverage analyzer that flags gaps before QA writes the test plan. Distinct from automated test generation — this is the WHAT to test before HOW.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/execution/test-scenarios",
+      "files": [
+        "SKILL.md",
+        "assets/scenario_template.md",
+        "references/coverage-anti-patterns.md",
+        "references/scenario-categories.md",
+        "scripts/test_scenario_generator.py"
+      ],
+      "size_bytes": 33350,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5931,12 +6812,57 @@
       "files": [
         "SKILL.md",
         "assets/wwas_template.md",
+        "examples/northwind-backlog-rewritten.md",
         "references/backlog-management-guide.md",
+        "references/red-flags.md",
         "scripts/backlog_alignment_checker.py",
         "scripts/invest_gate_checker.py",
         "scripts/wwas_quality_scorer.py"
       ],
-      "size_bytes": 52039,
+      "size_bytes": 74179,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "gtm-strategy",
+      "domain": "project-management",
+      "description": "Go-to-market strategy: ICP × motion × channels × messaging × success metrics × launch plan. Distinct from individual marketing or sales skills by being the integrated cross-functional strategy spanning product, marketing, sales, CS, and finance. Use when launching a new product, entering a new segment, or auditing why an existing GTM isn't working.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/gtm/gtm-strategy",
+      "files": [
+        "SKILL.md",
+        "assets/gtm_strategy_template.md",
+        "references/gtm-anti-patterns.md",
+        "references/gtm-components-deep.md",
+        "references/launch-sequence-playbook.md",
+        "scripts/gtm_strategy_validator.py"
+      ],
+      "size_bytes": 42512,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "ideal-customer-profile",
+      "domain": "project-management",
+      "description": "Define a sharp Ideal Customer Profile (ICP) — firmographics + behavioral signals + JTBD + trigger event + buyer persona — that marketing, sales, and product can all use. Use when defining a new ICP, refining an existing one based on actual closed customers, or auditing why pipeline / conversion is poor.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/gtm/ideal-customer-profile",
+      "files": [
+        "SKILL.md",
+        "assets/icp_template.md",
+        "references/icp-dimensions-deep.md",
+        "references/icp-refinement-from-data.md",
+        "scripts/icp_scorer.py"
+      ],
+      "size_bytes": 35468,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -5958,13 +6884,15 @@
       "path": "project-management/jira-expert",
       "files": [
         "SKILL.md",
+        "examples/acme-50-person-eng-setup.md",
         "references/automation-examples.md",
         "references/jql-examples.md",
+        "references/red-flags.md",
         "scripts/board_optimizer.py",
         "scripts/issue_quality_checker.py",
         "scripts/workflow_analyzer.py"
       ],
-      "size_bytes": 58786,
+      "size_bytes": 80955,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -5990,10 +6918,12 @@
         "SKILL.md",
         "assets/linear-team-template.md",
         "assets/linear-triage-workflow.md",
+        "examples/jira-to-linear-migration.md",
         "references/linear-graphql-patterns.md",
-        "references/linear-vs-jira.md"
+        "references/linear-vs-jira.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 47888,
+      "size_bytes": 69873,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -6019,10 +6949,12 @@
         "assets/notion-okr-template.md",
         "assets/notion-prd-template.md",
         "assets/notion-roadmap-template.md",
+        "examples/product-team-workspace-buildout.md",
         "references/notion-api-patterns.md",
-        "references/notion-database-design-for-pm.md"
+        "references/notion-database-design-for-pm.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 59531,
+      "size_bytes": 80211,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -6050,10 +6982,12 @@
         "assets/productboard-driver-template.md",
         "assets/productboard-feature-template.md",
         "assets/productboard-insight-triage-workflow.md",
+        "examples/wayfinder-productboard-setup.md",
         "references/productboard-api-patterns.md",
-        "references/productboard-vs-jira-vs-linear.md"
+        "references/productboard-vs-jira-vs-linear.md",
+        "references/red-flags.md"
       ],
-      "size_bytes": 74011,
+      "size_bytes": 94980,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -6075,13 +7009,15 @@
       "path": "project-management/program-manager",
       "files": [
         "SKILL.md",
+        "examples/northwind-ga-launch-portfolio.md",
+        "references/red-flags.md",
         "scripts/milestone_tracker.py",
         "scripts/portfolio_dashboard.py",
         "scripts/resource_allocator.py"
       ],
-      "size_bytes": 40594,
+      "size_bytes": 62181,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -6108,6 +7044,8 @@
         "assets/sprint_report_template.md",
         "assets/team_health_check_template.md",
         "assets/user_story_template.md",
+        "examples/acme-sprint-health-analysis.md",
+        "references/red-flags.md",
         "references/retro-formats.md",
         "references/sprint-planning-guide.md",
         "references/team-dynamics-framework.md",
@@ -6117,7 +7055,7 @@
         "scripts/sprint_health_scorer.py",
         "scripts/velocity_analyzer.py"
       ],
-      "size_bytes": 242098,
+      "size_bytes": 261686,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -6144,7 +7082,9 @@
         "assets/raci_matrix_template.md",
         "assets/sample_project_data.json",
         "assets/stakeholder_map_template.md",
+        "examples/acme-portfolio-health-assessment.md",
         "references/portfolio-prioritization-models.md",
+        "references/red-flags.md",
         "references/risk-management-framework.md",
         "references/stakeholder-engagement-guide.md",
         "scripts/project_health_dashboard.py",
@@ -6152,7 +7092,7 @@
         "scripts/risk_matrix_analyzer.py",
         "scripts/stakeholder_mapper.py"
       ],
-      "size_bytes": 257803,
+      "size_bytes": 279794,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -6175,6 +7115,8 @@
         "SKILL.md",
         "assets/retro_report_template.md",
         "assets/sample_sprint_data.json",
+        "examples/sprint-23-data-driven-retro.md",
+        "references/red-flags.md",
         "references/retrospective_facilitation.md",
         "references/velocity_benchmarks.md",
         "scripts/code_churn_analyzer.py",
@@ -6182,7 +7124,112 @@
         "scripts/retro_report_generator.py",
         "scripts/velocity_analyzer.py"
       ],
-      "size_bytes": 126613,
+      "size_bytes": 148132,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "ansoff-matrix",
+      "domain": "project-management",
+      "description": "Ansoff Matrix — 4-quadrant framework for growth strategy options: market penetration, market development, product development, and diversification. Use when evaluating growth bets, prioritizing investment across quadrants, and explicitly acknowledging the risk ladder from \"more of what we know\" to \"new product in new market\".",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/strategy-frameworks/ansoff-matrix",
+      "files": [
+        "SKILL.md",
+        "assets/ansoff_template.md",
+        "references/ansoff-matrix-deep.md",
+        "references/growth-strategy-patterns.md",
+        "scripts/ansoff_growth_scorer.py"
+      ],
+      "size_bytes": 32944,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "business-model-canvas",
+      "domain": "project-management",
+      "description": "Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 building blocks. Use when designing or refreshing a business model, auditing an existing canvas for gaps, exploring monetization alternatives, or aligning leadership on the business model assumptions that everything else depends on.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/strategy-frameworks/business-model-canvas",
+      "files": [
+        "SKILL.md",
+        "assets/canvas_template.md",
+        "references/canvas-framework.md",
+        "references/examples-anti-patterns.md",
+        "scripts/canvas_validator.py"
+      ],
+      "size_bytes": 41007,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "lean-canvas",
+      "domain": "project-management",
+      "description": "Lean Canvas (Ash Maurya) — startup-focused adaptation of the Business Model Canvas, optimized for capturing assumptions and unfair advantages in early-stage products. Use when at the idea, pre-PMF, or pivot stage; when BMC is too operational; when you need a 1-page model in 20 minutes.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/strategy-frameworks/lean-canvas",
+      "files": [
+        "SKILL.md",
+        "assets/lean_canvas_template.md",
+        "references/lean-canvas-framework.md",
+        "references/lean-startup-anti-patterns.md",
+        "scripts/lean_canvas_validator.py"
+      ],
+      "size_bytes": 34396,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "porters-five-forces",
+      "domain": "project-management",
+      "description": "Porter's Five Forces — analyze the competitive intensity and attractiveness of an industry. Use when evaluating a new market entry, understanding why margins are under pressure, designing a defensive strategy, or auditing strategic positioning at industry level.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/strategy-frameworks/porters-five-forces",
+      "files": [
+        "SKILL.md",
+        "assets/five_forces_template.md",
+        "references/five-forces-and-strategy.md",
+        "references/five-forces-deep.md",
+        "scripts/five_forces_scorer.py"
+      ],
+      "size_bytes": 33200,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": true
+    },
+    {
+      "name": "swot-analysis",
+      "domain": "project-management",
+      "description": "SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) — the foundational strategic-positioning exercise. Use when assessing a new market entry, a strategic pivot, a competitive response, an org restructure, or as input to annual strategic planning. Includes a validator that flags generic, ungrounded, or one-sided SWOTs.",
+      "tags": [],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "project-management/strategy-frameworks/swot-analysis",
+      "files": [
+        "SKILL.md",
+        "assets/swot_template.md",
+        "references/swot-anti-patterns.md",
+        "references/swot-framework.md",
+        "scripts/swot_scorer.py"
+      ],
+      "size_bytes": 29327,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -6243,6 +7290,40 @@
       "has_assets": false
     },
     {
+      "name": "apple-hig-expert",
+      "domain": "product-team",
+      "description": "Apple Human Interface Guidelines expert for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS. Covers platform-native patterns, navigation, typography, controls, gestures, accessibility, and the platform-specific conventions that make apps feel native. Use when designing or reviewing an Apple platform app, auditing for HIG compliance, picking the right native components, or validating accessibility against Apple's requirements.",
+      "tags": [
+        "apple",
+        "ios",
+        "ipados",
+        "macos",
+        "watchos",
+        "tvos",
+        "visionos",
+        "hig",
+        "design",
+        "accessibility"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "product-team/apple-hig-expert",
+      "files": [
+        "SKILL.md",
+        "references/cross-platform-considerations.md",
+        "references/hig-fundamentals.md",
+        "references/ios-component-patterns.md",
+        "scripts/accessibility_auditor.py",
+        "scripts/component_pattern_lookup.py",
+        "scripts/hig_compliance_checker.py"
+      ],
+      "size_bytes": 57191,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
       "name": "design-system-lead",
       "domain": "product-team",
       "description": "Expert design systems leadership covering component libraries, design tokens, documentation, and design-development collaboration. Use when architecting a design token system, building a component library, defining governance and contribution processes, measuring design system adoption, or generating cross-platform tokens (CSS, SCSS, iOS, Android).",
@@ -6266,6 +7347,38 @@
       "size_bytes": 54340,
       "has_scripts": true,
       "has_references": false,
+      "has_assets": false
+    },
+    {
+      "name": "product-analytics",
+      "domain": "product-team",
+      "description": "Product analytics framework for PMs and analytics engineers on instrumenting products, defining metrics, building activation/retention funnels, running cohort analyses, and translating product data into decisions. Use when designing a product metric tree, instrumenting a new feature, auditing existing instrumentation, defining North Star + counter-metrics, or building an analytics roadmap.",
+      "tags": [
+        "analytics",
+        "metrics",
+        "north-star",
+        "retention",
+        "activation",
+        "funnel",
+        "cohort",
+        "instrumentation"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "product-team/product-analytics",
+      "files": [
+        "SKILL.md",
+        "references/cohort-retention-and-funnel-analysis.md",
+        "references/instrumentation-and-event-design.md",
+        "references/metric-tree-and-north-star.md",
+        "scripts/event_taxonomy_auditor.py",
+        "scripts/metric_tree_designer.py",
+        "scripts/retention_cohort_analyzer.py"
+      ],
+      "size_bytes": 62753,
+      "has_scripts": true,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -6344,6 +7457,97 @@
         "scripts/okr_cascade_generator.py"
       ],
       "size_bytes": 75647,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "research-summarizer",
+      "domain": "product-team",
+      "description": "User research synthesis and communication skill for PMs, researchers, and design leads. Takes raw research artifacts (interview transcripts, survey results, observations, support tickets, win/loss notes) and produces structured insights, themed findings, and decision-ready briefs. Use when synthesizing a batch of user interviews, building a findings brief, separating signal from anecdote, or communicating research to stakeholders who didn't participate.",
+      "tags": [
+        "user-research",
+        "synthesis",
+        "insights",
+        "qualitative",
+        "ux",
+        "communication"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "product-team/research-summarizer",
+      "files": [
+        "SKILL.md",
+        "references/communicating-research-findings.md",
+        "references/insight-quality-and-bias.md",
+        "references/research-synthesis-frameworks.md",
+        "scripts/findings_brief_generator.py",
+        "scripts/insight_quality_scorer.py",
+        "scripts/research_synthesis_organizer.py"
+      ],
+      "size_bytes": 48974,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "roadmap-communicator",
+      "domain": "product-team",
+      "description": "Roadmap communication skill for PMs and product leaders. Helps translate a single internal roadmap into audience-appropriate formats (exec deck, customer one-pager, eng commit list, sales narrative, board section) and applies confidence-band discipline so promises match reality. Use when preparing a roadmap readout, translating roadmap for a specific audience, or auditing roadmap commitments for over-promise risk.",
+      "tags": [
+        "roadmap",
+        "communication",
+        "prd",
+        "now-next-later",
+        "themes",
+        "board",
+        "customer"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "product-team/roadmap-communicator",
+      "files": [
+        "SKILL.md",
+        "references/audience-specific-formats.md",
+        "references/now-next-later-and-themes.md",
+        "references/roadmap-communication-patterns.md",
+        "scripts/confidence_band_generator.py",
+        "scripts/roadmap_audience_translator.py",
+        "scripts/roadmap_diff_reporter.py"
+      ],
+      "size_bytes": 49908,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "spec-to-repo",
+      "domain": "product-team",
+      "description": "Translate product specs (PRDs, user stories, feature briefs) into a clean, ship-ready repo structure: ticket decomposition, branch strategy, PR sequencing, and definition-of-done. Use when planning the implementation of a feature, breaking a PRD into engineering tickets, designing the branch/PR sequence, or auditing existing decomposition for shipping risk.",
+      "tags": [
+        "prd",
+        "ticket-decomposition",
+        "branch-strategy",
+        "pr",
+        "definition-of-done",
+        "delivery"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "product-team/spec-to-repo",
+      "files": [
+        "SKILL.md",
+        "references/branch-strategy-for-features.md",
+        "references/pr-discipline-and-conventions.md",
+        "references/spec-to-ticket-decomposition.md",
+        "scripts/branch_naming_validator.py",
+        "scripts/pr_scope_analyzer.py",
+        "scripts/prd_to_tickets_decomposer.py"
+      ],
+      "size_bytes": 50524,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -7303,6 +8507,129 @@
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
+    },
+    {
+      "name": "dossier",
+      "domain": "research",
+      "description": "Build structured intelligence dossiers on companies, people, markets, or domains. Covers dossier frameworks, source triangulation, reliability scoring, and fact/inference discipline. Use when preparing a deal-prep dossier, executive briefing, market-entry analysis, due-diligence overview, or board-ready intelligence document.",
+      "tags": [
+        "dossier",
+        "intelligence",
+        "due-diligence",
+        "market-entry",
+        "briefing",
+        "research"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "research/dossier",
+      "files": [
+        "SKILL.md",
+        "references/dossier-frameworks-and-structure.md",
+        "references/fact-vs-inference-discipline.md",
+        "references/source-triangulation-and-reliability.md",
+        "scripts/dossier_outline_generator.py",
+        "scripts/fact_inference_separator.py",
+        "scripts/source_triangulation_validator.py"
+      ],
+      "size_bytes": 50966,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "grants",
+      "domain": "research",
+      "description": "Grant writing and proposal architecture skill for researchers, founders, and nonprofits. Covers funder fit, proposal structure, budget design, narrative discipline, and success-factor scoring. Use when writing a grant proposal, evaluating funder fit before applying, auditing a draft for competitiveness, or planning a budget that survives review.",
+      "tags": [
+        "grants",
+        "proposals",
+        "funding",
+        "nih",
+        "nsf",
+        "foundation",
+        "research",
+        "budget"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "research/grants",
+      "files": [
+        "SKILL.md",
+        "references/budget-design-and-justification.md",
+        "references/funder-fit-and-research-strategy.md",
+        "references/proposal-structure-and-narrative.md",
+        "scripts/budget_realism_checker.py",
+        "scripts/funder_fit_scorer.py",
+        "scripts/proposal_structure_validator.py"
+      ],
+      "size_bytes": 54998,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "litreview",
+      "domain": "research",
+      "description": "Literature review skill for academic, R&D, and professional research. Covers search strategy, source assessment (quality, relevance, recency), thematic synthesis, citation management, and the discipline of reproducible reviews. Use when conducting a systematic literature review, building a research bibliography, or preparing a research-grounded report.",
+      "tags": [
+        "literature-review",
+        "research",
+        "citation",
+        "synthesis",
+        "prisma",
+        "academic"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "research/litreview",
+      "files": [
+        "SKILL.md",
+        "references/search-strategy-and-prisma.md",
+        "references/source-quality-assessment.md",
+        "references/synthesis-and-citation-management.md",
+        "scripts/search_strategy_builder.py",
+        "scripts/source_quality_scorer.py",
+        "scripts/thematic_synthesis_builder.py"
+      ],
+      "size_bytes": 49733,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
+    },
+    {
+      "name": "patent",
+      "domain": "research",
+      "description": "Patent research and IP landscape skill. Covers prior-art search strategy, claim mapping, landscape analysis, freedom-to-operate assessment, and patentability scoring. Use when conducting a prior-art search, mapping the IP landscape of a technology area, evaluating patentability of an invention, or running an FTO analysis before product launch.",
+      "tags": [
+        "patent",
+        "ip",
+        "prior-art",
+        "freedom-to-operate",
+        "patentability",
+        "claims",
+        "landscape"
+      ],
+      "version": "1.0.0",
+      "updated": "2026-05-27",
+      "author": "borghei",
+      "path": "research/patent",
+      "files": [
+        "SKILL.md",
+        "references/claim-mapping-and-landscape.md",
+        "references/freedom-to-operate-and-patentability.md",
+        "references/prior-art-search-strategy.md",
+        "scripts/claim_landscape_mapper.py",
+        "scripts/patentability_scorer.py",
+        "scripts/prior_art_search_planner.py"
+      ],
+      "size_bytes": 52838,
+      "has_scripts": true,
+      "has_references": true,
+      "has_assets": false
     }
   ]
 }

@@ -38,6 +38,7 @@ DOMAINS = [
     "personal-productivity",
     "documents",
     "vertical-advisors",
+    "research",
 ]
 
 
