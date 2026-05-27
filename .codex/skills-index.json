@@ -3,11 +3,23 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/borghei/Claude-Skills",
-  "total_skills": 201,
+  "total_skills": 222,
   "skills": [
+    {
+      "name": "channel-economics",
+      "source": "../../business-growth/channel-economics",
+      "category": "business-growth",
+      "description": ">"
+    },
     {
       "name": "churn-prevention",
       "source": "../../business-growth/churn-prevention",
+      "category": "business-growth",
+      "description": ">"
+    },
+    {
+      "name": "commercial-policy",
+      "source": "../../business-growth/commercial-policy",
       "category": "business-growth",
       "description": ">"
     },
@@ -36,6 +48,12 @@
       "description": ">"
     },
     {
+      "name": "deal-desk",
+      "source": "../../business-growth/deal-desk",
+      "category": "business-growth",
+      "description": ">"
+    },
+    {
       "name": "form-cro",
       "source": "../../business-growth/form-cro",
       "category": "business-growth",
@@ -56,6 +74,12 @@
     {
       "name": "page-cro",
       "source": "../../business-growth/page-cro",
+      "category": "business-growth",
+      "description": ">"
+    },
+    {
+      "name": "partnerships-architect",
+      "source": "../../business-growth/partnerships-architect",
       "category": "business-growth",
       "description": ">"
     },
@@ -128,6 +152,24 @@
     {
       "name": "change-management",
       "source": "../../c-level-advisor/change-management",
+      "category": "c-level",
+      "description": ">"
+    },
+    {
+      "name": "chief-ai-officer-advisor",
+      "source": "../../c-level-advisor/chief-ai-officer-advisor",
+      "category": "c-level",
+      "description": ">"
+    },
+    {
+      "name": "chief-customer-officer-advisor",
+      "source": "../../c-level-advisor/chief-customer-officer-advisor",
+      "category": "c-level",
+      "description": ">"
+    },
+    {
+      "name": "chief-data-officer-advisor",
+      "source": "../../c-level-advisor/chief-data-officer-advisor",
       "category": "c-level",
       "description": ">"
     },
@@ -222,6 +264,12 @@
       "description": ">"
     },
     {
+      "name": "general-counsel-advisor",
+      "source": "../../c-level-advisor/general-counsel-advisor",
+      "category": "c-level",
+      "description": ">"
+    },
+    {
       "name": "internal-narrative",
       "source": "../../c-level-advisor/internal-narrative",
       "category": "c-level",
@@ -254,6 +302,12 @@
     {
       "name": "strategic-alignment",
       "source": "../../c-level-advisor/strategic-alignment",
+      "category": "c-level",
+      "description": ">"
+    },
+    {
+      "name": "vpe-advisor",
+      "source": "../../c-level-advisor/vpe-advisor",
       "category": "c-level",
       "description": ">"
     },
@@ -312,6 +366,12 @@
       "description": ">"
     },
     {
+      "name": "azure-cloud-architect",
+      "source": "../../engineering/azure-cloud-architect",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
       "name": "browser-automation",
       "source": "../../engineering/browser-automation",
       "category": "engineering",
@@ -320,6 +380,12 @@
     {
       "name": "changelog-generator",
       "source": "../../engineering/changelog-generator",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "chaos-engineering",
+      "source": "../../engineering/chaos-engineering",
       "category": "engineering",
       "description": ">"
     },
@@ -356,6 +422,12 @@
     {
       "name": "context-engine",
       "source": "../../engineering/context-engine",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "data-quality-auditor",
+      "source": "../../engineering/data-quality-auditor",
       "category": "engineering",
       "description": ">"
     },
@@ -408,8 +480,20 @@
       "description": ">"
     },
     {
+      "name": "feature-flags-architect",
+      "source": "../../engineering/feature-flags-architect",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
       "name": "focused-fix",
       "source": "../../engineering/focused-fix",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "gcp-cloud-architect",
+      "source": "../../engineering/gcp-cloud-architect",
       "category": "engineering",
       "description": ">"
     },
@@ -440,6 +524,12 @@
     {
       "name": "interview-system-designer",
       "source": "../../engineering/interview-system-designer",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "kubernetes-operator",
+      "source": "../../engineering/kubernetes-operator",
       "category": "engineering",
       "description": ">"
     },
@@ -744,6 +834,12 @@
       "description": ">"
     },
     {
+      "name": "aeo",
+      "source": "../../marketing/aeo",
+      "category": "marketing",
+      "description": ">"
+    },
+    {
       "name": "ai-seo",
       "source": "../../marketing/ai-seo",
       "category": "marketing",
@@ -972,8 +1068,20 @@
       "description": ">"
     },
     {
+      "name": "apple-hig-expert",
+      "source": "../../product-team/apple-hig-expert",
+      "category": "product",
+      "description": ">"
+    },
+    {
       "name": "design-system-lead",
       "source": "../../product-team/design-system-lead",
+      "category": "product",
+      "description": ">"
+    },
+    {
+      "name": "product-analytics",
+      "source": "../../product-team/product-analytics",
       "category": "product",
       "description": ">"
     },
@@ -992,6 +1100,24 @@
     {
       "name": "product-strategist",
       "source": "../../product-team/product-strategist",
+      "category": "product",
+      "description": ">"
+    },
+    {
+      "name": "research-summarizer",
+      "source": "../../product-team/research-summarizer",
+      "category": "product",
+      "description": ">"
+    },
+    {
+      "name": "roadmap-communicator",
+      "source": "../../product-team/roadmap-communicator",
+      "category": "product",
+      "description": ">"
+    },
+    {
+      "name": "spec-to-repo",
+      "source": "../../product-team/spec-to-repo",
       "category": "product",
       "description": ">"
     },
@@ -1214,17 +1340,17 @@
   ],
   "categories": {
     "business-growth": {
-      "count": 16,
+      "count": 20,
       "source": "../../business-growth",
       "description": "Customer success, sales engineering, and revenue operations skills"
     },
     "c-level": {
-      "count": 26,
+      "count": 31,
       "source": "../../c-level-advisor",
       "description": "Executive leadership and advisory skills"
     },
     "engineering": {
-      "count": 76,
+      "count": 82,
       "source": "../../engineering",
       "description": "Software engineering and technical skills"
     },
@@ -1234,12 +1360,12 @@
       "description": "Financial analysis, valuation, and forecasting skills"
     },
     "marketing": {
-      "count": 38,
+      "count": 39,
       "source": "../../marketing",
       "description": "Marketing, content, and demand generation skills"
     },
     "product": {
-      "count": 8,
+      "count": 13,
       "source": "../../product-team",
       "description": "Product management and design skills"
     },
