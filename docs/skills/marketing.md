@@ -4,7 +4,7 @@ title: Marketing Skills
 
 # Marketing Skills
 
-**38 skills** with **115 Python tools** covering content creation, SEO, demand generation, paid advertising, CRO, email marketing, social media, brand strategy, and analytics.
+**39 skills** with **118+ Python tools** covering content creation, SEO, AEO (Answer Engine Optimization for LLM citation), demand generation, paid advertising, CRO, email marketing, social media, brand strategy, and analytics.
 
 ## Content & Copywriting
 

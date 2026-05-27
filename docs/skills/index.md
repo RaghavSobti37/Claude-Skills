@@ -4,25 +4,26 @@ title: Skill Catalog
 
 # Skill Catalog
 
-294 production-ready skills across 15 domains, each with Python CLI tools, reference guides, and templates.
+338 production-ready skills across 16 domains, each with Python CLI tools, reference guides, and templates.
 
 ## Domains at a Glance
 
 | Domain | Skills | Tools | Page |
 |---|:---:|:---:|---|
-| **★ Project Management** (most-used) | **54** | **70+** | **[View all](project-management.md)** |
-| Engineering | 76 | 224 | [View all](engineering.md) |
-| Marketing | 38 | 115 | [View all](marketing.md) |
-| C-Level Advisory | 26 | 73 | [View all](c-level.md) |
-| RA/QM & Compliance | 21 | 38 | [View all](compliance.md) |
+| **★ Project Management** (most-used) | **66** | **82+** | **[View all](project-management.md)** |
+| Engineering | 82 | 248+ | [View all](engineering.md) |
+| Marketing | 39 | 118+ | [View all](marketing.md) |
+| C-Level Advisory | 31 | 88+ | [View all](c-level.md) |
+| RA/QM & Compliance | 27 | 50+ | [View all](compliance.md) |
+| Business Growth | 20 | 60+ | [View all](business.md#business-growth) |
 | Legal (Experimental) | 17 | 34 | [View all](legal.md) |
-| Business Growth | 16 | 48 | [View all](business.md#business-growth) |
-| Product Team | 8 | 15 | [View all](product.md) |
+| Product Team | 13 | 30+ | [View all](product.md) |
+| Research (new) | 4 | 12 | [View all](research.md) |
 | Data & Analytics | 5 | 16 | [View all](other.md#data--analytics) |
 | Sales & Success | 5 | 15 | [View all](business.md#sales--success) |
 | HR & Operations | 4 | 12 | [View all](other.md#hr--operations) |
 | Finance | 3 | 10 | [View all](business.md#finance) |
-| **Total** | **294** | **720+** | |
+| **Total** | **338** | **784+** | |
 
 ## Skill Package Structure
 

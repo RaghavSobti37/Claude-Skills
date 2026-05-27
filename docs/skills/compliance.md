@@ -4,7 +4,7 @@ title: Compliance Skills
 
 # RA/QM & Compliance Skills
 
-**21 skills** with **38 Python tools** covering 18 compliance frameworks including medical device regulation, privacy, security, AI governance, and financial resilience.
+**27 skills** with **50+ Python tools** covering 18 compliance frameworks including medical device regulation, privacy, security, AI governance, and financial resilience. Includes 6 audit-prep playbooks (`ra-qm-team/audit-prep/`) for short-runway audit preparation: SOC 2, GDPR, FDA QSR, EU AI Act, ISO 42001 AIMS, multi-framework readiness.
 
 !!! info "Frameworks covered"
     SOC 2, ISO 27001, ISO 13485, ISO 14971, ISO 42001, GDPR/DSGVO, HIPAA, CCPA/CPRA, EU AI Act, EU MDR, FDA (510(k)/PMA), NIS2, DORA, NIST CSF 2.0, PCI-DSS v4.0, 21 CFR Part 11, IEC 62304, IEC 62443.

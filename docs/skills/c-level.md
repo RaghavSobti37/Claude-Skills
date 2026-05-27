@@ -4,7 +4,7 @@ title: C-Level Advisory Skills
 
 # C-Level Advisory Skills
 
-**26 skills** with **73 Python tools** for executive leadership, strategic decision-making, board governance, and organizational health.
+**31 skills** with **88+ Python tools** for executive leadership, strategic decision-making, board governance, and organizational health. The full C-suite bench: CEO, CTO, CFO, CMO, CRO, CPO, COO, CHRO, CISO, plus CAIO (AI strategy), CDO (data strategy), CCO (customer experience), General Counsel, and VP Engineering.
 
 ## C-Suite Advisors
 

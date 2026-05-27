@@ -4,7 +4,7 @@ title: Business, Sales & Finance Skills
 
 # Business, Sales & Finance Skills
 
-**24 skills** with **73 Python tools** covering business growth, CRO, revenue operations, sales execution, and financial analysis.
+**28 skills** with **85+ Python tools** covering business growth, CRO, revenue operations, sales execution, and financial analysis. Includes commercial mechanics cluster (`deal-desk`, `channel-economics`, `partnerships-architect`, `commercial-policy`) — the operating layer between pricing and revenue.
 
 ## Business Growth
 

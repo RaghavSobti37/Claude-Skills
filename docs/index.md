@@ -59,65 +59,74 @@ See [Installation](getting-started/installation.md) for per-skill install, auto-
 
 <div class="card" markdown>
 ### :material-cog: Engineering
-**76 skills** &middot; 224 tools
+**82 skills** &middot; 248+ tools
 
-Fullstack, DevOps, security, mobile, ML, cloud, MCP servers, CI/CD, observability.
+Fullstack, DevOps, security, mobile, ML, cloud (AWS/Azure/GCP), MCP servers, CI/CD, observability, chaos engineering, feature flags, kubernetes operators, data quality.
 
 [:octicons-arrow-right-24: Browse skills](skills/engineering.md)
 </div>
 
 <div class="card" markdown>
 ### :material-bullhorn: Marketing
-**38 skills** &middot; 115 tools
+**39 skills** &middot; 118+ tools
 
-Content, SEO, demand gen, paid ads, CRO, email, social, brand, analytics.
+Content, SEO, AEO, demand gen, paid ads, CRO, email, social, brand, analytics.
 
 [:octicons-arrow-right-24: Browse skills](skills/marketing.md)
 </div>
 
 <div class="card" markdown>
 ### :material-account-tie: C-Level Advisory
-**26 skills** &middot; 73 tools
+**31 skills** &middot; 88+ tools
 
-CEO, CTO, CFO, CISO, CMO, COO, CPO, CRO advisors and board governance.
+CEO, CTO, CFO, CMO, CRO, CPO, COO, CHRO, CISO, plus CAIO, CDO, CCO, GC, VPE advisors and board governance.
 
 [:octicons-arrow-right-24: Browse skills](skills/c-level.md)
 </div>
 
 <div class="card" markdown>
 ### :material-shield-check: Compliance
-**21 skills** &middot; 38 tools
+**27 skills** &middot; 50+ tools
 
-ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS.
+ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS, plus 6 audit-prep playbooks.
 
 [:octicons-arrow-right-24: Browse skills](skills/compliance.md)
 </div>
 
 <div class="card" markdown>
 ### :material-clipboard-check: ★ Project Management
-**54 skills** &middot; 70+ tools &middot; *most-used domain*
+**66 skills** &middot; 82+ tools &middot; *most-used domain*
 
-PRDs (incl. AI features), OKRs, NSM, status updates, roadmaps, retros, story splitting, post-mortems, activation funnels, feature flags, career growth. Jira / Linear / Notion / Productboard / Confluence.
+PRDs (incl. AI features), OKRs, NSM, roadmaps, retros, story splitting, post-mortems, activation funnels, feature flags, career growth, strategy frameworks (BMC/Lean/SWOT/Porter's/Ansoff), GTM. Jira / Linear / Notion / Productboard / Confluence.
 
 [:octicons-arrow-right-24: Browse skills](skills/project-management.md)
 </div>
 
 <div class="card" markdown>
 ### :material-palette-outline: Product Team
-**8 skills** &middot; 15 tools
+**13 skills** &middot; 30+ tools
 
-UX research, design systems, A/B tests, product strategy.
+UX research, design systems, A/B tests, product strategy, product analytics, Apple HIG, research synthesis, spec-to-repo, roadmap communication.
 
 [:octicons-arrow-right-24: Browse skills](skills/product.md)
 </div>
 
 <div class="card" markdown>
 ### :material-chart-line: Business & Sales
-**24 skills** &middot; 73 tools
+**28 skills** &middot; 85+ tools
 
-CRO, churn prevention, pricing, referral programs, MEDDIC, pipeline, finance.
+CRO, churn prevention, pricing, referral programs, MEDDIC, pipeline, finance, plus deal-desk, channel-economics, partnerships-architect, commercial-policy.
 
 [:octicons-arrow-right-24: Browse skills](skills/business.md)
+</div>
+
+<div class="card" markdown>
+### :material-magnify: Research
+**4 skills** &middot; 12 tools &middot; *new domain*
+
+Literature review (PRISMA), grant proposals (NIH/NSF/SBIR), patent landscape, intelligence dossiers.
+
+[:octicons-arrow-right-24: Browse skills](skills/research.md)
 </div>
 
 <div class="card" markdown>
