@@ -1,10 +1,33 @@
 # Project Management Skills - Claude Code Guidance
 
-This guide covers the **54 production-ready project management skills** organized across role-based, discovery, execution, career, and integration domains. PM is the most-used domain in this library.
+This guide covers the **66 production-ready project management skills** organized across role-based, discovery, execution, career, integration, strategy-frameworks (Tier 3), and GTM (Tier 3) domains. PM is the most-used domain in this library.
 
 ## PM Skills Overview
 
-**Available Skills (54 total):**
+**Available Skills (66 total):**
+
+**Tier 3 additions (May 2026, 12 new skills):**
+
+### Strategy frameworks — `strategy-frameworks/` (5 NEW)
+- **business-model-canvas/** - Osterwalder 9-block canvas + validator (1 tool)
+- **lean-canvas/** - Ash Maurya startup canvas + validator (1 tool)
+- **swot-analysis/** - SWOT + TOWS matrix + scoring (1 tool)
+- **porters-five-forces/** - Industry analysis + strategy translation (1 tool)
+- **ansoff-matrix/** - Growth quadrants + investment mix (1 tool)
+
+### Go-to-market — `gtm/` (2 NEW)
+- **gtm-strategy/** - Full GTM: ICP, motion, channels, messaging, sequence (1 tool)
+- **ideal-customer-profile/** - 8-dimension ICP + qualification rubric (1 tool)
+
+### Discovery additions (2 NEW)
+- **discovery/opportunity-solution-tree/** - Teresa Torres OST + validator (1 tool)
+- **discovery/metrics-dashboard/** - Dashboard architect + audit (1 tool)
+
+### Execution additions (3 NEW)
+- **execution/stakeholder-map/** - Power × Interest + engagement plan (1 tool)
+- **execution/test-scenarios/** - 7-category coverage generator (1 tool)
+- **execution/sprint-plan/** - Capacity math + commit discipline (1 tool)
+
 
 ### Role-Based Skills (10)
 1. **senior-pm/** - Portfolio management, stakeholder mapping, EMV risk analysis, executive reporting

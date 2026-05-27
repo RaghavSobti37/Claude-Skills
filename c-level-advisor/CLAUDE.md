@@ -1,12 +1,30 @@
 # C-Level Advisory Skills - Claude Code Guidance
 
-This guide covers the 2 production-ready C-level advisory skills for strategic decision-making.
+This guide covers the 31 production-ready C-level advisory skills for strategic decision-making.
 
 ## C-Level Skills Overview
 
-**Available Skills:**
-1. **ceo-advisor/** - CEO strategic planning, business operations, organizational design
-2. **cto-advisor/** - CTO technical leadership, architecture decisions, engineering strategy
+**Core executive advisors (26):**
+- **ceo-advisor/** — strategic planning, business operations, organizational design
+- **cto-advisor/** — technical leadership, architecture, engineering strategy
+- **cfo-advisor/** — financial planning, fundraising, investor reporting
+- **cmo-advisor/** — marketing strategy, brand, demand
+- **cpo-advisor/** — product strategy, roadmap, prioritization
+- **cro-advisor/** — revenue, sales, GTM
+- **coo-advisor/** — operations, scaling, process
+- **chro-advisor/** — talent, culture, comp
+- **ciso-advisor/** — security strategy, risk, compliance
+- Plus: board-deck-builder, board-meeting, change-management, chief-of-staff,
+  company-os, competitive-intel, cs-onboard, culture-architect, decision-logger,
+  executive-mentor, founder-coach, internal-narrative, intl-expansion,
+  ma-playbook, org-health-diagnostic, scenario-war-room, strategic-alignment
+
+**Tier 2 additions (May 2026, 5 new C-suite advisors):**
+- **chief-ai-officer-advisor/** — AI strategy, governance, risk, investment, AI org design (3 tools)
+- **chief-data-officer-advisor/** — data strategy, governance, quality, platform evaluation (3 tools)
+- **chief-customer-officer-advisor/** — CX strategy, churn intervention, VoC program design (3 tools)
+- **general-counsel-advisor/** — legal strategy, risk register, contract portfolio, regulatory calendar (3 tools)
+- **vpe-advisor/** — engineering org health, productivity dashboard, capacity planning (3 tools)
 
 **Focus:** Strategic decision-making, cross-functional alignment, long-term planning
 

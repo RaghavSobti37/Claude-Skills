@@ -1,15 +1,24 @@
 # Business & Growth Skills - Claude Code Guidance
 
-This guide covers the 3 production-ready business and growth skills and their Python automation tools.
+This guide covers the 20 production-ready business and growth skills, organized into three clusters: **GTM operations** (customer success, sales engineering, revenue ops), **growth tactics** (CRO sub-skills, churn, referral, pricing, contracts, competitive teardown), and **commercial mechanics** (deal-desk, channel-economics, partnerships-architect, commercial-policy — added Apr 2026).
 
-## Business & Growth Skills Overview
+## Business & Growth Skills Overview (20 skills)
 
-**Available Skills:**
-1. **customer-success-manager/** - Customer health scoring, churn risk analysis, expansion opportunities (3 Python tools)
-2. **sales-engineer/** - Technical discovery, RFP analysis, competitive positioning, POC planning (3 Python tools)
-3. **revenue-operations/** - Pipeline analysis, forecast accuracy, GTM efficiency metrics (3 Python tools)
+### GTM operations
+- **customer-success-manager/** - Customer health scoring, churn risk analysis, expansion opportunities (3 Python tools)
+- **sales-engineer/** - Technical discovery, RFP analysis, competitive positioning, POC planning (3 Python tools)
+- **revenue-operations/** - Pipeline analysis, forecast accuracy, GTM efficiency metrics (3 Python tools)
 
-**Total Tools:** 9 Python automation tools, 9 knowledge bases, 19+ templates
+### Growth tactics
+- **churn-prevention** · **competitive-teardown** · **competitor-alternatives** · **contract-and-proposal-writer** · **form-cro** · **free-tool-strategy** · **onboarding-cro** · **page-cro** · **paywall-upgrade-cro** · **popup-cro** · **pricing-strategy** · **referral-program** · **signup-flow-cro**
+
+### Commercial mechanics (Apr 2026 additions)
+- **deal-desk/** - Charter, approval matrix, deal-review packets, velocity analysis (3 Python tools)
+- **channel-economics/** - 6-channel decision tree, TCO framework, tier economics, mix optimizer (3 Python tools)
+- **partnerships-architect/** - Partnership types, deal structures, partner evaluation, ROI modeler (3 Python tools)
+- **commercial-policy/** - Policy charter, compliance checker, terms-deviation analyzer, policy generator (3 Python tools)
+
+**Total Tools:** 30+ Python automation tools, 25+ knowledge bases, 19+ templates
 
 ## Python Automation Tools
 

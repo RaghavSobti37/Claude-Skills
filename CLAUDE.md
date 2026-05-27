@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the **universal AI skills library** — reusable, production-ready skill packages that bundle domain expertise, best practices, analysis tools, and strategic frameworks. Works with every major AI coding assistant: Claude Code, Cursor, Copilot, Codex, Gemini CLI, Windsurf, Cline, Aider, Goose, and more.
 
-**Current Scope:** 294 production-ready skills across 15 domains with 700+ Python automation tools, 32 AI agents (including 7 personas), 26 slash commands, 21 compound sub-skills, and 17 CI/CD workflows. **Project Management is the most-used domain (54 skills: discovery, delivery, career growth, modern AI/growth PM, integrations).**
+**Current Scope:** 338 production-ready skills across 16 domains with 784+ Python automation tools, 32 AI agents (including 7 personas), 26 slash commands, 21 compound sub-skills, and 17 CI/CD workflows. **Project Management is the most-used domain (66 skills: discovery, delivery, career growth, strategy frameworks, GTM, modern AI/growth PM, integrations).**
 
 **Key Distinction**: This is NOT a traditional application. It's a library of skill packages meant to be extracted and deployed by users into their AI coding workflows.
 
@@ -18,11 +18,11 @@ This repository uses **modular documentation**. For domain-specific guidance, se
 |--------|-------------------|-------|
 | **Agent Development** | [agents/CLAUDE.md](agents/CLAUDE.md) | cs-* agent creation, YAML frontmatter, relative paths |
 | **Marketing Skills** | [marketing/CLAUDE.md](marketing/CLAUDE.md) | Content creation, SEO, demand gen, campaign analytics Python tools |
-| **Product Team** | [product-team/CLAUDE.md](product-team/CLAUDE.md) | RICE, OKRs, user stories, UX research tools |
+| **Product Team** | [product-team/CLAUDE.md](product-team/CLAUDE.md) | 13 skills: RICE, OKRs, UX research, product analytics, Apple HIG, research synthesis, spec-to-repo, roadmap communication |
 | **Engineering** | [engineering/CLAUDE.md](engineering/CLAUDE.md) | Scaffolding, fullstack, AI/ML, data tools |
-| **C-Level Advisory** | [c-level-advisor/CLAUDE.md](c-level-advisor/CLAUDE.md) | CEO/CTO strategic decision-making |
-| **Project Management** ★ | [project-management/CLAUDE.md](project-management/CLAUDE.md) | **54 PM skills (most-used domain):** discovery, execution, career growth, Jira / Linear / Notion / Confluence integration |
-| **RA/QM Compliance** | [ra-qm-team/CLAUDE.md](ra-qm-team/CLAUDE.md) | 21 skills: ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS, CCPA, ISO 42001, infrastructure auditing |
+| **C-Level Advisory** | [c-level-advisor/CLAUDE.md](c-level-advisor/CLAUDE.md) | 31 skills: CEO/CTO/CFO/CMO/CRO/CPO/COO/CHRO/CISO + Tier 2 (CAIO, CDO, CCO, GC, VPE) advisors |
+| **Project Management** ★ | [project-management/CLAUDE.md](project-management/CLAUDE.md) | **66 PM skills (most-used domain):** discovery, execution, career growth, strategy-frameworks/ (BMC, lean canvas, SWOT, Porter's, Ansoff), gtm/ (GTM strategy, ICP), Jira / Linear / Notion / Confluence integration |
+| **RA/QM Compliance** | [ra-qm-team/CLAUDE.md](ra-qm-team/CLAUDE.md) | 27 skills: ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS, CCPA, ISO 42001, infrastructure auditing — plus 6 audit-prep playbooks |
 | **Business & Growth** | [business-growth/CLAUDE.md](business-growth/CLAUDE.md) | Customer success, sales engineering, revenue operations |
 | **Finance** | [finance/CLAUDE.md](finance/CLAUDE.md) | Financial analysis, DCF valuation, budgeting, forecasting |
 | **Data Analytics** | [data-analytics/CLAUDE.md](data-analytics/CLAUDE.md) | Data analysis, BI, ML ops, analytics engineering |
@@ -32,6 +32,7 @@ This repository uses **modular documentation**. For domain-specific guidance, se
 | **Personal Productivity** | [personal-productivity/CLAUDE.md](personal-productivity/CLAUDE.md) | 10 skills: resume, lead-research, meeting-insights, naming, invoices, email triage, calendar prep, investor update, pitch deck, weekly review |
 | **Documents** | [documents/CLAUDE.md](documents/CLAUDE.md) | 4 skills: docx, pdf, pptx, xlsx audit (stdlib-only OOXML parsing) |
 | **Vertical Advisors** | [vertical-advisors/CLAUDE.md](vertical-advisors/CLAUDE.md) | 7 skills: fintech, healthtech, edtech, ecommerce, proptech, climate-tech, marketplace strategic advisors |
+| **Research** | [research/CLAUDE.md](research/CLAUDE.md) | 4 skills: litreview (systematic reviews), grants (proposal architecture), patent (prior art + landscape), dossier (intelligence briefings) |
 | **Standards Library** | [standards/CLAUDE.md](standards/CLAUDE.md) | Communication, quality, git, security standards |
 | **Templates** | [templates/CLAUDE.md](templates/CLAUDE.md) | Template system usage |
 
@@ -53,13 +54,14 @@ claude-code-skills/
 ├── agents/
 │   ├── (domain dirs)/         # 26 cs-* prefixed skill agents
 │   └── personas/              # 7 cross-domain personas (startup-cto, solo-founder, etc.)
-├── engineering/               # 76 engineering skills + 3 compound sub-skill systems
-├── marketing/                 # 38 marketing skills + Python tools
-├── product-team/              # 8 product skills + Python tools
-├── project-management/        # 54 PM skills (most-used domain) — role-based, discovery/, execution/, career/, linear-expert, notion-pm
-├── c-level-advisor/           # 26 C-level advisory skills + Python tools
-├── ra-qm-team/                # 21 RA/QM compliance skills + Python tools
-├── business-growth/           # 16 business & growth skills + Python tools
+├── engineering/               # 82 engineering skills + 3 compound sub-skill systems
+├── marketing/                 # 39 marketing skills + Python tools (incl. aeo)
+├── product-team/              # 13 product skills + Python tools (Tier 2: product-analytics, apple-hig-expert, research-summarizer, spec-to-repo, roadmap-communicator)
+├── project-management/        # 66 PM skills (most-used domain) — role-based, discovery/, execution/, career/, strategy-frameworks/ (Tier 3), gtm/ (Tier 3), linear-expert, notion-pm
+├── c-level-advisor/           # 31 C-level advisory skills + Python tools (Tier 2: CAIO, CDO, CCO, GC, VPE advisors)
+├── research/                  # 4 research skills (Tier 2) — litreview, grants, patent, dossier
+├── ra-qm-team/                # 27 RA/QM compliance skills (incl. audit-prep/ subfolder)
+├── business-growth/           # 20 business & growth skills (incl. commercial: deal-desk, channel-economics, partnerships-architect, commercial-policy)
 ├── data-analytics/            # 5 data analytics skills + Python tools
 ├── hr-operations/             # 4 HR operations skills + Python tools
 ├── sales-success/             # 5 sales success skills + Python tools
@@ -215,8 +217,11 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 ---
 
 **Last Updated:** May 2026
-**Version:** 4.1.1
-**Status:** 294 skills, 67 cs-* agents (+ 7 personas), 26 commands, 21 sub-skills, 15 domains, Gemini CLI support. PM domain expanded to 54 skills with career track, AI/ML PRD, activation funnels, feature flags, post-mortems, customer feedback triage, pricing PRDs, Linear/Notion/Productboard integrations.
-- New domains: `personal-productivity/` (10 skills), `documents/` (4 skills, stdlib OOXML), `vertical-advisors/` (7 skills)
+**Version:** 4.3.0
+**Status:** 338 skills, 67 cs-* agents (+ 7 personas), 26 commands, 21 sub-skills, 16 domains, Gemini CLI support. PM domain expanded to 66 skills with career track, AI/ML PRD, activation funnels, feature flags, post-mortems, customer feedback triage, pricing PRDs, Linear/Notion/Productboard integrations, strategy frameworks (BMC/lean/SWOT/Porter's/Ansoff), and GTM (gtm-strategy/ICP).
+- **Recent Tier-3 additions (May 2026):** 12 PM skills in new subfolders `strategy-frameworks/` (business-model-canvas, lean-canvas, swot-analysis, porters-five-forces, ansoff-matrix) and `gtm/` (gtm-strategy, ideal-customer-profile), plus discovery additions (opportunity-solution-tree, metrics-dashboard) and execution additions (stakeholder-map, test-scenarios, sprint-plan). 12 stdlib Python validators, ~12K lines.
+- **Recent Tier-2 additions (May 2026):** 5 C-suite advisors (chief-ai-officer-advisor, chief-data-officer-advisor, chief-customer-officer-advisor, general-counsel-advisor, vpe-advisor); 5 product skills (product-analytics, apple-hig-expert, research-summarizer, spec-to-repo, roadmap-communicator); new `research/` domain with 4 skills (litreview, grants, patent, dossier). 14 deep skills, 42 stdlib Python scripts, ~24K lines.
+- **Tier-1 additions (Apr 2026):** 6 engineering skills (feature-flags-architect, chaos-engineering, kubernetes-operator, azure-cloud-architect, gcp-cloud-architect, data-quality-auditor); 4 commercial skills in business-growth (deal-desk, channel-economics, partnerships-architect, commercial-policy); 6 audit-prep playbooks in ra-qm-team/audit-prep/ (soc2/gdpr/fda-qsr/ai-act/aims/compliance-readiness); 1 marketing skill (aeo).
+- Domains: `personal-productivity/` (10 skills), `documents/` (4 skills, stdlib OOXML), `vertical-advisors/` (7 skills), `research/` (4 skills — Tier 2)
 - Vertical advisors: fintech, healthtech, edtech, ecommerce, proptech, climate-tech, marketplace — strategic, not implementation
 - Expanded `agents/`: cs-* agents across engineering (23), c-level (12), marketing (8), business-growth (3), hr (2), product (3), compliance (2), vertical (7), root (4)

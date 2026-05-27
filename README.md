@@ -6,8 +6,8 @@
 <p align="center"><b>AI skills for every team, not just engineering.</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-294-brightgreen.svg" alt="294 Skills">
-  <img src="https://img.shields.io/badge/Domains-15-blue.svg" alt="15 Domains">
+  <img src="https://img.shields.io/badge/Skills-338-brightgreen.svg" alt="338 Skills">
+  <img src="https://img.shields.io/badge/Domains-16-blue.svg" alt="16 Domains">
   <img src="https://img.shields.io/badge/Expert_Agents-67-purple.svg" alt="67 Expert Agents">
   <img src="https://img.shields.io/badge/AI_Assistants-11-orange.svg" alt="11 AI Assistants">
   <img src="https://img.shields.io/badge/Compliance_Frameworks-18-red.svg" alt="18 Compliance Frameworks">
@@ -22,6 +22,19 @@
 **No setup, any AI chat.** Browse the [skill library](https://borghei.github.io/Claude-Skills), click **Try it now** on any skill, and paste the prompt into Claude.ai, ChatGPT, or Gemini.
 
 **Save it to your AI.** Click **Save to my AI** to install as a Claude Project or Custom GPT. Guided setup, no terminal.
+
+### Install in Claude Cowork (Claude desktop app)
+
+In the Claude desktop app:
+
+1. Open **Customize** (bottom-left)
+2. Go to **Browse plugins**
+3. Enter: `borghei/Claude-Skills`
+
+All 338 skills become available across your Claude conversations.
+
+<!-- TODO: add install GIF at .docs/images/claude-skills-install.gif — recording recipe in .docs/images/README.md -->
+
 
 ### For developers
 
@@ -40,20 +53,20 @@ See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the Claude Code plugin, MCP
 **Ship a SOC 2 audit. Run a sprint retro. Draft a board update. Spin up a fintech compliance program.** Real workflows you can finish today, not prompt templates that need a prompt engineer to drive them.
 
 - **The only OSS skills library covering regulated industries.** SOC 2, ISO 13485, MDR, FDA, EU AI Act, NIS2, DORA, HIPAA, GDPR. 18 compliance frameworks with checklists, gap analyses, and audit-ready outputs.
-- **Scripts that actually run, not just prompt templates.** 720+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
+- **Scripts that actually run, not just prompt templates.** 784+ Python tools you can pipe into CI, MCP servers, or your own scripts. Standard library only, no pip cliffs.
 - **Call one persona, get a stack of skills behind it.** `startup-cto`, `growth-marketer`, `solo-founder`, `cs-cto-advisor`, `cs-fintech-advisor`, and 70 more. 74 expert identities ready out of the box.
 - **Works with your AI assistant.** Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Cline, Aider, Goose, OpenCode, and ChatGPT / Claude.ai.
-- **Discovery → delivery → career for product teams.** Project Management is the deepest domain — 54 skills, and every one ships with a worked example, an anti-pattern library, and a deterministic scoring rubric. 15 PM skills callable as MCP tools. 5 chain pipelines, 3 live data adapters. Jira / Linear / Notion / Productboard / Confluence.
+- **Discovery → delivery → career for product teams.** Project Management is the deepest domain — 66 skills, and every one ships with a worked example, an anti-pattern library, and a deterministic scoring rubric. 15 PM skills callable as MCP tools. 5 chain pipelines, 3 live data adapters. Jira / Linear / Notion / Productboard / Confluence. Tier 3 adds strategy frameworks (BMC, Lean Canvas, SWOT, Porter's, Ansoff) and GTM (gtm-strategy, ICP).
 
-*Supporting evidence:* 294 skills · 720+ Python tools · 74 agents · 18 compliance frameworks · 15 domains · 11 platforms.
+*Supporting evidence:* 338 skills · 784+ Python tools · 74 agents · 18 compliance frameworks · 16 domains · 11 platforms.
 
 ---
 
 ## Browse skills by domain
 
-**[Project Management (42) ★](project-management/)** *(most-visited domain. Discovery, delivery, career growth, Jira / Linear / Notion / Confluence.)*
+**[Project Management (66) ★](project-management/)** *(most-visited domain. Discovery, delivery, career growth, strategy frameworks, GTM, Jira / Linear / Notion / Confluence.)*
 
-[Engineering (76)](engineering/) · [Marketing (38)](marketing/) · [C-Level (26)](c-level-advisor/) · [Compliance (21)](ra-qm-team/) · [Business & Growth (16)](business-growth/) · [Legal (17)](legal/) · [Personal Productivity (10)](personal-productivity/) · [Product Team (8)](product-team/) · [Vertical Advisors (7)](vertical-advisors/) · [Data (5)](data-analytics/) · [Sales (5)](sales-success/) · [HR (4)](hr-operations/) · [Documents (4)](documents/) · [Finance (3)](finance/) · [All skills →](docs/SKILLS.md)
+[Engineering (82)](engineering/) · [Marketing (39)](marketing/) · [C-Level (31)](c-level-advisor/) · [Compliance (27)](ra-qm-team/) · [Business & Growth (20)](business-growth/) · [Legal (17)](legal/) · [Product Team (13)](product-team/) · [Personal Productivity (10)](personal-productivity/) · [Vertical Advisors (7)](vertical-advisors/) · [Data (5)](data-analytics/) · [Sales (5)](sales-success/) · [HR (4)](hr-operations/) · [Documents (4)](documents/) · [Research (4)](research/) · [Finance (3)](finance/) · [All skills →](docs/SKILLS.md)
 
 ---
 
@@ -150,7 +163,7 @@ Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Fo
 ---
 
 <p align="center">
-  <strong>294 skills · 720+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
+  <strong>312 skills · 730+ tools · 15 domains · 74 agents · 11 platforms.</strong><br>
   <a href="https://borghei.me">borghei.me</a>
 </p>
 

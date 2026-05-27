@@ -1,6 +1,6 @@
 # Engineering Team Skills - Claude Code Guidance
 
-This guide covers the 28 production-ready engineering skills and their Python automation tools.
+This guide covers the 82 production-ready engineering skills and their Python automation tools. This file (`CLAUDE-core.md`) details the original core set; newer additions are documented in their own SKILL.md files under `engineering/<skill-name>/`. Recent additions (Apr 2026): feature-flags-architect, chaos-engineering, kubernetes-operator, azure-cloud-architect, gcp-cloud-architect, data-quality-auditor.
 
 ## Customizing Tech Stacks
 

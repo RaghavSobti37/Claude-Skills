@@ -1,10 +1,10 @@
 # Product Team Skills - Claude Code Guidance
 
-This guide covers the 8 production-ready product management skills and their Python automation tools.
+This guide covers the 13 production-ready product management skills and their Python automation tools.
 
 ## Product Skills Overview
 
-**Available Skills:**
+**Core Skills (8):**
 1. **product-manager-toolkit/** - RICE prioritization, customer interview analysis (2 tools)
 2. **agile-product-owner/** - User story generation, sprint planning (1 tool)
 3. **product-strategist/** - OKR cascade, strategic planning (1 tool)
@@ -14,7 +14,14 @@ This guide covers the 8 production-ready product management skills and their Pyt
 7. **design-system-lead/** - Token generation, component scaffolding, adoption analysis (3 tools)
 8. **product-designer/** - Design critique, journey mapping, usability scoring (3 tools)
 
-**Total Tools:** 15 Python automation tools
+**Tier 2 additions (May 2026, 5 skills):**
+9. **product-analytics/** - Metric tree design, event taxonomy audit, retention cohort analysis (3 tools)
+10. **apple-hig-expert/** - HIG compliance check, component pattern lookup, accessibility audit (3 tools)
+11. **research-summarizer/** - Research synthesis organizer, insight quality scorer, findings brief generator (3 tools)
+12. **spec-to-repo/** - PRD-to-tickets decomposer, branch-naming validator, PR scope analyzer (3 tools)
+13. **roadmap-communicator/** - Audience translator, confidence band generator, roadmap diff reporter (3 tools)
+
+**Total Tools:** 30 Python automation tools (stdlib only)
 
 ## Python Automation Tools
 

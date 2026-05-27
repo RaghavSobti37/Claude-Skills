@@ -1,8 +1,26 @@
 # Regulatory Affairs, Quality Management & Compliance Skills — Claude Code Guidance
 
-This guide covers the **20 production-ready compliance skills** spanning medical device regulations, information security, privacy, financial resilience, AI governance, and infrastructure security. This is the most comprehensive open-source compliance skills library available.
+This guide covers the **27 production-ready compliance skills** spanning medical device regulations, information security, privacy, financial resilience, AI governance, and infrastructure security — plus the new `audit-prep/` subfolder with 6 audit-event playbooks (Apr 2026). This is the most comprehensive open-source compliance skills library available.
 
-## Compliance Skills Overview (20 Skills)
+## Structure
+
+```
+ra-qm-team/
+├── (20 deep framework specialists)     # ISO 13485, MDR, FDA, SOC 2, GDPR, EU AI Act, NIS2, DORA, NIST CSF, PCI-DSS, CCPA, ISO 42001, etc.
+└── audit-prep/                          # 6 audit-event playbooks (Apr 2026)
+    ├── soc2-audit-prep/                 # 4/8/12-week SOC 2 sprint
+    ├── gdpr-audit-prep/                 # DPA inquiry + customer audit response
+    ├── fda-qsr-audit-prep/              # 21 CFR 820 / QMSR + 483/WL response
+    ├── ai-act-readiness/                # EU AI Act conformity prep
+    ├── aims-audit/                      # ISO 42001 AIMS certification prep
+    └── compliance-readiness/            # Cross-framework orchestrator (SOC 2 + ISO 27001 + NIST + GDPR + HIPAA)
+```
+
+**Use distinction:**
+- **Deep framework specialists** (e.g., `soc2-compliance-expert`) — build the compliance program; multi-quarter
+- **Audit-prep playbooks** (e.g., `audit-prep/soc2-audit-prep`) — audit imminent in 4-12 weeks; sprint execution
+
+## Compliance Skills Overview (27 Skills total: 20 deep + 6 audit-prep + 1 cross-framework orchestrator)
 
 ### Strategic Leadership (2 skills)
 - **regulatory-affairs-head** — RA strategy, regulatory intelligence, FDA/EU/global pathways

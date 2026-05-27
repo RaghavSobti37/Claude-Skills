@@ -1,16 +1,20 @@
 # Marketing Skills - Claude Code Guidance
 
-This guide covers the 4 production-ready marketing skills and their Python automation tools.
+This guide covers the 39 production-ready marketing skills across content, SEO/AEO, demand gen, growth, PR, and analytics, plus Python automation tools.
 
-## Marketing Skills Overview
+## Marketing Skills Overview (39 skills)
 
-**Available Skills:**
+**Core (highlighted; full inventory under `marketing/`):**
 1. **content-creator/** - Content creation, brand voice, SEO optimization (2 Python tools)
 2. **marketing-demand-acquisition/** - Demand generation and customer acquisition (1 Python tool)
 3. **marketing-strategy-pmm/** - Product marketing and go-to-market strategy
 4. **campaign-analytics/** - Multi-touch attribution, funnel conversion analysis, campaign ROI calculation (3 Python tools)
 
-**Total Tools:** 6 Python automation tools, 9+ knowledge bases, 15+ templates
+**SEO / AI search:**
+- **seo-specialist/**, **seo-audit/**, **programmatic-seo/**, **ai-seo/** (AI search ranking — Perplexity, AI Overviews)
+- **aeo/** *(Apr 2026)* — Answer Engine Optimization (LLM citation in ChatGPT/Claude/Gemini answers); distinct from ai-seo (3 Python tools: content auditor, citation extractor, Q&A schema generator)
+
+**Total Tools:** 35+ Python automation tools, 30+ knowledge bases, 25+ templates
 
 ## Python Automation Tools
 

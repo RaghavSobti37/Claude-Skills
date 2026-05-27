@@ -1,10 +1,95 @@
 # Skills Reference
 
-Complete reference for all 204 skills across 13 domains. Each skill is a self-contained package with documentation (`SKILL.md`), Python CLI tools (`scripts/`), knowledge bases (`references/`), and user templates (`assets/`).
+Complete reference for **338 skills across 16 domains**. Each skill is a self-contained package with documentation (`SKILL.md`), Python CLI tools (`scripts/`), knowledge bases (`references/`), and user templates (`assets/`).
+
+> **Note:** The per-domain tables below are historical and not yet fully regenerated after recent expansions. For canonical skill listings, browse each domain folder directly. Recent additions are summarized below.
 
 ---
 
-## Engineering (28)
+## May 2026 Tier-3 Additions (12 new PM skills)
+
+Atomic PM skills covering classic strategy frameworks, GTM, and execution. Adds two new PM subfolders.
+
+### Strategy frameworks — `project-management/strategy-frameworks/` (+5)
+- [business-model-canvas](../project-management/strategy-frameworks/business-model-canvas/SKILL.md) — Osterwalder 9-block + cross-block coherence validator (1 tool)
+- [lean-canvas](../project-management/strategy-frameworks/lean-canvas/SKILL.md) — Ash Maurya startup canvas + unfair-advantage discipline (1 tool)
+- [swot-analysis](../project-management/strategy-frameworks/swot-analysis/SKILL.md) — SWOT + TOWS matrix + evidence audit (1 tool)
+- [porters-five-forces](../project-management/strategy-frameworks/porters-five-forces/SKILL.md) — Industry analysis + strategy translation (1 tool)
+- [ansoff-matrix](../project-management/strategy-frameworks/ansoff-matrix/SKILL.md) — Growth quadrants + stage-appropriate investment mix (1 tool)
+
+### Go-to-market — `project-management/gtm/` (+2)
+- [gtm-strategy](../project-management/gtm/gtm-strategy/SKILL.md) — ICP × motion × channels × messaging + T-90 → T+90 sequence (1 tool)
+- [ideal-customer-profile](../project-management/gtm/ideal-customer-profile/SKILL.md) — 8-dimension ICP + qualification rubric + scoring (1 tool, 2 modes)
+
+### Discovery additions (+2)
+- [opportunity-solution-tree](../project-management/discovery/opportunity-solution-tree/SKILL.md) — Teresa Torres OST: outcome → opportunity → solution → test (1 tool)
+- [metrics-dashboard](../project-management/discovery/metrics-dashboard/SKILL.md) — NS + inputs + guardrails + operational; anti-vanity audit (1 tool)
+
+### Execution additions (+3)
+- [stakeholder-map](../project-management/execution/stakeholder-map/SKILL.md) — Power × Interest 2x2 + DACI + blocker conversion plans (1 tool)
+- [test-scenarios](../project-management/execution/test-scenarios/SKILL.md) — 7-category coverage (happy / edge / error / empty / concurrent / a11y / security) (1 tool)
+- [sprint-plan](../project-management/execution/sprint-plan/SKILL.md) — Capacity math + commit/stretch discipline + DoD audit (1 tool)
+
+**Tier 3 totals:** 12 skills · 12 stdlib Python validators · 24 reference docs · ~12K lines
+
+---
+
+## May 2026 Tier-2 Additions (14 new skills)
+
+### C-Level Advisory (+5)
+- [chief-ai-officer-advisor](../c-level-advisor/chief-ai-officer-advisor/SKILL.md) — AI strategy, governance, risk register, investment planner, maturity assessor (3 tools)
+- [chief-data-officer-advisor](../c-level-advisor/chief-data-officer-advisor/SKILL.md) — Data strategy, governance audit (DAMA-DMBOK), platform evaluator, maturity assessor (3 tools)
+- [chief-customer-officer-advisor](../c-level-advisor/chief-customer-officer-advisor/SKILL.md) — CX strategy, churn intervention planner, VoC program designer, CX maturity scorer (3 tools)
+- [general-counsel-advisor](../c-level-advisor/general-counsel-advisor/SKILL.md) — Legal risk register, contract portfolio analyzer, regulatory calendar generator (3 tools)
+- [vpe-advisor](../c-level-advisor/vpe-advisor/SKILL.md) — Engineering org health scorer, DORA/DevEx productivity dashboard, capacity planner (3 tools)
+
+### Product Team (+5)
+- [product-analytics](../product-team/product-analytics/SKILL.md) — Metric tree designer, event taxonomy auditor, retention cohort analyzer (3 tools)
+- [apple-hig-expert](../product-team/apple-hig-expert/SKILL.md) — HIG compliance checker, component pattern lookup, accessibility auditor (3 tools)
+- [research-summarizer](../product-team/research-summarizer/SKILL.md) — Synthesis organizer, insight quality scorer, findings brief generator (3 tools)
+- [spec-to-repo](../product-team/spec-to-repo/SKILL.md) — PRD-to-tickets decomposer, branch-naming validator, PR scope analyzer (3 tools)
+- [roadmap-communicator](../product-team/roadmap-communicator/SKILL.md) — Audience translator, confidence band generator, roadmap diff reporter (3 tools)
+
+### Research — NEW DOMAIN (+4)
+- [litreview](../research/litreview/SKILL.md) — Search strategy builder (PRISMA-aligned), source quality scorer, thematic synthesis builder (3 tools)
+- [grants](../research/grants/SKILL.md) — Funder fit scorer, proposal structure validator (NIH/NSF/SBIR/foundation/DARPA), budget realism checker (3 tools)
+- [patent](../research/patent/SKILL.md) — Prior-art search planner, claim landscape mapper, patentability scorer (5-dim) (3 tools)
+- [dossier](../research/dossier/SKILL.md) — Dossier outline generator, source triangulation validator (Admiralty Code), fact/inference separator (3 tools)
+
+**Tier 2 totals:** 14 skills · 42 stdlib Python scripts · 42 reference docs · ~24K lines
+
+---
+
+## Apr 2026 Tier-1 Additions (17 new skills)
+
+### Engineering (+6)
+- [feature-flags-architect](../engineering/feature-flags-architect/SKILL.md) — Flag types, rollout playbooks, kill switches, debt cleanup (3 tools)
+- [chaos-engineering](../engineering/chaos-engineering/SKILL.md) — Hypothesis-driven fault injection; gameday playbooks; maturity model (3 tools)
+- [kubernetes-operator](../engineering/kubernetes-operator/SKILL.md) — Operator pattern, CRDs, reconciliation, finalizers (3 tools)
+- [azure-cloud-architect](../engineering/azure-cloud-architect/SKILL.md) — Azure-specific service selection, WAF, cost (3 tools)
+- [gcp-cloud-architect](../engineering/gcp-cloud-architect/SKILL.md) — GCP-specific service selection, CAF, cost (3 tools)
+- [data-quality-auditor](../engineering/data-quality-auditor/SKILL.md) — DQ dimensions, check catalog, incident response (3 tools)
+
+### Business & Growth — Commercial mechanics (+4)
+- [deal-desk](../business-growth/deal-desk/SKILL.md) — Charter, approval matrix, packet, velocity (3 tools)
+- [channel-economics](../business-growth/channel-economics/SKILL.md) — Channel models, TCO, tier economics, mix (3 tools)
+- [partnerships-architect](../business-growth/partnerships-architect/SKILL.md) — Partnership types, deal structures, eval, ROI (3 tools)
+- [commercial-policy](../business-growth/commercial-policy/SKILL.md) — Policy charter, compliance, deviation, generator (3 tools)
+
+### RA/QM — Audit-prep playbooks (+6, new `audit-prep/` subfolder)
+- [soc2-audit-prep](../ra-qm-team/audit-prep/soc2-audit-prep/SKILL.md) — 4/8/12-week SOC 2 sprint (2 tools)
+- [gdpr-audit-prep](../ra-qm-team/audit-prep/gdpr-audit-prep/SKILL.md) — DPA inquiry + customer audit response (2 tools)
+- [fda-qsr-audit-prep](../ra-qm-team/audit-prep/fda-qsr-audit-prep/SKILL.md) — 21 CFR 820 / QMSR + 483/WL response (2 tools)
+- [ai-act-readiness](../ra-qm-team/audit-prep/ai-act-readiness/SKILL.md) — EU AI Act conformity prep + GPAI obligations (2 tools)
+- [aims-audit](../ra-qm-team/audit-prep/aims-audit/SKILL.md) — ISO 42001 AIMS certification prep (2 tools)
+- [compliance-readiness](../ra-qm-team/audit-prep/compliance-readiness/SKILL.md) — Multi-framework orchestrator with shared evidence (3 tools)
+
+### Marketing (+1)
+- [aeo](../marketing/aeo/SKILL.md) — Answer Engine Optimization for LLM citation (ChatGPT/Claude/Gemini) (3 tools)
+
+---
+
+## Engineering (82)
 
 Core software engineering expertise with Python automation tools.
 
