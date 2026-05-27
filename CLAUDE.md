@@ -217,7 +217,7 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 ---
 
 **Last Updated:** May 2026
-**Version:** 4.3.0
+**Version:** 4.8.0
 **Status:** 338 skills, 67 cs-* agents (+ 7 personas), 26 commands, 21 sub-skills, 16 domains, Gemini CLI support. PM domain expanded to 66 skills with career track, AI/ML PRD, activation funnels, feature flags, post-mortems, customer feedback triage, pricing PRDs, Linear/Notion/Productboard integrations, strategy frameworks (BMC/lean/SWOT/Porter's/Ansoff), and GTM (gtm-strategy/ICP).
 - **Recent Tier-3 additions (May 2026):** 12 PM skills in new subfolders `strategy-frameworks/` (business-model-canvas, lean-canvas, swot-analysis, porters-five-forces, ansoff-matrix) and `gtm/` (gtm-strategy, ideal-customer-profile), plus discovery additions (opportunity-solution-tree, metrics-dashboard) and execution additions (stakeholder-map, test-scenarios, sprint-plan). 12 stdlib Python validators, ~12K lines.
 - **Recent Tier-2 additions (May 2026):** 5 C-suite advisors (chief-ai-officer-advisor, chief-data-officer-advisor, chief-customer-officer-advisor, general-counsel-advisor, vpe-advisor); 5 product skills (product-analytics, apple-hig-expert, research-summarizer, spec-to-repo, roadmap-communicator); new `research/` domain with 4 skills (litreview, grants, patent, dossier). 14 deep skills, 42 stdlib Python scripts, ~24K lines.
