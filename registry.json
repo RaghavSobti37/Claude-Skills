@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-27T16:31:19+00:00",
+  "generated_at": "2026-06-15T17:53:06+00:00",
   "repository": "claude-skills",
   "skill_count": 337,
   "domain_count": 16,
@@ -56,22 +56,22 @@
       "domain": "engineering",
       "description": "Design and implement AI agent communication protocols including MCP tool schemas, Google A2A protocol, OpenAI function calling, structured inter-agent messaging, and protocol negotiation. Use when building multi-agent systems, defining tool interfaces, implementing agent-to-agent communication, or standardizing LLM tool calling patterns across platforms.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/agent-protocol",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "agent-workflow-designer",
       "domain": "engineering",
       "description": "Design and implement multi-agent orchestration systems with workflow DAGs, agent routing, handoff protocols, state management, and cost optimization. Use when building AI pipelines with multiple specialized agents, designing fan-out/fan-in patterns, or implementing fault-tolerant agent workflows.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/agent-workflow-designer",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "agenthub",
@@ -595,11 +595,11 @@
       "domain": "engineering",
       "description": "Build production-ready MCP (Model Context Protocol) servers with tool definitions, resource providers, prompt templates, and transport configuration. Covers OpenAPI-to-MCP conversion, TypeScript and Python implementations, testing strategies, authentication, and deployment. Use when exposing APIs to AI agents, building tool servers, or creating MCP integrations.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/mcp-server-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "migration-architect",
@@ -1159,11 +1159,11 @@
       "domain": "engineering",
       "description": "Implement production-grade Stripe integrations for SaaS billing. Covers subscription lifecycle management, checkout sessions, plan upgrades/downgrades with proration, usage-based billing, idempotent webhook handlers, customer portal, dunning, SCA compliance, and local testing with Stripe CLI. Provides patterns for Next.js, Express, and Django.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/stripe-integration-expert",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "tdd-guide",
@@ -1175,8 +1175,8 @@
         "testing",
         "red-green-refactor"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/tdd-guide",
       "has_scripts": true,
       "has_references": true
@@ -1322,8 +1322,8 @@
         "keywords",
         "ratings"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/app-store-optimization",
       "has_scripts": true,
       "has_references": true
@@ -1549,11 +1549,11 @@
       "domain": "marketing",
       "description": "Library of 139+ proven marketing strategies organized by category, stage, budget, and timeline. Covers content, SEO, paid ads, social, email, partnerships, events, product-led growth, and unconventional tactics. Use when brainstorming marketing ideas, planning growth strategies, or when user mentions marketing ideas, growth ideas, how to market, marketing strategies, marketing tactics, ways to promote, campaign ideation, creative brainstorming, or trend analysis.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/marketing-ideas",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "marketing-ops",
@@ -1569,13 +1569,13 @@
     {
       "name": "marketing-psychology",
       "domain": "marketing",
-      "description": "Apply behavioral psychology and cognitive biases to marketing for conversion optimization, pricing strategy, copy improvement, and campaign design. Includes 70+ mental models organized by application, diagnostic frameworks for identifying behavioral barriers, and implementation guides with before/after examples. Use when applying psychology to marketing, optimizing conversions, improving pricing pages, or when user mentions psychology, cognitive bias, persuasion, behavioral science, mental models, why people buy, decision-making, consumer behavior, or neuromarketing.",
+      "description": "Apply behavioral psychology, cognitive biases, and 70+ mental models to marketing for conversion optimization, pricing, copy, and campaigns. Use for persuasion, behavioral science, why people buy, consumer behavior, or neuromarketing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/marketing-psychology",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "marketing-strategy-pmm",
@@ -1616,11 +1616,11 @@
         "content-at-scale",
         "data-driven-seo"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/programmatic-seo",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "schema-markup",
@@ -1645,11 +1645,11 @@
       "domain": "marketing",
       "description": "Comprehensive technical SEO auditing covering crawlability, indexation, Core Web Vitals, on-page optimization, content quality, and competitive gap analysis. Includes 85-point audit checklist, severity-weighted scoring, and prioritized remediation plans.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/seo-audit",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "seo-specialist",
@@ -2314,8 +2314,8 @@
         "resilience-testing",
         "financial-services"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/dora-compliance-expert",
       "has_scripts": true,
       "has_references": true
@@ -2383,8 +2383,8 @@
         "information-security",
         "cloud-security"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/information-security-manager-iso27001",
       "has_scripts": true,
       "has_references": true
@@ -2400,8 +2400,8 @@
         "tls",
         "compliance-automation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/infrastructure-compliance-auditor",
       "has_scripts": true,
       "has_references": true
@@ -2483,8 +2483,8 @@
         "maturity-assessment",
         "risk-management"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/nist-csf-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2499,8 +2499,8 @@
         "tokenization",
         "cardholder-data"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/pci-dss-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2560,8 +2560,8 @@
       "domain": "ra-qm-team",
       "description": "ISO 13485 Quality Management System implementation and maintenance for medical device organizations. Provides QMS design, documentation control, internal auditing, CAPA management, and certification support.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/quality-manager-qms-iso13485",
       "has_scripts": true,
       "has_references": true
@@ -2594,8 +2594,8 @@
         "risk-register",
         "medical-device"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/risk-management-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2866,11 +2866,11 @@
         "value-based-pricing",
         "revenue"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "business-growth/pricing-strategy",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "referral-program",
@@ -2884,11 +2884,11 @@
         "word-of-mouth",
         "acquisition"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "business-growth/referral-program",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "revenue-operations",
@@ -3267,15 +3267,15 @@
     {
       "name": "atlassian-templates",
       "domain": "project-management",
-      "description": "Atlassian Template and Files Creator/Modifier expert for creating, modifying, and managing Jira and Confluence templates, blueprints, custom layouts, reusable components, and standardized content structures. Use for building org-wide templates, custom blueprints, page layouts, and automated content generation.",
+      "description": "Create, modify, and govern reusable Jira and Confluence templates, blueprints, and standardized content structures. Use for org-wide templates, custom blueprints, page layouts, and automated content generation.",
       "tags": [
         "atlassian",
         "jira-templates",
         "confluence-templates",
         "workflows"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "project-management/atlassian-templates",
       "has_scripts": true,
       "has_references": true
