@@ -156,3 +156,73 @@ This gives the team the speed and narrative clarity of 5 Whys plus the structura
 - John Allspaw, "Etsy's Debriefing Facilitation Guide" — https://github.com/etsy/DebriefingFacilitationGuide
 - Charles Perrow, *Normal Accidents* (1984) — for the theoretical grounding on why single-cause framing fails in complex systems
 - Sidney Dekker, *The Field Guide to Understanding "Human Error"* (3rd ed., 2014)
+
+---
+
+## Root Cause Methods (quick reference from SKILL.md)
+
+### 5 Whys
+
+A linear technique popularized by Toyota. Start with the proximate effect and ask "why?" five times. Each answer becomes the next question.
+
+```
+1. Why did the API return 500 errors for 22 minutes?
+   → Because the database connection pool was exhausted.
+2. Why was the connection pool exhausted?
+   → Because a batch job opened 200 connections without releasing them.
+3. Why did the batch job not release them?
+   → Because the connection lifecycle is managed by a context manager that was bypassed on the error path.
+4. Why was the error path bypassing the context manager?
+   → Because a refactor in March introduced an early return before the `finally` block.
+5. Why did the refactor land without catching this?
+   → Because the test suite does not exercise the connection-pool exhaustion path.
+```
+
+**Strengths:** fast, anyone can run it, fits in a 15-minute slot.
+
+**Limits:** linear — only finds one chain. Real incidents usually have multiple contributing factors that combine non-linearly. Use 5 Whys when the failure is a clear chain. Use Causal Tree when it is not.
+
+### Causal Tree (Allspaw / SRE style)
+
+A tree where the root is the incident outcome and the branches are the contributing factors. Each factor can have its own sub-factors. Unlike 5 Whys, the tree allows for parallel chains and AND/OR relationships.
+
+```
+Outcome: API returned 500s for 22 minutes
+├── Connection pool exhausted
+│   ├── Batch job leaked connections (code defect)
+│   │   ├── Early-return bypassed context manager
+│   │   └── Test suite did not cover error path
+│   └── Pool size set conservatively for cost reasons
+│       └── Capacity planning predates current traffic shape
+├── Alert fired late
+│   ├── Threshold set at pool 95% (no warn at 80%)
+│   └── PagerDuty escalation path stale (rotated owner)
+└── Mitigation took 12 minutes
+    ├── Runbook missing pool-restart command
+    └── New on-call had not shadowed a database incident
+```
+
+**Strengths:** captures the multi-factor nature of complex systems failures. Maps cleanly to action items (one mitigation per leaf or sub-tree).
+
+**Limits:** longer to produce. Requires a facilitator who can keep the team from arguing the tree structure rather than the substance.
+
+### Choosing between them
+
+| Use 5 Whys when | Use Causal Tree when |
+|---|---|
+| Single clear chain of cause | Multiple contributing factors |
+| Sev 3 / Sev 4 incidents | Sev 0 / Sev 1 / Sev 2 incidents |
+| Pressed for time | Recurring class of failure |
+| Audience is a small team | Audience includes execs, multiple teams |
+
+## Root Cause vs Contributing Factors
+
+A common post-mortem failure mode is to declare a single "root cause" and stop. This is Perrow's Normal Accident Theory in action: complex systems fail because multiple contributing factors align, not because one thing broke. A post-mortem that names one root cause and prescribes one fix is usually incomplete.
+
+| | Root cause | Contributing factor |
+|---|---|---|
+| **Definition** | The conditions that, if absent, would have prevented the incident | Conditions that increased the probability or severity but were not individually sufficient |
+| **Example** | "Connection-pool exhaustion in service X" | "Stale on-call rotation", "missing runbook entry", "no canary deploy" |
+| **Action implication** | Always addressed | Each addressed unless explicitly accepted with rationale |
+
+Allspaw's reading of Perrow argues that in tightly-coupled complex systems, there is rarely a single cause; the appropriate framing is "the set of contributing factors that aligned". Write the post-mortem accordingly.

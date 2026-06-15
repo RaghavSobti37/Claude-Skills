@@ -403,3 +403,126 @@ For long-running scripts, prefer:
 | Create initiative | `initiativeCreate(input: InitiativeCreateInput!)` |
 
 Full schema: https://studio.apollographql.com/public/Linear-API/
+
+---
+
+## 11. Quick Inline Examples (from SKILL.md)
+
+Linear's API is GraphQL-only, served at `https://api.linear.app/graphql`. Auth is via personal API key (`Authorization: <key>`) or OAuth2.
+
+**List issues for a team in the active cycle**:
+```graphql
+query ActiveCycleIssues($teamKey: String!) {
+  team(id: $teamKey) {
+    activeCycle {
+      issues(first: 100) {
+        nodes {
+          identifier
+          title
+          state { name type }
+          assignee { name }
+          priority
+          estimate
+        }
+      }
+    }
+  }
+}
+```
+
+**Create an issue**:
+```graphql
+mutation CreateIssue($input: IssueCreateInput!) {
+  issueCreate(input: $input) {
+    success
+    issue { id identifier url }
+  }
+}
+```
+Variables:
+```json
+{
+  "input": {
+    "teamId": "team-uuid-here",
+    "title": "Support TOTP for SSO logins",
+    "description": "Customers on Enterprise plan want TOTP as a second factor.",
+    "priority": 2,
+    "labelIds": ["label-uuid-area-auth"],
+    "projectId": "project-uuid-self-serve-q3"
+  }
+}
+```
+
+**Transition an issue to a new state**:
+```graphql
+mutation MoveIssue($id: String!, $stateId: String!) {
+  issueUpdate(id: $id, input: { stateId: $stateId }) {
+    success
+    issue { identifier state { name } }
+  }
+}
+```
+
+**Find all open Urgent issues across the workspace**:
+```graphql
+query UrgentOpen {
+  issues(
+    filter: {
+      priority: { eq: 1 }
+      state: { type: { in: [backlog, unstarted, started] } }
+    }
+    first: 50
+  ) {
+    nodes { identifier title team { key } assignee { name } }
+  }
+}
+```
+
+**Paginate through a large result set**:
+```graphql
+query AllOpenIssues($after: String) {
+  issues(first: 250, after: $after, filter: { state: { type: { neq: completed } } }) {
+    pageInfo { hasNextPage endCursor }
+    nodes { identifier title }
+  }
+}
+```
+Loop until `pageInfo.hasNextPage` is false, passing `endCursor` as the next `after`.
+
+**Bulk update via batch mutation**:
+```graphql
+mutation BatchLabel($ids: [String!]!, $labelId: String!) {
+  issueBatchUpdate(ids: $ids, input: { labelIds: [$labelId] }) {
+    success
+    issues { identifier }
+  }
+}
+```
+
+**Webhook payload shape** (for `Issue` events):
+```json
+{
+  "action": "create",
+  "type": "Issue",
+  "data": { "id": "...", "identifier": "ENG-123", "title": "..." },
+  "url": "https://linear.app/acme/issue/ENG-123",
+  "createdAt": "2026-05-21T12:00:00.000Z",
+  "webhookId": "...",
+  "webhookTimestamp": 1716292800000
+}
+```
+Always validate the `Linear-Signature` header against your webhook secret.
+
+### CLI Patterns
+
+Linear does not ship a first-party CLI, but several community CLIs exist; alternatively, a thin shell wrapper around `curl` plus GraphQL queries is the most portable pattern.
+
+```bash
+# Minimal curl-based query helper
+linear_query() {
+  curl -s -X POST https://api.linear.app/graphql \
+    -H "Authorization: $LINEAR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"query\": \"$1\"}"
+}
+```

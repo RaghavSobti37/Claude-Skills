@@ -156,3 +156,138 @@ A triage program is working when:
 - Reforge "Customer Development" — https://www.reforge.com/programs/customer-development
 - ProductPlan, "How to Manage Product Feedback" — https://www.productplan.com/learn/product-feedback/
 - Patrick Campbell (ProfitWell), "Pricing and Voice of Customer" — https://www.profitwell.com/
+
+---
+
+## Frameworks
+
+### Marty Cagan: Request → Opportunity → Solution
+
+Cagan separates three things customers and the inbound stream conflate:
+
+| Layer | What it is | Example |
+|---|---|---|
+| **Request** | What the customer literally asked for | "Add an export to PDF button" |
+| **Opportunity** | The underlying job or problem | "I need to share results with my CFO who doesn't have a login" |
+| **Solution** | The chosen response | "Shareable read-only link" or "PDF export" or "CSV + email digest" |
+
+The triage workflow's job is to convert each Request into an Opportunity and route the Opportunity to the appropriate discovery / prioritization process. The literal Request is rarely the right thing to build.
+
+### Kano Model (Noriaki Kano, 1984)
+
+Kano classifies features by how their presence or absence affects customer satisfaction. The five categories:
+
+| Category | Effect of having it | Effect of missing it | Example (SaaS analytics tool) |
+|---|---|---|---|
+| **Basic / Must-be** | Expected; satisfaction does not increase | Severe dissatisfaction | Login works; data export exists |
+| **Performance / One-dimensional** | More is linearly better | Less is linearly worse | Query speed; dashboard load time |
+| **Delight / Attractive** | Disproportionate satisfaction | Customer does not miss it | Natural-language query; collaborative cursors |
+| **Indifferent** | No effect | No effect | Theme color picker (for most users) |
+| **Reverse** | Causes dissatisfaction | Improves satisfaction | An overly chatty AI assistant |
+
+Kano categories shift over time: today's delighter becomes tomorrow's basic. The categorization in this triage workflow is the team's current snapshot.
+
+### Reforge: Layered customer development
+
+Reforge frames customer development as concentric rings: stated needs → revealed jobs → underlying motivations. The triage workflow operates at the first ring (stated needs, captured in the request text). It explicitly routes high-signal items into deeper discovery work to surface the second and third rings.
+
+### ProductPlan: Request management
+
+Three principles, drawn from ProductPlan's request-management practice and adopted here:
+
+1. **Always acknowledge.** Every request, even ones that get a "no", gets a response. Customer silence is the fastest path to lost trust.
+2. **Sometimes commit.** Commit only when the item is scored, prioritized, and on the roadmap with a date the team will actually hit.
+3. **Rarely promise.** Avoid "we'll definitely build that" in any external channel until the item is funded, scoped, and started.
+
+## Workflow
+
+### Phase 1: Intake & normalization
+
+For every inbound feedback item, capture a normalized record with these fields:
+
+| Field | Required | Notes |
+|---|---|---|
+| `id` | yes | Internal ID |
+| `channel` | yes | One of: support, sales, social, nps, in_app, exec_ask, partner, customer_interview |
+| `customer_id` | yes | Anonymous OK; needed for dedup and segment analysis |
+| `segment` | recommended | e.g. SMB, mid-market, enterprise, prosumer |
+| `raw_text` | yes | The verbatim ask — do not paraphrase at intake |
+| `received_at` | yes | ISO-8601 |
+| `submitter` | yes | The internal person who logged it (Support agent, AE, PM) |
+| `opportunity_area` | optional | Coarse area, populated at triage (e.g. onboarding, reporting, integrations) |
+
+Normalization rules:
+
+- Capture the verbatim. Paraphrasing at intake loses signal. The PM can paraphrase at triage.
+- One request per record. If a customer email contains 3 asks, create 3 records.
+- Do not pre-judge at intake. Even off-topic items get logged and triaged later (they are signal about channel hygiene).
+
+### Phase 2: Triage (run `feedback_triage.py`)
+
+The Python tool ingests the normalized intake JSON and produces:
+
+1. **Deduplicated clusters** — items grouped by similar opportunity, even if the literal requests differ.
+2. **Kano category guess** — heuristic based on keyword signals (transparent and documented; the PM should override).
+3. **Categorization** — Bug / Feature / Question / Strategy.
+4. **Priority score** — combined Kano weight × volume × segment × strategic-alignment.
+5. **Suggested response template** — Will-build / Won't-build / Exploring, parameterized by request and customer name.
+
+### Phase 3: Categorization
+
+For each clustered item, categorize:
+
+| Category | Definition | Action |
+|---|---|---|
+| **Bug** | Existing functionality is broken | Route to engineering bug queue, not PM backlog |
+| **Feature request** | New functionality | Continue to scoring |
+| **Question** | Customer needs help, not a product change | Route to support / docs; flag if recurring (it's a doc gap) |
+| **Strategy** | Item implies a strategic direction (new market, new pricing model) | Route to leadership, not the backlog |
+
+### Phase 4: Scoring
+
+Each Feature request gets three scores:
+
+| Dimension | Range | Source |
+|---|---|---|
+| **Kano category** | basic / performance / delight / indifferent / reverse | Heuristic + PM override |
+| **Volume** | count of customer requests | Tool aggregates after dedup |
+| **Segment weight** | enterprise=4, mid-market=2, SMB=1 (configurable) | From customer record |
+| **Strategic alignment** | 0-2 | Manual; does it advance current strategic theme? |
+
+The composite priority is:
+
+```
+priority = (kano_weight × log10(volume + 1) × max_segment_weight × (1 + strategic_alignment))
+```
+
+Where Kano weights default to:
+- Basic = 4 (gaps here are existential)
+- Performance = 2
+- Delight = 3
+- Indifferent = 0
+- Reverse = -3 (negative — actively avoid building)
+
+This is a coarse score for triage routing, not a final RICE/ICE. Items above a threshold get routed to `prioritization-frameworks/` for proper scoring.
+
+### Phase 5: Response
+
+Every customer who submitted a request gets a response, even for "won't build". Three response templates (in `assets/response_templates.md`):
+
+| Template | When | Tone |
+|---|---|---|
+| **Will-build** | Item is scored, prioritized, on roadmap with date | Specific, dated, conservative |
+| **Exploring** | Item is interesting, not yet scoped | Acknowledge, do not commit, invite follow-up |
+| **Won't-build** | Item is out of scope or low-signal | Respectful, explanation, sometimes offer workaround |
+
+The response is sent by the channel originator (support agent, AE, CSM) — not the PM directly — so the customer relationship stays with the existing owner.
+
+### Phase 6: Feed forward
+
+| Output | Destination |
+|---|---|
+| High-priority Feature requests | `prioritization-frameworks/` for RICE/ICE scoring |
+| Recurring opportunity themes | `discovery/identify-assumptions/` to surface implicit assumptions |
+| Top customer voices for an opportunity | `discovery/interview-synthesis/` (target list for follow-up interviews) |
+| Backlog-ready items | `wwas/` or `job-stories/` for backlog format |
+| Bugs | engineering bug tracker |
+| Strategic items | exec channel or `c-level-advisor/` |

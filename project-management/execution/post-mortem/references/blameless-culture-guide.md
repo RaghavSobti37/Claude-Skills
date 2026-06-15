@@ -104,3 +104,21 @@ The mantra: blameless in the post-mortem, accountable in the action items, perfo
 - Google SRE Book, "Postmortem Culture: Learning from Failure" — https://sre.google/sre-book/postmortem-culture/
 - Charles Perrow, *Normal Accidents: Living with High-Risk Technologies* (1984)
 - Erik Hollnagel, *Safety-I and Safety-II: The Past and Future of Safety Management* (2014)
+
+---
+
+## Blameless Principles (quick reference from SKILL.md)
+
+The single most-cited reason post-mortems fail to produce learning is that participants feel unsafe. Blameless does not mean "consequence-free" — accountability still exists for following process. It means: assume that everyone involved acted reasonably given what they knew at the time, and focus on the system that surrounded their decision.
+
+### Five blameless ground rules
+
+1. **No names in the narrative.** Refer to roles, not people. "The on-call engineer", not "Sarah". Names appear only in the contacts table and the action-item owner column.
+2. **No "should have".** Replace with "the system did not surface". "The on-call should have noticed the queue depth" → "The dashboard did not alert on queue depth above 10,000".
+3. **No counterfactuals in the root cause.** "If only X had not happened" is not a cause; it is a wish. Stick to mechanisms.
+4. **Human error is a symptom, not a cause** (Dekker). When a human acted "incorrectly", the goal is to understand why that action was the locally rational thing to do.
+5. **Hindsight bias is the enemy.** What is obvious now was not obvious then. Reconstruct what was knowable in the moment, not what is knowable now.
+
+### The Allspaw test
+
+Adapted from John Allspaw's writing: after writing the post-mortem, ask: *"Would I send this document to the engineer who pushed the button, and would they feel that it represented their experience fairly?"* If no, rewrite until yes.

@@ -172,3 +172,17 @@ Scan every Linear configuration, GraphQL query, automation, or migration artifac
 - Sibling skill: `jira-expert/` -- Jira's equivalent patterns
 - Sibling skill: `scrum-master/` -- ceremony patterns that fit Linear cycles
 - Sibling skill: `execution/cycle-time-analyzer/` -- flow metrics that Linear emphasizes
+
+---
+
+## Troubleshooting
+
+| Problem | Likely Cause | Resolution |
+|---|---|---|
+| Issue did not auto-close on PR merge | PR description used wrong magic word, repo not connected to the team, or PR was merged via squash without the magic word in the commit message | Verify the GitHub integration is enabled for the team; ensure the magic word (`Fixes`, `Closes`, `Resolves`) appears in PR title or description; if squash-merging, include the magic word in the commit message |
+| GraphQL query returns null for a field that should exist | Field is gated behind a permission your API key lacks, or the field is on a different type (e.g. `Issue.project` vs `Issue.projectMilestone`) | Re-check the schema via Linear's GraphQL Playground; ensure the API key belongs to a workspace member with access to the relevant team |
+| Triage rules not firing for inbound items | Team does not have triage enabled, or the source integration is configured to write directly to a workflow state | Enable triage in team settings; reconfigure the source (e.g. Slack-to-Linear) to create issues without a state so they land in triage |
+| Bulk update script hits 429 errors | Exceeded the per-key rate limit (1,500/hr free, 5,000/hr paid) | Add exponential backoff; use `issueBatchUpdate` instead of per-issue calls; spread work over time or upgrade the plan |
+| Cycle issues show the wrong velocity | Issues without estimates are excluded from velocity; canceled work is excluded; scope changes during cycle distort the chart | Require estimates at planning time; review the cycle's scope history in Insights to spot mid-cycle additions |
+| Custom field values from Jira are missing after import | Linear has no custom fields; the Jira importer maps them to labels or appends to description, which can lose semantics | Pre-map critical Jira custom fields to label groups before import; for fields that cannot be expressed as labels, append structured key:value lines to the description |
+| Webhook deliveries are missing or duplicated | Receiver is too slow (>10s response), or the webhook secret is rotated and signatures fail validation | Respond with 2xx within 5 seconds; queue work asynchronously; verify the signature on every payload using the current secret |
