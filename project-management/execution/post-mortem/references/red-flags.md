@@ -277,3 +277,28 @@ Scan the draft post-mortem and the action-item tracker before publishing or sign
 - Sidney Dekker, *Just Culture* (3rd ed., 2017)
 - `discovery/pre-mortem/` (pre-mortem before incidents; post-mortem after)
 - `daci-framework/` (action item owner assignment)
+
+---
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---|---|---|
+| Post-mortem feels blameful despite no names | Counterfactuals ("if only", "should have") embedded in narrative | Search the document for "should", "could have", "if only"; rewrite each as a system property the team can change |
+| Action items never get completed | No single owner, no tracker ticket, or no recurring review | Each item must have one named owner and a real Jira/Linear ticket; review completion in weekly engineering ops |
+| Same incident class recurs | First post-mortem identified a symptom, not contributing factors; or contributing-factor action items were dropped | Re-run with Causal Tree instead of 5 Whys; audit what action items from the prior post-mortem were filed but not completed |
+| Team avoids difficult observations | Psychological safety low; managers in the room creating power dynamics | Run an anonymous pre-meeting survey; consider a facilitator outside the team; separate post-mortems from performance reviews explicitly |
+| Post-mortem takes more than 2 weeks to publish | Author has competing priorities or scope crept into a sweeping retrospective | Set a hard "first draft within 3 business days" rule; cut anything not directly tied to this incident; spin off broader themes into a separate retrospective |
+| Executives push for a single root cause | Cultural expectation of accountability framed as blame | Educate using Normal Accident Theory framing; provide the contributing-factor list as the answer to "what caused this"; offer one-line summary that lists top 3 contributing factors |
+| "What went well" section is empty | Author skipped the section under time pressure, or team culture undervalues positive observations | Use `assets/what_went_well_prompts.md`; require minimum 3 items before publishing; surface positives in distribution channels |
+
+## Success Criteria
+
+- Every Sev 0 / Sev 1 / Sev 2 incident has a post-mortem published within the SLA window (5 / 5 / 7 business days)
+- 100% of post-mortems pass the Allspaw test ("would I send this to the engineer who pushed the button?")
+- Each post-mortem has at least one item in "What went well" (minimum 3 preferred)
+- Every action item has a named owner, a tracker ticket, and a due date
+- Post-mortem action-item 30-day completion rate >= 70%; 90-day completion rate >= 90%
+- Recurring incident classes (same failure mode within 90 days) decrease quarter over quarter
+- New engineers can find post-mortems for their service within 5 minutes of starting
+- Post-mortems are explicitly disconnected from performance review processes; no engineer has ever been disciplined as a direct result of a post-mortem narrative

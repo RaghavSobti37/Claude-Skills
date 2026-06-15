@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-27T16:31:19+00:00",
+  "generated_at": "2026-06-15T18:17:33+00:00",
   "repository": "claude-skills",
   "skill_count": 337,
   "domain_count": 16,
@@ -56,22 +56,22 @@
       "domain": "engineering",
       "description": "Design and implement AI agent communication protocols including MCP tool schemas, Google A2A protocol, OpenAI function calling, structured inter-agent messaging, and protocol negotiation. Use when building multi-agent systems, defining tool interfaces, implementing agent-to-agent communication, or standardizing LLM tool calling patterns across platforms.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/agent-protocol",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "agent-workflow-designer",
       "domain": "engineering",
       "description": "Design and implement multi-agent orchestration systems with workflow DAGs, agent routing, handoff protocols, state management, and cost optimization. Use when building AI pipelines with multiple specialized agents, designing fan-out/fan-in patterns, or implementing fault-tolerant agent workflows.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/agent-workflow-designer",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "agenthub",
@@ -595,11 +595,11 @@
       "domain": "engineering",
       "description": "Build production-ready MCP (Model Context Protocol) servers with tool definitions, resource providers, prompt templates, and transport configuration. Covers OpenAPI-to-MCP conversion, TypeScript and Python implementations, testing strategies, authentication, and deployment. Use when exposing APIs to AI agents, building tool servers, or creating MCP integrations.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/mcp-server-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "migration-architect",
@@ -1159,11 +1159,11 @@
       "domain": "engineering",
       "description": "Implement production-grade Stripe integrations for SaaS billing. Covers subscription lifecycle management, checkout sessions, plan upgrades/downgrades with proration, usage-based billing, idempotent webhook handlers, customer portal, dunning, SCA compliance, and local testing with Stripe CLI. Provides patterns for Next.js, Express, and Django.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/stripe-integration-expert",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "tdd-guide",
@@ -1175,8 +1175,8 @@
         "testing",
         "red-green-refactor"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "engineering/tdd-guide",
       "has_scripts": true,
       "has_references": true
@@ -1322,8 +1322,8 @@
         "keywords",
         "ratings"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/app-store-optimization",
       "has_scripts": true,
       "has_references": true
@@ -1549,11 +1549,11 @@
       "domain": "marketing",
       "description": "Library of 139+ proven marketing strategies organized by category, stage, budget, and timeline. Covers content, SEO, paid ads, social, email, partnerships, events, product-led growth, and unconventional tactics. Use when brainstorming marketing ideas, planning growth strategies, or when user mentions marketing ideas, growth ideas, how to market, marketing strategies, marketing tactics, ways to promote, campaign ideation, creative brainstorming, or trend analysis.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/marketing-ideas",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "marketing-ops",
@@ -1569,13 +1569,13 @@
     {
       "name": "marketing-psychology",
       "domain": "marketing",
-      "description": "Apply behavioral psychology and cognitive biases to marketing for conversion optimization, pricing strategy, copy improvement, and campaign design. Includes 70+ mental models organized by application, diagnostic frameworks for identifying behavioral barriers, and implementation guides with before/after examples. Use when applying psychology to marketing, optimizing conversions, improving pricing pages, or when user mentions psychology, cognitive bias, persuasion, behavioral science, mental models, why people buy, decision-making, consumer behavior, or neuromarketing.",
+      "description": "Apply behavioral psychology, cognitive biases, and 70+ mental models to marketing for conversion optimization, pricing, copy, and campaigns. Use for persuasion, behavioral science, why people buy, consumer behavior, or neuromarketing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/marketing-psychology",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "marketing-strategy-pmm",
@@ -1616,11 +1616,11 @@
         "content-at-scale",
         "data-driven-seo"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/programmatic-seo",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "schema-markup",
@@ -1645,11 +1645,11 @@
       "domain": "marketing",
       "description": "Comprehensive technical SEO auditing covering crawlability, indexation, Core Web Vitals, on-page optimization, content quality, and competitive gap analysis. Includes 85-point audit checklist, severity-weighted scoring, and prioritized remediation plans.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "marketing/seo-audit",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "seo-specialist",
@@ -2314,8 +2314,8 @@
         "resilience-testing",
         "financial-services"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/dora-compliance-expert",
       "has_scripts": true,
       "has_references": true
@@ -2383,8 +2383,8 @@
         "information-security",
         "cloud-security"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/information-security-manager-iso27001",
       "has_scripts": true,
       "has_references": true
@@ -2400,8 +2400,8 @@
         "tls",
         "compliance-automation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/infrastructure-compliance-auditor",
       "has_scripts": true,
       "has_references": true
@@ -2483,8 +2483,8 @@
         "maturity-assessment",
         "risk-management"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/nist-csf-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2499,8 +2499,8 @@
         "tokenization",
         "cardholder-data"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/pci-dss-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2560,8 +2560,8 @@
       "domain": "ra-qm-team",
       "description": "ISO 13485 Quality Management System implementation and maintenance for medical device organizations. Provides QMS design, documentation control, internal auditing, CAPA management, and certification support.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/quality-manager-qms-iso13485",
       "has_scripts": true,
       "has_references": true
@@ -2594,8 +2594,8 @@
         "risk-register",
         "medical-device"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "ra-qm-team/risk-management-specialist",
       "has_scripts": true,
       "has_references": true
@@ -2866,11 +2866,11 @@
         "value-based-pricing",
         "revenue"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "business-growth/pricing-strategy",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "referral-program",
@@ -2884,11 +2884,11 @@
         "word-of-mouth",
         "acquisition"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "business-growth/referral-program",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "revenue-operations",
@@ -3233,7 +3233,7 @@
     {
       "name": "agile-coach",
       "domain": "project-management",
-      "description": "Expert agile coaching for team transformation, framework selection, maturity assessment, and organizational change management. Use when selecting an agile framework for a team, coaching through Tuckman development stages, facilitating retrospectives, assessing organizational agile maturity, or designing a transformation roadmap.",
+      "description": "Expert agile coaching: framework selection, maturity assessment, retrospective facilitation, transformation roadmaps. Use when selecting an agile framework, coaching teams, facilitating retrospectives, or designing a transformation.",
       "tags": [
         "agile",
         "coaching",
@@ -3241,8 +3241,8 @@
         "scrum",
         "kanban"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/agile-coach",
       "has_scripts": true,
       "has_references": true
@@ -3250,7 +3250,7 @@
     {
       "name": "atlassian-admin",
       "domain": "project-management",
-      "description": "Atlassian Administrator for managing and organizing Atlassian products, users, customization of the Atlassian suite, permissions, security, integrations, system configuration, and all administrative features. Use for user provisioning, global settings, security policies, system optimization, and org-wide Atlassian governance.",
+      "description": "Administer the Atlassian suite (Jira/Confluence): user provisioning, groups, SSO/SAML, permissions, security policies, marketplace apps, backups, and org-wide governance. Use for admin config, access management, and system optimization.",
       "tags": [
         "atlassian",
         "jira",
@@ -3258,8 +3258,8 @@
         "administration",
         "permissions"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/atlassian-admin",
       "has_scripts": true,
       "has_references": true
@@ -3267,15 +3267,15 @@
     {
       "name": "atlassian-templates",
       "domain": "project-management",
-      "description": "Atlassian Template and Files Creator/Modifier expert for creating, modifying, and managing Jira and Confluence templates, blueprints, custom layouts, reusable components, and standardized content structures. Use for building org-wide templates, custom blueprints, page layouts, and automated content generation.",
+      "description": "Create, modify, and govern reusable Jira and Confluence templates, blueprints, and standardized content structures. Use for org-wide templates, custom blueprints, page layouts, and automated content generation.",
       "tags": [
         "atlassian",
         "jira-templates",
         "confluence-templates",
         "workflows"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-15",
       "path": "project-management/atlassian-templates",
       "has_scripts": true,
       "has_references": true
@@ -3283,10 +3283,10 @@
     {
       "name": "pm-1on1s",
       "domain": "project-management",
-      "description": "Structured PM 1:1 templates by partner type — with manager, engineering manager partner, designer, IC reports — grounded in Radical Candor, the GROW coaching model, and the Manager Tools 1:1 framework.",
+      "description": "Structured PM 1:1 templates by partner type — manager, engineering-manager partner, designer, IC reports, cross-functional — grounded in Radical Candor, the GROW coaching model, and the Manager Tools 1:1 framework.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/career/pm-1on1s",
       "has_scripts": false,
       "has_references": true
@@ -3296,8 +3296,8 @@
       "domain": "project-management",
       "description": "PM career ladder rubrics from APM through VP/CPO across product sense, execution, leadership, strategy, and communication. Includes gap analysis, growth planning, and promotion packet templates.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/career/pm-career-ladder",
       "has_scripts": false,
       "has_references": true
@@ -3307,8 +3307,8 @@
       "domain": "project-management",
       "description": "Structured PM interview preparation across product sense, execution, strategy, behavioral, and technical rounds, using CIRCLES, AARM, STAR, and the estimation framework. Calibrated to APM, PM, Senior PM, and Group PM rubrics.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/career/pm-interview-prep",
       "has_scripts": false,
       "has_references": true
@@ -3318,8 +3318,8 @@
       "domain": "project-management",
       "description": "30-60-90 day plan for a new PM joining a company or team, grounded in Michael Watkins' First 90 Days framework and the STARS situational diagnosis. Includes week-by-week plan, stakeholder map, 1:1 question bank, and first-PRD template.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/career/pm-onboarding",
       "has_scripts": false,
       "has_references": true
@@ -3327,15 +3327,15 @@
     {
       "name": "confluence-expert",
       "domain": "project-management",
-      "description": "Atlassian Confluence expert for creating and managing spaces, knowledge bases, documentation, planning, product discovery, page layouts, macros, templates, and all Confluence features. Use for documentation strategy, space architecture, content organization, and collaborative knowledge management.",
+      "description": "Confluence expert for spaces, knowledge bases, documentation, page layouts, macros, templates, and Jira-Confluence integration. Use for documentation strategy, space architecture, content organization, and collaborative knowledge management.",
       "tags": [
         "confluence",
         "knowledge-management",
         "wiki",
         "documentation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/confluence-expert",
       "has_scripts": true,
       "has_references": true
@@ -3343,7 +3343,7 @@
     {
       "name": "delivery-manager",
       "domain": "project-management",
-      "description": "Expert delivery management for release planning, deployment coordination, incident response, change management, and SLA tracking across continuous delivery pipelines. Use when planning a release, coordinating a deployment, responding to a production incident, evaluating change requests, calculating SLA/error budgets, or assessing delivery maturity.",
+      "description": "Expert delivery management for release planning, deployment strategy, incident response, change management, SLA/error-budget tracking, and DORA metrics across continuous delivery pipelines.",
       "tags": [
         "delivery",
         "release",
@@ -3351,8 +3351,8 @@
         "operations",
         "devops"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/delivery-manager",
       "has_scripts": true,
       "has_references": true
@@ -3362,8 +3362,8 @@
       "domain": "project-management",
       "description": "Experiment design expert using pretotyping and lean validation for both new product concepts and existing product features.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/brainstorm-experiments",
       "has_scripts": true,
       "has_references": true
@@ -3373,8 +3373,8 @@
       "domain": "project-management",
       "description": "Product ideation expert using Product Trio approach and Opportunity Solution Trees for both new and existing products.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/brainstorm-ideas",
       "has_scripts": true,
       "has_references": true
@@ -3382,10 +3382,10 @@
     {
       "name": "customer-interview-script",
       "domain": "project-management",
-      "description": "Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres, Fitzpatrick, and Lewis Lin.",
+      "description": "Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres, Fitzpatrick (Mom Test), and Lewis Lin.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/customer-interview-script",
       "has_scripts": false,
       "has_references": true
@@ -3395,8 +3395,8 @@
       "domain": "project-management",
       "description": "Assumption mapping expert that identifies, categorizes, and prioritizes product assumptions across 4-8 risk categories using devil's advocate analysis.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/identify-assumptions",
       "has_scripts": true,
       "has_references": true
@@ -3404,10 +3404,10 @@
     {
       "name": "interview-synthesis",
       "domain": "project-management",
-      "description": "Customer interview synthesis expert that turns raw transcripts into themed insights, an opportunity solution tree, and a follow-up question list using Teresa Torres' continuous discovery methodology.",
+      "description": "Customer interview synthesis: raw transcripts to themed insights, an opportunity solution tree, and follow-up questions (Teresa Torres continuous discovery). Use for post-interview synthesis, opportunity mapping, and evidence gap analysis.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/interview-synthesis",
       "has_scripts": true,
       "has_references": true
@@ -3415,10 +3415,10 @@
     {
       "name": "jtbd-workshop",
       "domain": "project-management",
-      "description": "Run a full Jobs-To-Be-Done discovery workshop with switch interviews, forces-of-progress mapping, and outcome statement generation across 2hr, 4hr, and 8hr formats.",
+      "description": "Run a full Jobs-To-Be-Done discovery workshop with switch interviews, forces-of-progress mapping, ODI outcome scoring, and opportunity statements across 2hr, 4hr, and 8hr formats.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/jtbd-workshop",
       "has_scripts": false,
       "has_references": true
@@ -3450,8 +3450,8 @@
       "domain": "project-management",
       "description": "Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/pre-mortem",
       "has_scripts": true,
       "has_references": true
@@ -3459,10 +3459,10 @@
     {
       "name": "value-proposition-canvas",
       "domain": "project-management",
-      "description": "Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution and product-market dimensions.",
+      "description": "Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution, product-market, and business-model dimensions. Use for jobs-to-be-done, pains/gains, and product-market-fit framing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/discovery/value-proposition-canvas",
       "has_scripts": false,
       "has_references": true
@@ -3472,8 +3472,8 @@
       "domain": "project-management",
       "description": "Design and analyze activation funnels (AARRR / AAARRR Pirate Metrics) with conversion + drop-off math, bottleneck detection, and Mermaid funnel diagrams. Includes a stdlib Python tool that emits all 6 shared PM output formats.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/activation-funnel",
       "has_scripts": true,
       "has_references": true
@@ -3483,8 +3483,8 @@
       "domain": "project-management",
       "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Extends the standard 8-section PRD with 3 AI-specific sections covering model selection, evals, guardrails, data flow, deployment, failure modes, human-in-the-loop, AI metrics, ethical review, and cost monitoring.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/ai-feature-prd",
       "has_scripts": false,
       "has_references": true
@@ -3494,8 +3494,8 @@
       "domain": "project-management",
       "description": "Backlog refinement playbook covering INVEST quality, vertical story splitting, Definition of Ready, and Definition of Done -- with a Python scorer that grades each story against INVEST and emits a ready/not-ready verdict.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/backlog-refinement",
       "has_scripts": true,
       "has_references": true
@@ -3505,8 +3505,8 @@
       "domain": "project-management",
       "description": "Closed beta program playbook covering recruitment, success criteria, communication cadence, and beta-to-GA exit gates.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/beta-program",
       "has_scripts": false,
       "has_references": true
@@ -3514,10 +3514,10 @@
     {
       "name": "brainstorm-okrs",
       "domain": "project-management",
-      "description": "OKR brainstorming and validation using the Radical Focus framework. Generates outcome-focused objectives with measurable key results and counter-metrics. Use when setting quarterly OKRs, validating existing OKRs against quality criteria, aligning team goals to company objectives, or teaching teams the difference between outputs and outcomes in goal-setting.",
+      "description": "OKR brainstorming and validation using the Radical Focus framework — outcome objectives, measurable key results, counter-metrics. Use for setting or validating quarterly OKRs, aligning team goals, or teaching outcomes vs outputs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/brainstorm-okrs",
       "has_scripts": true,
       "has_references": true
@@ -3525,10 +3525,10 @@
     {
       "name": "create-prd",
       "domain": "project-management",
-      "description": "PRD scaffolding expert that generates structured product requirements documents using an 8-section framework.",
+      "description": "PRD scaffolding expert that generates structured product requirements documents using an 8-section framework, problem framing canvas, and working-backwards press release. Use to spec a new product or feature.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/create-prd",
       "has_scripts": true,
       "has_references": true
@@ -3536,7 +3536,7 @@
     {
       "name": "customer-feedback-triage",
       "domain": "project-management",
-      "description": "Inbound customer-feedback triage system. Categorize, deduplicate, score, and respond to feature requests from support, sales, NPS, in-app feedback, and exec asks. Feeds a clean signal into prioritization-frameworks.",
+      "description": "Inbound customer-feedback triage system. Categorize, deduplicate, score, and respond to feature requests from support, sales, NPS, in-app feedback, and exec asks (Kano + Cagan). Feeds clean signal into prioritization-frameworks.",
       "tags": [
         "feedback",
         "triage",
@@ -3545,8 +3545,8 @@
         "voice-of-customer",
         "intake"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/customer-feedback-triage",
       "has_scripts": true,
       "has_references": true
@@ -3556,8 +3556,8 @@
       "domain": "project-management",
       "description": "Flow metrics analyzer (lead time, cycle time, throughput, WIP, aging WIP) for sprint and team health, with cumulative flow diagrams.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/cycle-time-analyzer",
       "has_scripts": true,
       "has_references": true
@@ -3565,10 +3565,10 @@
     {
       "name": "daci-framework",
       "domain": "project-management",
-      "description": "DACI decision facilitation framework for clarifying decision ownership, reducing decision thrash, and improving governance across product teams. Use for decision-making clarity, role assignment, governance design, and reducing ambiguity about who drives, approves, contributes, or is informed.",
+      "description": "DACI decision facilitation framework (Driver, Approver, Contributor, Informed) for clarifying decision ownership, reducing decision thrash, role assignment, and governance design across product teams.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-04-10",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/daci-framework",
       "has_scripts": false,
       "has_references": true
@@ -3578,8 +3578,8 @@
       "domain": "project-management",
       "description": "Cross-team dependency tracking with critical path analysis and Mermaid dependency graphs for program coordination.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/dependency-map",
       "has_scripts": true,
       "has_references": true
@@ -3587,10 +3587,10 @@
     {
       "name": "eol-communication",
       "domain": "project-management",
-      "description": "End-of-life product messaging and sunset communication framework for creating clear, empathetic EOL announcements that preserve customer trust and facilitate smooth transitions. Use when sunsetting a product, feature, or service.",
+      "description": "End-of-life product messaging and sunset communication framework for clear, empathetic EOL announcements that preserve customer trust. Use when sunsetting a product, feature, service, API version, or pricing tier.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-04-10",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/eol-communication",
       "has_scripts": false,
       "has_references": true
@@ -3600,8 +3600,8 @@
       "domain": "project-management",
       "description": "PM-facing playbook for phased rollouts with feature flags -- taxonomy (release / experiment / ops / permission), rollout shapes, kill-switch decision tree, holdouts, flag debt retirement, and naming conventions.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/feature-flag-strategy",
       "has_scripts": false,
       "has_references": true
@@ -3609,10 +3609,10 @@
     {
       "name": "job-stories",
       "domain": "project-management",
-      "description": "Jobs-to-Be-Done story writing that focuses on user situations and motivations rather than personas.",
+      "description": "Jobs-to-Be-Done story writing that focuses on user situations and motivations rather than personas. Use to write When/Want/So backlog items, run a JTBD discovery canvas, apply INVEST, and convert user stories to job stories.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/job-stories",
       "has_scripts": true,
       "has_references": true
@@ -3620,10 +3620,10 @@
     {
       "name": "launch-playbook",
       "domain": "project-management",
-      "description": "Internal and external launch coordination playbook covering pre-launch, launch day, and post-launch with run-of-show, comms, rollback, and retro.",
+      "description": "Internal and external launch coordination playbook covering pre-launch, launch day, and post-launch with run-of-show, comms, RACI, rollback, and retro. Use to coordinate a GA launch, major release, or re-launch.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/launch-playbook",
       "has_scripts": false,
       "has_references": true
@@ -3633,8 +3633,8 @@
       "domain": "project-management",
       "description": "Define a North Star Metric (NSM) and its input metric tree, with leading indicators, anti-metrics, and counter-metrics. Includes a Python tool that renders the metric tree as a Mermaid diagram.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/north-star-metric",
       "has_scripts": true,
       "has_references": true
@@ -3642,10 +3642,10 @@
     {
       "name": "outcome-roadmap",
       "domain": "project-management",
-      "description": "Transforms output-based feature lists into outcome-driven roadmaps with measurable impact using Now/Next/Later framing and the \"so what?\" technique. Use when converting a feature-list roadmap into outcome-driven format, communicating product strategy to executives or customers, running quarterly planning, or aligning teams around impact rather than deliverables.",
+      "description": "Transform output-based feature lists into outcome-driven Now/Next/Later roadmaps using the \"so what?\" technique. Use when converting a feature-list roadmap to outcomes, communicating product strategy, or running quarterly planning.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/outcome-roadmap",
       "has_scripts": true,
       "has_references": true
@@ -3663,8 +3663,8 @@
         "five-whys",
         "causal-tree"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/post-mortem",
       "has_scripts": false,
       "has_references": true
@@ -3674,8 +3674,8 @@
       "domain": "project-management",
       "description": "Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written. Produces a press release, an internal FAQ, and an external FAQ as a single decision artifact.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/prfaq",
       "has_scripts": false,
       "has_references": true
@@ -3692,8 +3692,8 @@
         "grandfathering",
         "monetization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/pricing-prd",
       "has_scripts": false,
       "has_references": true
@@ -3703,8 +3703,8 @@
       "domain": "project-management",
       "description": "Comprehensive prioritization framework expert covering 9 methods with scoring tools and decision guidance for product managers.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/prioritization-frameworks",
       "has_scripts": true,
       "has_references": true
@@ -3712,10 +3712,10 @@
     {
       "name": "product-vision",
       "domain": "project-management",
-      "description": "Write the Product Vision document -- the narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's strategic narrative, and Cagan's 10-year framing.",
+      "description": "Write the Product Vision document -- the durable 5-10 year narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's strategic narrative, Cagan's 10-year framing, and Amazon Working Backwards.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/product-vision",
       "has_scripts": false,
       "has_references": true
@@ -3723,10 +3723,10 @@
     {
       "name": "quarterly-planning",
       "domain": "project-management",
-      "description": "Full quarterly planning cycle -- kickoff, mid-quarter check-in, and close -- using Wodtke's Radical Focus, Cagan strategy, and Reforge cycle frameworks.",
+      "description": "Run the full quarterly planning cycle -- pre-quarter homework, kickoff, weekly Wodtke rhythm, mid-quarter check-in, and close retro -- using Radical Focus, Cagan strategy, and the Reforge cycle around your OKRs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/quarterly-planning",
       "has_scripts": false,
       "has_references": true
@@ -3734,10 +3734,10 @@
     {
       "name": "release-notes",
       "domain": "project-management",
-      "description": "Structured release notes creation that translates technical changes into user-benefit-oriented communication.",
+      "description": "Structured release notes that translate technical changes (tickets, changelogs, git logs, PRDs) into user-benefit communication. Use for product releases, sprint demos, changelog maintenance, or customer release announcements.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/release-notes",
       "has_scripts": true,
       "has_references": true
@@ -3745,10 +3745,10 @@
     {
       "name": "roadmap-communication",
       "domain": "project-management",
-      "description": "Same roadmap, three audiences. Produce executive, customer, and internal variants of a single roadmap with appropriate framing, detail level, and risk language for each.",
+      "description": "Same roadmap, three audiences. Produce executive, customer, and internal roadmap variants with audience-appropriate framing, detail, and risk language. Use for quarterly roadmap publication, board packets, and customer/sales roadmaps.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/roadmap-communication",
       "has_scripts": false,
       "has_references": true
@@ -3780,8 +3780,8 @@
       "domain": "project-management",
       "description": "Generate weekly executive status updates from Jira/Linear data exports. Produces a structured \"highlights / blockers / risks / asks / what's next\" briefing in markdown, Confluence, Notion, Linear, JSON, or Mermaid.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/status-update-generator",
       "has_scripts": true,
       "has_references": true
@@ -3789,10 +3789,10 @@
     {
       "name": "story-mapping",
       "domain": "project-management",
-      "description": "Jeff Patton-style user story mapping for visualizing user journeys and translating product strategy into prioritized, deliverable work. Use for release planning, MVP definition, backlog sequencing, and cross-team alignment on what to build and in what order.",
+      "description": "Jeff Patton-style user story mapping for visualizing user journeys, MVP definition, release planning, backlog sequencing, and cross-team alignment.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-04-10",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/story-mapping",
       "has_scripts": false,
       "has_references": true
@@ -3800,10 +3800,10 @@
     {
       "name": "story-splitting",
       "domain": "project-management",
-      "description": "Vertical-slicing playbook with 9 canonical patterns for splitting epics into shippable user stories without losing user value.",
+      "description": "Vertical-slicing playbook with 9 canonical Lawrence patterns for splitting epics into shippable user stories without losing user value. Use when a story is too big, exceeds cycle time, or fails INVEST-S.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/story-splitting",
       "has_scripts": false,
       "has_references": true
@@ -3813,8 +3813,8 @@
       "domain": "project-management",
       "description": "Structured meeting summarization that captures decisions, action items, and open questions in a consistent format.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/summarize-meeting",
       "has_scripts": true,
       "has_references": true
@@ -3833,10 +3833,10 @@
     {
       "name": "wwas",
       "domain": "project-management",
-      "description": "Why-What-Acceptance backlog format that connects every work item to strategic business objectives.",
+      "description": "Why-What-Acceptance backlog format that connects every work item to strategic business objectives, with INVEST quality gates and observable acceptance criteria.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-04",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/execution/wwas",
       "has_scripts": true,
       "has_references": true
@@ -3866,7 +3866,7 @@
     {
       "name": "jira-expert",
       "domain": "project-management",
-      "description": "Atlassian Jira expert for creating and managing projects, planning, product discovery, JQL queries, workflows, custom fields, automation, reporting, and all Jira features. Use for Jira project setup, configuration, advanced search, dashboard creation, workflow design, and technical Jira operations.",
+      "description": "Jira expert for project setup, workflow design, JQL queries, custom fields, automation rules, dashboards, and reporting. Use for Jira configuration, advanced search, board and dashboard creation, and technical Jira operations.",
       "tags": [
         "jira",
         "jql",
@@ -3874,8 +3874,8 @@
         "automation",
         "dashboards"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/jira-expert",
       "has_scripts": true,
       "has_references": true
@@ -3883,7 +3883,7 @@
     {
       "name": "linear-expert",
       "domain": "project-management",
-      "description": "Linear expert for team and workspace administration, Cycles, Projects, Initiatives, Roadmaps, GraphQL API queries, automations, triage workflows, GitHub integration, bulk operations, and Jira-to-Linear migration. Use for Linear configuration, workflow design, GraphQL authoring, and modern PM-friendly issue tracking at scale.",
+      "description": "Linear expert for workspace/team admin, Cycles, Projects, Initiatives, Roadmaps, GraphQL API queries, triage workflows, GitHub integration, bulk operations, and Jira-to-Linear migration.",
       "tags": [
         "linear",
         "graphql",
@@ -3893,8 +3893,8 @@
         "triage",
         "migration"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/linear-expert",
       "has_scripts": false,
       "has_references": true
@@ -3902,7 +3902,7 @@
     {
       "name": "notion-pm",
       "domain": "project-management",
-      "description": "Notion expert for product management workflows. Covers database design for PRDs, OKRs, Roadmaps, and Decisions; property types (relation, rollup, formula); view design (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored Markdown blocks; Notion REST API patterns; and sync patterns with Jira, Linear, and GitHub.",
+      "description": "Notion expert for product management workflows: database design for PRDs, OKRs, Roadmaps, and Decisions; property types (relation, rollup, formula); view design (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored Markdown; Notion REST API; and sync with Jira, Linear, and GitHub.",
       "tags": [
         "notion",
         "databases",
@@ -3911,8 +3911,8 @@
         "roadmap",
         "decisions"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-21",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/notion-pm",
       "has_scripts": false,
       "has_references": true
@@ -3920,7 +3920,7 @@
     {
       "name": "productboard-expert",
       "domain": "project-management",
-      "description": "Productboard expert for workspace administration, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API patterns, and two-way integration with Jira/Linear/Azure DevOps. Use for Productboard setup, prioritization workflows, and programmatic operations against the API.",
+      "description": "Productboard expert for workspace setup, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API automation, and two-way Jira/Linear/ Azure DevOps/Salesforce/Intercom/Slack integration. Use for Productboard administration, prioritization workflows, and programmatic API operations.",
       "tags": [
         "productboard",
         "prioritization",
@@ -3931,8 +3931,8 @@
         "intercom",
         "slack"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-22",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/productboard-expert",
       "has_scripts": false,
       "has_references": true
@@ -3940,7 +3940,7 @@
     {
       "name": "program-manager",
       "domain": "project-management",
-      "description": "Expert program management for multi-project coordination, portfolio governance, dependency tracking, benefits realization, and cross-functional stakeholder communication. Use when standing up a new program, managing cross-project dependencies, creating governance structures, tracking benefits realization, or reporting program status to steering committees.",
+      "description": "Program management for multi-project coordination, portfolio governance, dependency tracking, benefits realization, charters, and steering-committee reporting. Use to stand up or run a program and escalate program status.",
       "tags": [
         "program",
         "portfolio",
@@ -3948,8 +3948,8 @@
         "strategic",
         "coordination"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/program-manager",
       "has_scripts": true,
       "has_references": true
@@ -3957,7 +3957,7 @@
     {
       "name": "scrum-master",
       "domain": "project-management",
-      "description": "Data-driven Scrum Master with sprint health scoring, Monte Carlo velocity forecasting, retrospective pattern analysis, and psychological safety frameworks. Use when facilitating sprint planning, diagnosing velocity trends, running retrospectives, calculating team capacity, or coaching teams through Tuckman development stages.",
+      "description": "Data-driven Scrum Master for sprint health scoring, Monte Carlo velocity forecasting, retrospective analysis, capacity planning, and Tuckman team coaching. Use when facilitating sprint planning, diagnosing velocity, or running retrospectives.",
       "tags": [
         "scrum",
         "agile",
@@ -3965,8 +3965,8 @@
         "retrospective",
         "impediments"
       ],
-      "version": "2.0.0",
-      "updated": "2026-02-15",
+      "version": "2.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/scrum-master",
       "has_scripts": true,
       "has_references": true
@@ -3974,15 +3974,15 @@
     {
       "name": "senior-pm",
       "domain": "project-management",
-      "description": "Senior Project Manager for enterprise software, SaaS, and digital transformation projects. Specializes in portfolio management, quantitative risk analysis, resource optimization, stakeholder alignment, and executive reporting. Uses advanced methodologies including EMV analysis, Monte Carlo simulation, WSJF prioritization, and multi-dimensional health scoring.",
+      "description": "Senior Project Manager for enterprise software, SaaS, and digital transformation. Specializes in portfolio management, quantitative risk analysis (EMV, Monte Carlo), WSJF/RICE/ICE prioritization, resource optimization, stakeholder mapping, and executive RAG reporting. Use for portfolio health reviews, board-ready status reports, and multi-project risk/capacity analysis.",
       "tags": [
         "project-management",
         "stakeholder-management",
         "risk",
         "planning"
       ],
-      "version": "2.0.0",
-      "updated": "2026-03-04",
+      "version": "2.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/senior-pm",
       "has_scripts": true,
       "has_references": true
@@ -3990,15 +3990,15 @@
     {
       "name": "sprint-retrospective",
       "domain": "project-management",
-      "description": "Data-driven sprint retrospectives with velocity analytics, contributor insights, code quality trends, and actionable improvement recommendations. Analyzes git history to produce comprehensive retrospective reports with session detection, churn hotspots, work pattern analysis, and sprint-over-sprint comparison dashboards.",
+      "description": "Data-driven sprint retrospectives from git history — velocity analytics, cycle/ lead time, contributor insights, code churn hotspots, bus factor, work-session detection, and sprint-over-sprint comparison reports. Use to run a retrospective, analyze team velocity/throughput, or generate a retro report from commit history.",
       "tags": [
         "retrospective",
         "agile",
         "continuous-improvement",
         "team"
       ],
-      "version": "2.0.0",
-      "updated": "2026-03-18",
+      "version": "2.0.1",
+      "updated": "2026-06-15",
       "path": "project-management/sprint-retrospective",
       "has_scripts": true,
       "has_references": true

@@ -5,6 +5,32 @@ All notable changes to the Claude Skills Library will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.9.0] - 2026-06-15 (Token efficiency — progressive disclosure)
+
+Behavior-preserving refactor that cuts the per-invocation token cost of the heaviest skills by moving deep content into load-on-demand `references/` files, following the Anthropic Agent Skills three-tier loading model (description always resident → SKILL.md body on trigger → references on demand).
+
+### Changed
+
+**73 token-heavy skills refactored to progressive disclosure.** Oversized `SKILL.md` bodies were slimmed to lean "maps" (overview, core capabilities, when-to-use, and a `## References` section with "read this when…" pointers), with the deep content (frameworks, procedures, tables, code, checklists) moved **verbatim** into `references/` files. No knowledge was dropped — distinctive-content retention was spot-checked across the affected skills.
+
+- **Top 20 cross-domain offenders** (engineering, marketing, ra-qm-team, business-growth, project-management): bodies cut from 5.6K–18.6K to 1.0K–1.8K tokens each; combined per-trigger cost ~155K → ~28K tokens. 70 new reference files.
+- **All 53 token-heavy Project Management skills**: PM-domain Tier-2 body cost 226,646 → 91,516 tokens (−60%); every one of the 66 PM skills now uses progressive disclosure (heavy bodies 53 → 0). 69 reference files added/extended.
+- Affected skill `metadata.version` bumped and `metadata.updated` set to 2026-06-15; a few oversized always-resident `description` fields tightened to trigger-rich single sentences.
+
+### Added
+
+- **`scripts/skill_token_audit.py`** — stdlib-only tool that scores every skill on the three loading tiers (description / body / references token cost), flags missing progressive disclosure, orphan references, and oversized bodies/descriptions, and emits a refactor-priority worklist (`table`, `summary`, or `json`).
+
+### Fixed
+
+- **Broken reference links** in several PM skills (`program-manager`, `delivery-manager`, `agile-coach`) that pointed at `references/*.md` files which never existed — content is now created and correctly linked.
+- **Orphan references** across 11 skills (9 PM + 2 cross-domain) whose `references/` files existed but were never linked from the body — now linked with "read this when…" notes.
+
+### Notes
+
+- `cli/skills.json` and `registry.json` regenerated.
+- Token counts are chars/4 estimates used for ranking, not billing.
+
 ## [4.7.0] - 2026-05-22 (Tier 3 of PM depth)
 
 ### Added

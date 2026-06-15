@@ -225,3 +225,53 @@ Scan the triage queue, the `feedback_triage.py` output, and the response distrib
 - `prioritization-frameworks/` (for proper RICE/ICE scoring downstream)
 - `discovery/interview-synthesis/` (for follow-up interviews with top clusters)
 - `c-level-advisor/` (for strategy-routed items)
+
+---
+
+## Common Traps
+
+### Squeaky-wheel bias
+
+The loudest customer is rarely the average customer. One enterprise account screaming for a feature does not equal demand. The volume score (count of distinct customers requesting) is the antidote; segment weight prevents under-counting enterprise asks, but does not let one enterprise ask dominate alone.
+
+### Sales-driven roadmap
+
+A common pattern: every closed-won deal comes with a list of "promised" features. The roadmap fills with one-off enterprise asks that benefit single customers. Mitigations:
+
+- Sales-channel requests count toward volume only if the customer is willing to be quoted as wanting it (filters tire-kickers).
+- A request with a single customer behind it scores low even with high segment weight.
+- Track sales-promised features separately from PM-prioritized features; report monthly on the gap.
+
+### HiPPO override
+
+Highest-Paid Person's Opinion. An exec sends a one-liner request and it jumps the queue. The `exec_ask` channel is a real channel — execs do have customer context — but the request should run through the same triage as everything else. Use the response policy: acknowledge, sometimes commit, rarely promise.
+
+### Confusing requests with discovery
+
+A high-volume request for "X" does not mean X is the right solution. It is signal that an opportunity exists in the area of X. Discovery (interviews, prototypes, experiments) determines the actual solution. The triage routes signal into discovery — it does not replace discovery.
+
+### Acknowledgment debt
+
+Failing to respond to inbound requests teaches customers that submitting feedback is futile. The compounding cost is loss of signal volume — fewer customers bother submitting next quarter. Acknowledgment is non-negotiable, even for items the team will not build.
+
+## Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---|---|---|
+| Same customer appears in multiple clusters with different requests | Customer submitted multiple distinct opportunities; correct behavior | Confirm one record per ask is the intake rule; review whether the asks are genuinely distinct or whether the customer is fishing |
+| Kano heuristic mis-categorizes a delighter as performance | The keyword heuristic is intentionally coarse | The Kano column is a starting guess; PM should override during review. Document overrides for future heuristic tuning |
+| Volume score dominates over enterprise signal | Single enterprise asks have volume = 1 and lose to consumer-volume asks | Raise the segment weight for enterprise (default 4); if a single enterprise ask is strategically critical, route it via the `strategic_alignment` boost rather than overriding volume |
+| Exec asks bypass triage | Cultural pattern; not a tool problem | Route every exec ask through the same intake form; report monthly on exec-channel volume and conversion to roadmap; surface the cost of HiPPO override quantitatively |
+| Won't-build responses get hostile customer pushback | Tone too dismissive, or the response failed to explain the rationale | Use the Won't-build template's explanation pattern: acknowledge the underlying job, explain the tradeoff, offer the closest workaround |
+| Triage queue grows faster than throughput | Intake is wider than triage capacity; PM is the bottleneck | Cap triage to a weekly batch; auto-acknowledge at intake with a 2-week response SLA; train Support/CSM to pre-categorize obvious bugs |
+| Tool exits with input validation error | Required fields (`id`, `channel`, `customer_id`, `raw_text`, `received_at`) missing in JSON input | Confirm input matches the schema in Tool Reference; run `--demo` to see a valid example |
+
+## Success Criteria
+
+- 100% of inbound feedback items receive an acknowledgment within 14 days
+- Feature-request response distribution roughly: 10-20% will-build, 20-30% exploring, 50-70% won't-build (a roadmap is mostly "no")
+- Deduplication reduces raw request volume by 30-60% (varies by channel mix and product maturity)
+- Sales-promised feature delta from PM-prioritized list is reported monthly to leadership
+- HiPPO exec-channel items are processed through triage at the same rate as other channels; exec-channel conversion rate to roadmap is tracked
+- At least one customer interview per quarter is sourced from triage clusters (closing the loop from triage to discovery)
+- Triage cadence is regular: at minimum monthly, ideally weekly for active products
