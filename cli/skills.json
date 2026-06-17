@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-17T08:03:26+00:00",
+  "generated_at": "2026-06-17T08:51:39+00:00",
   "skill_count": 337,
   "domain_count": 16,
   "skills": [
@@ -36,8 +36,8 @@
       "domain": "engineering",
       "description": "Designs multi-agent system architectures with orchestration patterns, tool schemas, and performance evaluation. Use when building AI agent systems, designing agent workflows, creating tool schemas, or evaluating agent performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/agent-designer",
       "files": [
@@ -52,11 +52,13 @@
         "expected_outputs/sample_evaluation_report.json",
         "expected_outputs/sample_tool_schemas.json",
         "references/agent_architecture_patterns.md",
+        "references/core-capabilities.md",
         "references/evaluation_methodology.md",
         "references/tool_design_best_practices.md",
+        "references/troubleshooting-and-tool-reference.md",
         "tool_schema_generator.py"
       ],
-      "size_bytes": 283746,
+      "size_bytes": 287420,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -120,13 +122,15 @@
         "parallel",
         "agent-hub"
       ],
-      "version": "1.0.0",
-      "updated": "2026-04-02",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/agenthub",
       "files": [
         "SKILL.md",
         "references/multi-agent-patterns.md",
+        "references/operations-and-quality.md",
+        "references/orchestration-core.md",
         "scripts/board_manager.py",
         "scripts/dag_analyzer.py",
         "scripts/result_ranker.py",
@@ -139,7 +143,7 @@
         "skills/spawn.md",
         "skills/status.md"
       ],
-      "size_bytes": 80713,
+      "size_bytes": 83083,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -174,19 +178,21 @@
       "domain": "engineering",
       "description": "Review REST API designs for quality, consistency, and breaking changes. Lints OpenAPI specs, generates scorecards, and detects breaking changes between versions. Use when designing APIs, reviewing contracts, or managing API versioning.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/api-design-reviewer",
       "files": [
         "SKILL.md",
         "references/api_antipatterns.md",
+        "references/rest-design-patterns.md",
         "references/rest_design_rules.md",
+        "references/tooling-ci-and-troubleshooting.md",
         "scripts/api_linter.py",
         "scripts/api_scorecard.py",
         "scripts/breaking_change_detector.py"
       ],
-      "size_bytes": 199063,
+      "size_bytes": 200081,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -196,19 +202,22 @@
       "domain": "engineering",
       "description": "Generate API test suites from route definitions across frameworks: auth, input validation, contract, k6 load testing, mocking, and OpenAPI-driven generation. Use when adding new APIs, auditing test coverage, or building regression suites.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/api-test-suite-builder",
       "files": [
         "SKILL.md",
+        "references/contract-and-load-testing.md",
+        "references/route-detection-and-matrices.md",
+        "references/workflow-and-quality.md",
         "scripts/contract_validator.py",
         "scripts/coverage_analyzer.py",
         "scripts/test_generator.py"
       ],
-      "size_bytes": 75572,
+      "size_bytes": 76900,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -221,8 +230,8 @@
         "cloudformation",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/aws-solution-architect",
       "files": [
@@ -232,11 +241,13 @@
         "references/architecture_patterns.md",
         "references/best_practices.md",
         "references/service_selection.md",
+        "references/tool-reference.md",
+        "references/workflow-and-usage.md",
         "scripts/architecture_designer.py",
         "scripts/cost_optimizer.py",
         "scripts/serverless_stack.py"
       ],
-      "size_bytes": 138000,
+      "size_bytes": 139347,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -255,20 +266,22 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/azure-cloud-architect",
       "files": [
         "SKILL.md",
         "references/azure-cost-optimization.md",
+        "references/azure-decision-trees.md",
         "references/azure-services-reference.md",
         "references/azure-well-architected.md",
+        "references/azure-workflows-and-antipatterns.md",
         "scripts/azure_architecture_validator.py",
         "scripts/azure_cost_estimator.py",
         "scripts/azure_waf_scorer.py"
       ],
-      "size_bytes": 119617,
+      "size_bytes": 122042,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -305,19 +318,22 @@
       "domain": "engineering",
       "description": "Generate changelogs and release notes from Conventional Commits with semver bump detection, Keep a Changelog formatting, and monorepo scopes. Use when preparing releases, enforcing commit standards, or automating release notes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/changelog-generator",
       "files": [
         "SKILL.md",
+        "references/commit-format-and-rendering.md",
+        "references/generation-and-linting.md",
+        "references/quality-and-troubleshooting.md",
         "scripts/breaking_change_detector.py",
         "scripts/changelog_formatter.py",
         "scripts/commit_parser.py"
       ],
-      "size_bytes": 52511,
+      "size_bytes": 54331,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -333,20 +349,22 @@
         "reliability",
         "blast-radius"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/chaos-engineering",
       "files": [
         "SKILL.md",
         "references/chaos-principles-and-maturity.md",
+        "references/experiment-design-loop.md",
         "references/fault-injection-catalog.md",
         "references/gameday-playbook.md",
+        "references/gameday-workflows-and-antipatterns.md",
         "scripts/blast_radius_calculator.py",
         "scripts/chaos_experiment_designer.py",
         "scripts/gameday_planner.py"
       ],
-      "size_bytes": 124417,
+      "size_bytes": 127598,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -356,19 +374,21 @@
       "domain": "engineering",
       "description": "Design and generate CI/CD pipelines from project stack signals across GitHub Actions, GitLab CI, CircleCI, and Buildkite. Use when bootstrapping CI, migrating pipelines, adding deployment gates, or optimizing build times.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/ci-cd-pipeline-builder",
       "files": [
         "SKILL.md",
+        "references/pipeline-templates.md",
+        "references/quality-and-operations.md",
         "scripts/cache_optimizer.py",
         "scripts/pipeline_generator.py",
         "scripts/pipeline_linter.py"
       ],
-      "size_bytes": 66518,
+      "size_bytes": 67906,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -381,8 +401,8 @@
         "subagents",
         "hooks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/claude-code-mastery",
       "files": [
@@ -390,13 +410,16 @@
         "assets/agent-template.md",
         "assets/skill-template.md",
         "references/hooks-cookbook.md",
+        "references/quick-reference.md",
         "references/skill-authoring-guide.md",
         "references/subagent-patterns.md",
+        "references/tool-reference.md",
+        "references/workflows.md",
         "scripts/claudemd_optimizer.py",
         "scripts/context_analyzer.py",
         "scripts/skill_scaffolder.py"
       ],
-      "size_bytes": 124258,
+      "size_bytes": 127380,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -411,8 +434,8 @@
         "code-quality",
         "best-practices"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/code-reviewer",
       "files": [
@@ -420,11 +443,12 @@
         "references/code_review_checklist.md",
         "references/coding_standards.md",
         "references/common_antipatterns.md",
+        "references/tool_reference.md",
         "scripts/code_quality_checker.py",
         "scripts/pr_analyzer.py",
         "scripts/review_report_generator.py"
       ],
-      "size_bytes": 100878,
+      "size_bytes": 102794,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -434,19 +458,22 @@
       "domain": "engineering",
       "description": "Analyze a codebase and generate onboarding docs: architecture overviews, file maps, setup guides, runbooks, and debugging guides. Use when onboarding new team members, open-sourcing, or documenting after a major refactor.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/codebase-onboarding",
       "files": [
         "SKILL.md",
+        "references/documentation-templates.md",
+        "references/fact-gathering-and-patterns.md",
+        "references/quality-and-best-practices.md",
         "scripts/architecture_mapper.py",
         "scripts/onboarding_generator.py",
         "scripts/setup_validator.py"
       ],
-      "size_bytes": 57888,
+      "size_bytes": 59986,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -459,20 +486,23 @@
         "skill-conversion",
         "cli"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/codex-cli-specialist",
       "files": [
         "SKILL.md",
         "assets/openai-yaml-template.yaml",
+        "references/best-practices-and-troubleshooting.md",
         "references/codex-cli-guide.md",
+        "references/configuration-and-distribution.md",
         "references/cross-platform-skills.md",
+        "references/workflows.md",
         "scripts/codex_skill_converter.py",
         "scripts/cross_platform_validator.py",
         "scripts/skills_index_builder.py"
       ],
-      "size_bytes": 112479,
+      "size_bytes": 115489,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -482,19 +512,23 @@
       "domain": "engineering",
       "description": "Context management engine for AI coding agents. Use when building agent memory systems, optimizing context windows, allocating token budgets, designing RAG pipelines for code, or managing persistent multi-session agent state.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/context-engine",
       "files": [
         "SKILL.md",
+        "references/code-retrieval-patterns.md",
+        "references/context-window-strategies.md",
+        "references/memory-architecture-guide.md",
+        "references/workflows-and-quality.md",
         "scripts/context_analyzer.py",
         "scripts/context_pruner.py",
         "scripts/memory_indexer.py"
       ],
-      "size_bytes": 66960,
+      "size_bytes": 69506,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -512,20 +546,23 @@
         "data-observability",
         "data-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/data-quality-auditor",
       "files": [
         "SKILL.md",
         "references/data-quality-dimensions.md",
+        "references/dq-anti-patterns.md",
         "references/dq-check-catalog.md",
         "references/dq-incident-response.md",
+        "references/dq-maturity-model.md",
+        "references/dq-workflows.md",
         "scripts/dq_check_runner.py",
         "scripts/freshness_monitor.py",
         "scripts/schema_drift_detector.py"
       ],
-      "size_bytes": 82209,
+      "size_bytes": 83090,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -535,8 +572,8 @@
       "domain": "engineering",
       "description": "Database design with schema analysis, index optimization, and migration generation for PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries, planning migrations, or analyzing database performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/database-designer",
       "files": [
@@ -553,9 +590,11 @@
         "references/database_selection_decision_tree.md",
         "references/index_strategy_patterns.md",
         "references/normalization_guide.md",
+        "references/patterns-and-troubleshooting.md",
+        "references/workflows-and-tools.md",
         "schema_analyzer.py"
       ],
-      "size_bytes": 237820,
+      "size_bytes": 240864,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -565,19 +604,22 @@
       "domain": "engineering",
       "description": "Design relational schemas from requirements with normalization, migrations, ERDs, RLS policies, and indexes for PostgreSQL, MySQL, and SQLite. Use when designing new features, reviewing schemas, or adding multi-tenancy.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/database-schema-designer",
       "files": [
         "SKILL.md",
+        "references/best-practices-and-troubleshooting.md",
+        "references/indexes-and-migrations.md",
+        "references/schema-design-and-security.md",
         "scripts/erd_generator.py",
         "scripts/migration_diffr.py",
         "scripts/schema_validator.py"
       ],
-      "size_bytes": 64593,
+      "size_bytes": 66108,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -585,8 +627,8 @@
       "domain": "engineering",
       "description": "Scan project dependencies for vulnerabilities, license issues, and upgrade opportunities across Python, Node.js, Go, and Rust. Use when auditing dependencies, checking licenses, planning upgrades, or assessing supply chain security.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/dependency-auditor",
       "files": [
@@ -598,8 +640,10 @@
         "expected_outputs/sample_license_report.txt",
         "expected_outputs/sample_upgrade_plan.txt",
         "expected_outputs/sample_vulnerability_report.json",
+        "references/capabilities-and-best-practices.md",
         "references/dependency_management_best_practices.md",
         "references/license_compatibility_matrix.md",
+        "references/tools-integration-and-troubleshooting.md",
         "references/vulnerability_assessment_guide.md",
         "scripts/dep_scanner.py",
         "scripts/license_checker.py",
@@ -607,7 +651,7 @@
         "test-inventory.json",
         "test-project/package.json"
       ],
-      "size_bytes": 218442,
+      "size_bytes": 222416,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -622,8 +666,8 @@
         "color-contrast",
         "accessibility"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/design-auditor",
       "files": [
@@ -632,13 +676,14 @@
         "assets/sample_audit_data.json",
         "references/accessibility_checklist.md",
         "references/ai_slop_patterns.md",
+        "references/audit-workflows-and-operations.md",
         "references/design_audit_methodology.md",
         "scripts/ai_slop_detector.py",
         "scripts/color_contrast_checker.py",
         "scripts/design_scorer.py",
         "scripts/design_system_validator.py"
       ],
-      "size_bytes": 133857,
+      "size_bytes": 137076,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -653,8 +698,8 @@
         "deployment",
         "workflows"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/devops-workflow-engineer",
       "files": [
@@ -664,11 +709,12 @@
         "references/agentic-workflows-guide.md",
         "references/deployment-strategies.md",
         "references/github-actions-patterns.md",
+        "references/workflows-and-optimization.md",
         "scripts/deployment_planner.py",
         "scripts/pipeline_analyzer.py",
         "scripts/workflow_generator.py"
       ],
-      "size_bytes": 161259,
+      "size_bytes": 162961,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -683,8 +729,8 @@
         "api-docs",
         "drift-analysis"
       ],
-      "version": "2.0.0",
-      "updated": "2026-03-18",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/doc-drift-detector",
       "files": [
@@ -693,12 +739,14 @@
         "assets/sample_drift_data.json",
         "references/documentation_standards.md",
         "references/drift_prevention_guide.md",
+        "references/scoring-categories-and-troubleshooting.md",
+        "references/workflows-and-tool-reference.md",
         "scripts/api_doc_validator.py",
         "scripts/doc_staleness_scorer.py",
         "scripts/drift_analyzer.py",
         "scripts/link_checker.py"
       ],
-      "size_bytes": 138260,
+      "size_bytes": 141334,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -736,19 +784,23 @@
       "domain": "engineering",
       "description": "Environment and secrets management lifecycle: .env scaffolding, validation, leak detection, and rotation across Vault, AWS SSM, 1Password, and Doppler. Use when setting up projects, scanning for leaked secrets, or rotating credentials.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/env-secrets-manager",
       "files": [
         "SKILL.md",
+        "references/best-practices-and-troubleshooting.md",
+        "references/env-file-structure.md",
+        "references/leak-detection-and-rotation.md",
+        "references/secret-manager-integration.md",
         "scripts/env_sync_checker.py",
         "scripts/env_validator.py",
         "scripts/secret_scanner.py"
       ],
-      "size_bytes": 54848,
+      "size_bytes": 56784,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -764,20 +816,21 @@
         "experimentation",
         "flag-governance"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/feature-flags-architect",
       "files": [
         "SKILL.md",
         "references/flag-debt-and-cleanup.md",
         "references/flag-types-and-patterns.md",
+        "references/operations-governance-and-workflows.md",
         "references/rollout-and-kill-switch-playbook.md",
         "scripts/flag_audit.py",
         "scripts/kill_switch_runbook.py",
         "scripts/rollout_simulator.py"
       ],
-      "size_bytes": 114889,
+      "size_bytes": 117887,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -827,20 +880,23 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/gcp-cloud-architect",
       "files": [
         "SKILL.md",
+        "references/caf-cost-and-workflows.md",
+        "references/decision-trees.md",
         "references/gcp-cost-optimization.md",
         "references/gcp-services-reference.md",
         "references/gcp-well-architected.md",
+        "references/networking-and-identity.md",
         "scripts/gcp_architecture_validator.py",
         "scripts/gcp_caf_scorer.py",
         "scripts/gcp_cost_estimator.py"
       ],
-      "size_bytes": 112502,
+      "size_bytes": 115790,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -850,19 +906,22 @@
       "domain": "engineering",
       "description": "Manage parallel development with Git worktrees: creation with port allocation, environment sync, branch isolation, and cleanup. Use when working multiple branches at once, running parallel CI validations, or isolating agent workspaces.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/git-worktree-manager",
       "files": [
         "SKILL.md",
+        "references/cleanup-and-workflows.md",
+        "references/operations-playbook.md",
+        "references/setup-and-ports.md",
         "scripts/port_allocator.py",
         "scripts/worktree_manager.py",
         "scripts/worktree_validator.py"
       ],
-      "size_bytes": 62616,
+      "size_bytes": 64296,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -930,8 +989,8 @@
         "rca",
         "postmortem"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/incident-commander",
       "files": [
@@ -953,6 +1012,7 @@
         "references/incident-response-framework.md",
         "references/incident_severity_matrix.md",
         "references/rca_frameworks_guide.md",
+        "references/response-playbooks.md",
         "references/sla-management-guide.md",
         "scripts/incident_classifier.py",
         "scripts/incident_timeline_builder.py",
@@ -961,7 +1021,7 @@
         "scripts/severity_classifier.py",
         "scripts/timeline_reconstructor.py"
       ],
-      "size_bytes": 411157,
+      "size_bytes": 415824,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -971,8 +1031,8 @@
       "domain": "engineering",
       "description": "Design calibrated interview loops, competency-based question banks, and hiring calibration. Use when designing interview processes, creating hiring pipelines, generating scoring rubrics, analyzing interviewer bias, or building question banks.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/interview-system-designer",
       "files": [
@@ -989,9 +1049,11 @@
         "question_bank_generator.py",
         "references/bias_mitigation_checklist.md",
         "references/competency_matrix_templates.md",
-        "references/debrief_facilitation_guide.md"
+        "references/debrief_facilitation_guide.md",
+        "references/tool-reference.md",
+        "references/workflows-and-templates.md"
       ],
-      "size_bytes": 298341,
+      "size_bytes": 301957,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -1009,20 +1071,21 @@
         "platform-engineering",
         "sre"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/kubernetes-operator",
       "files": [
         "SKILL.md",
         "references/controller-runtime-patterns.md",
         "references/operator-anti-patterns.md",
+        "references/operator-decisions-and-workflows.md",
         "references/operator-pattern-and-crds.md",
         "scripts/crd_validator.py",
         "scripts/operator_scaffold.py",
         "scripts/reconciliation_audit.py"
       ],
-      "size_bytes": 129380,
+      "size_bytes": 132931,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1082,8 +1145,8 @@
       "domain": "engineering",
       "description": "Plans zero-downtime migrations with compatibility validation, rollback strategies, and phased execution plans. Use when migrating databases, APIs, infrastructure, or services between platforms or versions.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/migration-architect",
       "files": [
@@ -1103,12 +1166,14 @@
         "expected_outputs/schema_compatibility_report.txt",
         "references/data_reconciliation_strategies.md",
         "references/migration_patterns_catalog.md",
+        "references/tool-reference.md",
+        "references/workflows-patterns-and-quality.md",
         "references/zero_downtime_techniques.md",
         "scripts/compatibility_checker.py",
         "scripts/migration_planner.py",
         "scripts/rollback_generator.py"
       ],
-      "size_bytes": 346838,
+      "size_bytes": 350027,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -1118,19 +1183,21 @@
       "domain": "engineering",
       "description": "Manage and optimize monorepos with Turborepo, Nx, pnpm workspaces, and Changesets. Use when working in monorepos, running impact analysis, optimizing build times with remote caching, migrating from multi-repo, or coordinating publishing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/monorepo-navigator",
       "files": [
         "SKILL.md",
+        "references/operations-and-best-practices.md",
+        "references/tooling-and-configuration.md",
         "scripts/dependency_graph.py",
         "scripts/impact_detector.py",
         "scripts/package_analyzer.py"
       ],
-      "size_bytes": 63908,
+      "size_bytes": 65299,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1143,22 +1210,24 @@
         "office-365",
         "administration"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/ms365-tenant-manager",
       "files": [
         "SKILL.md",
         "expected_output.json",
+        "references/operations-and-best-practices.md",
         "references/powershell-templates.md",
         "references/security-policies.md",
+        "references/tools-and-workflows.md",
         "references/troubleshooting.md",
         "sample_input.json",
         "scripts/powershell_generator.py",
         "scripts/tenant_setup.py",
         "scripts/user_management.py"
       ],
-      "size_bytes": 115971,
+      "size_bytes": 118896,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1168,8 +1237,8 @@
       "domain": "engineering",
       "description": "Design observability strategies: SLI/SLO frameworks, alerting, and dashboards. Use when instrumenting a production service, tuning alert rules, designing Grafana dashboards, defining SLOs and error budgets, or reducing alert fatigue.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/observability-designer",
       "files": [
@@ -1182,12 +1251,15 @@
         "expected_outputs/sample_slo_framework.json",
         "references/alert_design_patterns.md",
         "references/dashboard_best_practices.md",
+        "references/dashboards-logs-traces.md",
+        "references/slo-and-alerting.md",
         "references/slo_cookbook.md",
+        "references/tools-integration-and-troubleshooting.md",
         "scripts/alert_optimizer.py",
         "scripts/dashboard_generator.py",
         "scripts/slo_designer.py"
       ],
-      "size_bytes": 247200,
+      "size_bytes": 251499,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -1197,19 +1269,22 @@
       "domain": "engineering",
       "description": "Performance profiling for Node.js, Python, and Go: CPU flamegraphs, memory leak detection, bundle analysis, query optimization, and k6 load testing. Use when diagnosing slow endpoints, memory growth, large bundles, or traffic spikes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/performance-profiler",
       "files": [
         "SKILL.md",
+        "references/cpu-and-memory-profiling.md",
+        "references/database-and-bundle.md",
+        "references/load-testing-and-methodology.md",
         "scripts/benchmark_reporter.py",
         "scripts/bottleneck_detector.py",
         "scripts/resource_analyzer.py"
       ],
-      "size_bytes": 60436,
+      "size_bytes": 62470,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1226,12 +1301,14 @@
         "visual-regression",
         "accessibility"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/playwright-pro",
       "files": [
         "SKILL.md",
+        "references/core-rules-and-patterns.md",
+        "references/diagnosis-migration-and-ci.md",
         "references/playwright-patterns.md",
         "scripts/coverage_mapper.py",
         "scripts/flaky_detector.py",
@@ -1249,7 +1326,7 @@
         "skills/review.md",
         "skills/testrail.md"
       ],
-      "size_bytes": 122716,
+      "size_bytes": 125035,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1259,19 +1336,22 @@
       "domain": "engineering",
       "description": "Systematic PR review with blast-radius analysis, security scanning, and breaking-change and test-coverage deltas. Use when reviewing PRs that touch shared libraries, APIs, database schemas, auth, or security-sensitive code.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/pr-review-expert",
       "files": [
         "SKILL.md",
+        "references/best-practices-and-troubleshooting.md",
+        "references/review-workflow-commands.md",
+        "references/writeup-format-and-checklist.md",
         "scripts/blast_radius_calculator.py",
         "scripts/diff_analyzer.py",
         "scripts/review_checklist_generator.py"
       ],
-      "size_bytes": 58992,
+      "size_bytes": 61096,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1279,19 +1359,22 @@
       "domain": "engineering",
       "description": "Prompt engineering frameworks for building, testing, versioning, and evaluating prompts: chain-of-thought, few-shot, regression testing, and rubrics. Use when designing production prompts, running A/B tests, or building prompt libraries.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/prompt-engineer-toolkit",
       "files": [
         "SKILL.md",
+        "references/failure-modes-and-workflows.md",
+        "references/prompt-patterns-catalog.md",
+        "references/testing-and-versioning.md",
         "scripts/eval_scorer.py",
         "scripts/prompt_analyzer.py",
         "scripts/prompt_diff.py"
       ],
-      "size_bytes": 56182,
+      "size_bytes": 59167,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1356,8 +1439,8 @@
       "domain": "engineering",
       "description": "Design RAG pipelines: chunking, retrieval evaluation, and architecture. Use when building a RAG system, selecting a chunking strategy, choosing a vector database, optimizing retrieval quality, or evaluating with RAGAS metrics.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/rag-architect",
       "files": [
@@ -1366,10 +1449,12 @@
         "rag_pipeline_designer.py",
         "references/chunking_strategies_comparison.md",
         "references/embedding_model_benchmark.md",
+        "references/rag-design-guide.md",
         "references/rag_evaluation_framework.md",
+        "references/tool-cli-reference.md",
         "retrieval_evaluator.py"
       ],
-      "size_bytes": 137367,
+      "size_bytes": 141326,
       "has_scripts": false,
       "has_references": true,
       "has_assets": false
@@ -1404,8 +1489,8 @@
       "domain": "engineering",
       "description": "Automates release management with changelog generation, semantic versioning, and release readiness checks. Use when preparing releases, generating changelogs, bumping versions, or validating release candidates.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/release-manager",
       "files": [
@@ -1422,10 +1507,11 @@
         "references/conventional-commits-guide.md",
         "references/hotfix-procedures.md",
         "references/release-workflow-comparison.md",
+        "references/workflows-and-tool-reference.md",
         "release_planner.py",
         "version_bumper.py"
       ],
-      "size_bytes": 179604,
+      "size_bytes": 182766,
       "has_scripts": false,
       "has_references": true,
       "has_assets": true
@@ -1440,8 +1526,8 @@
         "pre-flight",
         "readiness"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/release-orchestrator",
       "files": [
@@ -1449,6 +1535,7 @@
         "assets/release_checklist_template.md",
         "assets/sample_release_data.json",
         "references/ci_cd_best_practices.md",
+        "references/release-workflows-and-operations.md",
         "references/release_engineering_guide.md",
         "references/rollback_strategies.md",
         "scripts/changelog_generator.py",
@@ -1456,7 +1543,7 @@
         "scripts/release_readiness_scorer.py",
         "scripts/version_bumper.py"
       ],
-      "size_bytes": 115647,
+      "size_bytes": 118960,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -1466,19 +1553,22 @@
       "domain": "engineering",
       "description": "Generate operational runbooks from codebase analysis covering deployment, incident response, scaling, and monitoring, with copy-paste commands and rollback steps. Use when bootstrapping ops docs, preparing for on-call, or post-incident.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/runbook-generator",
       "files": [
         "SKILL.md",
+        "references/quality-and-troubleshooting.md",
+        "references/runbook-templates.md",
+        "references/staleness-and-maintenance.md",
         "scripts/runbook_scaffolder.py",
         "scripts/runbook_validator.py",
         "scripts/staleness_checker.py"
       ],
-      "size_bytes": 61729,
+      "size_bytes": 63686,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1486,19 +1576,22 @@
       "domain": "engineering",
       "description": "Generate SaaS boilerplate with auth, database schemas, Stripe billing, multi-tenancy, API routes, and dashboard UI on a Next.js/TypeScript/Tailwind stack. Use when starting a new SaaS product, subscription app, or multi-tenant platform.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/saas-scaffolder",
       "files": [
         "SKILL.md",
+        "references/auth-billing-and-tenancy.md",
+        "references/project-structure-and-schema.md",
+        "references/workflow-and-quality.md",
         "scripts/feature_flag_manager.py",
         "scripts/saas_scaffolder.py",
         "scripts/tenant_config_validator.py"
       ],
-      "size_bytes": 65585,
+      "size_bytes": 69022,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1541,12 +1634,15 @@
         "meta-learning",
         "memory-curation"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/self-improving-agent",
       "files": [
         "SKILL.md",
+        "references/feedback-loop-patterns.md",
+        "references/memory-curation-guide.md",
+        "references/meta-learning-architectures.md",
         "references/self-improvement-methodology.md",
         "scripts/feedback_analyzer.py",
         "scripts/memory_health_checker.py",
@@ -1560,7 +1656,7 @@
         "skills/review.md",
         "skills/status.md"
       ],
-      "size_bytes": 121631,
+      "size_bytes": 123529,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1576,20 +1672,22 @@
         "adr",
         "scalability"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-architect",
       "files": [
         "SKILL.md",
         "references/architecture_patterns.md",
+        "references/decision_workflows.md",
         "references/system_design_workflows.md",
         "references/tech_decision_guide.md",
+        "references/tools-and-usage.md",
         "scripts/architecture_diagram_generator.py",
         "scripts/dependency_analyzer.py",
         "scripts/project_architect.py"
       ],
-      "size_bytes": 133393,
+      "size_bytes": 135623,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1605,8 +1703,8 @@
         "caching",
         "queues"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-backend",
       "files": [
@@ -1614,11 +1712,13 @@
         "references/api_design_patterns.md",
         "references/backend_security_practices.md",
         "references/database_optimization_guide.md",
+        "references/tools-reference.md",
+        "references/workflows-and-patterns.md",
         "scripts/api_load_tester.py",
         "scripts/api_scaffolder.py",
         "scripts/database_migration_tool.py"
       ],
-      "size_bytes": 149123,
+      "size_bytes": 151357,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1636,16 +1736,18 @@
         "infrastructure",
         "terraform"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-cloud-architect",
       "files": [
-        "SKILL.md"
+        "SKILL.md",
+        "references/cloud-architecture-playbooks.md",
+        "references/cloud-operations.md"
       ],
-      "size_bytes": 11388,
+      "size_bytes": 13500,
       "has_scripts": false,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -1658,20 +1760,23 @@
         "computer-vision",
         "model-training"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-computer-vision",
       "files": [
         "SKILL.md",
+        "references/commands-targets-and-troubleshooting.md",
         "references/computer_vision_architectures.md",
+        "references/detection-workflows.md",
         "references/object_detection_optimization.md",
         "references/production_vision_systems.md",
+        "references/tool-reference.md",
         "scripts/dataset_pipeline_builder.py",
         "scripts/inference_optimizer.py",
         "scripts/vision_model_trainer.py"
       ],
-      "size_bytes": 209278,
+      "size_bytes": 211959,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1687,8 +1792,8 @@
         "warehousing",
         "etl"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-data-engineer",
       "files": [
@@ -1696,11 +1801,13 @@
         "references/data_modeling_patterns.md",
         "references/data_pipeline_architecture.md",
         "references/dataops_best_practices.md",
+        "references/decisions-and-troubleshooting.md",
+        "references/pipeline-workflows.md",
         "scripts/data_quality_validator.py",
         "scripts/etl_performance_optimizer.py",
         "scripts/pipeline_orchestrator.py"
       ],
-      "size_bytes": 270160,
+      "size_bytes": 272335,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1717,12 +1824,14 @@
         "python",
         "mlops"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-data-scientist",
       "files": [
         "SKILL.md",
+        "references/ds-operations.md",
+        "references/ds-workflows.md",
         "references/experiment_design_frameworks.md",
         "references/feature_engineering_patterns.md",
         "references/statistical_methods_advanced.md",
@@ -1730,7 +1839,7 @@
         "scripts/feature_engineering_pipeline.py",
         "scripts/model_evaluation_suite.py"
       ],
-      "size_bytes": 28865,
+      "size_bytes": 31399,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1746,8 +1855,8 @@
         "ci-cd",
         "monitoring"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-devops",
       "files": [
@@ -1755,13 +1864,14 @@
         "references/cicd_pipeline_guide.md",
         "references/cloud_platform_guide.md",
         "references/deployment_strategies.md",
+        "references/devops-workflows-and-operations.md",
         "references/infrastructure_as_code.md",
         "references/kubernetes_patterns.md",
         "scripts/deployment_manager.py",
         "scripts/pipeline_generator.py",
         "scripts/terraform_scaffolder.py"
       ],
-      "size_bytes": 35134,
+      "size_bytes": 37330,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1777,20 +1887,22 @@
         "performance",
         "state-management"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-frontend",
       "files": [
         "SKILL.md",
+        "references/code-patterns.md",
         "references/frontend_best_practices.md",
         "references/nextjs_optimization_guide.md",
         "references/react_patterns.md",
+        "references/tooling-guide.md",
         "scripts/bundle_analyzer.py",
         "scripts/component_generator.py",
         "scripts/frontend_scaffolder.py"
       ],
-      "size_bytes": 123096,
+      "size_bytes": 126440,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1806,8 +1918,8 @@
         "api-design",
         "system-architecture"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-fullstack",
       "files": [
@@ -1815,10 +1927,11 @@
         "references/architecture_patterns.md",
         "references/development_workflows.md",
         "references/tech_stack_guide.md",
+        "references/tooling-workflows-and-quality.md",
         "scripts/code_quality_analyzer.py",
         "scripts/project_scaffolder.py"
       ],
-      "size_bytes": 109345,
+      "size_bytes": 110973,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1833,20 +1946,22 @@
         "mlops",
         "rag"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-ml-engineer",
       "files": [
         "SKILL.md",
         "references/llm_integration_guide.md",
         "references/mlops_production_patterns.md",
+        "references/production-ml-workflows.md",
         "references/rag_system_architecture.md",
+        "references/tool-reference.md",
         "scripts/ml_monitoring_suite.py",
         "scripts/model_deployment_pipeline.py",
         "scripts/rag_system_builder.py"
       ],
-      "size_bytes": 50084,
+      "size_bytes": 52727,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1864,8 +1979,8 @@
         "swift",
         "kotlin"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-mobile",
       "files": [
@@ -1874,11 +1989,14 @@
         "references/ios-android-patterns.md",
         "references/mobile-security-guide.md",
         "references/react-native-patterns.md",
+        "references/tool-reference.md",
+        "references/troubleshooting-and-success.md",
+        "references/workflows.md",
         "scripts/app_performance_analyzer.py",
         "scripts/mobile_scaffold.py",
         "scripts/store_metadata_generator.py"
       ],
-      "size_bytes": 193800,
+      "size_bytes": 196428,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1893,8 +2011,8 @@
         "agents",
         "prompt-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-prompt-engineer",
       "files": [
@@ -1902,11 +2020,12 @@
         "references/agentic_system_design.md",
         "references/llm_evaluation_frameworks.md",
         "references/prompt_engineering_patterns.md",
+        "references/tools-and-workflows.md",
         "scripts/agent_orchestrator.py",
         "scripts/prompt_optimizer.py",
         "scripts/rag_evaluator.py"
       ],
-      "size_bytes": 130254,
+      "size_bytes": 132477,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1921,21 +2040,23 @@
         "performance-testing",
         "test-frameworks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-qa",
       "files": [
         "README.md",
         "SKILL.md",
+        "references/qa-workflows-and-tools.md",
         "references/qa_best_practices.md",
         "references/test_automation_patterns.md",
         "references/testing_strategies.md",
+        "references/tool-cli-reference.md",
         "scripts/coverage_analyzer.py",
         "scripts/e2e_test_scaffolder.py",
         "scripts/test_suite_generator.py"
       ],
-      "size_bytes": 169313,
+      "size_bytes": 171854,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1945,20 +2066,22 @@
       "domain": "engineering",
       "description": "SecOps for application security, vulnerability management, compliance, and secure development. Use when implementing security controls, conducting security audits, responding to vulnerabilities, or meeting compliance requirements.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-secops",
       "files": [
         "SKILL.md",
         "references/compliance_requirements.md",
         "references/security_standards.md",
+        "references/standards-and-playbook.md",
         "references/vulnerability_management_guide.md",
+        "references/workflows-and-tooling.md",
         "scripts/compliance_checker.py",
         "scripts/security_scanner.py",
         "scripts/vulnerability_assessor.py"
       ],
-      "size_bytes": 157901,
+      "size_bytes": 161139,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1973,19 +2096,21 @@
         "penetration-testing",
         "application-security"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/senior-security",
       "files": [
         "SKILL.md",
         "references/cryptography-implementation.md",
         "references/security-architecture-patterns.md",
+        "references/security-workflows.md",
         "references/threat-modeling-guide.md",
+        "references/tool-reference.md",
         "scripts/secret_scanner.py",
         "scripts/threat_modeler.py"
       ],
-      "size_bytes": 131329,
+      "size_bytes": 133729,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
@@ -1995,19 +2120,22 @@
       "domain": "engineering",
       "description": "Security audit and vulnerability scanning for AI agent skills before install. Detects prompt injection, dangerous code, exfiltration, credential harvesting, and supply chain risks. Use when evaluating untrusted skills or gating installs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/skill-security-auditor",
       "files": [
         "SKILL.md",
+        "references/audit-output-and-workflow.md",
+        "references/quality-and-best-practices.md",
+        "references/threat-model-and-patterns.md",
         "scripts/code_scanner.py",
         "scripts/prompt_injection_scanner.py",
         "scripts/supply_chain_checker.py"
       ],
-      "size_bytes": 67348,
+      "size_bytes": 68928,
       "has_scripts": true,
-      "has_references": false,
+      "has_references": true,
       "has_assets": false
     },
     {
@@ -2015,8 +2143,8 @@
       "domain": "engineering",
       "description": "Validate and score Claude Code skill packages for quality, completeness, and best-practice compliance. Tests Python scripts, checks YAML frontmatter, and generates reports. Use when creating, validating, or auditing skill packages.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/skill-tester",
       "files": [
@@ -2033,11 +2161,13 @@
         "references/quality-scoring-rubric.md",
         "references/skill-structure-specification.md",
         "references/tier-requirements-matrix.md",
+        "references/tool-reference.md",
+        "references/workflows-and-cicd.md",
         "scripts/quality_scorer.py",
         "scripts/script_tester.py",
         "scripts/skill_validator.py"
       ],
-      "size_bytes": 196036,
+      "size_bytes": 199265,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -2167,8 +2297,8 @@
       "domain": "engineering",
       "description": "Scan codebases for technical debt with AST parsing, prioritize by impact, and generate trend dashboards. Use when tracking tech debt, prioritizing refactoring, calculating cost-of- delay, planning sprint debt, or reporting debt to execs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/tech-debt-tracker",
       "files": [
@@ -2184,14 +2314,17 @@
         "expected_outputs/sample_dashboard_output.json",
         "expected_outputs/sample_prioritization_output.json",
         "expected_outputs/sample_scan_output.json",
+        "references/dashboards-and-examples.md",
         "references/debt-classification-taxonomy.md",
+        "references/methodology.md",
         "references/prioritization-framework.md",
         "references/stakeholder-communication-templates.md",
+        "references/tool-reference.md",
         "scripts/debt_dashboard.py",
         "scripts/debt_prioritizer.py",
         "scripts/debt_scanner.py"
       ],
-      "size_bytes": 340747,
+      "size_bytes": 344333,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true
@@ -2205,8 +2338,8 @@
         "tco-analysis",
         "technology-evaluation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "author": "borghei",
       "path": "engineering/tech-stack-evaluator",
       "files": [
@@ -2217,6 +2350,8 @@
         "assets/sample_input_text.json",
         "references/examples.md",
         "references/metrics.md",
+        "references/tool-reference.md",
+        "references/usage-and-criteria.md",
         "references/workflows.md",
         "scripts/ecosystem_analyzer.py",
         "scripts/format_detector.py",
@@ -2226,7 +2361,7 @@
         "scripts/stack_comparator.py",
         "scripts/tco_calculator.py"
       ],
-      "size_bytes": 166638,
+      "size_bytes": 167703,
       "has_scripts": true,
       "has_references": true,
       "has_assets": true

@@ -495,3 +495,63 @@ Now `kubectl scale database/prod-orders --replicas=5` works. HPA can target your
 - CRD validation reference (OpenAPI v3 + CEL extensions)
 - Kubebuilder book (uses controller-runtime; good intro)
 - Operator-SDK docs (if OLM-focused)
+
+---
+
+## CRD design — the foundation (skill-body overview)
+
+A bad CRD = perpetual operator pain. Spend time here.
+
+### Required design decisions
+
+| Decision | Options | Default |
+|----------|---------|---------|
+| Scope | Namespaced / Cluster | Namespaced (unless cluster-wide makes no sense without it) |
+| Versioning | v1alpha1 / v1beta1 / v1 | Start v1alpha1, graduate per Kubernetes API conventions |
+| Conversion | None / Webhook / None-with-storage-version | Webhook once you have > 1 served version |
+| Subresources | status / scale / both | Always enable `status`; `scale` if user-controlled replicas |
+| Validation | OpenAPI schema / admission webhook / both | OpenAPI for shape; webhook for cross-field |
+| Printer columns | Yes (recommended) | Always — kubectl get is much nicer |
+| Categories | Optional | Add for grouping (e.g., `kubectl get all,databases`) |
+| Short names | Optional | Add (e.g., `db` for `Database`) |
+
+### Spec / Status separation
+
+**Spec** = what the user wants (desired state)
+**Status** = what the operator observes (actual state)
+
+The user writes Spec. The operator writes Status. Never the other way round.
+
+```yaml
+apiVersion: example.com/v1
+kind: Database
+metadata:
+  name: prod-orders
+spec:                          # user-owned
+  version: "14.10"
+  storage: 100Gi
+  replicas: 3
+  backup:
+    schedule: "0 2 * * *"
+status:                        # operator-owned
+  phase: Running
+  observedGeneration: 5
+  conditions:
+    - type: Available
+      status: "True"
+      reason: AllReplicasReady
+      lastTransitionTime: "2026-05-27T08:00:00Z"
+  endpoints:
+    primary: prod-orders-primary.default.svc.cluster.local
+    replicas: ["prod-orders-replica-0.default.svc.cluster.local"]
+  observedVersion: "14.10"
+```
+
+### CRD schema rules
+
+- **Use OpenAPI v3 schema**, structural (no `x-kubernetes-preserve-unknown-fields` unless you really need it)
+- **Validate at the API edge** — required fields, enum values, format, regex pattern, min/max
+- **Use defaults sparingly** — every default is something users can't tell the operator "I don't care, you decide"
+- **Add descriptions** — they show up in `kubectl explain`, which is how users learn your API
+- **Use `x-kubernetes-validations`** (CEL, K8s 1.25+) for cross-field validation that doesn't need a webhook
+- **Version your API thoughtfully** — v1alpha1 can break; v1 is forever

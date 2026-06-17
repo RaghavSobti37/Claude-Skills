@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-17T08:03:26+00:00",
+  "generated_at": "2026-06-17T08:51:39+00:00",
   "repository": "claude-skills",
   "skill_count": 337,
   "domain_count": 16,
@@ -45,8 +45,8 @@
       "domain": "engineering",
       "description": "Designs multi-agent system architectures with orchestration patterns, tool schemas, and performance evaluation. Use when building AI agent systems, designing agent workflows, creating tool schemas, or evaluating agent performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/agent-designer",
       "has_scripts": false,
       "has_references": true
@@ -85,8 +85,8 @@
         "parallel",
         "agent-hub"
       ],
-      "version": "1.0.0",
-      "updated": "2026-04-02",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/agenthub",
       "has_scripts": true,
       "has_references": true
@@ -113,8 +113,8 @@
       "domain": "engineering",
       "description": "Review REST API designs for quality, consistency, and breaking changes. Lints OpenAPI specs, generates scorecards, and detects breaking changes between versions. Use when designing APIs, reviewing contracts, or managing API versioning.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/api-design-reviewer",
       "has_scripts": true,
       "has_references": true
@@ -124,11 +124,11 @@
       "domain": "engineering",
       "description": "Generate API test suites from route definitions across frameworks: auth, input validation, contract, k6 load testing, mocking, and OpenAPI-driven generation. Use when adding new APIs, auditing test coverage, or building regression suites.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/api-test-suite-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "aws-solution-architect",
@@ -140,8 +140,8 @@
         "cloudformation",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/aws-solution-architect",
       "has_scripts": true,
       "has_references": true
@@ -160,8 +160,8 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/azure-cloud-architect",
       "has_scripts": true,
       "has_references": true
@@ -188,11 +188,11 @@
       "domain": "engineering",
       "description": "Generate changelogs and release notes from Conventional Commits with semver bump detection, Keep a Changelog formatting, and monorepo scopes. Use when preparing releases, enforcing commit standards, or automating release notes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/changelog-generator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "chaos-engineering",
@@ -207,8 +207,8 @@
         "reliability",
         "blast-radius"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/chaos-engineering",
       "has_scripts": true,
       "has_references": true
@@ -218,11 +218,11 @@
       "domain": "engineering",
       "description": "Design and generate CI/CD pipelines from project stack signals across GitHub Actions, GitLab CI, CircleCI, and Buildkite. Use when bootstrapping CI, migrating pipelines, adding deployment gates, or optimizing build times.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/ci-cd-pipeline-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "claude-code-mastery",
@@ -234,8 +234,8 @@
         "subagents",
         "hooks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/claude-code-mastery",
       "has_scripts": true,
       "has_references": true
@@ -250,8 +250,8 @@
         "code-quality",
         "best-practices"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/code-reviewer",
       "has_scripts": true,
       "has_references": true
@@ -261,11 +261,11 @@
       "domain": "engineering",
       "description": "Analyze a codebase and generate onboarding docs: architecture overviews, file maps, setup guides, runbooks, and debugging guides. Use when onboarding new team members, open-sourcing, or documenting after a major refactor.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/codebase-onboarding",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "codex-cli-specialist",
@@ -277,8 +277,8 @@
         "skill-conversion",
         "cli"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/codex-cli-specialist",
       "has_scripts": true,
       "has_references": true
@@ -288,11 +288,11 @@
       "domain": "engineering",
       "description": "Context management engine for AI coding agents. Use when building agent memory systems, optimizing context windows, allocating token budgets, designing RAG pipelines for code, or managing persistent multi-session agent state.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/context-engine",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "data-quality-auditor",
@@ -309,8 +309,8 @@
         "data-observability",
         "data-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/data-quality-auditor",
       "has_scripts": true,
       "has_references": true
@@ -320,8 +320,8 @@
       "domain": "engineering",
       "description": "Database design with schema analysis, index optimization, and migration generation for PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries, planning migrations, or analyzing database performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/database-designer",
       "has_scripts": false,
       "has_references": true
@@ -331,19 +331,19 @@
       "domain": "engineering",
       "description": "Design relational schemas from requirements with normalization, migrations, ERDs, RLS policies, and indexes for PostgreSQL, MySQL, and SQLite. Use when designing new features, reviewing schemas, or adding multi-tenancy.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/database-schema-designer",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "dependency-auditor",
       "domain": "engineering",
       "description": "Scan project dependencies for vulnerabilities, license issues, and upgrade opportunities across Python, Node.js, Go, and Rust. Use when auditing dependencies, checking licenses, planning upgrades, or assessing supply chain security.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/dependency-auditor",
       "has_scripts": true,
       "has_references": true
@@ -358,8 +358,8 @@
         "color-contrast",
         "accessibility"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/design-auditor",
       "has_scripts": true,
       "has_references": true
@@ -374,8 +374,8 @@
         "deployment",
         "workflows"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/devops-workflow-engineer",
       "has_scripts": true,
       "has_references": true
@@ -390,8 +390,8 @@
         "api-docs",
         "drift-analysis"
       ],
-      "version": "2.0.0",
-      "updated": "2026-03-18",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/doc-drift-detector",
       "has_scripts": true,
       "has_references": true
@@ -418,11 +418,11 @@
       "domain": "engineering",
       "description": "Environment and secrets management lifecycle: .env scaffolding, validation, leak detection, and rotation across Vault, AWS SSM, 1Password, and Doppler. Use when setting up projects, scanning for leaked secrets, or rotating credentials.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/env-secrets-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "feature-flags-architect",
@@ -437,8 +437,8 @@
         "experimentation",
         "flag-governance"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/feature-flags-architect",
       "has_scripts": true,
       "has_references": true
@@ -476,8 +476,8 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/gcp-cloud-architect",
       "has_scripts": true,
       "has_references": true
@@ -487,11 +487,11 @@
       "domain": "engineering",
       "description": "Manage parallel development with Git worktrees: creation with port allocation, environment sync, branch isolation, and cleanup. Use when working multiple branches at once, running parallel CI validations, or isolating agent workspaces.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/git-worktree-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "google-workspace-cli",
@@ -537,8 +537,8 @@
         "rca",
         "postmortem"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/incident-commander",
       "has_scripts": true,
       "has_references": true
@@ -548,8 +548,8 @@
       "domain": "engineering",
       "description": "Design calibrated interview loops, competency-based question banks, and hiring calibration. Use when designing interview processes, creating hiring pipelines, generating scoring rubrics, analyzing interviewer bias, or building question banks.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/interview-system-designer",
       "has_scripts": false,
       "has_references": true
@@ -567,8 +567,8 @@
         "platform-engineering",
         "sre"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/kubernetes-operator",
       "has_scripts": true,
       "has_references": true
@@ -606,8 +606,8 @@
       "domain": "engineering",
       "description": "Plans zero-downtime migrations with compatibility validation, rollback strategies, and phased execution plans. Use when migrating databases, APIs, infrastructure, or services between platforms or versions.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/migration-architect",
       "has_scripts": true,
       "has_references": true
@@ -617,11 +617,11 @@
       "domain": "engineering",
       "description": "Manage and optimize monorepos with Turborepo, Nx, pnpm workspaces, and Changesets. Use when working in monorepos, running impact analysis, optimizing build times with remote caching, migrating from multi-repo, or coordinating publishing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/monorepo-navigator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "ms365-tenant-manager",
@@ -633,8 +633,8 @@
         "office-365",
         "administration"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/ms365-tenant-manager",
       "has_scripts": true,
       "has_references": true
@@ -644,8 +644,8 @@
       "domain": "engineering",
       "description": "Design observability strategies: SLI/SLO frameworks, alerting, and dashboards. Use when instrumenting a production service, tuning alert rules, designing Grafana dashboards, defining SLOs and error budgets, or reducing alert fatigue.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/observability-designer",
       "has_scripts": true,
       "has_references": true
@@ -655,11 +655,11 @@
       "domain": "engineering",
       "description": "Performance profiling for Node.js, Python, and Go: CPU flamegraphs, memory leak detection, bundle analysis, query optimization, and k6 load testing. Use when diagnosing slow endpoints, memory growth, large bundles, or traffic spikes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/performance-profiler",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "playwright-pro",
@@ -675,8 +675,8 @@
         "visual-regression",
         "accessibility"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/playwright-pro",
       "has_scripts": true,
       "has_references": true
@@ -686,22 +686,22 @@
       "domain": "engineering",
       "description": "Systematic PR review with blast-radius analysis, security scanning, and breaking-change and test-coverage deltas. Use when reviewing PRs that touch shared libraries, APIs, database schemas, auth, or security-sensitive code.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/pr-review-expert",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "prompt-engineer-toolkit",
       "domain": "engineering",
       "description": "Prompt engineering frameworks for building, testing, versioning, and evaluating prompts: chain-of-thought, few-shot, regression testing, and rubrics. Use when designing production prompts, running A/B tests, or building prompt libraries.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/prompt-engineer-toolkit",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "prompt-governance",
@@ -741,8 +741,8 @@
       "domain": "engineering",
       "description": "Design RAG pipelines: chunking, retrieval evaluation, and architecture. Use when building a RAG system, selecting a chunking strategy, choosing a vector database, optimizing retrieval quality, or evaluating with RAGAS metrics.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/rag-architect",
       "has_scripts": false,
       "has_references": true
@@ -769,8 +769,8 @@
       "domain": "engineering",
       "description": "Automates release management with changelog generation, semantic versioning, and release readiness checks. Use when preparing releases, generating changelogs, bumping versions, or validating release candidates.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/release-manager",
       "has_scripts": false,
       "has_references": true
@@ -785,8 +785,8 @@
         "pre-flight",
         "readiness"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/release-orchestrator",
       "has_scripts": true,
       "has_references": true
@@ -796,22 +796,22 @@
       "domain": "engineering",
       "description": "Generate operational runbooks from codebase analysis covering deployment, incident response, scaling, and monitoring, with copy-paste commands and rollback steps. Use when bootstrapping ops docs, preparing for on-call, or post-incident.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/runbook-generator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "saas-scaffolder",
       "domain": "engineering",
       "description": "Generate SaaS boilerplate with auth, database schemas, Stripe billing, multi-tenancy, API routes, and dashboard UI on a Next.js/TypeScript/Tailwind stack. Use when starting a new SaaS product, subscription app, or multi-tenant platform.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/saas-scaffolder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "secrets-vault-manager",
@@ -843,8 +843,8 @@
         "meta-learning",
         "memory-curation"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/self-improving-agent",
       "has_scripts": true,
       "has_references": true
@@ -860,8 +860,8 @@
         "adr",
         "scalability"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-architect",
       "has_scripts": true,
       "has_references": true
@@ -877,8 +877,8 @@
         "caching",
         "queues"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-backend",
       "has_scripts": true,
       "has_references": true
@@ -896,11 +896,11 @@
         "infrastructure",
         "terraform"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-cloud-architect",
       "has_scripts": false,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "senior-computer-vision",
@@ -912,8 +912,8 @@
         "computer-vision",
         "model-training"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-computer-vision",
       "has_scripts": true,
       "has_references": true
@@ -929,8 +929,8 @@
         "warehousing",
         "etl"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-data-engineer",
       "has_scripts": true,
       "has_references": true
@@ -947,8 +947,8 @@
         "python",
         "mlops"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-data-scientist",
       "has_scripts": true,
       "has_references": true
@@ -964,8 +964,8 @@
         "ci-cd",
         "monitoring"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-devops",
       "has_scripts": true,
       "has_references": true
@@ -981,8 +981,8 @@
         "performance",
         "state-management"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-frontend",
       "has_scripts": true,
       "has_references": true
@@ -998,8 +998,8 @@
         "api-design",
         "system-architecture"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-fullstack",
       "has_scripts": true,
       "has_references": true
@@ -1014,8 +1014,8 @@
         "mlops",
         "rag"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-ml-engineer",
       "has_scripts": true,
       "has_references": true
@@ -1033,8 +1033,8 @@
         "swift",
         "kotlin"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-mobile",
       "has_scripts": true,
       "has_references": true
@@ -1049,8 +1049,8 @@
         "agents",
         "prompt-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-prompt-engineer",
       "has_scripts": true,
       "has_references": true
@@ -1065,8 +1065,8 @@
         "performance-testing",
         "test-frameworks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-qa",
       "has_scripts": true,
       "has_references": true
@@ -1076,8 +1076,8 @@
       "domain": "engineering",
       "description": "SecOps for application security, vulnerability management, compliance, and secure development. Use when implementing security controls, conducting security audits, responding to vulnerabilities, or meeting compliance requirements.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-secops",
       "has_scripts": true,
       "has_references": true
@@ -1092,8 +1092,8 @@
         "penetration-testing",
         "application-security"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-security",
       "has_scripts": true,
       "has_references": true
@@ -1103,19 +1103,19 @@
       "domain": "engineering",
       "description": "Security audit and vulnerability scanning for AI agent skills before install. Detects prompt injection, dangerous code, exfiltration, credential harvesting, and supply chain risks. Use when evaluating untrusted skills or gating installs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/skill-security-auditor",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "skill-tester",
       "domain": "engineering",
       "description": "Validate and score Claude Code skill packages for quality, completeness, and best-practice compliance. Tests Python scripts, checks YAML frontmatter, and generates reports. Use when creating, validating, or auditing skill packages.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/skill-tester",
       "has_scripts": true,
       "has_references": true
@@ -1186,8 +1186,8 @@
       "domain": "engineering",
       "description": "Scan codebases for technical debt with AST parsing, prioritize by impact, and generate trend dashboards. Use when tracking tech debt, prioritizing refactoring, calculating cost-of- delay, planning sprint debt, or reporting debt to execs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/tech-debt-tracker",
       "has_scripts": true,
       "has_references": true
@@ -1201,8 +1201,8 @@
         "tco-analysis",
         "technology-evaluation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/tech-stack-evaluator",
       "has_scripts": true,
       "has_references": true
