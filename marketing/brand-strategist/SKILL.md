@@ -1,11 +1,9 @@
 ---
 name: brand-strategist
 description: >
-  Expert brand strategy covering brand positioning, identity development, brand
-  architecture, messaging frameworks, and brand governance. Use when developing
-  brand positioning statements, creating messaging frameworks, auditing brand
-  health metrics, building brand architecture models, or establishing brand
-  governance guidelines.
+  Brand strategy covering positioning, identity, brand architecture, messaging
+  frameworks, and governance. Use when developing brand positioning, creating
+  messaging frameworks, auditing brand health, or building brand architecture.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

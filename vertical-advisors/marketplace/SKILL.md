@@ -1,12 +1,9 @@
 ---
 name: marketplace-advisor
 description: >
-  Strategic advisory for two-sided marketplace founders covering chicken-and-egg
-  problem solving, take rates, liquidity metrics, supply/demand balance,
-  network effects, and marketplace business model patterns. Use when
-  scoping a marketplace idea, scoring marketplace health, or when the user
-  mentions marketplace, two-sided market, take rate, liquidity, supply
-  density, or network effects.
+  Strategic advisory for two-sided marketplace founders on chicken-and-egg, take
+  rates, liquidity, and network effects. Use when scoping a marketplace idea or
+  scoring health, or mentioning marketplace, take rate, liquidity, or network effects.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

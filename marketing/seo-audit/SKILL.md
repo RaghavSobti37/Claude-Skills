@@ -1,10 +1,10 @@
 ---
 name: seo-audit
 description: >
-  Comprehensive technical SEO auditing covering crawlability, indexation, Core
-  Web Vitals, on-page optimization, content quality, and competitive gap
-  analysis. Includes 85-point audit checklist, severity-weighted scoring, and
-  prioritized remediation plans.
+  Technical SEO auditing covering crawlability, indexation, Core Web Vitals,
+  on-page optimization, and competitive gaps, with an 85-point checklist and
+  remediation plans. Use when auditing technical SEO or diagnosing indexation
+  issues.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

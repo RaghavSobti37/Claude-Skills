@@ -2,13 +2,8 @@
 name: aeo
 description: >
   Answer Engine Optimization (AEO): optimize content to be cited by LLMs
-  (ChatGPT, Claude, Perplexity, Gemini, Copilot) when they answer user
-  questions. Use when designing content strategy for the LLM-citation era,
-  auditing existing content for LLM citability, structuring Q&A schema for
-  AI surfaces, tracking which content gets cited and where, or measuring
-  AEO performance against competitors. Distinct from our `ai-seo` skill —
-  that one is about ranking in AI search results (Perplexity, Google AI
-  Overviews); this one is about being the source LLMs cite in their answers.
+  (ChatGPT, Claude, Perplexity, Gemini) in their answers. Use when designing
+  content for LLM citation, auditing citability, or structuring Q&A schema.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

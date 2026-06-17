@@ -1,11 +1,9 @@
 ---
 name: domain-name-brainstormer
 description: >
-  Generate candidate brand and product names by combining seed words with
-  prefixes, suffixes, vowel-drops, blends, and TLD variations, then score
-  candidates for memorability, length, and pronounceability. Use when naming
-  a new product, company, or feature, or when the user mentions domain names,
-  brand naming, naming brainstorm, or finding an available .com.
+  Generate and score candidate brand, product, and domain names for
+  memorability and pronounceability. Use when naming a new product, company,
+  or feature, brainstorming brand names, or finding an available .com.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

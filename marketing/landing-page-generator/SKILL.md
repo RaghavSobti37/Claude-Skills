@@ -1,14 +1,10 @@
 ---
 name: landing-page-generator
 description: >
-  Generate high-converting landing pages with complete page structure, copy
-  frameworks, conversion optimization, CTA strategy, and performance patterns.
-  Covers hero sections, feature grids, pricing tables, FAQ sections, testimonial
-  blocks, and CTA sections with proven frameworks (PAS, AIDA, BAB). Includes SEO
-  meta tags, structured data guidance, and Core Web Vitals optimization. Use
-  when creating landing pages, marketing pages, campaign pages, lead capture
-  pages, or when user mentions landing page, conversion page, lead gen page,
-  promo page, or single-page site.
+  Generate high-converting landing pages with page structure, copy frameworks
+  (PAS, AIDA, BAB), CTA strategy, SEO meta, and Core Web Vitals optimization.
+  Use when creating landing pages, campaign pages, lead capture pages, or
+  conversion pages.
 license: MIT
 metadata:
   version: 1.0.0

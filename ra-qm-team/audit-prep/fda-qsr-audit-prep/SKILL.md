@@ -1,12 +1,9 @@
 ---
 name: fda-qsr-audit-prep
 description: >
-  FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for
-  medical device companies. Use when an FDA inspection is announced, when
-  preparing for the new QMSR (Quality Management System Regulation, 2026),
-  when 483 / Warning Letter response is needed, or when annual readiness
-  assessment surfaces gaps. Pairs with our fda-consultant-specialist for
-  program-building; this skill is the audit-event playbook.
+  FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for medical
+  devices. Use when an FDA inspection is announced, when preparing for the new QMSR
+  (2026), or when a 483 / Warning Letter response is needed.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

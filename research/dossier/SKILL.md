@@ -1,11 +1,9 @@
 ---
 name: dossier
 description: >
-  Build structured intelligence dossiers on companies, people, markets,
-  or domains. Covers dossier frameworks, source triangulation, reliability
-  scoring, and fact/inference discipline. Use when preparing a deal-prep
-  dossier, executive briefing, market-entry analysis, due-diligence
-  overview, or board-ready intelligence document.
+  Structured intelligence dossiers on companies, people, markets, or domains,
+  with source triangulation and fact/inference discipline. Use when preparing a
+  deal-prep dossier, executive briefing, or due-diligence overview.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

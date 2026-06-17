@@ -629,3 +629,39 @@ ErrorAlarm:
 | Data transfer costs | Keep traffic in same AZ/region |
 | NAT Gateway charges | Use VPC endpoints for AWS services |
 | Log accumulation | Set CloudWatch retention policies |
+
+---
+
+## Service Limitations
+
+- Lambda: 15-minute execution, 10GB memory max
+- API Gateway: 29-second timeout, 10MB payload
+- DynamoDB: 400KB item size, eventually consistent by default
+- Regional availability varies by service
+- Some services have AWS-specific lock-in
+
+---
+
+## Troubleshooting
+
+| Problem | Cause | Solution |
+|---------|-------|----------|
+| Lambda cold starts exceed 500ms | Function package too large or VPC-attached Lambda without provisioned concurrency | Reduce deployment package size, use Lambda layers, enable provisioned concurrency for latency-sensitive endpoints, or move to Fargate for consistent performance |
+| CloudFormation stack stuck in `ROLLBACK_IN_PROGRESS` | Resource creation failed mid-deploy and rollback also failed (e.g., non-empty S3 bucket) | Check CloudFormation events for the root cause, manually delete the blocking resource, then delete the stack; use `DeletionPolicy: Retain` for stateful resources |
+| Monthly AWS bill significantly exceeds estimate | Untagged resources, forgotten dev/staging environments, or NAT Gateway data transfer costs | Enable Cost Explorer, set up AWS Budgets with 50%/80%/100% alerts, run `cost_optimizer.py` against current inventory, and audit resources with missing tags |
+| DynamoDB throttling errors (ProvisionedThroughputExceededException) | Read/write capacity insufficient for traffic spikes, or hot partition key | Switch to on-demand billing mode, redesign partition key for even distribution, or enable DynamoDB Auto Scaling with appropriate min/max settings |
+| API Gateway returns 504 Gateway Timeout | Backend Lambda or integration exceeds the 29-second API Gateway limit | Optimize Lambda execution time, offload long tasks to Step Functions or SQS, increase Lambda memory (which also increases CPU), or use asynchronous invocation patterns |
+| Cross-region replication lag causes stale reads | DynamoDB Global Tables or Aurora Global Database replication latency under heavy write load | Design for eventual consistency, route reads to the write-primary region for strong consistency, or use conflict resolution strategies documented in `references/architecture_patterns.md` |
+| IAM permission denied errors after deployment | Least-privilege policies missing required actions, or trust policy not updated for new services | Review CloudTrail logs for denied API calls, add the specific missing actions to the IAM policy, and validate with IAM Policy Simulator before deploying |
+
+---
+
+## Success Criteria
+
+- **Cost accuracy**: Monthly AWS bill stays within 10% of the architecture estimate produced by `cost_optimizer.py`.
+- **Availability**: Production workloads meet or exceed the target SLA (99.9% uptime for three-tier, 99.95% for multi-region).
+- **Recovery time**: RTO under 4 hours and RPO under 1 hour for all production architectures with disaster recovery configured.
+- **Deployment speed**: Infrastructure provisioned from generated IaC templates in under 30 minutes for serverless stacks and under 60 minutes for three-tier stacks.
+- **Security posture**: Zero critical findings in AWS Security Hub within 30 days of deployment; all resources encrypted at rest and in transit.
+- **Scaling response**: Auto-scaling responds to traffic spikes within 2 minutes, handling 10x baseline load without manual intervention.
+- **Operational overhead**: Team spends less than 4 hours per week on infrastructure operations after initial deployment.

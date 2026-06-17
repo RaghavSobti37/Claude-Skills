@@ -1,13 +1,9 @@
 ---
 name: soc2-audit-prep
 description: >
-  SOC 2 audit-prep playbook: the 4/8/12-week sprint to get from "we have most
-  of the controls" to "audit-ready" for a Type I or Type II observation. Use
-  when the audit is scheduled and you need a punch list, when readiness
-  assessment surfaced gaps and you need a sprint plan, or when evidence
-  collection is missing or stale. Lighter operational complement to our deep
-  soc2-compliance-expert skill — that one builds the program; this one preps
-  for the specific audit event.
+  SOC 2 audit-prep playbook: the 4/8/12-week sprint to audit-ready for a Type I or
+  Type II observation. Use when the audit is scheduled, when readiness assessment
+  surfaced gaps and you need a sprint plan, or when evidence is missing or stale.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

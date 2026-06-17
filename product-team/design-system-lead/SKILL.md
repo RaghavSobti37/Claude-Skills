@@ -1,11 +1,9 @@
 ---
 name: design-system-lead
 description: >
-  Expert design systems leadership covering component libraries, design tokens,
-  documentation, and design-development collaboration. Use when architecting a
-  design token system, building a component library, defining governance and
-  contribution processes, measuring design system adoption, or generating
-  cross-platform tokens (CSS, SCSS, iOS, Android).
+  Design systems leadership across component libraries, design tokens, and
+  design-dev collaboration. Use when architecting a token system, building a
+  component library, defining governance, or generating cross-platform tokens.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

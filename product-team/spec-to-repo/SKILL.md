@@ -1,12 +1,9 @@
 ---
 name: spec-to-repo
 description: >
-  Translate product specs (PRDs, user stories, feature briefs) into a
-  clean, ship-ready repo structure: ticket decomposition, branch
-  strategy, PR sequencing, and definition-of-done. Use when planning
-  the implementation of a feature, breaking a PRD into engineering
-  tickets, designing the branch/PR sequence, or auditing existing
-  decomposition for shipping risk.
+  Translate product specs (PRDs, user stories) into a ship-ready repo plan:
+  ticket decomposition, branch strategy, and PR sequencing. Use when breaking a
+  PRD into tickets or designing the branch/PR sequence.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

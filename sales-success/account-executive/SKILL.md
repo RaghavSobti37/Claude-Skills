@@ -1,10 +1,9 @@
 ---
 name: account-executive
 description: >
-  Expert sales execution covering pipeline management, discovery, demos,
-  negotiation, and deal closing. Use when qualifying opportunities, running
-  MEDDIC discovery, building account plans, handling objections, structuring
-  proposals, or forecasting pipeline.
+  Sales execution across pipeline, discovery, demos, negotiation, and closing.
+  Use when qualifying opportunities, running MEDDIC discovery, building account
+  plans, handling objections, structuring proposals, or forecasting pipeline.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

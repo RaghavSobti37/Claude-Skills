@@ -2,9 +2,8 @@
 name: weekly-review
 description: >
   Synthesize a week of inputs (calendar, tasks, journal, OKR check-ins) into
-  a structured weekly review with wins, learnings, blockers, and next-week
-  priorities. Use every Friday or Sunday, or when the user mentions weekly
-  review, GTD review, OKR check-in, or end-of-week reflection.
+  a structured review with wins, learnings, blockers, and next-week priorities.
+  Use for a Friday/Sunday weekly review, GTD review, or OKR check-in.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

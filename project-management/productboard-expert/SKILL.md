@@ -1,10 +1,10 @@
 ---
 name: productboard-expert
 description: >
-  Productboard expert for workspace setup, Insight-to-Feature triage, Driver
-  scoring, Releases, Roadmap views, REST API automation, and two-way Jira/Linear/
-  Azure DevOps/Salesforce/Intercom/Slack integration. Use for Productboard
-  administration, prioritization workflows, and programmatic API operations.
+  Productboard expert for workspace setup, Insight-to-Feature triage,
+  Driver scoring, Releases, Roadmap views, and REST API automation. Use
+  for Productboard administration, prioritization workflows, and
+  programmatic API operations.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.1

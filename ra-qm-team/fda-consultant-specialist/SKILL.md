@@ -1,11 +1,10 @@
 ---
 name: fda-consultant-specialist
 description: >
-  FDA regulatory consultant for medical device companies. Provides 510(k)/PMA/De
-  Novo pathway guidance, QSR (21 CFR 820) compliance, HIPAA assessments, and
-  device cybersecurity. Use when user mentions FDA submission, 510(k), PMA, De
-  Novo, QSR, premarket, predicate device, substantial equivalence, HIPAA medical
-  device, or FDA cybersecurity.
+  FDA regulatory consultant for medical device companies, covering 510(k)/PMA/De
+  Novo pathways, QSR (21 CFR 820), HIPAA, and device cybersecurity. Use for FDA
+  submissions, predicate and substantial-equivalence analysis, and premarket
+  strategy.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,11 +1,10 @@
 ---
 name: ansoff-matrix
 description: >
-  Ansoff Matrix — 4-quadrant framework for growth strategy options:
-  market penetration, market development, product development, and
-  diversification. Use when evaluating growth bets, prioritizing
-  investment across quadrants, and explicitly acknowledging the risk
-  ladder from "more of what we know" to "new product in new market".
+  Ansoff Matrix — 4-quadrant framework for growth options: market
+  penetration, market/product development, and diversification. Use
+  when evaluating growth bets, prioritizing investment across quadrants,
+  or weighing the risk ladder of each move.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

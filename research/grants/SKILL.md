@@ -1,11 +1,10 @@
 ---
 name: grants
 description: >
-  Grant writing and proposal architecture skill for researchers, founders,
-  and nonprofits. Covers funder fit, proposal structure, budget design,
-  narrative discipline, and success-factor scoring. Use when writing a
-  grant proposal, evaluating funder fit before applying, auditing a draft
-  for competitiveness, or planning a budget that survives review.
+  Grant writing and proposal architecture: funder fit, proposal structure,
+  budget design, and success-factor scoring. Use when writing a grant proposal,
+  evaluating funder fit, auditing a draft for competitiveness, or planning a
+  budget.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

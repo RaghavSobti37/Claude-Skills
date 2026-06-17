@@ -1,11 +1,9 @@
 ---
 name: operations-manager
 description: >
-  Expert operations management covering process optimization, operational
-  efficiency, resource management, and continuous improvement. Use when
-  designing workflows, auditing operational maturity, building capacity plans,
-  evaluating vendors, running Lean Six Sigma DMAIC projects, or optimizing
-  cost-per-unit metrics.
+  Operations management across process optimization, efficiency, and continuous
+  improvement. Use when designing workflows, building capacity plans, evaluating
+  vendors, running Lean Six Sigma DMAIC projects, or optimizing cost-per-unit.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

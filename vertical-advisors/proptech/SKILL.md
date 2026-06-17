@@ -1,13 +1,9 @@
 ---
 name: proptech-advisor
 description: >
-  Strategic advisory for proptech founders covering real-estate market segments
-  (residential / commercial / industrial), MLS access and brokerage models,
-  state-by-state real-estate licensing, and proptech business-model patterns
-  (transaction, listing, financing, management, services). Use when scoping
-  a proptech idea, classifying market segment, or when the user mentions
-  proptech, real estate technology, MLS, brokerage, iBuyer, property
-  management, or RESPA.
+  Strategic advisory for proptech founders on real-estate segments, MLS/brokerage
+  models, licensing, and business models. Use when scoping a proptech idea or when
+  the user mentions proptech, MLS, brokerage, iBuyer, or RESPA.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

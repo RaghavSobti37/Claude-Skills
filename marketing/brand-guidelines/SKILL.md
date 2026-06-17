@@ -1,13 +1,10 @@
 ---
 name: brand-guidelines
 description: >
-  Build, document, and enforce brand identity systems covering visual identity,
-  voice and tone, typography, color systems, logo usage, imagery standards, and
-  cross-channel consistency. Use when creating style guides, defining brand
-  voice, auditing brand consistency, establishing visual standards, or when user
-  mentions brand guidelines, brand colors, typography, logo usage, brand voice,
-  visual identity, tone of voice, brand standards, style guide, brand
-  consistency, or design standards.
+  Build and enforce brand identity systems: visual identity, voice and tone,
+  typography, color, and cross-channel consistency. Use when creating style
+  guides, defining brand voice, auditing brand consistency, or setting visual
+  standards.
 license: MIT
 metadata:
   version: 1.0.0

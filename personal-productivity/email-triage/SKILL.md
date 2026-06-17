@@ -1,11 +1,9 @@
 ---
 name: email-triage
 description: >
-  Classify a batch of email subjects/snippets into action categories
-  (reply now / reply later / archive / delete / unsubscribe), and surface
-  unsubscribe candidates and recurring senders. Use after a busy week,
-  when running inbox-zero, or when the user mentions inbox triage,
-  email overload, unsubscribe, or inbox zero.
+  Classify a batch of emails into action categories (reply now, reply later,
+  archive, delete, unsubscribe) and surface unsubscribe candidates. Use after
+  a busy week, running inbox zero, or triaging email overload.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

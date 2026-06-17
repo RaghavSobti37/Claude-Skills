@@ -1,12 +1,10 @@
 ---
 name: product-analytics
 description: >
-  Product analytics framework for PMs and analytics engineers on instrumenting
-  products, defining metrics, building activation/retention funnels, running
-  cohort analyses, and translating product data into decisions. Use when
-  designing a product metric tree, instrumenting a new feature, auditing
-  existing instrumentation, defining North Star + counter-metrics, or
-  building an analytics roadmap.
+  Product analytics for instrumenting products, defining metrics, and building
+  retention funnels. Use when designing a metric tree, instrumenting a feature,
+  auditing instrumentation, defining a North Star, or building an analytics
+  roadmap.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: aims-audit
 description: >
-  ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when ISO 42001
-  certification audit is scheduled (Stage 1 documentation review OR Stage 2 onsite),
-  when surveillance audit is due, when internal AIMS audit is being conducted,
-  or when preparing AI Impact Assessment (AIIA) for new AI systems. Pairs with
-  our iso42001-ai-management skill — that one builds the AIMS; this one preps
-  for the certification or surveillance audit.
+  ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when an ISO 42001
+  certification audit is scheduled (Stage 1 or Stage 2), when a surveillance or
+  internal AIMS audit is due, or when preparing an AI Impact Assessment (AIIA).
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

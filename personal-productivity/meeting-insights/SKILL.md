@@ -3,8 +3,7 @@ name: meeting-insights
 description: >
   Analyze meeting transcripts to extract decisions, action items, owners, due
   dates, open questions, and risks. Use after recorded meetings, sales calls,
-  customer interviews, or planning sessions, or when the user mentions meeting
-  notes, action items, decision log, transcript analysis, or follow-up emails.
+  customer interviews, or planning sessions, or to build a decision log.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

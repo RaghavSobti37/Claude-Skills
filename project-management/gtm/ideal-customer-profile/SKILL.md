@@ -1,11 +1,10 @@
 ---
 name: ideal-customer-profile
 description: >
-  Define a sharp Ideal Customer Profile (ICP) — firmographics +
-  behavioral signals + JTBD + trigger event + buyer persona — that
-  marketing, sales, and product can all use. Use when defining a new
-  ICP, refining an existing one based on actual closed customers, or
-  auditing why pipeline / conversion is poor.
+  Define a sharp Ideal Customer Profile (ICP) — firmographics, behavioral
+  signals, JTBD, and buyer persona. Use when defining a new ICP, refining
+  one from actual closed customers, or auditing why pipeline or conversion
+  is poor.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

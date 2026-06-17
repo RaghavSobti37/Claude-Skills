@@ -558,3 +558,20 @@ if !meta.IsStatusConditionTrue(db.Status.Conditions, "WelcomeEmailSent") {
 | Operator can't be moved namespaces | #18 (hardcoded namespace) |
 | Sec audit blocked | #9 (wide RBAC) or #24 (secrets in status) |
 | Upgrade broke everything | #23 (no upgrade story) or #21 (webhook dep) |
+
+---
+
+## Quick anti-pattern checklist (skill-body summary)
+
+- **Status fields in spec.** User writes "phase: Running", operator never overrides — chaos. Status is operator-only.
+- **No finalizer + external resources.** User deletes CR, cloud resources leak.
+- **No leader election + multiple replicas.** Two controllers race; status flaps.
+- **Tight loop on error.** Reconcile returns error, K8s requeues immediately, infinite spin. Always backoff.
+- **Reconcile creates resources directly with name = CR name (no ownerRef).** Garbage collection won't clean up; orphaned resources accumulate.
+- **Spec field is array; controller appends instead of setting.** Each reconcile grows the array; eventually hits etcd object size limit.
+- **Cross-CR coupling without watchers.** Controller for A reads B; if B changes, A doesn't reconcile until something else triggers it.
+- **Wide RBAC.** `cluster-admin` for convenience; massive blast radius.
+- **No status conditions.** User has no way to tell why a CR is failing.
+- **Operator that requires `kubectl edit` for normal operations.** Defeats the declarative API.
+- **No observed generation.** User can't tell if their spec change has been processed.
+- **Operator that mutates Pods directly.** Bypasses StatefulSet/Deployment semantics; gets very confusing very fast.

@@ -1,12 +1,9 @@
 ---
 name: ab-test-setup
 description: >
-  Design and implement statistically rigorous A/B tests and experiments. Covers
-  hypothesis formulation, sample size calculation, metric selection, traffic
-  allocation, implementation patterns (client-side and server-side), statistical
-  analysis, and common pitfalls. Use when planning experiments, calculating
-  sample sizes, designing test variants, analyzing results, or when someone says
-  "let's test that.
+  Design and run statistically rigorous A/B tests and experiments. Use when
+  planning experiments, calculating sample sizes, designing test variants,
+  selecting metrics, analyzing results, or when someone says "let's test that."
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

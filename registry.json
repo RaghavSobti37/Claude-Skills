@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-15T18:17:33+00:00",
+  "generated_at": "2026-06-17T09:28:31+00:00",
   "repository": "claude-skills",
   "skill_count": 337,
   "domain_count": 16,
@@ -45,8 +45,8 @@
       "domain": "engineering",
       "description": "Designs multi-agent system architectures with orchestration patterns, tool schemas, and performance evaluation. Use when building AI agent systems, designing agent workflows, creating tool schemas, or evaluating agent performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/agent-designer",
       "has_scripts": false,
       "has_references": true
@@ -54,7 +54,7 @@
     {
       "name": "agent-protocol",
       "domain": "engineering",
-      "description": "Design and implement AI agent communication protocols including MCP tool schemas, Google A2A protocol, OpenAI function calling, structured inter-agent messaging, and protocol negotiation. Use when building multi-agent systems, defining tool interfaces, implementing agent-to-agent communication, or standardizing LLM tool calling patterns across platforms.",
+      "description": "Design AI agent communication protocols: MCP tool schemas, A2A, function calling, and inter- agent messaging. Use when building multi-agent systems, defining tool interfaces, or implementing agent-to-agent communication.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -65,7 +65,7 @@
     {
       "name": "agent-workflow-designer",
       "domain": "engineering",
-      "description": "Design and implement multi-agent orchestration systems with workflow DAGs, agent routing, handoff protocols, state management, and cost optimization. Use when building AI pipelines with multiple specialized agents, designing fan-out/fan-in patterns, or implementing fault-tolerant agent workflows.",
+      "description": "Design multi-agent orchestration with workflow DAGs, routing, handoff protocols, and state management. Use when building pipelines of specialized agents, designing fan-out/fan-in patterns, or implementing fault-tolerant workflows.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -76,7 +76,7 @@
     {
       "name": "agenthub",
       "domain": "engineering",
-      "description": "Multi-agent DAG orchestration framework. Design, execute, and manage workflows where multiple AI agents collaborate on complex tasks with dependency graphs. Covers agent spawning, output merging, quality evaluation, and real-time status boards. Use when a task requires multiple specialized agents working in concert, or when you need to parallelize AI work across sub-tasks.",
+      "description": "Multi-agent DAG orchestration for workflows where AI agents collaborate via dependency graphs, covering agent spawning, output merging, and quality evaluation. Use when a task needs multiple specialized agents or to parallelize AI work.",
       "tags": [
         "multi-agent",
         "orchestration",
@@ -85,8 +85,8 @@
         "parallel",
         "agent-hub"
       ],
-      "version": "1.0.0",
-      "updated": "2026-04-02",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/agenthub",
       "has_scripts": true,
       "has_references": true
@@ -111,10 +111,10 @@
     {
       "name": "api-design-reviewer",
       "domain": "engineering",
-      "description": "Reviews REST API designs for quality, consistency, and breaking changes. Lints OpenAPI specs, generates API scorecards, and detects breaking changes between versions. Use when designing APIs, reviewing API contracts, or managing API versioning.",
+      "description": "Review REST API designs for quality, consistency, and breaking changes. Lints OpenAPI specs, generates scorecards, and detects breaking changes between versions. Use when designing APIs, reviewing contracts, or managing API versioning.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/api-design-reviewer",
       "has_scripts": true,
       "has_references": true
@@ -122,26 +122,26 @@
     {
       "name": "api-test-suite-builder",
       "domain": "engineering",
-      "description": "Generate comprehensive API test suites from route definitions across frameworks. Covers auth testing, input validation, contract testing, load testing with k6, API mocking, and OpenAPI-driven test generation. Use when adding new APIs, auditing test coverage, or building regression suites.",
+      "description": "Generate API test suites from route definitions across frameworks: auth, input validation, contract, k6 load testing, mocking, and OpenAPI-driven generation. Use when adding new APIs, auditing test coverage, or building regression suites.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/api-test-suite-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "aws-solution-architect",
       "domain": "engineering",
-      "description": "Design AWS architectures for startups using serverless patterns and IaC templates. Use when asked to design serverless architecture, create CloudFormation templates, optimize AWS costs, set up CI/CD pipelines, or migrate to AWS. Covers Lambda, API Gateway, DynamoDB, ECS, Aurora, and cost optimization.",
+      "description": "Design AWS serverless architectures for startups with IaC. Use when designing serverless architecture, writing CloudFormation, optimizing AWS costs, setting up CI/CD, or migrating to AWS across Lambda, API Gateway, and DynamoDB.",
       "tags": [
         "aws",
         "serverless",
         "cloudformation",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/aws-solution-architect",
       "has_scripts": true,
       "has_references": true
@@ -149,7 +149,7 @@
     {
       "name": "azure-cloud-architect",
       "domain": "engineering",
-      "description": "Design, review, and validate Azure cloud architectures. Use when picking the right Azure compute (AKS / App Service / Container Apps / Functions / VMs / VMSS), data store (SQL DB / Cosmos / Postgres Flexible / Storage), networking (VNet / Private Endpoint / Front Door / Application Gateway), identity (Entra ID / Managed Identity / RBAC scopes), or applying the Azure Well-Architected Framework (Reliability, Security, Cost Optimization, Operational Excellence, Performance Efficiency) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on Azure-specific services, pricing, and operational defaults.",
+      "description": "Design, review, and validate Azure cloud architectures. Use when choosing Azure compute, storage, networking, or identity services, or applying the Azure Well-Architected Framework to a workload.",
       "tags": [
         "azure",
         "cloud-architecture",
@@ -160,8 +160,8 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/azure-cloud-architect",
       "has_scripts": true,
       "has_references": true
@@ -186,18 +186,18 @@
     {
       "name": "changelog-generator",
       "domain": "engineering",
-      "description": "Generate changelogs and release notes from Conventional Commits. Covers commit parsing, semantic version bump detection, Keep a Changelog formatting, monorepo scoped changelogs, CI integration, and commit message linting. Use when preparing releases, enforcing commit standards, or automating release notes.",
+      "description": "Generate changelogs and release notes from Conventional Commits with semver bump detection, Keep a Changelog formatting, and monorepo scopes. Use when preparing releases, enforcing commit standards, or automating release notes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/changelog-generator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "chaos-engineering",
       "domain": "engineering",
-      "description": "Chaos engineering practice: hypothesis-driven fault injection to surface weakness before users do. Use when designing a chaos experiment, planning a gameday, picking what to inject (network, host, dependency, resource, state), computing the blast radius of an experiment, building a chaos maturity model for a team, or running a post-incident game to verify the same failure doesn't recur. Covers the four chaos maturity levels, the experiment design loop (steady-state → hypothesis → variables → blast-radius → run → learn), and the catalog of fault types per layer.",
+      "description": "Chaos engineering: hypothesis-driven fault injection to surface weakness before users do. Use when designing a chaos experiment, planning a gameday, choosing what to inject, computing blast radius, or building a chaos maturity model.",
       "tags": [
         "chaos-engineering",
         "resilience",
@@ -207,8 +207,8 @@
         "reliability",
         "blast-radius"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/chaos-engineering",
       "has_scripts": true,
       "has_references": true
@@ -216,13 +216,13 @@
     {
       "name": "ci-cd-pipeline-builder",
       "domain": "engineering",
-      "description": "Design and generate CI/CD pipelines from detected project stack signals. Covers GitHub Actions, GitLab CI, CircleCI, and Buildkite with caching, matrix builds, deployment strategies (blue-green, canary, rolling), environment gates, and security scanning. Use when bootstrapping CI, migrating pipelines, or optimizing build times.",
+      "description": "Design and generate CI/CD pipelines from project stack signals across GitHub Actions, GitLab CI, CircleCI, and Buildkite. Use when bootstrapping CI, migrating pipelines, adding deployment gates, or optimizing build times.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/ci-cd-pipeline-builder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "claude-code-mastery",
@@ -234,8 +234,8 @@
         "subagents",
         "hooks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/claude-code-mastery",
       "has_scripts": true,
       "has_references": true
@@ -243,15 +243,15 @@
     {
       "name": "code-reviewer",
       "domain": "engineering",
-      "description": "Code review automation for TypeScript, JavaScript, Python, Go, Swift, Kotlin. Analyzes PRs for complexity and risk, checks code quality for SOLID violations and code smells, generates review reports. Use when reviewing pull requests, analyzing code quality, identifying issues, generating review checklists.",
+      "description": "Code review automation for TypeScript, JavaScript, Python, Go, Swift, and Kotlin. Analyzes PRs for complexity, risk, SOLID violations, and code smells. Use when reviewing PRs, analyzing code quality, or generating review checklists.",
       "tags": [
         "code-review",
         "pull-request",
         "code-quality",
         "best-practices"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/code-reviewer",
       "has_scripts": true,
       "has_references": true
@@ -259,26 +259,26 @@
     {
       "name": "codebase-onboarding",
       "domain": "engineering",
-      "description": "Analyze a codebase and generate comprehensive onboarding documentation including architecture overviews, key file maps, local setup guides, task runbooks, debugging guides, and contribution guidelines. Audience-aware output for junior, senior, or contractor developers. Use when onboarding new team members, open-sourcing, or documenting after a major refactor.",
+      "description": "Analyze a codebase and generate onboarding docs: architecture overviews, file maps, setup guides, runbooks, and debugging guides. Use when onboarding new team members, open-sourcing, or documenting after a major refactor.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/codebase-onboarding",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "codex-cli-specialist",
       "domain": "engineering",
-      "description": "This skill should be used when the user asks to \"set up Codex CLI\", \"convert skills for Codex\", \"write cross-platform AI skills\", \"configure agents/openai.yaml\", \"build skills index\", \"validate skill compatibility\", \"sync skills between Claude Code and Codex\", or \"optimize Codex CLI workflows\". Use for OpenAI Codex CLI mastery, cross-platform skill authoring, skill conversion, and multi-agent compatibility patterns.",
+      "description": "OpenAI Codex CLI and cross-platform skill authoring. Use when setting up Codex CLI, converting or syncing skills between Claude Code and Codex, configuring agents/openai.yaml, or validating cross-platform skill compatibility.",
       "tags": [
         "openai-codex",
         "cross-platform",
         "skill-conversion",
         "cli"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/codex-cli-specialist",
       "has_scripts": true,
       "has_references": true
@@ -286,18 +286,18 @@
     {
       "name": "context-engine",
       "domain": "engineering",
-      "description": "Context management engine for AI coding agents. Handles context window optimization, persistent memory across sessions, context retrieval strategies, token budget allocation, and knowledge graph construction from codebases. Use when building agent memory systems, optimizing context windows, designing RAG pipelines for code, or managing multi-session agent state.",
+      "description": "Context management engine for AI coding agents. Use when building agent memory systems, optimizing context windows, allocating token budgets, designing RAG pipelines for code, or managing persistent multi-session agent state.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/context-engine",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "data-quality-auditor",
       "domain": "engineering",
-      "description": "Audit data quality across pipelines, warehouses, and operational stores. Use when designing a DQ program from scratch, defining DQ dimensions (completeness, accuracy, consistency, timeliness, validity, uniqueness) for a dataset, building rule-based checks (Great Expectations / dbt tests / Soda / custom), detecting schema drift, monitoring freshness SLAs, responding to a DQ incident, or auditing an existing pipeline for missing DQ coverage. Complements our `senior-data-engineer` skill (which covers pipeline design / ETL / Spark) by going deep on audit-grade quality, not throughput.",
+      "description": "Audit data quality across pipelines, warehouses, and stores. Use when designing a DQ program, defining DQ dimensions, building rule-based checks, detecting schema drift, monitoring freshness SLAs, or responding to a DQ incident.",
       "tags": [
         "data-quality",
         "dq",
@@ -309,8 +309,8 @@
         "data-observability",
         "data-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/data-quality-auditor",
       "has_scripts": true,
       "has_references": true
@@ -318,10 +318,10 @@
     {
       "name": "database-designer",
       "domain": "engineering",
-      "description": "Provides expert-level database design with schema analysis, index optimization, and migration generation. Supports PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries, planning migrations, or analyzing database performance.",
+      "description": "Database design with schema analysis, index optimization, and migration generation for PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries, planning migrations, or analyzing database performance.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/database-designer",
       "has_scripts": false,
       "has_references": true
@@ -329,21 +329,21 @@
     {
       "name": "database-schema-designer",
       "domain": "engineering",
-      "description": "Design relational database schemas from requirements with normalization, migration planning, ERD generation, RLS policies, index strategies, and type generation. Supports PostgreSQL, MySQL, and SQLite with Drizzle, Prisma, and Alembic migrations. Use when designing new features, reviewing schemas, or adding multi-tenancy.",
+      "description": "Design relational schemas from requirements with normalization, migrations, ERDs, RLS policies, and indexes for PostgreSQL, MySQL, and SQLite. Use when designing new features, reviewing schemas, or adding multi-tenancy.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/database-schema-designer",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "dependency-auditor",
       "domain": "engineering",
-      "description": "Scans project dependencies for vulnerabilities, license compliance issues, and upgrade opportunities across Python, Node.js, Go, and Rust. Use when auditing dependencies, checking licenses, planning upgrades, or assessing supply chain security.",
+      "description": "Scan project dependencies for vulnerabilities, license issues, and upgrade opportunities across Python, Node.js, Go, and Rust. Use when auditing dependencies, checking licenses, planning upgrades, or assessing supply chain security.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/dependency-auditor",
       "has_scripts": true,
       "has_references": true
@@ -351,15 +351,15 @@
     {
       "name": "design-auditor",
       "domain": "engineering",
-      "description": "Use when auditing UI/UX designs for quality, detecting AI-generated slop patterns, validating WCAG accessibility compliance, checking design system token adherence, or reviewing responsive design across breakpoints. Produces three independent grades (Design, AI Slop, Accessibility) with prioritized fix recommendations.",
+      "description": "Audit UI/UX designs for quality, AI-generated slop, and accessibility. Use when reviewing designs, detecting slop patterns, validating WCAG compliance, checking design-token adherence, or reviewing responsive design across breakpoints.",
       "tags": [
         "design-audit",
         "ai-slop",
         "color-contrast",
         "accessibility"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/design-auditor",
       "has_scripts": true,
       "has_references": true
@@ -367,15 +367,15 @@
     {
       "name": "devops-workflow-engineer",
       "domain": "engineering",
-      "description": "Use when designing GitHub Actions workflows, creating CI/CD pipelines, planning multi-environment deployments, optimizing pipeline cost and execution time, or implementing deployment strategies (blue-green, canary, rolling). Generates production-ready workflow YAML, analyzes existing pipelines for optimization, and creates deployment plans.",
+      "description": "Generate and optimize GitHub Actions CI/CD workflows. Use when designing workflows, planning multi-environment deployments, optimizing pipeline cost and runtime, or implementing blue- green, canary, or rolling deployment strategies.",
       "tags": [
         "github-actions",
         "ci-cd",
         "deployment",
         "workflows"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/devops-workflow-engineer",
       "has_scripts": true,
       "has_references": true
@@ -383,15 +383,15 @@
     {
       "name": "doc-drift-detector",
       "domain": "engineering",
-      "description": "Detects documentation drift against code changes, scores staleness on a weighted 0-100 scale, validates API docs via AST parsing, and audits link integrity. Use when documentation falls out of sync with code, preparing releases, running CI doc gates, or auditing README/API doc accuracy.",
+      "description": "Detect documentation drift against code changes, score staleness, validate API docs via AST parsing, and audit link integrity. Use when docs fall out of sync with code, preparing releases, running CI doc gates, or auditing doc accuracy.",
       "tags": [
         "documentation",
         "staleness",
         "api-docs",
         "drift-analysis"
       ],
-      "version": "2.0.0",
-      "updated": "2026-03-18",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/doc-drift-detector",
       "has_scripts": true,
       "has_references": true
@@ -416,18 +416,18 @@
     {
       "name": "env-secrets-manager",
       "domain": "engineering",
-      "description": "Complete environment and secrets management lifecycle. Covers .env file scaffolding, validation scripts, secret leak detection in git history, credential rotation playbooks, and integration with HashiCorp Vault, AWS SSM, 1Password CLI, and Doppler. Use when setting up projects, scanning for leaked secrets, or rotating credentials after an incident.",
+      "description": "Environment and secrets management lifecycle: .env scaffolding, validation, leak detection, and rotation across Vault, AWS SSM, 1Password, and Doppler. Use when setting up projects, scanning for leaked secrets, or rotating credentials.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/env-secrets-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "feature-flags-architect",
       "domain": "engineering",
-      "description": "Feature flag strategy, lifecycle, and operations for production systems. Use when designing a flag taxonomy, planning a gradual rollout, building kill switches for risky changes, auditing flag debt in a codebase, defining flag governance (who can flip what, when, and how), running progressive delivery experiments, or recovering from a bad release via flag-based rollback. Covers the four flag types (release, ops, experiment, permission), rollout ramp patterns, blast-radius math, kill-switch runbooks, and the flag-debt cleanup loop that prevents flag rot.",
+      "description": "Feature flag strategy, lifecycle, and operations. Use when designing a flag taxonomy, planning a gradual rollout, building kill switches, auditing flag debt, defining governance, running progressive delivery, or rolling back via flags.",
       "tags": [
         "feature-flags",
         "progressive-delivery",
@@ -437,8 +437,8 @@
         "experimentation",
         "flag-governance"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/feature-flags-architect",
       "has_scripts": true,
       "has_references": true
@@ -463,7 +463,7 @@
     {
       "name": "gcp-cloud-architect",
       "domain": "engineering",
-      "description": "Design, review, and validate Google Cloud (GCP) architectures. Use when picking the right GCP compute (GKE / Cloud Run / Cloud Functions / GCE / Cloud Run Jobs), data store (Cloud SQL / Spanner / Firestore / BigQuery / Bigtable / Cloud Storage), networking (VPC / Private Service Connect / Cloud Load Balancing / Cloud Armor), identity (IAM / Workload Identity Federation / Service Accounts), or applying the Google Cloud Architecture Framework (Operational Excellence, Security, Reliability, Cost Optimization, Performance Optimization) to a workload. Pairs with our existing senior-cloud-architect (multi-cloud, abstract patterns) by going deep on GCP-specific services, pricing, and operational defaults.",
+      "description": "Design, review, and validate Google Cloud (GCP) architectures. Use when choosing GCP compute, storage, networking, or identity services, or applying the Google Cloud Architecture Framework (reliability, security, cost, performance).",
       "tags": [
         "gcp",
         "google-cloud",
@@ -476,8 +476,8 @@
         "networking",
         "cost-optimization"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/gcp-cloud-architect",
       "has_scripts": true,
       "has_references": true
@@ -485,13 +485,13 @@
     {
       "name": "git-worktree-manager",
       "domain": "engineering",
-      "description": "Manage parallel development with Git worktrees. Covers worktree creation with port allocation, environment sync, branch isolation for multi-agent workflows, cleanup automation, and Docker Compose integration. Use when working on multiple branches simultaneously, running parallel CI validations, or isolating agent workspaces.",
+      "description": "Manage parallel development with Git worktrees: creation with port allocation, environment sync, branch isolation, and cleanup. Use when working multiple branches at once, running parallel CI validations, or isolating agent workspaces.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/git-worktree-manager",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "google-workspace-cli",
@@ -530,15 +530,15 @@
     {
       "name": "incident-commander",
       "domain": "engineering",
-      "description": "Use when handling production incidents, classifying severity, reconstructing timelines, writing postmortems, generating communication templates, or building incident response playbooks. Provides automated severity scoring, RCA frameworks (5 Whys, Fishbone, Bow Tie), and structured PIR generation.",
+      "description": "Production incident response. Use when handling incidents, classifying severity, reconstructing timelines, writing postmortems, generating comms templates, or building response playbooks with severity scoring and RCA frameworks.",
       "tags": [
         "incident-response",
         "severity-classification",
         "rca",
         "postmortem"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/incident-commander",
       "has_scripts": true,
       "has_references": true
@@ -546,10 +546,10 @@
     {
       "name": "interview-system-designer",
       "domain": "engineering",
-      "description": "Designs calibrated interview loops, competency-based question banks, and hiring calibration systems. Use when designing interview processes, creating hiring pipelines, generating scoring rubrics, analyzing interviewer bias, or building question banks for engineering, product, or design roles.",
+      "description": "Design calibrated interview loops, competency-based question banks, and hiring calibration. Use when designing interview processes, creating hiring pipelines, generating scoring rubrics, analyzing interviewer bias, or building question banks.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/interview-system-designer",
       "has_scripts": false,
       "has_references": true
@@ -557,7 +557,7 @@
     {
       "name": "kubernetes-operator",
       "domain": "engineering",
-      "description": "Design, build, and operate Kubernetes operators using the operator pattern. Use when extending Kubernetes with a custom controller for a domain object (database, message queue, ML pipeline, internal platform primitive), deciding between operator-SDK / Kubebuilder / controller-runtime / metacontroller, designing CRDs with proper schema and conversion, implementing reconciliation loops that are idempotent and converge, building status subresources for observability, or auditing an existing operator for anti-patterns (leaky abstractions, missing finalizers, no leader election, status as spec).",
+      "description": "Design, build, and operate Kubernetes operators. Use when extending Kubernetes with a custom controller, choosing a framework, designing CRDs, implementing reconciliation loops, or auditing an operator for anti-patterns.",
       "tags": [
         "kubernetes",
         "operator-pattern",
@@ -567,8 +567,8 @@
         "platform-engineering",
         "sre"
       ],
-      "version": "1.0.0",
-      "updated": "2026-05-27",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/kubernetes-operator",
       "has_scripts": true,
       "has_references": true
@@ -593,7 +593,7 @@
     {
       "name": "mcp-server-builder",
       "domain": "engineering",
-      "description": "Build production-ready MCP (Model Context Protocol) servers with tool definitions, resource providers, prompt templates, and transport configuration. Covers OpenAPI-to-MCP conversion, TypeScript and Python implementations, testing strategies, authentication, and deployment. Use when exposing APIs to AI agents, building tool servers, or creating MCP integrations.",
+      "description": "Build MCP (Model Context Protocol) servers with tool definitions, resource providers, prompt templates, and transports. Use when exposing APIs to AI agents, building tool servers, converting OpenAPI to MCP, or creating MCP integrations.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -606,8 +606,8 @@
       "domain": "engineering",
       "description": "Plans zero-downtime migrations with compatibility validation, rollback strategies, and phased execution plans. Use when migrating databases, APIs, infrastructure, or services between platforms or versions.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/migration-architect",
       "has_scripts": true,
       "has_references": true
@@ -615,26 +615,26 @@
     {
       "name": "monorepo-navigator",
       "domain": "engineering",
-      "description": "Navigate, manage, and optimize monorepos with Turborepo, Nx, pnpm workspaces, and Changesets. Covers cross-package impact analysis, selective builds, dependency graph visualization, remote caching, migration from multi-repo, and coordinated publishing. Use when working in monorepos, optimizing build times, or managing shared packages.",
+      "description": "Manage and optimize monorepos with Turborepo, Nx, pnpm workspaces, and Changesets. Use when working in monorepos, running impact analysis, optimizing build times with remote caching, migrating from multi-repo, or coordinating publishing.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/monorepo-navigator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "ms365-tenant-manager",
       "domain": "engineering",
-      "description": "Microsoft 365 tenant administration for Global Administrators. Automate M365 tenant setup, Office 365 admin tasks, Azure AD user management, Exchange Online configuration, Teams administration, and security policies. Generate PowerShell scripts for bulk operations, Conditional Access policies, license management, and compliance reporting. Use for M365 tenant manager, Office 365 admin, Azure AD users, Global Administrator, tenant configuration, or Microsoft 365 automation.",
+      "description": "Microsoft 365 tenant administration for Global Administrators. Use for tenant setup, Azure AD user management, Exchange Online and Teams config, Conditional Access policies, license management, and PowerShell bulk-operation scripts.",
       "tags": [
         "microsoft-365",
         "azure-ad",
         "office-365",
         "administration"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/ms365-tenant-manager",
       "has_scripts": true,
       "has_references": true
@@ -642,10 +642,10 @@
     {
       "name": "observability-designer",
       "domain": "engineering",
-      "description": "Designs comprehensive observability strategies including SLI/SLO frameworks, alerting optimization, and dashboard generation. Use when implementing monitoring for a production service, creating or tuning alert rules, designing Grafana dashboards, defining SLOs and error budgets, or reducing alert fatigue in on-call rotations.",
+      "description": "Design observability strategies: SLI/SLO frameworks, alerting, and dashboards. Use when instrumenting a production service, tuning alert rules, designing Grafana dashboards, defining SLOs and error budgets, or reducing alert fatigue.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/observability-designer",
       "has_scripts": true,
       "has_references": true
@@ -653,18 +653,18 @@
     {
       "name": "performance-profiler",
       "domain": "engineering",
-      "description": "Systematic performance profiling for Node.js, Python, and Go applications. Covers CPU flamegraphs, memory leak detection, bundle analysis, database query optimization, N+1 detection, load testing with k6, and before/after measurement methodology. Use when diagnosing slow endpoints, memory growth, large bundles, or preparing for traffic spikes.",
+      "description": "Performance profiling for Node.js, Python, and Go: CPU flamegraphs, memory leak detection, bundle analysis, query optimization, and k6 load testing. Use when diagnosing slow endpoints, memory growth, large bundles, or traffic spikes.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/performance-profiler",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "playwright-pro",
       "domain": "engineering",
-      "description": "Production-grade end-to-end testing with Playwright. Covers test generation from user stories, page object patterns, locator strategy, flaky test diagnosis, Cypress/Selenium migration, CI integration, visual regression testing, and accessibility auditing. Use when writing E2E tests, fixing flaky tests, or migrating from Cypress/Selenium.",
+      "description": "End-to-end testing with Playwright: test generation, page objects, locator strategy, flaky- test diagnosis, visual regression, and CI integration. Use when writing E2E tests, fixing flaky tests, or migrating from Cypress/Selenium.",
       "tags": [
         "playwright",
         "e2e-testing",
@@ -675,8 +675,8 @@
         "visual-regression",
         "accessibility"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/playwright-pro",
       "has_scripts": true,
       "has_references": true
@@ -684,24 +684,24 @@
     {
       "name": "pr-review-expert",
       "domain": "engineering",
-      "description": "Systematic PR review with blast radius analysis, security scanning, breaking change detection, test coverage delta, and performance impact assessment. Produces prioritized findings with a 35+ item checklist. Use when reviewing PRs that touch shared libraries, APIs, database schemas, auth, or security-sensitive code.",
+      "description": "Systematic PR review with blast-radius analysis, security scanning, and breaking-change and test-coverage deltas. Use when reviewing PRs that touch shared libraries, APIs, database schemas, auth, or security-sensitive code.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/pr-review-expert",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "prompt-engineer-toolkit",
       "domain": "engineering",
-      "description": "Production prompt engineering frameworks for building, testing, versioning, and evaluating prompts. Covers chain-of-thought, few-shot design, system prompt architecture, prompt regression testing, and evaluation rubrics. Use when designing prompts for production systems, running A/B tests on prompts, building prompt libraries, or debugging prompt quality degradation.",
+      "description": "Prompt engineering frameworks for building, testing, versioning, and evaluating prompts: chain-of-thought, few-shot, regression testing, and rubrics. Use when designing production prompts, running A/B tests, or building prompt libraries.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/prompt-engineer-toolkit",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "prompt-governance",
@@ -723,7 +723,7 @@
     {
       "name": "qa-browser-automation",
       "domain": "engineering",
-      "description": "Use when performing browser-based QA testing, visual regression tracking, WCAG accessibility auditing, performance profiling, or health scoring web applications. Combines Chrome MCP browser control with Python analysis tools for systematic, repeatable quality assurance.",
+      "description": "Browser-based QA combining Chrome MCP control with Python analysis tools. Use when performing browser QA testing, visual regression tracking, WCAG accessibility auditing, performance profiling, or health-scoring web applications.",
       "tags": [
         "browser-qa",
         "wcag",
@@ -739,10 +739,10 @@
     {
       "name": "rag-architect",
       "domain": "engineering",
-      "description": "Designs production-grade RAG pipelines with chunking optimization, retrieval evaluation, and pipeline architecture. Use when building a RAG system, selecting a chunking strategy, choosing a vector database, optimizing retrieval quality, designing embedding pipelines, or evaluating RAG performance with RAGAS metrics.",
+      "description": "Design RAG pipelines: chunking, retrieval evaluation, and architecture. Use when building a RAG system, selecting a chunking strategy, choosing a vector database, optimizing retrieval quality, or evaluating with RAGAS metrics.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/rag-architect",
       "has_scripts": false,
       "has_references": true
@@ -769,8 +769,8 @@
       "domain": "engineering",
       "description": "Automates release management with changelog generation, semantic versioning, and release readiness checks. Use when preparing releases, generating changelogs, bumping versions, or validating release candidates.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/release-manager",
       "has_scripts": false,
       "has_references": true
@@ -778,15 +778,15 @@
     {
       "name": "release-orchestrator",
       "domain": "engineering",
-      "description": "Use when running pre-release validation, generating changelogs, bumping semantic versions, scoring deployment readiness, or orchestrating end-to-end release pipelines. Provides pre-flight checks, secret scanning, conventional commit parsing, and GO/CONDITIONAL/NO-GO gating.",
+      "description": "Orchestrate end-to-end release pipelines. Use when running pre-release validation, generating changelogs, bumping semantic versions, scoring deployment readiness, or gating releases with secret scanning and GO/NO-GO checks.",
       "tags": [
         "release-pipeline",
         "versioning",
         "pre-flight",
         "readiness"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/release-orchestrator",
       "has_scripts": true,
       "has_references": true
@@ -794,24 +794,24 @@
     {
       "name": "runbook-generator",
       "domain": "engineering",
-      "description": "Generate production-grade operational runbooks from codebase analysis. Covers deployment procedures, incident response, database maintenance, scaling operations, and monitoring setup. Every step includes copy-paste commands, verification checks, rollback procedures, escalation paths, and time estimates. Use when bootstrapping ops docs, preparing for on-call, or post-incident improvements.",
+      "description": "Generate operational runbooks from codebase analysis covering deployment, incident response, scaling, and monitoring, with copy-paste commands and rollback steps. Use when bootstrapping ops docs, preparing for on-call, or post-incident.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/runbook-generator",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "saas-scaffolder",
       "domain": "engineering",
-      "description": "Generate complete production-ready SaaS boilerplate with authentication, database schemas, billing integration (Stripe), multi-tenancy, API routes, dashboard UI, and deployment configuration. Supports Next.js App Router, TypeScript, Tailwind, shadcn/ui, Drizzle ORM, and multiple auth/payment providers. Use when starting a new SaaS product, subscription app, or multi-tenant platform.",
+      "description": "Generate SaaS boilerplate with auth, database schemas, Stripe billing, multi-tenancy, API routes, and dashboard UI on a Next.js/TypeScript/Tailwind stack. Use when starting a new SaaS product, subscription app, or multi-tenant platform.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/saas-scaffolder",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "secrets-vault-manager",
@@ -834,7 +834,7 @@
     {
       "name": "self-improving-agent",
       "domain": "engineering",
-      "description": "Patterns for building AI agents that learn from their own execution, detect failure modes, and improve autonomously. Covers feedback loops, performance regression detection, memory curation, skill extraction, and meta-learning architectures. Use when building agents that need to get better over time, managing auto-memory, or designing self-correcting systems.",
+      "description": "Patterns for AI agents that learn from their own execution, detect failure modes, and improve autonomously. Use when building agents that get better over time, managing auto- memory, or designing self-correcting feedback loops.",
       "tags": [
         "self-improvement",
         "ai-agents",
@@ -843,8 +843,8 @@
         "meta-learning",
         "memory-curation"
       ],
-      "version": "2.0.0",
-      "updated": "2026-04-02",
+      "version": "2.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/self-improving-agent",
       "has_scripts": true,
       "has_references": true
@@ -852,7 +852,7 @@
     {
       "name": "senior-architect",
       "domain": "engineering",
-      "description": "This skill should be used when the user asks to \"design system architecture\", \"evaluate microservices vs monolith\", \"create architecture diagrams\", \"analyze dependencies\", \"choose a database\", \"plan for scalability\", \"make technical decisions\", or \"review system design\". Use for architecture decision records (ADRs), tech stack evaluation, system design reviews, dependency analysis, and generating architecture diagrams in Mermaid, PlantUML, or ASCII format.",
+      "description": "System architecture design and review. Use when designing architecture, evaluating microservices vs monolith, writing ADRs, choosing a database, planning for scalability, reviewing system design, or generating architecture diagrams.",
       "tags": [
         "system-design",
         "distributed-systems",
@@ -860,8 +860,8 @@
         "adr",
         "scalability"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-architect",
       "has_scripts": true,
       "has_references": true
@@ -869,7 +869,7 @@
     {
       "name": "senior-backend",
       "domain": "engineering",
-      "description": "This skill should be used when the user asks to \"design REST APIs\", \"optimize database queries\", \"implement authentication\", \"build microservices\", \"review backend code\", \"set up GraphQL\", \"handle database migrations\", or \"load test APIs\". Use for Node.js/Express/Fastify development, PostgreSQL optimization, API security, and backend architecture patterns.",
+      "description": "Backend development with Node.js/Express/Fastify and PostgreSQL. Use when designing REST or GraphQL APIs, optimizing database queries, implementing authentication, building microservices, handling migrations, or reviewing backend code.",
       "tags": [
         "api-design",
         "microservices",
@@ -877,8 +877,8 @@
         "caching",
         "queues"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-backend",
       "has_scripts": true,
       "has_references": true
@@ -896,24 +896,24 @@
         "infrastructure",
         "terraform"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-cloud-architect",
       "has_scripts": false,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "senior-computer-vision",
       "domain": "engineering",
-      "description": "Computer vision engineering skill for object detection, image segmentation, and visual AI systems. Covers CNN and Vision Transformer architectures, YOLO/Faster R-CNN/DETR detection, Mask R-CNN/SAM segmentation, and production deployment with ONNX/TensorRT. Includes PyTorch, torchvision, Ultralytics, Detectron2, and MMDetection frameworks. Use when building detection pipelines, training custom models, optimizing inference, or deploying vision systems.",
+      "description": "Computer vision engineering for object detection, segmentation, and visual AI, covering CNN and Vision Transformer architectures and ONNX/TensorRT deployment. Use when building detection pipelines, training models, or optimizing inference.",
       "tags": [
         "object-detection",
         "image-segmentation",
         "computer-vision",
         "model-training"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-computer-vision",
       "has_scripts": true,
       "has_references": true
@@ -921,7 +921,7 @@
     {
       "name": "senior-data-engineer",
       "domain": "engineering",
-      "description": "Use when designing data architectures, building batch or streaming pipelines, implementing data quality frameworks, optimizing ETL/ELT performance, working with Airflow/dbt/Spark/Kafka, or troubleshooting data pipeline failures. Provides pipeline generation, data quality validation, and SQL/Spark performance optimization.",
+      "description": "Data engineering for batch and streaming pipelines with Airflow, dbt, Spark, and Kafka. Use when designing data architectures, building pipelines, adding data-quality checks, optimizing ETL/ELT, or troubleshooting pipeline failures.",
       "tags": [
         "airflow",
         "spark",
@@ -929,8 +929,8 @@
         "warehousing",
         "etl"
       ],
-      "version": "1.1.0",
-      "updated": "2026-04-02",
+      "version": "1.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-data-engineer",
       "has_scripts": true,
       "has_references": true
@@ -947,8 +947,8 @@
         "python",
         "mlops"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-data-scientist",
       "has_scripts": true,
       "has_references": true
@@ -956,7 +956,7 @@
     {
       "name": "senior-devops",
       "domain": "engineering",
-      "description": "Use when building CI/CD pipelines, containerizing applications, managing Kubernetes clusters, provisioning cloud infrastructure with Terraform, implementing deployment strategies (blue-green, canary, rolling), setting up monitoring/observability, optimizing cloud costs, or handling infrastructure incident response.",
+      "description": "DevOps for CI/CD, containers, Kubernetes, and Terraform. Use when building pipelines, containerizing apps, managing clusters, provisioning cloud infra, deploying with blue- green/canary, or handling infrastructure incidents.",
       "tags": [
         "docker",
         "kubernetes",
@@ -964,8 +964,8 @@
         "ci-cd",
         "monitoring"
       ],
-      "version": "2.1.0",
-      "updated": "2026-04-02",
+      "version": "2.2.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-devops",
       "has_scripts": true,
       "has_references": true
@@ -973,7 +973,7 @@
     {
       "name": "senior-frontend",
       "domain": "engineering",
-      "description": "Frontend development skill for React, Next.js, TypeScript, and Tailwind CSS applications. Use when building React components, optimizing Next.js performance, analyzing bundle sizes, scaffolding frontend projects, implementing accessibility, or reviewing frontend code quality.",
+      "description": "Frontend development for React, Next.js, TypeScript, and Tailwind CSS. Use when building React components, optimizing Next.js performance, analyzing bundle sizes, scaffolding projects, implementing accessibility, or reviewing frontend code.",
       "tags": [
         "react",
         "typescript",
@@ -981,8 +981,8 @@
         "performance",
         "state-management"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-frontend",
       "has_scripts": true,
       "has_references": true
@@ -998,8 +998,8 @@
         "api-design",
         "system-architecture"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-fullstack",
       "has_scripts": true,
       "has_references": true
@@ -1014,8 +1014,8 @@
         "mlops",
         "rag"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-ml-engineer",
       "has_scripts": true,
       "has_references": true
@@ -1033,8 +1033,8 @@
         "swift",
         "kotlin"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-mobile",
       "has_scripts": true,
       "has_references": true
@@ -1042,15 +1042,15 @@
     {
       "name": "senior-prompt-engineer",
       "domain": "engineering",
-      "description": "This skill should be used when the user asks to \"optimize prompts\", \"design prompt templates\", \"evaluate LLM outputs\", \"build agentic systems\", \"implement RAG\", \"create few-shot examples\", \"analyze token usage\", or \"design AI workflows\". Use for prompt engineering patterns, LLM evaluation frameworks, agent architectures, and structured output design.",
+      "description": "Prompt engineering and LLM evaluation. Use when optimizing prompts, designing prompt templates, evaluating LLM outputs, building agentic systems, implementing RAG, creating few- shot examples, or designing structured-output workflows.",
       "tags": [
         "prompt-optimization",
         "llm-evaluation",
         "agents",
         "prompt-engineering"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-prompt-engineer",
       "has_scripts": true,
       "has_references": true
@@ -1058,15 +1058,15 @@
     {
       "name": "senior-qa",
       "domain": "engineering",
-      "description": "This skill should be used when the user asks to \"generate tests\", \"write unit tests\", \"analyze test coverage\", \"scaffold E2E tests\", \"set up Playwright\", \"configure Jest\", \"implement testing patterns\", or \"improve test quality\". Use for React/Next.js testing with Jest, React Testing Library, and Playwright.",
+      "description": "Testing for React/Next.js with Jest, React Testing Library, and Playwright. Use when generating tests, writing unit tests, analyzing coverage, scaffolding E2E tests, configuring Jest, or improving test quality.",
       "tags": [
         "test-strategy",
         "automation",
         "performance-testing",
         "test-frameworks"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-qa",
       "has_scripts": true,
       "has_references": true
@@ -1074,10 +1074,10 @@
     {
       "name": "senior-secops",
       "domain": "engineering",
-      "description": "Comprehensive SecOps skill for application security, vulnerability management, compliance, and secure development practices. Includes security scanning, vulnerability assessment, compliance checking, and security automation. Use when implementing security controls, conducting security audits, responding to vulnerabilities, or ensuring compliance requirements.",
+      "description": "SecOps for application security, vulnerability management, compliance, and secure development. Use when implementing security controls, conducting security audits, responding to vulnerabilities, or meeting compliance requirements.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-secops",
       "has_scripts": true,
       "has_references": true
@@ -1085,15 +1085,15 @@
     {
       "name": "senior-security",
       "domain": "engineering",
-      "description": "Performs STRIDE threat modeling, DREAD risk scoring, secret detection, and secure architecture design. Use when conducting threat models, reviewing code for security vulnerabilities, designing defense-in-depth architectures, or scanning for hardcoded secrets and credentials.",
+      "description": "STRIDE threat modeling, DREAD risk scoring, secret detection, and secure architecture design. Use when conducting threat models, reviewing code for vulnerabilities, designing defense-in-depth, or scanning for hardcoded secrets.",
       "tags": [
         "owasp",
         "threat-modeling",
         "penetration-testing",
         "application-security"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/senior-security",
       "has_scripts": true,
       "has_references": true
@@ -1101,21 +1101,21 @@
     {
       "name": "skill-security-auditor",
       "domain": "engineering",
-      "description": "Security audit and vulnerability scanning for AI agent skills before installation. Detects prompt injection in SKILL.md files, dangerous code patterns (eval, exec, subprocess), network exfiltration, credential harvesting, dependency supply chain risks, file system boundary violations, and obfuscation. Produces PASS/WARN/FAIL verdicts with remediation guidance. Use when evaluating untrusted skills, pre-install security gates, or auditing skill repositories.",
+      "description": "Security audit and vulnerability scanning for AI agent skills before install. Detects prompt injection, dangerous code, exfiltration, credential harvesting, and supply chain risks. Use when evaluating untrusted skills or gating installs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-09",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/skill-security-auditor",
       "has_scripts": true,
-      "has_references": false
+      "has_references": true
     },
     {
       "name": "skill-tester",
       "domain": "engineering",
-      "description": "Validates and scores Claude Code skill packages for quality, completeness, and best practices compliance. Tests Python scripts, checks YAML frontmatter, and generates quality reports. Use when creating new skills, validating skill packages, or auditing skill quality.",
+      "description": "Validate and score Claude Code skill packages for quality, completeness, and best-practice compliance. Tests Python scripts, checks YAML frontmatter, and generates reports. Use when creating, validating, or auditing skill packages.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/skill-tester",
       "has_scripts": true,
       "has_references": true
@@ -1157,7 +1157,7 @@
     {
       "name": "stripe-integration-expert",
       "domain": "engineering",
-      "description": "Implement production-grade Stripe integrations for SaaS billing. Covers subscription lifecycle management, checkout sessions, plan upgrades/downgrades with proration, usage-based billing, idempotent webhook handlers, customer portal, dunning, SCA compliance, and local testing with Stripe CLI. Provides patterns for Next.js, Express, and Django.",
+      "description": "Implement Stripe integrations for SaaS billing: subscriptions, checkout, proration, usage- based billing, idempotent webhooks, customer portal, dunning, and SCA. Use when building billing, handling webhooks, or testing with Stripe CLI.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -1168,7 +1168,7 @@
     {
       "name": "tdd-guide",
       "domain": "engineering",
-      "description": "Guides red-green-refactor TDD workflows with test generation, coverage gap analysis, and multi-framework support. Use when writing tests first, analyzing coverage reports, generating test stubs, or converting tests between Jest, Pytest, JUnit, and Vitest.",
+      "description": "Guide red-green-refactor TDD with test generation, coverage-gap analysis, and multi- framework support. Use when writing tests first, analyzing coverage, generating test stubs, or converting tests between Jest, Pytest, JUnit, and Vitest.",
       "tags": [
         "tdd",
         "test-driven-development",
@@ -1184,10 +1184,10 @@
     {
       "name": "tech-debt-tracker",
       "domain": "engineering",
-      "description": "Scans codebases for technical debt with AST parsing, prioritizes debt items by impact, and generates trend dashboards. Use when tracking tech debt across a codebase, prioritizing refactoring work, calculating cost-of-delay for debt items, planning sprint debt allocation, or generating executive debt reports.",
+      "description": "Scan codebases for technical debt with AST parsing, prioritize by impact, and generate trend dashboards. Use when tracking tech debt, prioritizing refactoring, calculating cost-of- delay, planning sprint debt, or reporting debt to execs.",
       "tags": [],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/tech-debt-tracker",
       "has_scripts": true,
       "has_references": true
@@ -1195,14 +1195,14 @@
     {
       "name": "tech-stack-evaluator",
       "domain": "engineering",
-      "description": "Technology stack evaluation and comparison with TCO analysis, security assessment, and ecosystem health scoring. Use when comparing frameworks, evaluating technology stacks, calculating total cost of ownership, assessing migration paths, or analyzing ecosystem viability.",
+      "description": "Evaluate and compare technology stacks with TCO analysis, security assessment, and ecosystem health scoring. Use when comparing frameworks, calculating total cost of ownership, assessing migration paths, or analyzing ecosystem viability.",
       "tags": [
         "framework-comparison",
         "tco-analysis",
         "technology-evaluation"
       ],
-      "version": "1.0.0",
-      "updated": "2026-03-31",
+      "version": "1.1.0",
+      "updated": "2026-06-17",
       "path": "engineering/tech-stack-evaluator",
       "has_scripts": true,
       "has_references": true
@@ -1244,7 +1244,7 @@
     {
       "name": "ab-test-setup",
       "domain": "marketing",
-      "description": "This skill should be used when the user asks to \"set up an A/B test\", \"calculate sample size\", \"design an experiment\", \"analyze A/B test results\", \"check statistical significance\", \"determine test duration\", or \"evaluate conversion rate experiments\".",
+      "description": "Design and analyze A/B tests: sample size, test duration, and statistical significance for conversion experiments. Use when setting up an A/B test, calculating sample size, designing an experiment, or analyzing results.",
       "tags": [
         "ab-testing",
         "experimentation",
@@ -1261,7 +1261,7 @@
     {
       "name": "ad-creative",
       "domain": "marketing",
-      "description": "Design high-converting ad creative across Google, Meta, LinkedIn, Twitter/X, and TikTok. Includes platform-specific format specs, A/B testing frameworks, headline formulas, creative iteration methodology, and compliance validation. Use when writing ad copy, generating headline variations, creating ad sets, iterating on winning ads, validating creative against platform specs, or when user mentions ad copy, RSA headlines, Meta ad copy, LinkedIn ads, creative testing, ad variations, or bulk creative production.",
+      "description": "Design ad creative across Google, Meta, LinkedIn, Twitter/X, and TikTok with platform format specs, headline formulas, and A/B testing. Use when writing ad copy, generating headline variations, creating ad sets, or validating creative.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1272,7 +1272,7 @@
     {
       "name": "aeo",
       "domain": "marketing",
-      "description": "Answer Engine Optimization (AEO): optimize content to be cited by LLMs (ChatGPT, Claude, Perplexity, Gemini, Copilot) when they answer user questions. Use when designing content strategy for the LLM-citation era, auditing existing content for LLM citability, structuring Q&A schema for AI surfaces, tracking which content gets cited and where, or measuring AEO performance against competitors. Distinct from our `ai-seo` skill — that one is about ranking in AI search results (Perplexity, Google AI Overviews); this one is about being the source LLMs cite in their answers.",
+      "description": "Answer Engine Optimization (AEO): optimize content to be cited by LLMs (ChatGPT, Claude, Perplexity, Gemini) in their answers. Use when designing content for LLM citation, auditing citability, or structuring Q&A schema.",
       "tags": [
         "aeo",
         "answer-engine-optimization",
@@ -1292,7 +1292,7 @@
     {
       "name": "ai-seo",
       "domain": "marketing",
-      "description": "Optimize content for AI search engines including Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Microsoft Copilot. Covers generative engine optimization (GEO), AI citability audits, content structuring for extraction, schema markup, bot access configuration, and monitoring. Use when optimizing for AI search, AI overviews, generative search, LLM visibility, semantic search, entity optimization, or when user mentions AI SEO, GEO, Perplexity citations, ChatGPT visibility, or AI-generated answers.",
+      "description": "Optimize content to rank in AI search engines (AI Overviews, Perplexity, ChatGPT) via generative engine optimization (GEO), citability audits, and schema markup. Use when optimizing for AI search, generative search, or LLM visibility.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1303,7 +1303,7 @@
     {
       "name": "analytics-tracking",
       "domain": "marketing",
-      "description": "End-to-end analytics implementation for web and SaaS products. Covers GA4 configuration, Google Tag Manager setup, event taxonomy design, conversion tracking across Google Ads and Meta, cross-domain tracking, UTM strategy, consent management, and data quality auditing. Use when building a tracking plan, debugging missing events, setting up GTM, or auditing existing analytics.",
+      "description": "End-to-end analytics implementation for web and SaaS: GA4, Google Tag Manager, event taxonomy, conversion tracking, and UTM strategy. Use when building a tracking plan, debugging missing events, setting up GTM, or auditing existing analytics.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1331,7 +1331,7 @@
     {
       "name": "brand-guidelines",
       "domain": "marketing",
-      "description": "Build, document, and enforce brand identity systems covering visual identity, voice and tone, typography, color systems, logo usage, imagery standards, and cross-channel consistency. Use when creating style guides, defining brand voice, auditing brand consistency, establishing visual standards, or when user mentions brand guidelines, brand colors, typography, logo usage, brand voice, visual identity, tone of voice, brand standards, style guide, brand consistency, or design standards.",
+      "description": "Build and enforce brand identity systems: visual identity, voice and tone, typography, color, and cross-channel consistency. Use when creating style guides, defining brand voice, auditing brand consistency, or setting visual standards.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1342,7 +1342,7 @@
     {
       "name": "brand-strategist",
       "domain": "marketing",
-      "description": "Expert brand strategy covering brand positioning, identity development, brand architecture, messaging frameworks, and brand governance. Use when developing brand positioning statements, creating messaging frameworks, auditing brand health metrics, building brand architecture models, or establishing brand governance guidelines.",
+      "description": "Brand strategy covering positioning, identity, brand architecture, messaging frameworks, and governance. Use when developing brand positioning, creating messaging frameworks, auditing brand health, or building brand architecture.",
       "tags": [
         "brand",
         "strategy",
@@ -1370,7 +1370,7 @@
     {
       "name": "cold-email",
       "domain": "marketing",
-      "description": "Write, build, and optimize B2B cold email outreach sequences that get replies. Covers first-touch emails, multi-email sequences, personalization strategies, follow-up cadence, deliverability setup, and compliance (CAN-SPAM, GDPR). Use when writing cold outreach, prospecting emails, SDR emails, sales emails, first-touch emails, follow-up sequences, or when user mentions cold email, cold outreach, email prospecting, outbound email, sales development, or sequence building.",
+      "description": "Write and optimize B2B cold email outreach sequences that get replies, covering personalization, follow-up cadence, deliverability, and compliance. Use when writing cold outreach, prospecting/SDR emails, or building outbound sequences.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1381,7 +1381,7 @@
     {
       "name": "content-creator",
       "domain": "marketing",
-      "description": "Create SEO-optimized marketing content with consistent brand voice. Includes brand voice analyzer, SEO optimizer, content frameworks, and social media templates. Use when writing blog posts, creating social media content, analyzing brand voice, optimizing SEO, planning content calendars, or when user mentions content creation, brand voice, SEO optimization, social media marketing, or content strategy.",
+      "description": "Create SEO-optimized marketing content with consistent brand voice, using a brand voice analyzer, SEO optimizer, and content frameworks. Use when writing blog posts, creating social content, or analyzing brand voice.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
@@ -1392,7 +1392,7 @@
     {
       "name": "content-humanizer",
       "domain": "marketing",
-      "description": "Transform AI-generated content into authentic, human-sounding writing. Covers AI pattern detection, natural writing rhythm restoration, voice injection, brand personality application, and authenticity scoring. Use when content sounds robotic, uses AI cliches, lacks personality, reads like committee writing, or when user mentions AI content, make it human, add personality, sounds robotic, fix AI writing, content authenticity, AI detection, or humanize content.",
+      "description": "Transform AI-generated content into human-sounding writing via AI pattern detection, rhythm restoration, and authenticity scoring. Use when content sounds robotic, uses AI cliches, or the user wants to humanize or fix AI writing.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1403,7 +1403,7 @@
     {
       "name": "content-production",
       "domain": "marketing",
-      "description": "Full content production pipeline from blank page to publish-ready piece. Covers competitive research, content briefs, drafting, SEO optimization, readability scoring, editorial quality gates, and internal linking. Use when writing blog posts, articles, guides, or long-form content end-to-end, or when user mentions write a post, draft an article, create content, content pipeline, editorial workflow, content operations, content calendar management, repurposing, or content at scale.",
+      "description": "Full content production pipeline from blank page to publish-ready piece: research, briefs, drafting, SEO, readability, and editorial gates. Use when writing blog posts, articles, guides, or long-form content end-to-end at scale.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1414,7 +1414,7 @@
     {
       "name": "content-strategy",
       "domain": "marketing",
-      "description": "Plan content strategy including content pillars, audience research, topic clustering, funnel mapping, competitive content analysis, content audits, and editorial planning. Use when deciding what content to create, building a content calendar, planning topic clusters, conducting content audits, or when user mentions content strategy, content ideas, blog strategy, topic clusters, content planning, content pillars, content gaps, or editorial planning.",
+      "description": "Plan content strategy: content pillars, audience research, topic clustering, funnel mapping, and content audits. Use when deciding what content to create, building a content calendar, planning topic clusters, or finding content gaps.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1425,7 +1425,7 @@
     {
       "name": "copy-editing",
       "domain": "marketing",
-      "description": "Systematic copy editing through focused passes covering clarity, voice consistency, benefit framing, proof validation, specificity, emotional impact, and friction removal. Includes the Seven Sweeps Framework, editorial checklists, common problem diagnosis, and style consistency standards. Use when editing marketing copy, reviewing drafts, polishing content, proofreading, or when user mentions edit copy, review copy, copy feedback, proofread, polish, copy sweep, editorial review, or fact-checking.",
+      "description": "Systematic copy editing through focused passes (the Seven Sweeps Framework) covering clarity, voice, proof, specificity, and friction removal. Use when editing marketing copy, reviewing drafts, polishing content, or proofreading.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1436,7 +1436,7 @@
     {
       "name": "copywriting",
       "domain": "marketing",
-      "description": "Write persuasive marketing copy for homepages, landing pages, pricing pages, feature pages, and product pages. Includes headline formulas, CTA frameworks, page structure templates, conversion copy principles, and objection handling. Use when writing page copy, improving headlines, crafting CTAs, rewriting marketing pages, or when user mentions copywriting, marketing copy, headline help, CTA copy, page copy, conversion copy, landing page copy, homepage copy, or persuasive writing.",
+      "description": "Write persuasive marketing copy for homepages, landing, pricing, feature, and product pages using headline formulas, CTA frameworks, and objection handling. Use when writing page copy, improving headlines, crafting CTAs, or conversion copy.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1447,7 +1447,7 @@
     {
       "name": "email-sequence",
       "domain": "marketing",
-      "description": "Design and write complete email automation sequences for SaaS and B2B products. Covers welcome/onboarding, lead nurture, re-engagement, post-purchase, trial expiration, and sales sequences. Outputs ready-to-send drafts with subject lines, preview text, full body copy, CTAs, timing, and segmentation logic. Use when building drip campaigns, improving trial-to-paid conversion, or designing lifecycle email programs.",
+      "description": "Design and write email automation sequences (welcome/onboarding, nurture, re-engagement, trial expiration, sales) for SaaS and B2B, with subject lines, copy, CTAs, and timing. Use when building drip campaigns or designing lifecycle email.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1458,7 +1458,7 @@
     {
       "name": "email-template-builder",
       "domain": "marketing",
-      "description": "Build production-grade email template systems with React Email or MJML. Covers responsive layouts, dark mode, multi-provider sending (Resend, SendGrid, Postmark, SES), i18n, spam score optimization, preview servers, and analytics tracking. Use when setting up transactional email infrastructure, building email design systems, or debugging deliverability issues.",
+      "description": "Build email template systems with React Email or MJML: responsive layouts, dark mode, multi-provider sending, and spam score optimization. Use when setting up transactional email, building email design systems, or debugging deliverability.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1469,7 +1469,7 @@
     {
       "name": "growth-marketer",
       "domain": "marketing",
-      "description": "Expert growth marketing covering experimentation, funnel optimization, acquisition channels, retention strategies, and viral growth. Use when designing A/B experiments, optimizing AARRR funnel stages, calculating viral coefficients, building growth models, or prioritizing acquisition channels by CAC and LTV.",
+      "description": "Growth marketing covering experimentation, funnel optimization, acquisition channels, retention, and viral growth. Use when designing A/B experiments, optimizing AARRR funnel stages, or prioritizing channels by CAC and LTV.",
       "tags": [
         "growth",
         "experimentation",
@@ -1486,7 +1486,7 @@
     {
       "name": "landing-page-generator",
       "domain": "marketing",
-      "description": "Generate high-converting landing pages with complete page structure, copy frameworks, conversion optimization, CTA strategy, and performance patterns. Covers hero sections, feature grids, pricing tables, FAQ sections, testimonial blocks, and CTA sections with proven frameworks (PAS, AIDA, BAB). Includes SEO meta tags, structured data guidance, and Core Web Vitals optimization. Use when creating landing pages, marketing pages, campaign pages, lead capture pages, or when user mentions landing page, conversion page, lead gen page, promo page, or single-page site.",
+      "description": "Generate high-converting landing pages with page structure, copy frameworks (PAS, AIDA, BAB), CTA strategy, SEO meta, and Core Web Vitals optimization. Use when creating landing pages, campaign pages, lead capture pages, or conversion pages.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1497,7 +1497,7 @@
     {
       "name": "launch-strategy",
       "domain": "marketing",
-      "description": "Plan and execute product launches and feature announcements for SaaS and technology products. Covers phased launch plans (alpha, beta, GA), channel strategy (owned/rented/borrowed), Product Hunt playbooks, launch day execution, and post-launch momentum. Use when launching a new product, major feature, pricing change, or planning a Product Hunt launch.",
+      "description": "Plan and execute product launches and feature announcements: phased plans (alpha, beta, GA), channel strategy, Product Hunt playbooks, and post-launch momentum. Use when launching a new product or feature, or planning a Product Hunt launch.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1508,7 +1508,7 @@
     {
       "name": "marketing-analyst",
       "domain": "marketing",
-      "description": "Expert marketing analytics covering campaign analysis, attribution modeling, marketing mix modeling, ROI measurement, and performance reporting. Use when analyzing campaign ROI, comparing attribution models, optimizing marketing budget allocation, building executive dashboards, or running A/B test statistical analysis.",
+      "description": "Marketing analytics covering campaign analysis, attribution and marketing mix modeling, ROI measurement, and performance reporting. Use when analyzing campaign ROI, comparing attribution models, or optimizing budget allocation.",
       "tags": [
         "analytics",
         "attribution",
@@ -1525,7 +1525,7 @@
     {
       "name": "marketing-context",
       "domain": "marketing",
-      "description": "Create and maintain the foundational marketing context document covering product positioning, ICP definition, competitive landscape, brand voice, customer language, objection handling, proof points, and switching dynamics. All marketing skills read this context before starting. Use when setting up marketing context, defining target audience, establishing brand voice, documenting ICP, capturing customer language, or when user mentions marketing context, brand voice setup, target audience, ICP, positioning, customer insights, competitive analysis, or market research.",
+      "description": "Create and maintain the foundational context doc (positioning, ICP, competitive landscape, brand voice, customer language) that other marketing skills read first. Use when setting up context, defining the ICP, or setting brand voice.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1547,7 +1547,7 @@
     {
       "name": "marketing-ideas",
       "domain": "marketing",
-      "description": "Library of 139+ proven marketing strategies organized by category, stage, budget, and timeline. Covers content, SEO, paid ads, social, email, partnerships, events, product-led growth, and unconventional tactics. Use when brainstorming marketing ideas, planning growth strategies, or when user mentions marketing ideas, growth ideas, how to market, marketing strategies, marketing tactics, ways to promote, campaign ideation, creative brainstorming, or trend analysis.",
+      "description": "Library of 139+ proven marketing strategies organized by category, stage, budget, and timeline across content, SEO, paid, social, email, and growth. Use when brainstorming marketing ideas, planning growth strategies, or ideating campaigns.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -1558,7 +1558,7 @@
     {
       "name": "marketing-ops",
       "domain": "marketing",
-      "description": "Central marketing operations hub covering MarTech stack management, marketing automation, data management, attribution modeling, campaign orchestration, skill routing, and cross-functional coordination. Use when routing marketing questions, orchestrating multi-skill campaigns, managing MarTech stack, setting up marketing automation, or when user mentions marketing ops, campaign plan, marketing help, marketing priorities, coordinate marketing, MarTech, marketing automation, data management, or attribution.",
+      "description": "Central marketing operations hub for MarTech stack, automation, attribution, campaign orchestration, and skill routing. Use when routing marketing questions, orchestrating multi-skill campaigns, or managing the MarTech stack and automation.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1597,7 +1597,7 @@
     {
       "name": "paid-ads",
       "domain": "marketing",
-      "description": "Plan, execute, and optimize paid advertising campaigns across Google Ads, Meta Ads, LinkedIn Ads, Twitter/X, and TikTok. Covers campaign structure, audience targeting, budget allocation, bid strategies, retargeting, attribution, and performance optimization. Use when running PPC campaigns, setting up ad accounts, optimizing ROAS/CPA, or when user mentions paid ads, PPC, Google Ads, Meta Ads, LinkedIn Ads, ad campaigns, retargeting, audience targeting, budget optimization, ROAS, CPA, or ad performance.",
+      "description": "Plan, execute, and optimize paid ad campaigns across Google, Meta, LinkedIn, Twitter/X, and TikTok, covering targeting, budget, bid strategies, and retargeting. Use when running PPC campaigns, setting up ad accounts, or optimizing ROAS/CPA.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1608,7 +1608,7 @@
     {
       "name": "programmatic-seo",
       "domain": "marketing",
-      "description": "Programmatic page generation at scale using template-based SEO, data pipelines, and automated content production. Covers keyword pattern mining, template architecture, data sourcing, quality control, and indexation strategy for 100-100K+ page deployments.",
+      "description": "Programmatic page generation at scale using template-based SEO and data",
       "tags": [
         "seo",
         "programmatic",
@@ -1643,7 +1643,7 @@
     {
       "name": "seo-audit",
       "domain": "marketing",
-      "description": "Comprehensive technical SEO auditing covering crawlability, indexation, Core Web Vitals, on-page optimization, content quality, and competitive gap analysis. Includes 85-point audit checklist, severity-weighted scoring, and prioritized remediation plans.",
+      "description": "Technical SEO auditing covering crawlability, indexation, Core Web Vitals, on-page optimization, and competitive gaps, with an 85-point checklist and remediation plans. Use when auditing technical SEO or diagnosing indexation issues.",
       "tags": [],
       "version": "1.1.0",
       "updated": "2026-06-15",
@@ -1654,7 +1654,7 @@
     {
       "name": "seo-specialist",
       "domain": "marketing",
-      "description": "Expert SEO covering technical SEO, content optimization, link building, keyword research, and search analytics. Use when auditing technical SEO issues, researching keywords by intent and difficulty, optimizing on-page elements, building link acquisition strategies, or analyzing organic search performance.",
+      "description": "SEO covering technical SEO, content optimization, link building, keyword research, and search analytics. Use when auditing technical SEO, researching keywords, optimizing on-page elements, or analyzing organic search performance.",
       "tags": [
         "seo",
         "search",
@@ -1682,7 +1682,7 @@
     {
       "name": "social-content",
       "domain": "marketing",
-      "description": "Create engaging social media content across LinkedIn, Twitter/X, Instagram, TikTok, and Facebook with platform-specific formats, hook formulas, content pillar systems, repurposing workflows, engagement strategies, and analytics. Use when creating social posts, planning social calendars, writing LinkedIn posts, crafting Twitter threads, or when user mentions social media, social content, LinkedIn post, tweet, social calendar, engagement, viral content, social scheduling, or platform-specific content.",
+      "description": "Create social media content across LinkedIn, Twitter/X, Instagram, TikTok, and Facebook with platform formats, hook formulas, and content pillars. Use when creating social posts, planning calendars, or writing LinkedIn posts and threads.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1693,7 +1693,7 @@
     {
       "name": "social-media-analyzer",
       "domain": "marketing",
-      "description": "Social media campaign analysis and performance tracking. Calculates engagement rates, ROI, and benchmarks across platforms. Use for analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards.",
+      "description": "Social media campaign analysis and performance tracking that calculates engagement rates, ROI, and cross-platform benchmarks. Use for analyzing social performance, calculating engagement rate, or measuring campaign ROI.",
       "tags": [
         "social-media",
         "analytics",
@@ -1709,7 +1709,7 @@
     {
       "name": "social-media-manager",
       "domain": "marketing",
-      "description": "Strategic social media management for B2B SaaS and technology companies. Covers platform selection, content pillar design, editorial calendars, community engagement frameworks, crisis response protocols, growth tactics, and performance measurement. Use when building social media strategy, planning content calendars, managing community engagement, conducting social audits, or scaling social operations.",
+      "description": "Strategic social media management for B2B SaaS: platform selection, content pillars, editorial calendars, community engagement, and crisis response. Use when building social strategy, planning content calendars, or conducting social audits.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1756,7 +1756,7 @@
     {
       "name": "board-deck-builder",
       "domain": "c-level-advisor",
-      "description": "Assembles comprehensive board and investor update decks by pulling perspectives from all C-suite roles. Covers deck structure, narrative frameworks, bad news delivery, section-by-section guidance, and common mistakes. Use when preparing board meetings, investor updates, quarterly business reviews, fundraising narratives, or when user mentions board deck, investor update, board pack, board presentation, quarterly review, fundraising deck, or investor deck.",
+      "description": "Assembles board and investor update decks by pulling perspectives from all C-suite roles. Use when preparing board meetings, investor updates, quarterly business reviews, or fundraising narratives.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1767,7 +1767,7 @@
     {
       "name": "board-meeting",
       "domain": "c-level-advisor",
-      "description": "Multi-agent board meeting protocol for strategic decisions. Runs a structured 6-phase deliberation: context loading, independent C-suite contributions, critic analysis, synthesis, founder review, and decision extraction. Prevents groupthink through isolated contributions. Use when making major strategic decisions, resolving cross-functional disagreements, evaluating irreversible choices, or when user mentions board meeting, executive deliberation, strategic decision, multi-perspective, or structured deliberation.",
+      "description": "Multi-agent board meeting protocol running a structured 6-phase deliberation with isolated C-suite contributions to prevent groupthink. Use when making major strategic decisions or resolving cross-functional disagreements.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1778,7 +1778,7 @@
     {
       "name": "ceo-advisor",
       "domain": "c-level-advisor",
-      "description": "Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management. Includes strategy analyzer, financial scenario modeling, board governance frameworks, and investor relations playbooks. Use when planning strategy, preparing board presentations, managing investors, developing organizational culture, making executive decisions, or when user mentions CEO, strategic planning, board meetings, investor updates, organizational leadership, or executive strategy.",
+      "description": "Executive leadership guidance for strategic decisions, org development, and stakeholder management. Use when planning strategy, preparing board presentations, managing investors, or making executive decisions.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
@@ -1789,7 +1789,7 @@
     {
       "name": "cfo-advisor",
       "domain": "c-level-advisor",
-      "description": "Financial leadership advisor for CFOs on financial planning, fundraising, investor reporting, unit economics, cash management, and financial operations. Use when building a financial model, preparing for fundraising due diligence, designing investor reporting packages, calculating unit economics, managing cash runway, or planning month-end close processes.",
+      "description": "Financial leadership advisor on financial planning, fundraising, investor reporting, and unit economics. Use when building a financial model, preparing for fundraising, calculating unit economics, or managing cash runway.",
       "tags": [
         "finance",
         "fundraising",
@@ -1806,7 +1806,7 @@
     {
       "name": "change-management",
       "domain": "c-level-advisor",
-      "description": "Framework for rolling out organizational changes without chaos. Covers the ADKAR model adapted for startups, communication templates, resistance patterns and responses, change fatigue management, and specific playbooks for process changes, reorgs, strategy pivots, and culture changes. Use when announcing a reorg, switching tools, pivoting strategy, killing a product, changing leadership, rolling out new processes, or when user mentions change management, change rollout, managing resistance, org change, reorg, pivot communication, tool migration, or change fatigue.",
+      "description": "Framework for rolling out organizational changes without chaos, using ADKAR adapted for startups. Use when announcing a reorg, switching tools, pivoting strategy, killing a product, or managing change resistance.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1817,7 +1817,7 @@
     {
       "name": "chief-ai-officer-advisor",
       "domain": "c-level-advisor",
-      "description": "AI leadership advisor for Chief AI Officers on AI strategy, governance, risk management, investment planning, organizational design, and the AI/ML talent stack. Use when defining an AI strategy, building an AI governance program, evaluating build-vs-buy for AI capability, scoring AI maturity, drafting an AI risk register, or planning AI investment across the portfolio.",
+      "description": "AI leadership advisor on AI strategy, governance, risk, investment, and org design. Use when defining an AI strategy, building an AI governance program, scoring AI maturity, or drafting an AI risk register.",
       "tags": [
         "ai",
         "strategy",
@@ -1836,7 +1836,7 @@
     {
       "name": "chief-customer-officer-advisor",
       "domain": "c-level-advisor",
-      "description": "Customer leadership advisor for Chief Customer Officers on customer experience strategy, retention and expansion, voice-of-customer programs, CX organizational design, and customer outcomes accountability. Use when defining a CX strategy, scoring CX maturity, planning churn interventions, designing a VoC program, or preparing the customer section of a board update.",
+      "description": "Customer leadership advisor on CX strategy, retention and expansion, and voice-of-customer programs. Use when defining a CX strategy, scoring CX maturity, planning churn interventions, or designing a VoC program.",
       "tags": [
         "customer-experience",
         "retention",
@@ -1855,7 +1855,7 @@
     {
       "name": "chief-data-officer-advisor",
       "domain": "c-level-advisor",
-      "description": "Data leadership advisor for Chief Data Officers on data strategy, governance, quality, monetization, platform decisions, and team design. Use when defining a data strategy, scoring data maturity, auditing a data governance program, evaluating a data platform stack, designing the data org, or preparing the data section of a board update.",
+      "description": "Data leadership advisor on data strategy, governance, quality, and platform decisions. Use when defining a data strategy, scoring data maturity, auditing data governance, evaluating a data platform, or designing the data org.",
       "tags": [
         "data",
         "governance",
@@ -1874,7 +1874,7 @@
     {
       "name": "chief-of-staff",
       "domain": "c-level-advisor",
-      "description": "C-suite orchestration layer that routes founder questions to the right advisor role(s), triggers multi-role board meetings for complex decisions, synthesizes outputs, tracks decisions, and manages cross-functional alignment. Every C-suite interaction starts here. Use when coordinating executive decisions, routing strategic questions, managing board meetings, synthesizing multi-perspective advice, tracking decision history, resolving inter-department conflicts, or when user mentions chief of staff, orchestrator, c-suite coordinator, executive routing, board coordination, decision synthesis, advisor routing, multi-agent coordination, or strategic orchestration.",
+      "description": "C-suite orchestration that routes founder questions to the right advisor role(s) and runs multi-role board meetings. Use when coordinating executive decisions, routing strategic questions, or resolving cross-department conflicts.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1885,7 +1885,7 @@
     {
       "name": "chro-advisor",
       "domain": "c-level-advisor",
-      "description": "People leadership for scaling companies. Covers hiring strategy, compensation design, org structure, performance management, retention, culture health, and workforce planning. Use when building hiring plans, designing comp frameworks, restructuring teams, managing performance, building career ladders, handling attrition, workforce planning, or when user mentions CHRO, HR, people strategy, talent acquisition, headcount, compensation, org design, retention, performance management, employee engagement, or people operations.",
+      "description": "People leadership for scaling companies: hiring, compensation, org structure, performance, and retention. Use when building hiring plans, designing comp frameworks, restructuring teams, or managing performance.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1896,7 +1896,7 @@
     {
       "name": "ciso-advisor",
       "domain": "c-level-advisor",
-      "description": "Security leadership for growth-stage companies. Risk quantification in dollars, compliance roadmap sequencing (SOC 2, ISO 27001, HIPAA, GDPR), security architecture strategy, incident response leadership, vendor security assessment, and board-level security reporting. Use when building security programs, justifying security budget, selecting compliance frameworks, managing incidents, assessing vendor risk, preparing for audits, or when user mentions CISO, security strategy, compliance, zero trust, board security, risk assessment, incident response, SOC 2, ISO 27001, HIPAA, GDPR, penetration testing, or vulnerability management.",
+      "description": "Security leadership for growth-stage companies. Use when building security programs, selecting compliance frameworks (SOC 2, ISO 27001, HIPAA, GDPR), managing incidents, or assessing vendor risk.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1907,7 +1907,7 @@
     {
       "name": "cmo-advisor",
       "domain": "c-level-advisor",
-      "description": "Marketing leadership advisor for CMOs on brand strategy, demand generation, marketing operations, growth marketing, and revenue marketing alignment. Use when building a marketing strategy, planning demand-gen campaigns, designing lead scoring models, allocating marketing budget, or aligning marketing with revenue targets.",
+      "description": "Marketing leadership advisor on brand strategy, demand generation, and marketing operations. Use when building a marketing strategy, planning demand-gen campaigns, designing lead scoring models, or aligning marketing with revenue.",
       "tags": [
         "marketing",
         "brand",
@@ -1924,7 +1924,7 @@
     {
       "name": "company-os",
       "domain": "c-level-advisor",
-      "description": "The meta-framework for how a company runs -- the connective tissue between all C-suite roles. Covers operating system selection (EOS, Scaling Up, OKR-native, hybrid), accountability charts, scorecards, meeting pulse design, issue resolution (IDS), 90-day rocks, and communication cadence. Use when setting up company operations, selecting a management framework, designing meeting rhythms, building accountability systems, implementing OKRs, or when user mentions EOS, Scaling Up, operating system, L10 meetings, rocks, scorecard, accountability chart, quarterly planning, or meeting cadence.",
+      "description": "Meta-framework for how a company runs -- the connective tissue between C-suite roles (EOS, Scaling Up, OKR-native). Use when setting up company operations, selecting a management framework, designing meeting rhythms, or implementing OKRs.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1935,7 +1935,7 @@
     {
       "name": "competitive-intel",
       "domain": "c-level-advisor",
-      "description": "Systematic competitor tracking that feeds CMO positioning, CRO battlecards, and CPO roadmap decisions. Covers competitor identification, 8-dimension tracking, analysis frameworks, battlecard creation, win/loss analysis, and intelligence distribution. Use when analyzing competitors, building battlecards, tracking market moves, conducting win/loss analysis, updating positioning, or when user mentions competitive intelligence, competitor analysis, battlecards, win/loss, market positioning, or competitive strategy.",
+      "description": "Systematic competitor tracking that feeds positioning, battlecards, and roadmap decisions. Use when analyzing competitors, building battlecards, tracking market moves, conducting win/loss analysis, or updating positioning.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1946,7 +1946,7 @@
     {
       "name": "coo-advisor",
       "domain": "c-level-advisor",
-      "description": "Operations leadership advisor for COOs on business operations, process optimization, scaling infrastructure, cross-functional alignment, and operational excellence. Use when designing operational processes, planning headcount capacity, optimizing vendor relationships, building business continuity plans, or scaling operations for rapid growth.",
+      "description": "Operations leadership advisor on business operations, process optimization, and scaling infrastructure. Use when designing operational processes, planning headcount capacity, optimizing vendors, or scaling operations.",
       "tags": [
         "operations",
         "process",
@@ -1963,7 +1963,7 @@
     {
       "name": "cpo-advisor",
       "domain": "c-level-advisor",
-      "description": "Strategic product leadership for scaling companies. Covers product vision, portfolio strategy, product-market fit measurement, product org design, north star metrics, investment postures, and board-level product reporting. Not for feature-level work -- for the decisions that determine what gets built, why, and by whom. Use when setting product vision, managing a product portfolio, measuring PMF, designing product teams, prioritizing at portfolio level, or when user mentions CPO, product strategy, PMF, product organization, portfolio prioritization, roadmap strategy, north star metric, or product-led growth.",
+      "description": "Strategic product leadership for scaling companies: product vision, portfolio strategy, and PMF measurement. Use when setting product vision, managing a product portfolio, measuring PMF, or designing product teams.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1974,7 +1974,7 @@
     {
       "name": "cro-advisor",
       "domain": "c-level-advisor",
-      "description": "Revenue leadership for B2B SaaS companies. Covers revenue forecasting, sales model design, pricing strategy, net revenue retention, sales team scaling, pipeline management, and board-level revenue reporting. Use when designing the revenue engine, setting quotas, modeling NRR, evaluating pricing, building forecasts, scaling sales teams, or when user mentions CRO, revenue strategy, sales model, ARR growth, NRR, expansion revenue, churn, pricing strategy, sales capacity, pipeline, quota, or MEDDPICC.",
+      "description": "Revenue leadership for B2B SaaS: forecasting, sales model design, pricing, and net revenue retention. Use when designing the revenue engine, setting quotas, modeling NRR, evaluating pricing, or scaling sales teams.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -1985,7 +1985,7 @@
     {
       "name": "cs-onboard",
       "domain": "c-level-advisor",
-      "description": "Structured C-suite onboarding through a founder interview that captures company context across 7 dimensions. Generates a persistent company context file used by all C-level advisory skills. Includes quarterly refresh protocol, context quality scoring, and graceful handling of missing information. Use when setting up advisory context for the first time, refreshing stale company context, or onboarding a new executive.",
+      "description": "Structured C-suite onboarding via a founder interview that captures company context into a persistent file used by all advisory skills. Use when setting up advisory context, refreshing stale context, or onboarding a new executive.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -1996,7 +1996,7 @@
     {
       "name": "cto-advisor",
       "domain": "c-level-advisor",
-      "description": "Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Includes tech debt analyzer, team scaling calculator, engineering metrics frameworks, technology evaluation tools, and ADR templates. Use when assessing technical debt, scaling engineering teams, evaluating technologies, making architecture decisions, establishing engineering metrics, or when user mentions CTO, tech debt, technical debt, team scaling, architecture decisions, technology evaluation, engineering metrics, DORA metrics, or technology strategy.",
+      "description": "Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Use when assessing technical debt, scaling engineering teams, evaluating technologies, or making architecture decisions.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2025-10-20",
@@ -2007,7 +2007,7 @@
     {
       "name": "culture-architect",
       "domain": "c-level-advisor",
-      "description": "Build, measure, and evolve company culture as operational behavior -- not wall posters. Covers mission/vision/values workshops, values-to-behaviors translation, culture code creation, culture health assessment, cultural rituals by stage, and culture debt management. Use when building company values, assessing culture health, designing rituals, creating culture codes, handling culture clashes, managing through rapid growth, M&A integration, or when user mentions culture, values, culture debt, founder culture, culture code, psychological safety, engagement, eNPS, or remote culture.",
+      "description": "Build, measure, and evolve company culture as operational behavior, not wall posters. Use when building company values, assessing culture health, designing rituals, creating culture codes, or handling culture clashes.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2018,7 +2018,7 @@
     {
       "name": "decision-logger",
       "domain": "c-level-advisor",
-      "description": "Two-layer memory architecture for tracking executive decisions. Layer 1 stores raw deliberation transcripts, Layer 2 stores founder-approved decisions only. Future sessions read Layer 2 to prevent hallucinated consensus from past debates. Handles conflict detection, supersession tracking, DO_NOT_RESURFACE enforcement, overdue action item alerts, and decision search. Use when logging decisions, reviewing past decisions, checking overdue items, detecting conflicting decisions, or when user mentions decision log, decision history, past decisions, action items, decision tracking, or decision review.",
+      "description": "Two-layer memory for executive decisions, separating raw deliberation from approved decisions to prevent hallucinated consensus. Use when logging decisions, reviewing past decisions, or checking overdue action items.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2029,7 +2029,7 @@
     {
       "name": "executive-mentor",
       "domain": "c-level-advisor",
-      "description": "Adversarial thinking partner for founders and executives. Stress-tests plans, prepares for board meetings, dissects decisions with no good options, forces honest post-mortems, and identifies blind spots before competitors or board members do. Use when you need plan validation, board preparation, hard decision frameworks, assumption stress-testing, failure analysis, or when user mentions stress test, challenge, board prep, hard decision, pre-mortem, post-mortem, devil's advocate, plan review, or executive coaching.",
+      "description": "Adversarial thinking partner that stress-tests plans, prepares board meetings, and surfaces blind spots. Use when you need plan validation, board prep, hard-decision frameworks, or pre/post-mortem failure analysis.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2040,7 +2040,7 @@
     {
       "name": "founder-coach",
       "domain": "c-level-advisor",
-      "description": "Personal leadership development for founders and first-time CEOs. Covers founder archetype identification, delegation frameworks, energy management, CEO calendar audits, leadership style evolution, blind spot identification, imposter syndrome, founder mental health, succession planning, and the founder mode trap. Use when a founder feels like the bottleneck, struggles to delegate, is burning out, transitioning from IC to executive, managing a board for the first time, or when user mentions founder mode, CEO growth, leadership development, delegation, burnout, imposter syndrome, founder bottleneck, or executive transition.",
+      "description": "Personal leadership development for founders and first-time CEOs. Use when a founder feels like the bottleneck, struggles to delegate, is burning out, or transitioning from IC to executive.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2051,7 +2051,7 @@
     {
       "name": "general-counsel-advisor",
       "domain": "c-level-advisor",
-      "description": "Legal leadership advisor for General Counsels and senior legal leaders on legal strategy, risk management, contract and commercial governance, regulatory tracking, litigation management, and legal-team operating model. Use when defining a legal strategy, scoring legal risk, auditing the contract portfolio, building a regulatory calendar, or preparing the legal section of a board update.",
+      "description": "Legal leadership advisor on legal strategy, risk, contract governance, and regulatory tracking. Use when defining a legal strategy, scoring legal risk, auditing the contract portfolio, or building a regulatory calendar.",
       "tags": [
         "legal",
         "gc",
@@ -2070,7 +2070,7 @@
     {
       "name": "internal-narrative",
       "domain": "c-level-advisor",
-      "description": "Build and maintain one coherent company story across all stakeholder audiences -- employees, investors, customers, candidates, and partners. Covers narrative construction, audience translation, contradiction detection, all-hands design, investor updates, crisis communication, and change management communications. Use when preparing all-hands meetings, investor updates, board presentations, recruiting narratives, crisis communications, or any time narrative consistency matters.",
+      "description": "Build and maintain one coherent company story across employees, investors, customers, candidates, and partners. Use when preparing all-hands meetings, investor updates, board presentations, recruiting narratives, or crisis communications.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -2081,7 +2081,7 @@
     {
       "name": "intl-expansion",
       "domain": "c-level-advisor",
-      "description": "International market expansion strategy for scaling companies. Covers market selection scoring, entry mode evaluation, localization requirements, regulatory compliance by region, go-to-market adaptation, team structure decisions, and launch planning. Use when expanding to new countries, evaluating international markets, planning localization, building regional teams, assessing regulatory requirements, or when user mentions international expansion, market entry, localization, regional strategy, global expansion, cross-border, or new market.",
+      "description": "International market expansion strategy for scaling companies. Use when expanding to new countries, evaluating international markets, planning localization, building regional teams, or assessing regulatory requirements by region.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2092,7 +2092,7 @@
     {
       "name": "ma-playbook",
       "domain": "c-level-advisor",
-      "description": "M&A strategy for acquiring companies or being acquired. Covers strategic rationale assessment, target screening, due diligence frameworks, valuation methodologies, deal structure, negotiation strategy, integration planning, and post-acquisition execution. Use when evaluating acquisitions, preparing to be acquired, conducting due diligence, planning integration, negotiating deal terms, or when user mentions M&A, acquisition, merger, acqui-hire, due diligence, valuation, LOI, earnout, integration, or deal structure.",
+      "description": "M&A strategy for acquiring companies or being acquired. Use when evaluating acquisitions, preparing to be acquired, conducting due diligence, planning integration, or negotiating deal terms (valuation, LOI, earnout, deal structure).",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2103,7 +2103,7 @@
     {
       "name": "org-health-diagnostic",
       "domain": "c-level-advisor",
-      "description": "Cross-functional organizational health check combining signals from all C-suite roles. Scores 8 dimensions on a traffic-light scale with drill-down recommendations and cascade analysis. Use when assessing overall company health, preparing for board reviews, identifying at-risk functions, diagnosing cross-functional problems, or when user mentions org health, health check, health dashboard, company health, functional health, or health assessment.",
+      "description": "Cross-functional organizational health check scoring 8 dimensions on a traffic-light scale. Use when assessing company health, preparing for board reviews, identifying at-risk functions, or diagnosing cross-functional problems.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2114,7 +2114,7 @@
     {
       "name": "scenario-war-room",
       "domain": "c-level-advisor",
-      "description": "Cross-functional what-if modeling for compound adversity scenarios. Models cascading multi-variable risks across all business functions simultaneously. Unlike single-assumption stress tests, this shows how one problem creates the next. Use when facing complex risk scenarios, strategic decisions with major downside, multi-variable threats, or when someone asks \"what if X AND Y both happen?",
+      "description": "Cross-functional what-if modeling for compound adversity -- shows how one problem cascades into the next. Use when facing complex risk scenarios, strategic decisions with major downside, or multi-variable threats.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -2125,7 +2125,7 @@
     {
       "name": "strategic-alignment",
       "domain": "c-level-advisor",
-      "description": "Cascades strategy from boardroom to individual contributor and detects misalignment. Covers strategy articulation testing, cascade mapping, orphan goal detection, conflicting goal identification, silo diagnosis, communication gap analysis, and realignment protocols. Use when teams are pulling in different directions, OKRs don't connect, departments optimize locally at company expense, strategy doesn't translate to execution, or when user mentions alignment, strategy cascade, silo, conflicting OKRs, strategy communication, goal cascade, or misalignment.",
+      "description": "Cascades strategy from boardroom to individual contributor and detects misalignment. Use when teams pull in different directions, OKRs don't connect, departments optimize locally at company expense, or strategy doesn't translate to execution.",
       "tags": [],
       "version": "2.0.0",
       "updated": "2026-03-09",
@@ -2136,7 +2136,7 @@
     {
       "name": "vpe-advisor",
       "domain": "c-level-advisor",
-      "description": "VP of Engineering advisor for engineering leaders on organizational design, productivity, quality, delivery, capacity planning, and culture. Complements cto-advisor (technical strategy) with the people-process-delivery half of the engineering leadership mandate. Use when scoring engineering org health, designing the engineering org, planning capacity, building the productivity dashboard, or preparing the eng section of the board update.",
+      "description": "VP of Engineering advisor on org design, productivity, quality, delivery, and capacity planning. Use when scoring engineering org health, designing the eng org, planning capacity, or building the productivity dashboard.",
       "tags": [
         "engineering",
         "vpe",
@@ -2157,7 +2157,7 @@
     {
       "name": "ai-act-readiness",
       "domain": "ra-qm-team",
-      "description": "EU AI Act readiness assessment + sprint playbook. Use when preparing for the Aug 2026 high-risk AI system requirements deadline, when notified-body conformity assessment is scheduled, when GPAI (general-purpose AI) obligations apply, or when annual readiness assessment is due. Pairs with our deep eu-ai-act-specialist skill — that one builds the program; this one preps for the specific assessment.",
+      "description": "EU AI Act readiness assessment and sprint playbook. Use when preparing for the Aug 2026 high-risk AI system deadline, when a notified-body conformity assessment is scheduled, or when GPAI (general-purpose AI) obligations apply.",
       "tags": [
         "eu-ai-act",
         "ai-readiness",
@@ -2176,7 +2176,7 @@
     {
       "name": "aims-audit",
       "domain": "ra-qm-team",
-      "description": "ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when ISO 42001 certification audit is scheduled (Stage 1 documentation review OR Stage 2 onsite), when surveillance audit is due, when internal AIMS audit is being conducted, or when preparing AI Impact Assessment (AIIA) for new AI systems. Pairs with our iso42001-ai-management skill — that one builds the AIMS; this one preps for the certification or surveillance audit.",
+      "description": "ISO 42001 AI Management System (AIMS) audit-prep playbook. Use when an ISO 42001 certification audit is scheduled (Stage 1 or Stage 2), when a surveillance or internal AIMS audit is due, or when preparing an AI Impact Assessment (AIIA).",
       "tags": [
         "iso42001",
         "aims",
@@ -2195,7 +2195,7 @@
     {
       "name": "compliance-readiness",
       "domain": "ra-qm-team",
-      "description": "Cross-framework compliance readiness orchestrator. Use when preparing for multi-framework certification (SOC 2 + ISO 27001 + NIST CSF together), when building a shared-evidence strategy that satisfies multiple frameworks simultaneously, when sequencing certifications (which to do first), or when mapping a single control to its expression across multiple frameworks. Sits above the framework-specific audit-prep skills and the deep framework-specialist skills.",
+      "description": "Cross-framework compliance readiness orchestrator. Use when preparing for multi-framework certification (SOC 2 + ISO 27001 + NIST CSF), building a shared-evidence strategy, sequencing certifications, or mapping a control across frameworks.",
       "tags": [
         "compliance-readiness",
         "multi-framework",
@@ -2216,7 +2216,7 @@
     {
       "name": "fda-qsr-audit-prep",
       "domain": "ra-qm-team",
-      "description": "FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for medical device companies. Use when an FDA inspection is announced, when preparing for the new QMSR (Quality Management System Regulation, 2026), when 483 / Warning Letter response is needed, or when annual readiness assessment surfaces gaps. Pairs with our fda-consultant-specialist for program-building; this skill is the audit-event playbook.",
+      "description": "FDA Quality System Regulation (21 CFR 820 / QMSR) audit-prep playbook for medical devices. Use when an FDA inspection is announced, when preparing for the new QMSR (2026), or when a 483 / Warning Letter response is needed.",
       "tags": [
         "fda",
         "qsr",
@@ -2236,7 +2236,7 @@
     {
       "name": "gdpr-audit-prep",
       "domain": "ra-qm-team",
-      "description": "GDPR audit-prep playbook: 4/8/12-week sprint to prepare for a supervisory authority inquiry, a customer-side DPA audit, or an internal compliance review. Use when an audit is on the calendar, when readiness assessment surfaced gaps, or when ROPA (Records of Processing Activities) needs rapid completion. Pairs with our deep gdpr-dsgvo-expert skill (the program-building one) — this is the operational audit-prep variant.",
+      "description": "GDPR audit-prep playbook: sprint to prepare for a supervisory authority inquiry, DPA audit, or internal review. Use when an audit is scheduled, when readiness gaps surface, or when ROPA (Records of Processing Activities) needs completion.",
       "tags": [
         "gdpr",
         "audit-prep",
@@ -2255,7 +2255,7 @@
     {
       "name": "soc2-audit-prep",
       "domain": "ra-qm-team",
-      "description": "SOC 2 audit-prep playbook: the 4/8/12-week sprint to get from \"we have most of the controls\" to \"audit-ready\" for a Type I or Type II observation. Use when the audit is scheduled and you need a punch list, when readiness assessment surfaced gaps and you need a sprint plan, or when evidence collection is missing or stale. Lighter operational complement to our deep soc2-compliance-expert skill — that one builds the program; this one preps for the specific audit event.",
+      "description": "SOC 2 audit-prep playbook: the 4/8/12-week sprint to audit-ready for a Type I or Type II observation. Use when the audit is scheduled, when readiness assessment surfaced gaps and you need a sprint plan, or when evidence is missing or stale.",
       "tags": [
         "soc2",
         "audit-prep",
@@ -2273,7 +2273,7 @@
     {
       "name": "capa-officer",
       "domain": "ra-qm-team",
-      "description": "CAPA system management for medical device QMS. Covers root cause analysis, corrective action planning, effectiveness verification, and CAPA metrics. Use for CAPA investigations, 5-Why analysis, fishbone diagrams, root cause determination, corrective action tracking, effectiveness verification, or CAPA program optimization.",
+      "description": "CAPA system management for medical device QMS, covering root cause analysis, corrective action planning, and effectiveness verification. Use for CAPA investigations, 5-Why and fishbone analysis, and corrective action tracking.",
       "tags": [
         "capa",
         "root-cause-analysis",
@@ -2290,7 +2290,7 @@
     {
       "name": "ccpa-cpra-privacy-expert",
       "domain": "ra-qm-team",
-      "description": "CCPA and CPRA privacy compliance automation. Audits organizations for California privacy law compliance, maps personal information flows, validates consumer rights readiness, and checks technical safeguards. Use for CCPA compliance assessments, CPRA readiness checks, privacy policy review, consumer rights handling, data mapping, and California privacy audits.",
+      "description": "CCPA and CPRA California privacy compliance. Use for CCPA/CPRA readiness assessments, personal information data mapping, consumer rights handling, privacy policy review, opt-out mechanisms, and California privacy audits.",
       "tags": [
         "ccpa",
         "cpra",
@@ -2307,7 +2307,7 @@
     {
       "name": "dora-compliance-expert",
       "domain": "ra-qm-team",
-      "description": "DORA (EU 2022/2554) digital operational resilience compliance automation for financial entities. Assesses readiness against all 5 DORA pillars, classifies ICT incidents, validates third-party risk management, and generates resilience testing plans. Use for DORA compliance assessments, ICT risk management, incident classification, third-party ICT oversight, and digital operational resilience testing.",
+      "description": "DORA (EU 2022/2554) digital operational resilience compliance for financial entities, covering all 5 pillars. Use for DORA readiness assessments, ICT risk management, incident classification, and third-party ICT oversight.",
       "tags": [
         "dora",
         "ict-risk",
@@ -2323,7 +2323,7 @@
     {
       "name": "eu-ai-act-specialist",
       "domain": "ra-qm-team",
-      "description": "EU AI Act (Regulation EU 2024/1689) compliance specialist. Use when classifying AI systems by risk tier, assessing provider or deployer obligations, evaluating GPAI model compliance, running conformity assessments, performing bias detection and fairness testing, building AI governance programs, or preparing for EU AI Act enforcement deadlines. Covers the full regulatory lifecycle from system inventory through post-market monitoring.",
+      "description": "EU AI Act (Regulation EU 2024/1689) compliance specialist. Use for AI system risk classification, provider/deployer obligations, GPAI model compliance, conformity assessments, bias and fairness testing, and AI governance programs.",
       "tags": [
         "eu-ai-act",
         "ai-governance",
@@ -2340,7 +2340,7 @@
     {
       "name": "fda-consultant-specialist",
       "domain": "ra-qm-team",
-      "description": "FDA regulatory consultant for medical device companies. Provides 510(k)/PMA/De Novo pathway guidance, QSR (21 CFR 820) compliance, HIPAA assessments, and device cybersecurity. Use when user mentions FDA submission, 510(k), PMA, De Novo, QSR, premarket, predicate device, substantial equivalence, HIPAA medical device, or FDA cybersecurity.",
+      "description": "FDA regulatory consultant for medical device companies, covering 510(k)/PMA/De Novo pathways, QSR (21 CFR 820), HIPAA, and device cybersecurity. Use for FDA submissions, predicate and substantial-equivalence analysis, and premarket strategy.",
       "tags": [
         "fda",
         "510k",
@@ -2358,7 +2358,7 @@
     {
       "name": "gdpr-dsgvo-expert",
       "domain": "ra-qm-team",
-      "description": "GDPR and German DSGVO compliance automation. Scans codebases for privacy risks, generates DPIA documentation, tracks data subject rights requests. Use for GDPR compliance assessments, privacy audits, data protection planning, DPIA generation, and data subject rights management.",
+      "description": "GDPR and German DSGVO compliance. Use for GDPR compliance assessments, privacy audits, scanning codebases for privacy risks, DPIA generation, data protection planning, and data subject rights management.",
       "tags": [
         "gdpr",
         "dsgvo",
@@ -2375,7 +2375,7 @@
     {
       "name": "information-security-manager-iso27001",
       "domain": "ra-qm-team",
-      "description": "ISO 27001 ISMS implementation and cybersecurity governance for HealthTech and MedTech companies. Use for ISMS design, security risk assessment, control implementation, ISO 27001 certification, security audits, incident response, and compliance verification. Covers ISO 27001, ISO 27002, healthcare security, and medical device cybersecurity.",
+      "description": "ISO 27001:2022 ISMS implementation and cybersecurity governance for HealthTech and MedTech. Use for ISMS design, risk assessment per Clause 6.1.2, Annex A controls, ISO 27001 certification, security audits, and incident response.",
       "tags": [
         "iso-27001",
         "isms",
@@ -2392,7 +2392,7 @@
     {
       "name": "infrastructure-compliance-auditor",
       "domain": "ra-qm-team",
-      "description": "Cross-cutting infrastructure security audit skill that checks cloud infrastructure, DNS, TLS, endpoints, access control, network security, containers, CI/CD pipelines, secrets management, logging, and physical security against ALL major compliance frameworks. Use for infrastructure audit, cloud security audit, infrastructure compliance, DNS security audit, TLS audit, endpoint security, access control audit, network security assessment, infrastructure security, cloud compliance, Vanta alternative, compliance automation, security posture assessment, hardware security keys, YubiKey compliance.",
+      "description": "Cross-framework infrastructure security audit across cloud, network, and CI/CD. Use for infrastructure and cloud security audits, security posture assessment, and validating technical controls for SOC 2, ISO 27001, and NIST CSF.",
       "tags": [
         "infrastructure-audit",
         "cloud-security",
@@ -2409,7 +2409,7 @@
     {
       "name": "isms-audit-expert",
       "domain": "ra-qm-team",
-      "description": "Information Security Management System auditing for ISO 27001 compliance, security control assessment, and certification support. Use when planning ISMS audit programs, executing internal or external ISO 27001 audits, testing ISO 27002 Annex A controls, managing audit findings and corrective actions, or preparing for Stage 1/Stage 2 certification and surveillance audits.",
+      "description": "ISMS auditing for ISO 27001 compliance, control assessment, and certification support. Use for ISMS audit programs, internal/external ISO 27001 audits, ISO 27002 Annex A control testing, and Stage 1/Stage 2 certification audits.",
       "tags": [
         "iso-27001",
         "isms-audit",
@@ -2426,7 +2426,7 @@
     {
       "name": "iso42001-ai-management",
       "domain": "ra-qm-team",
-      "description": "ISO 42001 AI Management System compliance automation. Assesses organizational readiness for AIMS certification, evaluates AI system impacts, validates governance structures, and checks Annex A controls. Use for ISO 42001 readiness assessments, AI governance planning, AI impact assessments, responsible AI implementation, and AIMS certification preparation.",
+      "description": "ISO 42001 AI Management System (AIMS) compliance. Use for ISO 42001 readiness assessments, AI governance planning, AI impact assessments, Annex A control validation, responsible AI implementation, and AIMS certification preparation.",
       "tags": [
         "iso-42001",
         "ai-management",
@@ -2443,7 +2443,7 @@
     {
       "name": "mdr-745-specialist",
       "domain": "ra-qm-team",
-      "description": "EU MDR 2017/745 compliance specialist for medical device classification, technical documentation, clinical evidence, and post-market surveillance. Covers Annex VIII classification rules, Annex II/III technical files, Annex XIV clinical evaluation, and EUDAMED integration.",
+      "description": "EU MDR 2017/745 compliance specialist for medical device classification, technical documentation, clinical evidence, and post-market surveillance. Use for Annex VIII classification, GSPR, clinical evaluation, EUDAMED, and UDI.",
       "tags": [
         "eu-mdr",
         "medical-device",
@@ -2460,7 +2460,7 @@
     {
       "name": "nis2-directive-specialist",
       "domain": "ra-qm-team",
-      "description": "NIS2 Directive (EU 2022/2555) compliance automation. Analyzes organizational scope, assesses compliance against all 10 minimum security measures, validates incident reporting readiness, and generates gap analysis reports. Use for NIS2 compliance assessments, critical infrastructure cybersecurity planning, supply chain security evaluation, and incident reporting preparation.",
+      "description": "NIS2 Directive (EU 2022/2555) compliance for critical infrastructure entities, covering the 10 minimum security measures. Use for NIS2 compliance assessments, entity scope analysis, supply chain security, and incident reporting readiness.",
       "tags": [
         "nis2",
         "cybersecurity-directive",
@@ -2476,7 +2476,7 @@
     {
       "name": "nist-csf-specialist",
       "domain": "ra-qm-team",
-      "description": "NIST Cybersecurity Framework 2.0 implementation, assessment, and compliance management. Use for NIST cybersecurity framework, CSF 2.0, NIST compliance, cybersecurity risk management, NIST controls, NIST assessment, cybersecurity maturity, NIST CSF profile, cybersecurity governance, CSF gap analysis, cybersecurity program development, and cross-framework compliance mapping.",
+      "description": "NIST Cybersecurity Framework 2.0 implementation, assessment, and compliance management. Use for CSF 2.0 gap analysis, cybersecurity risk management, maturity assessment, CSF profiles, and cross-framework compliance mapping.",
       "tags": [
         "nist-csf",
         "cybersecurity",
@@ -2492,7 +2492,7 @@
     {
       "name": "pci-dss-specialist",
       "domain": "ra-qm-team",
-      "description": "PCI DSS v4.0 payment card industry data security standard compliance, assessment, and implementation. Use for PCI DSS, payment card security, cardholder data, PCI compliance, payment security, PCI assessment, SAQ, ROC, QSA, credit card security, payment processing security, PCI scoping, tokenization, payment terminal security, CDE security, and merchant compliance.",
+      "description": "PCI DSS v4.0 payment card data security compliance, assessment, and implementation. Use for PCI DSS scoping, cardholder data environment (CDE) security, SAQ and ROC preparation, QSA engagement, tokenization, and merchant compliance.",
       "tags": [
         "pci-dss",
         "payment-security",
@@ -2508,7 +2508,7 @@
     {
       "name": "qms-audit-expert",
       "domain": "ra-qm-team",
-      "description": "ISO 13485 internal audit expertise for medical device QMS. Covers audit planning, execution, nonconformity classification, and CAPA verification. Use for internal audit planning, audit execution, finding classification, external audit preparation, or audit program management.",
+      "description": "ISO 13485 internal audit expertise for medical device QMS. Use for audit planning and execution, nonconformity classification, CAPA verification, external audit preparation, or audit program management.",
       "tags": [
         "iso-13485",
         "audit",
@@ -2525,7 +2525,7 @@
     {
       "name": "quality-documentation-manager",
       "domain": "ra-qm-team",
-      "description": "Document control system management for medical device QMS. Covers document numbering, version control, change management, and 21 CFR Part 11 compliance. Use for document control procedures, change control workflow, document numbering, version management, electronic signature compliance, or regulatory documentation review.",
+      "description": "Document control for medical device QMS, covering numbering, version control, change management, and 21 CFR Part 11 compliance. Use for document control procedures, change control workflows, and electronic signature compliance.",
       "tags": [
         "document-control",
         "21-cfr-part-11",
@@ -2541,7 +2541,7 @@
     {
       "name": "quality-manager-qmr",
       "domain": "ra-qm-team",
-      "description": "Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech companies. Use when conducting management reviews, setting quality objectives, tracking quality KPIs, assessing quality culture, overseeing regulatory compliance across jurisdictions, or preparing for Notified Body and FDA inspections. Provides quality system governance and performance monitoring per ISO 13485 Clause 5.5.2.",
+      "description": "Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech. Use for management reviews, quality objectives and KPIs, quality culture, and Notified Body / FDA inspection prep per ISO 13485 Clause 5.5.2.",
       "tags": [
         "quality-management",
         "qms",
@@ -2569,7 +2569,7 @@
     {
       "name": "regulatory-affairs-head",
       "domain": "ra-qm-team",
-      "description": "Senior Regulatory Affairs Manager for HealthTech and MedTech companies. Use when developing regulatory strategy, preparing FDA 510(k)/PMA/De Novo submissions, planning EU MDR CE marking, coordinating global market access, or monitoring regulatory intelligence. Provides pathway analysis, submission management, timeline planning, and cross-functional regulatory leadership.",
+      "description": "Senior Regulatory Affairs Manager for HealthTech and MedTech. Use for regulatory strategy, FDA 510(k)/PMA/De Novo submissions, EU MDR CE marking, global market access, and regulatory intelligence.",
       "tags": [
         "regulatory-affairs",
         "fda",
@@ -2603,7 +2603,7 @@
     {
       "name": "soc2-compliance-expert",
       "domain": "ra-qm-team",
-      "description": "SOC 2 Type I and Type II compliance management. Use when conducting SOC 2 readiness assessments, performing gap analysis against Trust Services Criteria, collecting audit evidence, validating infrastructure security controls, preparing for CPA firm audits, managing the observation period, or building continuous compliance programs. Covers all TSC categories (CC1-CC9, A1, PI1, C1, P1) with infrastructure validation for cloud, DNS, TLS, endpoints, and CI/CD pipelines.",
+      "description": "SOC 2 Type I and Type II compliance management against the Trust Services Criteria. Use for SOC 2 readiness assessments, TSC gap analysis, audit evidence collection, infrastructure control validation, and CPA firm audit preparation.",
       "tags": [
         "soc2",
         "trust-services",
@@ -2619,7 +2619,7 @@
     {
       "name": "channel-economics",
       "domain": "business-growth",
-      "description": "Channel economics: design and analyze the financial structure of go-to-market channels (direct sales, resellers, distributors, marketplaces, embedded partners, MSPs, integrators). Use when picking the right channel mix for a product, modeling partner margin / TCO, designing partner tiers with rebate structures, analyzing channel conflict, or building the financial model that justifies (or kills) a partnership. Pairs with our partnerships-architect (partnership type / strategy) and deal-desk (partner-deal mechanics) — this one is the spreadsheet behind those conversations.",
+      "description": "Channel economics: design and analyze the financial structure of go-to-market channels. Use when picking a channel mix, modeling partner margin or TCO, designing partner tiers and rebates, or analyzing channel conflict.",
       "tags": [
         "channel-economics",
         "channel-strategy",
@@ -2658,7 +2658,7 @@
     {
       "name": "commercial-policy",
       "domain": "business-growth",
-      "description": "Commercial policy: the written governance framework that defines what commercial terms sales can offer, what triggers approval, and what's off-limits. Use when authoring or refreshing a company commercial-policy charter, defining discount / contract / payment / termination / liability policies, auditing existing deals for policy compliance, drafting commercial-policy training for sales, or generating a tailored policy for a new region or vertical. Sits above deal-desk (which enforces) and pricing-strategy (which sets prices) — this is the policy layer that reflects how the company decides to do business.",
+      "description": "Commercial policy: the governance framework defining what terms sales can offer and what triggers approval. Use when authoring a policy charter, defining discount/payment/liability rules, auditing deals, or generating a regional policy.",
       "tags": [
         "commercial-policy",
         "governance",
@@ -2688,7 +2688,7 @@
     {
       "name": "competitor-alternatives",
       "domain": "business-growth",
-      "description": "Competitor comparison and alternative page creation for SEO and sales enablement. Covers 4 page formats (singular alternative, plural alternatives, vs pages, competitor vs competitor), content architecture, research methodology, and centralized competitor data management.",
+      "description": "Create competitor comparison and alternative pages for SEO and sales enablement. Use when building alternative pages, vs pages, or competitor-vs-competitor pages, planning comparison content, or managing competitor data.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
@@ -2699,7 +2699,7 @@
     {
       "name": "contract-and-proposal-writer",
       "domain": "business-growth",
-      "description": "Generate production-ready business documents including freelance contracts, project proposals, SOWs, NDAs, and MSAs with jurisdiction-aware clauses. Covers US (Delaware), EU (GDPR), UK, and DACH (German law) legal frameworks. Includes contract templates, clause libraries, and DOCX conversion. Use when starting client engagements, writing proposals, drafting partnership agreements, or needing GDPR-compliant data processing addenda.",
+      "description": "Generate business documents — contracts, proposals, SOWs, NDAs, MSAs — with jurisdiction-aware clauses for US, EU, UK, and DACH. Use when starting client engagements, writing proposals, drafting agreements, or needing GDPR-compliant DPAs.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-09",
@@ -2727,7 +2727,7 @@
     {
       "name": "deal-desk",
       "domain": "business-growth",
-      "description": "Deal desk: the cross-functional function that reviews, approves, and structures non-standard sales deals. Use when standing up a deal-desk function from scratch, defining the deal-desk charter and SLA, building approval-threshold matrices (discount %, contract length, custom terms, payment terms, custom SLAs), designing a deal-review packet template, routing deals through the right approvers, analyzing deal velocity to find bottlenecks, or auditing recent deals for policy compliance. Pairs with our existing pricing-strategy (sets the prices) and revenue-operations (measures the funnel) skills — this one runs the operational machinery between those two.",
+      "description": "Deal desk: reviews, approves, and structures non-standard sales deals. Use when standing up a deal desk, building approval-threshold matrices, designing deal-review packets, routing deals, or auditing deals for compliance.",
       "tags": [
         "deal-desk",
         "sales-operations",
@@ -2802,7 +2802,7 @@
     {
       "name": "partnerships-architect",
       "domain": "business-growth",
-      "description": "Design strategic partnerships — technology / channel / strategic / co-marketing — and the programs that scale them. Use when evaluating a potential partner, picking the right partnership type (tech integration vs reseller vs OEM vs strategic alliance), designing a partner program from scratch, structuring a specific partnership deal, modeling ROI on a partnership investment, or auditing an existing partner portfolio for ROI / strategic fit. Pairs with our channel-economics (financial mechanics) and deal-desk (per-deal approval) — this skill is the strategy layer above both.",
+      "description": "Design strategic partnerships — technology, channel, co-marketing — and the programs that scale them. Use when evaluating a partner, picking a partnership type, designing a partner program, structuring a deal, or modeling ROI.",
       "tags": [
         "partnerships",
         "strategic-alliances",
@@ -3426,7 +3426,7 @@
     {
       "name": "metrics-dashboard",
       "domain": "project-management",
-      "description": "Design a product metrics dashboard — North Star + input metrics + guardrails — that the team actually uses to make decisions. Distinct from north-star-metric (defines THE one number) by focusing on the full dashboard architecture: layers, owners, cadence, visualization, and the discipline that prevents 30-chart dashboards.",
+      "description": "Design a product metrics dashboard — North Star, input metrics, and guardrails — that a team actually uses to make decisions. Use when building dashboard architecture: layers, owners, cadence, and visualization.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3437,7 +3437,7 @@
     {
       "name": "opportunity-solution-tree",
       "domain": "project-management",
-      "description": "Opportunity Solution Tree (Teresa Torres) — a continuous discovery artifact mapping desired outcomes → opportunities → solutions → assumption tests. Use when prioritizing discovery work, structuring weekly customer interviews, mapping multiple solutions to one problem, or auditing whether your roadmap actually moves outcomes.",
+      "description": "Opportunity Solution Tree (Teresa Torres) mapping outcomes → opportunities → solutions → assumption tests. Use when prioritizing discovery work, mapping solutions to a problem, or checking whether a roadmap moves outcomes.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3481,7 +3481,7 @@
     {
       "name": "ai-feature-prd",
       "domain": "project-management",
-      "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Extends the standard 8-section PRD with 3 AI-specific sections covering model selection, evals, guardrails, data flow, deployment, failure modes, human-in-the-loop, AI metrics, ethical review, and cost monitoring.",
+      "description": "AI/ML feature PRD scaffolding for the modern AI product manager. Use to extend a standard PRD with AI-specific sections covering model selection, evals, guardrails, failure modes, human-in-the-loop, AI metrics, and cost monitoring.",
       "tags": [],
       "version": "1.0.1",
       "updated": "2026-06-15",
@@ -3756,7 +3756,7 @@
     {
       "name": "sprint-plan",
       "domain": "project-management",
-      "description": "Plan a sprint that ships — capacity, commitment vs stretch, dependencies, risk-identification, and the pre-sprint discipline that prevents mid-sprint surprises. Distinct from scrum-master (process facilitation) by focusing on the planning artifact itself.",
+      "description": "Plan a sprint that ships — capacity, commitment vs stretch, dependencies, and risk identification that prevents mid-sprint surprises. Use to build the sprint planning artifact itself.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3767,7 +3767,7 @@
     {
       "name": "stakeholder-map",
       "domain": "project-management",
-      "description": "Map stakeholders by power × interest (or influence × support), design a communication plan, and run the stakeholder-management discipline that prevents surprise objections. Use when launching a major initiative, navigating an enterprise deal, planning a re-org, or pre-empting political resistance to a roadmap change.",
+      "description": "Map stakeholders by power × interest and design a communication plan that prevents surprise objections. Use when launching a major initiative, navigating an enterprise deal, planning a re-org, or pre-empting resistance to a roadmap change.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3822,7 +3822,7 @@
     {
       "name": "test-scenarios",
       "domain": "project-management",
-      "description": "Generate complete test scenario coverage from a feature spec: happy paths, edge cases, error handling, accessibility, security, and performance scenarios. Includes a coverage analyzer that flags gaps before QA writes the test plan. Distinct from automated test generation — this is the WHAT to test before HOW.",
+      "description": "Generate test scenario coverage from a feature spec — happy paths, edge cases, error handling, accessibility, security, and performance — with a coverage analyzer that flags gaps. Use to define what to test before QA writes the test plan.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3844,7 +3844,7 @@
     {
       "name": "gtm-strategy",
       "domain": "project-management",
-      "description": "Go-to-market strategy: ICP × motion × channels × messaging × success metrics × launch plan. Distinct from individual marketing or sales skills by being the integrated cross-functional strategy spanning product, marketing, sales, CS, and finance. Use when launching a new product, entering a new segment, or auditing why an existing GTM isn't working.",
+      "description": "Integrated go-to-market strategy spanning ICP, motion, channels, messaging, success metrics, and launch plan. Use when launching a new product, entering a new segment, or auditing why an existing GTM isn't working.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3855,7 +3855,7 @@
     {
       "name": "ideal-customer-profile",
       "domain": "project-management",
-      "description": "Define a sharp Ideal Customer Profile (ICP) — firmographics + behavioral signals + JTBD + trigger event + buyer persona — that marketing, sales, and product can all use. Use when defining a new ICP, refining an existing one based on actual closed customers, or auditing why pipeline / conversion is poor.",
+      "description": "Define a sharp Ideal Customer Profile (ICP) — firmographics, behavioral signals, JTBD, and buyer persona. Use when defining a new ICP, refining one from actual closed customers, or auditing why pipeline or conversion is poor.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -3902,7 +3902,7 @@
     {
       "name": "notion-pm",
       "domain": "project-management",
-      "description": "Notion expert for product management workflows: database design for PRDs, OKRs, Roadmaps, and Decisions; property types (relation, rollup, formula); view design (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored Markdown; Notion REST API; and sync with Jira, Linear, and GitHub.",
+      "description": "Notion expert for product management workflows. Use for database design for PRDs/OKRs/Roadmaps/Decisions, property and view design, page architecture, Notion REST API, and sync with Jira, Linear, and GitHub.",
       "tags": [
         "notion",
         "databases",
@@ -3920,7 +3920,7 @@
     {
       "name": "productboard-expert",
       "domain": "project-management",
-      "description": "Productboard expert for workspace setup, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, REST API automation, and two-way Jira/Linear/ Azure DevOps/Salesforce/Intercom/Slack integration. Use for Productboard administration, prioritization workflows, and programmatic API operations.",
+      "description": "Productboard expert for workspace setup, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, and REST API automation. Use for Productboard administration, prioritization workflows, and programmatic API operations.",
       "tags": [
         "productboard",
         "prioritization",
@@ -3974,7 +3974,7 @@
     {
       "name": "senior-pm",
       "domain": "project-management",
-      "description": "Senior Project Manager for enterprise software, SaaS, and digital transformation. Specializes in portfolio management, quantitative risk analysis (EMV, Monte Carlo), WSJF/RICE/ICE prioritization, resource optimization, stakeholder mapping, and executive RAG reporting. Use for portfolio health reviews, board-ready status reports, and multi-project risk/capacity analysis.",
+      "description": "Senior PM for enterprise software and SaaS — portfolio management, quantitative risk analysis, prioritization, and executive reporting. Use for portfolio health reviews, board-ready status reports, and multi-project risk/capacity analysis.",
       "tags": [
         "project-management",
         "stakeholder-management",
@@ -3990,7 +3990,7 @@
     {
       "name": "sprint-retrospective",
       "domain": "project-management",
-      "description": "Data-driven sprint retrospectives from git history — velocity analytics, cycle/ lead time, contributor insights, code churn hotspots, bus factor, work-session detection, and sprint-over-sprint comparison reports. Use to run a retrospective, analyze team velocity/throughput, or generate a retro report from commit history.",
+      "description": "Data-driven sprint retrospectives from git history — velocity, cycle/lead time, contributor insights, and churn hotspots. Use to run a retrospective, analyze team velocity or throughput, or generate a retro report from commit history.",
       "tags": [
         "retrospective",
         "agile",
@@ -4006,7 +4006,7 @@
     {
       "name": "ansoff-matrix",
       "domain": "project-management",
-      "description": "Ansoff Matrix — 4-quadrant framework for growth strategy options: market penetration, market development, product development, and diversification. Use when evaluating growth bets, prioritizing investment across quadrants, and explicitly acknowledging the risk ladder from \"more of what we know\" to \"new product in new market\".",
+      "description": "Ansoff Matrix — 4-quadrant framework for growth options: market penetration, market/product development, and diversification. Use when evaluating growth bets, prioritizing investment across quadrants, or weighing the risk ladder of each move.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -4017,7 +4017,7 @@
     {
       "name": "business-model-canvas",
       "domain": "project-management",
-      "description": "Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 building blocks. Use when designing or refreshing a business model, auditing an existing canvas for gaps, exploring monetization alternatives, or aligning leadership on the business model assumptions that everything else depends on.",
+      "description": "Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 blocks. Use when designing or refreshing a business model, auditing a canvas for gaps, exploring monetization, or aligning on the model's assumptions.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -4028,7 +4028,7 @@
     {
       "name": "lean-canvas",
       "domain": "project-management",
-      "description": "Lean Canvas (Ash Maurya) — startup-focused adaptation of the Business Model Canvas, optimized for capturing assumptions and unfair advantages in early-stage products. Use when at the idea, pre-PMF, or pivot stage; when BMC is too operational; when you need a 1-page model in 20 minutes.",
+      "description": "Lean Canvas (Ash Maurya) — startup adaptation of the Business Model Canvas for capturing assumptions and unfair advantages in early-stage products. Use at the idea, pre-PMF, or pivot stage, or when you need a 1-page model fast.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -4039,7 +4039,7 @@
     {
       "name": "porters-five-forces",
       "domain": "project-management",
-      "description": "Porter's Five Forces — analyze the competitive intensity and attractiveness of an industry. Use when evaluating a new market entry, understanding why margins are under pressure, designing a defensive strategy, or auditing strategic positioning at industry level.",
+      "description": "Porter's Five Forces — analyze the competitive intensity and attractiveness of an industry. Use when evaluating a new market entry, diagnosing margin pressure, designing a defensive strategy, or auditing industry-level positioning.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -4050,7 +4050,7 @@
     {
       "name": "swot-analysis",
       "domain": "project-management",
-      "description": "SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) — the foundational strategic-positioning exercise. Use when assessing a new market entry, a strategic pivot, a competitive response, an org restructure, or as input to annual strategic planning. Includes a validator that flags generic, ungrounded, or one-sided SWOTs.",
+      "description": "SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for strategic positioning. Use when assessing a new market entry, a strategic pivot, a competitive response, an org restructure, or as input to annual strategic planning.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-27",
@@ -4061,7 +4061,7 @@
     {
       "name": "ab-test-setup",
       "domain": "product-team",
-      "description": "Design and implement statistically rigorous A/B tests and experiments. Covers hypothesis formulation, sample size calculation, metric selection, traffic allocation, implementation patterns (client-side and server-side), statistical analysis, and common pitfalls. Use when planning experiments, calculating sample sizes, designing test variants, analyzing results, or when someone says \"let's test that.",
+      "description": "Design and run statistically rigorous A/B tests and experiments. Use when planning experiments, calculating sample sizes, designing test variants, selecting metrics, analyzing results, or when someone says \"let's test that.\"",
       "tags": [
         "ab-testing",
         "experimentation",
@@ -4077,7 +4077,7 @@
     {
       "name": "agile-product-owner",
       "domain": "product-team",
-      "description": "Agile product ownership for backlog management and sprint execution. Covers user story writing, acceptance criteria, sprint planning, and velocity tracking. Use for writing user stories, creating acceptance criteria, planning sprints, estimating story points, breaking down epics, or prioritizing backlog.",
+      "description": "Agile product ownership for backlog management and sprint execution. Use for writing user stories and acceptance criteria, planning sprints, estimating story points, breaking down epics, or prioritizing a backlog.",
       "tags": [
         "agile",
         "user-stories",
@@ -4094,7 +4094,7 @@
     {
       "name": "apple-hig-expert",
       "domain": "product-team",
-      "description": "Apple Human Interface Guidelines expert for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS. Covers platform-native patterns, navigation, typography, controls, gestures, accessibility, and the platform-specific conventions that make apps feel native. Use when designing or reviewing an Apple platform app, auditing for HIG compliance, picking the right native components, or validating accessibility against Apple's requirements.",
+      "description": "Apple Human Interface Guidelines expert across iOS, iPadOS, macOS, watchOS, tvOS, and visionOS. Use when designing or reviewing an Apple-platform app, auditing for HIG compliance, picking native components, or validating accessibility.",
       "tags": [
         "apple",
         "ios",
@@ -4116,7 +4116,7 @@
     {
       "name": "design-system-lead",
       "domain": "product-team",
-      "description": "Expert design systems leadership covering component libraries, design tokens, documentation, and design-development collaboration. Use when architecting a design token system, building a component library, defining governance and contribution processes, measuring design system adoption, or generating cross-platform tokens (CSS, SCSS, iOS, Android).",
+      "description": "Design systems leadership across component libraries, design tokens, and design-dev collaboration. Use when architecting a token system, building a component library, defining governance, or generating cross-platform tokens.",
       "tags": [
         "design-systems",
         "components",
@@ -4133,7 +4133,7 @@
     {
       "name": "product-analytics",
       "domain": "product-team",
-      "description": "Product analytics framework for PMs and analytics engineers on instrumenting products, defining metrics, building activation/retention funnels, running cohort analyses, and translating product data into decisions. Use when designing a product metric tree, instrumenting a new feature, auditing existing instrumentation, defining North Star + counter-metrics, or building an analytics roadmap.",
+      "description": "Product analytics for instrumenting products, defining metrics, and building retention funnels. Use when designing a metric tree, instrumenting a feature, auditing instrumentation, defining a North Star, or building an analytics roadmap.",
       "tags": [
         "analytics",
         "metrics",
@@ -4153,7 +4153,7 @@
     {
       "name": "product-designer",
       "domain": "product-team",
-      "description": "Expert product design covering UI/UX design, design systems, prototyping, user research, and design thinking. Use when creating user journey maps, building wireframes, defining design tokens and component systems, planning usability tests, or establishing design principles for a product.",
+      "description": "Product design across UI/UX, design systems, prototyping, and user research. Use when creating user journey maps, building wireframes, defining design tokens and component systems, planning usability tests, or establishing design principles.",
       "tags": [
         "design",
         "ux",
@@ -4171,7 +4171,7 @@
     {
       "name": "product-manager-toolkit",
       "domain": "product-team",
-      "description": "Comprehensive toolkit for product managers including RICE prioritization, customer interview analysis, PRD templates, discovery frameworks, and go-to-market strategies. Use for feature prioritization, user research synthesis, requirement documentation, and product strategy development.",
+      "description": "Product manager toolkit covering RICE prioritization, customer interview analysis, PRDs, and discovery frameworks. Use for feature prioritization, user research synthesis, requirement documentation, or product strategy.",
       "tags": [
         "product-management",
         "rice",
@@ -4204,7 +4204,7 @@
     {
       "name": "research-summarizer",
       "domain": "product-team",
-      "description": "User research synthesis and communication skill for PMs, researchers, and design leads. Takes raw research artifacts (interview transcripts, survey results, observations, support tickets, win/loss notes) and produces structured insights, themed findings, and decision-ready briefs. Use when synthesizing a batch of user interviews, building a findings brief, separating signal from anecdote, or communicating research to stakeholders who didn't participate.",
+      "description": "Synthesize raw user research (interviews, surveys, tickets) into themed findings and decision-ready briefs. Use when synthesizing user interviews, building a findings brief, or communicating research to stakeholders.",
       "tags": [
         "user-research",
         "synthesis",
@@ -4222,7 +4222,7 @@
     {
       "name": "roadmap-communicator",
       "domain": "product-team",
-      "description": "Roadmap communication skill for PMs and product leaders. Helps translate a single internal roadmap into audience-appropriate formats (exec deck, customer one-pager, eng commit list, sales narrative, board section) and applies confidence-band discipline so promises match reality. Use when preparing a roadmap readout, translating roadmap for a specific audience, or auditing roadmap commitments for over-promise risk.",
+      "description": "Translate one internal roadmap into audience-appropriate formats with confidence-band discipline. Use when preparing a roadmap readout, tailoring it for an exec, customer, eng, or sales audience, or auditing over-promise risk.",
       "tags": [
         "roadmap",
         "communication",
@@ -4241,7 +4241,7 @@
     {
       "name": "spec-to-repo",
       "domain": "product-team",
-      "description": "Translate product specs (PRDs, user stories, feature briefs) into a clean, ship-ready repo structure: ticket decomposition, branch strategy, PR sequencing, and definition-of-done. Use when planning the implementation of a feature, breaking a PRD into engineering tickets, designing the branch/PR sequence, or auditing existing decomposition for shipping risk.",
+      "description": "Translate product specs (PRDs, user stories) into a ship-ready repo plan: ticket decomposition, branch strategy, and PR sequencing. Use when breaking a PRD into tickets or designing the branch/PR sequence.",
       "tags": [
         "prd",
         "ticket-decomposition",
@@ -4259,7 +4259,7 @@
     {
       "name": "ui-design-system",
       "domain": "product-team",
-      "description": "UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and developer handoff tools. Use for creating design systems, maintaining visual consistency, and facilitating design-dev collaboration.",
+      "description": "UI design system toolkit covering design tokens, component documentation, responsive calculations, and developer handoff. Use for creating design systems, maintaining visual consistency, or facilitating design-dev handoff.",
       "tags": [
         "design-system",
         "components",
@@ -4275,7 +4275,7 @@
     {
       "name": "ux-researcher-designer",
       "domain": "product-team",
-      "description": "UX research and design toolkit for Senior UX Designer/Researcher including data-driven persona generation, journey mapping, usability testing frameworks, and research synthesis. Use for user research, persona creation, journey mapping, and design validation.",
+      "description": "UX research and design toolkit covering persona generation, journey mapping, usability testing, and research synthesis. Use for user research, persona creation, journey mapping, or design validation.",
       "tags": [
         "ux-research",
         "usability-testing",
@@ -4291,7 +4291,7 @@
     {
       "name": "analytics-engineer",
       "domain": "data-analytics",
-      "description": "Expert analytics engineering covering data modeling, dbt development, data transformation, and semantic layer management. Use when building dbt models, designing star schemas, writing staging or mart SQL, configuring data tests, defining semantic-layer metrics, or optimizing warehouse query performance.",
+      "description": "Analytics engineering across data modeling, dbt, transformation, and semantic layers. Use when building dbt models, designing star schemas, writing staging or mart SQL, configuring data tests, or optimizing warehouse queries.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-03-31",
@@ -4302,7 +4302,7 @@
     {
       "name": "business-intelligence",
       "domain": "data-analytics",
-      "description": "Expert business intelligence covering dashboard design, data visualization, reporting automation, and executive insights delivery. Use when designing dashboards, building KPI frameworks, automating scheduled reports, creating data stories for stakeholders, or optimizing BI tool performance.",
+      "description": "Business intelligence across dashboard design, visualization, and reporting automation. Use when designing dashboards, building KPI frameworks, automating reports, creating data stories, or optimizing BI tool performance.",
       "tags": [
         "bi",
         "dashboards",
@@ -4319,7 +4319,7 @@
     {
       "name": "data-analyst",
       "domain": "data-analytics",
-      "description": "Expert data analysis covering SQL querying, data visualization, statistical analysis, business reporting, and data storytelling. Use when writing SQL queries, building dashboards, performing cohort or funnel analysis, running hypothesis tests, or presenting data-driven recommendations to stakeholders.",
+      "description": "Data analysis across SQL, visualization, statistics, and reporting. Use when writing SQL queries, building dashboards, performing cohort or funnel analysis, running hypothesis tests, or presenting data-driven recommendations.",
       "tags": [
         "analytics",
         "sql",
@@ -4336,7 +4336,7 @@
     {
       "name": "data-scientist",
       "domain": "data-analytics",
-      "description": "Expert data science covering machine learning, statistical modeling, experimentation, predictive analytics, and advanced analytics. Use when selecting ML algorithms, engineering features, designing A/B tests, evaluating model performance, or building predictive pipelines.",
+      "description": "Data science across machine learning, statistical modeling, and experimentation. Use when selecting ML algorithms, engineering features, designing A/B tests, evaluating model performance, or building predictive pipelines.",
       "tags": [
         "data-science",
         "machine-learning",
@@ -4353,7 +4353,7 @@
     {
       "name": "ml-ops-engineer",
       "domain": "data-analytics",
-      "description": "Expert MLOps engineering covering model deployment, ML pipelines, model monitoring, feature stores, and infrastructure automation. Use when deploying models to production, building training pipelines, setting up drift detection, configuring feature stores, or automating ML CI/CD workflows.",
+      "description": "MLOps across model deployment, ML pipelines, monitoring, and feature stores. Use when deploying models to production, building training pipelines, setting up drift detection, configuring feature stores, or automating ML CI/CD workflows.",
       "tags": [
         "mlops",
         "deployment",
@@ -4370,7 +4370,7 @@
     {
       "name": "account-executive",
       "domain": "sales-success",
-      "description": "Expert sales execution covering pipeline management, discovery, demos, negotiation, and deal closing. Use when qualifying opportunities, running MEDDIC discovery, building account plans, handling objections, structuring proposals, or forecasting pipeline.",
+      "description": "Sales execution across pipeline, discovery, demos, negotiation, and closing. Use when qualifying opportunities, running MEDDIC discovery, building account plans, handling objections, structuring proposals, or forecasting pipeline.",
       "tags": [
         "sales",
         "pipeline",
@@ -4387,7 +4387,7 @@
     {
       "name": "customer-success-manager",
       "domain": "sales-success",
-      "description": "Expert customer success covering onboarding, adoption, retention, expansion, health scoring, and customer advocacy. Use when designing onboarding playbooks, calculating health scores, building QBR decks, planning renewal strategies, or identifying expansion opportunities.",
+      "description": "Customer success across onboarding, adoption, retention, and expansion. Use when designing onboarding playbooks, calculating health scores, building QBR decks, planning renewal strategies, or identifying expansion opportunities.",
       "tags": [
         "customer-success",
         "retention",
@@ -4404,7 +4404,7 @@
     {
       "name": "sales-engineer",
       "domain": "sales-success",
-      "description": "Expert sales engineering covering technical demos, solution design, RFP responses, POC management, and technical objection handling. Use when preparing product demos, responding to RFPs/RFIs, scoping proof-of-concept projects, building competitive battle cards, or handling technical objections during sales cycles.",
+      "description": "Technical sales engineering: demos, solution design, RFP responses, and POC management. Use when preparing demos, responding to RFPs/RFIs, scoping proof-of-concepts, building battle cards, or handling technical objections.",
       "tags": [
         "sales",
         "technical",
@@ -4422,7 +4422,7 @@
     {
       "name": "sales-operations",
       "domain": "sales-success",
-      "description": "Expert sales operations covering CRM management, sales analytics, territory planning, compensation design, and process optimization. Use when building pipeline reports, designing territories, setting quotas, creating comp plans, or auditing CRM data quality.",
+      "description": "Sales operations across CRM, analytics, territory planning, and compensation. Use when building pipeline reports, designing territories, setting quotas, creating comp plans, or auditing CRM data quality.",
       "tags": [
         "sales-ops",
         "crm",
@@ -4439,7 +4439,7 @@
     {
       "name": "solutions-architect",
       "domain": "sales-success",
-      "description": "Expert solutions architecture covering technical requirements, solution design, integration planning, and enterprise architecture alignment. Use when conducting technical discovery, designing integration architectures, running security assessments, scoping proof-of-concept engagements, or creating solution architecture documents.",
+      "description": "Solutions architecture for technical pre-sales. Use when running technical discovery, designing integration architectures, running security assessments, scoping proof-of-concepts, or writing solution architecture documents.",
       "tags": [
         "solutions",
         "architecture",
@@ -4456,7 +4456,7 @@
     {
       "name": "hr-business-partner",
       "domain": "hr-operations",
-      "description": "Expert HR business partnership covering talent strategy, organizational development, employee relations, and people analytics. Use when building workforce plans, designing performance review cycles, resolving employee relations cases, running calibration sessions, structuring compensation philosophy, or advising leadership on organizational change.",
+      "description": "HR business partnership across talent strategy, org development, and employee relations. Use when building workforce plans, designing performance reviews, resolving employee relations cases, or advising leadership on org change.",
       "tags": [
         "hr",
         "talent",
@@ -4473,7 +4473,7 @@
     {
       "name": "operations-manager",
       "domain": "hr-operations",
-      "description": "Expert operations management covering process optimization, operational efficiency, resource management, and continuous improvement. Use when designing workflows, auditing operational maturity, building capacity plans, evaluating vendors, running Lean Six Sigma DMAIC projects, or optimizing cost-per-unit metrics.",
+      "description": "Operations management across process optimization, efficiency, and continuous improvement. Use when designing workflows, building capacity plans, evaluating vendors, running Lean Six Sigma DMAIC projects, or optimizing cost-per-unit.",
       "tags": [
         "operations",
         "efficiency",
@@ -4490,7 +4490,7 @@
     {
       "name": "people-analytics",
       "domain": "hr-operations",
-      "description": "Expert people analytics covering workforce analytics, HR metrics, predictive modeling, employee insights, and data-driven HR decisions. Use when building turnover prediction models, analyzing engagement surveys, running pay equity regressions, designing people dashboards, scoring flight risk, or advising HR leaders with workforce data.",
+      "description": "People analytics across workforce metrics, predictive modeling, and employee insights. Use when building turnover models, analyzing engagement surveys, running pay equity regressions, or scoring flight risk.",
       "tags": [
         "people-analytics",
         "hr-metrics",
@@ -4507,7 +4507,7 @@
     {
       "name": "talent-acquisition",
       "domain": "hr-operations",
-      "description": "Expert talent acquisition covering recruiting strategy, candidate sourcing, interview design, employer branding, and hiring analytics. Use when building job descriptions, designing interview scorecards, analyzing hiring funnels, drafting sourcing outreach, structuring compensation bands, or improving offer acceptance rates.",
+      "description": "Talent acquisition across recruiting strategy, sourcing, interviews, and hiring analytics. Use when writing job descriptions, designing interview scorecards, analyzing hiring funnels, or improving offer acceptance rates.",
       "tags": [
         "recruiting",
         "hiring",
@@ -4579,7 +4579,7 @@
     {
       "name": "calendar-prep",
       "domain": "personal-productivity",
-      "description": "Generate one-page meeting briefings from a structured input (attendees, prior context, decisions needed) so you walk into every meeting prepared. Use before customer calls, board meetings, 1:1s, or when the user mentions meeting prep, briefing, pre-read, or pre-meeting.",
+      "description": "Generate one-page meeting briefings from structured input (attendees, prior context, decisions needed). Use before customer calls, board meetings, or",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4590,7 +4590,7 @@
     {
       "name": "domain-name-brainstormer",
       "domain": "personal-productivity",
-      "description": "Generate candidate brand and product names by combining seed words with prefixes, suffixes, vowel-drops, blends, and TLD variations, then score candidates for memorability, length, and pronounceability. Use when naming a new product, company, or feature, or when the user mentions domain names, brand naming, naming brainstorm, or finding an available .com.",
+      "description": "Generate and score candidate brand, product, and domain names for memorability and pronounceability. Use when naming a new product, company, or feature, brainstorming brand names, or finding an available .com.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4601,7 +4601,7 @@
     {
       "name": "email-triage",
       "domain": "personal-productivity",
-      "description": "Classify a batch of email subjects/snippets into action categories (reply now / reply later / archive / delete / unsubscribe), and surface unsubscribe candidates and recurring senders. Use after a busy week, when running inbox-zero, or when the user mentions inbox triage, email overload, unsubscribe, or inbox zero.",
+      "description": "Classify a batch of emails into action categories (reply now, reply later, archive, delete, unsubscribe) and surface unsubscribe candidates. Use after a busy week, running inbox zero, or triaging email overload.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4612,7 +4612,7 @@
     {
       "name": "investor-update-generator",
       "domain": "personal-productivity",
-      "description": "Validate that a monthly investor update has the structural sections that separate strong updates (transparent, decision-relevant, asks specific) from weak ones (PR-style, all-good-news, no asks). Use before sending a monthly investor update, or when the user mentions investor update, monthly update, or fundraise communication cadence.",
+      "description": "Validate a monthly investor update against a rubric of strong-update sections (transparency, decision-relevance, specific asks). Use before sending a monthly investor update or setting a fundraise communication cadence.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4623,7 +4623,7 @@
     {
       "name": "invoice-organizer",
       "domain": "personal-productivity",
-      "description": "Categorize invoices and receipts by vendor, expense category, and tax bucket, detect duplicates, and produce a tax-ready monthly summary. Use during bookkeeping, tax prep, expense reimbursement, or when the user mentions receipts, invoices, expenses, bookkeeping, or tax categorization.",
+      "description": "Categorize invoices and receipts by vendor, expense, and tax bucket, detect duplicates, and produce a tax-ready monthly summary. Use during bookkeeping, tax prep, or expense reimbursement.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4634,7 +4634,7 @@
     {
       "name": "lead-researcher",
       "domain": "personal-productivity",
-      "description": "Qualify and prioritize sales leads against an ICP definition, score lead lists for outreach worthiness, and draft personalized outreach hooks. Use when building a target account list, qualifying inbound leads, prepping for outreach, or when the user mentions lead research, prospecting, sales outreach, ICP scoring, or account targeting.",
+      "description": "Qualify and prioritize sales leads against an ICP, score lead lists, and draft personalized outreach hooks. Use when building a target account list, qualifying inbound leads, prepping for outreach, or scoring prospects.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4645,7 +4645,7 @@
     {
       "name": "meeting-insights",
       "domain": "personal-productivity",
-      "description": "Analyze meeting transcripts to extract decisions, action items, owners, due dates, open questions, and risks. Use after recorded meetings, sales calls, customer interviews, or planning sessions, or when the user mentions meeting notes, action items, decision log, transcript analysis, or follow-up emails.",
+      "description": "Analyze meeting transcripts to extract decisions, action items, owners, due dates, open questions, and risks. Use after recorded meetings, sales calls, customer interviews, or planning sessions, or to build a decision log.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4656,7 +4656,7 @@
     {
       "name": "pitch-deck-reviewer",
       "domain": "personal-productivity",
-      "description": "Score a pitch deck (provided as text/markdown summary of slides) against YC, Sequoia, and a16z heuristics — does it have the right slides in the right order with the right content? Use before sending a deck to investors, practicing pitch with a co-founder, or when the user mentions pitch deck, fundraising deck, seed deck, or Series A deck review.",
+      "description": "Score a pitch deck's structure and content against YC, Sequoia, and a16z heuristics. Use before sending a deck to investors, practicing a pitch, or reviewing a seed or Series A fundraising deck.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4667,7 +4667,7 @@
     {
       "name": "resume-tailor",
       "domain": "personal-productivity",
-      "description": "Tailor a resume to a specific job description by extracting target keywords, scoring keyword match, and rewriting bullets for impact and relevance. Use when applying to a specific role, optimizing for ATS keyword match, or when the user mentions resume tailoring, job application, ATS optimization, or cover letter customization.",
+      "description": "Tailor a resume to a job description by extracting keywords, scoring match, and rewriting bullets for impact. Use when applying to a role, optimizing for ATS keyword match, or customizing a cover letter.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4678,7 +4678,7 @@
     {
       "name": "weekly-review",
       "domain": "personal-productivity",
-      "description": "Synthesize a week of inputs (calendar, tasks, journal, OKR check-ins) into a structured weekly review with wins, learnings, blockers, and next-week priorities. Use every Friday or Sunday, or when the user mentions weekly review, GTD review, OKR check-in, or end-of-week reflection.",
+      "description": "Synthesize a week of inputs (calendar, tasks, journal, OKR check-ins) into a structured review with wins, learnings, blockers, and next-week priorities. Use for a Friday/Sunday weekly review, GTD review, or OKR check-in.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4689,7 +4689,7 @@
     {
       "name": "docx-toolkit",
       "domain": "documents",
-      "description": "Audit Microsoft Word (.docx) documents for word count, heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, enforcing a style guide, or when the user mentions Word document review, docx audit, comment cleanup, or tracked-changes resolution.",
+      "description": "Audit Microsoft Word (.docx) documents for heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, or enforcing a style guide.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4700,7 +4700,7 @@
     {
       "name": "pdf-toolkit",
       "domain": "documents",
-      "description": "Audit PDF files for metadata leakage, page count, encryption, JavaScript, embedded files, and version. Use before sending a PDF externally, when redacting sensitive metadata, or when the user mentions PDF audit, PDF metadata, PDF leakage check, or PDF security review.",
+      "description": "Audit PDF files for metadata leakage, page count, encryption, JavaScript, embedded files, and version. Use before sending a PDF externally, when redacting sensitive metadata, or running a PDF security review.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4711,7 +4711,7 @@
     {
       "name": "pptx-toolkit",
       "domain": "documents",
-      "description": "Audit PowerPoint (.pptx) decks for slide count, text density per slide, embedded images, embedded fonts, hidden slides, speaker notes presence, and animation density. Use when reviewing a board deck, sales deck, or conference talk before sending, or when the user mentions deck audit, pptx review, slide density, or speaker notes check.",
+      "description": "Audit PowerPoint (.pptx) decks for slide count, text density, embedded images and fonts, hidden slides, speaker notes, and animation density. Use when reviewing a board deck, sales deck, or conference talk before sending.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4722,7 +4722,7 @@
     {
       "name": "xlsx-toolkit",
       "domain": "documents",
-      "description": "Audit Microsoft Excel (.xlsx) workbooks for sheet count, cell count, formula density, external references, named ranges, hidden sheets, and data validation rules. Use when reviewing a financial model, sharing a workbook externally, or when the user mentions xlsx audit, spreadsheet review, formula audit, or workbook leakage check.",
+      "description": "Audit Microsoft Excel (.xlsx) workbooks for formula density, external references, named ranges, hidden sheets, and data validation. Use when reviewing a financial model, sharing a workbook externally, or checking for data leakage.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4733,7 +4733,7 @@
     {
       "name": "climate-tech-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for climate-tech founders covering carbon markets, GHG accounting (Scope 1/2/3), regulatory landscape (CSRD, SEC climate rules, EU Green Deal), funding sources (DOE, IRA, private climate VC), and category landscape (energy, industry, transport, food, carbon removal). Use when scoping a climate-tech idea, navigating climate funding, picking a category, or when the user mentions climate, carbon, GHG, ESG, IRA, DOE, CDR, or net-zero.",
+      "description": "Strategic advisory for climate-tech founders on carbon markets, GHG accounting, climate regulation, and funding. Use when scoping a climate-tech idea or picking a category, or mentioning climate, carbon, GHG, ESG, IRA, DOE, or net-zero.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4744,7 +4744,7 @@
     {
       "name": "ecommerce-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for e-commerce founders covering unit economics, fulfillment models (3PL, DTC, dropship, retail), payment economics, returns / refunds, and channel strategy (DTC site / Amazon / wholesale / retail). Use when evaluating an ecommerce idea, modeling unit economics, picking fulfillment strategy, or when the user mentions DTC, e-commerce, Shopify, Amazon, 3PL, CAC, contribution margin, or retail expansion.",
+      "description": "Strategic advisory for e-commerce founders on unit economics, fulfillment models, payments, and channel strategy. Use when evaluating an ecommerce idea or modeling unit economics, or mentioning DTC, Shopify, Amazon, 3PL, or CAC.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4755,7 +4755,7 @@
     {
       "name": "edtech-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for edtech founders covering FERPA / COPPA / GDPR-K compliance, K-12 vs higher-ed vs corporate L&D market dynamics, school district sales cycles, and edtech pricing models. Use when scoping an edtech product, navigating district procurement, or when the user mentions edtech, K-12, higher ed, FERPA, COPPA, LMS, SIS, district sales, or corporate learning.",
+      "description": "Strategic advisory for edtech founders on FERPA/COPPA compliance, K-12 vs higher-ed vs L&D dynamics, district sales, and pricing. Use when scoping an edtech product or navigating procurement, or mentioning edtech, K-12, FERPA, COPPA, or LMS.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4766,7 +4766,7 @@
     {
       "name": "fintech-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for fintech founders and product leaders covering US/EU regulatory triggers, license-vs-partner decisions, KYC/AML basics, PSD2 / Open Banking, embedded finance patterns, and fintech business models. Use when evaluating a fintech idea, scoping regulatory exposure, picking a BaaS partner, or when the user mentions fintech, money transmitter, lending, neobank, embedded finance, KYC, AML, or PSD2.",
+      "description": "Strategic advisory for fintech founders on US/EU regulatory triggers, license-vs-partner, KYC/AML, and embedded finance. Use when scoping a fintech idea or regulatory exposure, or mentioning fintech, money transmitter, neobank, KYC, or PSD2.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4777,7 +4777,7 @@
     {
       "name": "healthtech-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for digital health and healthtech founders covering HIPAA scope, FDA SaMD vs non-SaMD classification, EHR integration patterns, payor/provider/employer GTM, and value-based care models. Complements the RA/QM compliance domain with software-side strategic guidance. Use when scoping a healthtech idea, classifying PHI, picking a GTM, or when the user mentions HIPAA, PHI, FDA SaMD, EHR integration, telehealth, or digital therapeutics.",
+      "description": "Strategic advisory for digital health founders on HIPAA scope, FDA SaMD classification, EHR integration, and payor/provider GTM. Use when scoping a healthtech idea, classifying PHI, or mentioning HIPAA, FDA SaMD, EHR, or telehealth.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4788,7 +4788,7 @@
     {
       "name": "marketplace-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for two-sided marketplace founders covering chicken-and-egg problem solving, take rates, liquidity metrics, supply/demand balance, network effects, and marketplace business model patterns. Use when scoping a marketplace idea, scoring marketplace health, or when the user mentions marketplace, two-sided market, take rate, liquidity, supply density, or network effects.",
+      "description": "Strategic advisory for two-sided marketplace founders on chicken-and-egg, take rates, liquidity, and network effects. Use when scoping a marketplace idea or scoring health, or mentioning marketplace, take rate, liquidity, or network effects.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4799,7 +4799,7 @@
     {
       "name": "proptech-advisor",
       "domain": "vertical-advisors",
-      "description": "Strategic advisory for proptech founders covering real-estate market segments (residential / commercial / industrial), MLS access and brokerage models, state-by-state real-estate licensing, and proptech business-model patterns (transaction, listing, financing, management, services). Use when scoping a proptech idea, classifying market segment, or when the user mentions proptech, real estate technology, MLS, brokerage, iBuyer, property management, or RESPA.",
+      "description": "Strategic advisory for proptech founders on real-estate segments, MLS/brokerage models, licensing, and business models. Use when scoping a proptech idea or when the user mentions proptech, MLS, brokerage, iBuyer, or RESPA.",
       "tags": [],
       "version": "1.0.0",
       "updated": "2026-05-04",
@@ -4810,7 +4810,7 @@
     {
       "name": "dossier",
       "domain": "research",
-      "description": "Build structured intelligence dossiers on companies, people, markets, or domains. Covers dossier frameworks, source triangulation, reliability scoring, and fact/inference discipline. Use when preparing a deal-prep dossier, executive briefing, market-entry analysis, due-diligence overview, or board-ready intelligence document.",
+      "description": "Structured intelligence dossiers on companies, people, markets, or domains, with source triangulation and fact/inference discipline. Use when preparing a deal-prep dossier, executive briefing, or due-diligence overview.",
       "tags": [
         "dossier",
         "intelligence",
@@ -4828,7 +4828,7 @@
     {
       "name": "grants",
       "domain": "research",
-      "description": "Grant writing and proposal architecture skill for researchers, founders, and nonprofits. Covers funder fit, proposal structure, budget design, narrative discipline, and success-factor scoring. Use when writing a grant proposal, evaluating funder fit before applying, auditing a draft for competitiveness, or planning a budget that survives review.",
+      "description": "Grant writing and proposal architecture: funder fit, proposal structure, budget design, and success-factor scoring. Use when writing a grant proposal, evaluating funder fit, auditing a draft for competitiveness, or planning a budget.",
       "tags": [
         "grants",
         "proposals",
@@ -4848,7 +4848,7 @@
     {
       "name": "litreview",
       "domain": "research",
-      "description": "Literature review skill for academic, R&D, and professional research. Covers search strategy, source assessment (quality, relevance, recency), thematic synthesis, citation management, and the discipline of reproducible reviews. Use when conducting a systematic literature review, building a research bibliography, or preparing a research-grounded report.",
+      "description": "Literature review for academic and R&D research: search strategy, source assessment, synthesis, and citation management. Use when conducting a systematic literature review, building a bibliography, or preparing a research-grounded report.",
       "tags": [
         "literature-review",
         "research",
@@ -4866,7 +4866,7 @@
     {
       "name": "patent",
       "domain": "research",
-      "description": "Patent research and IP landscape skill. Covers prior-art search strategy, claim mapping, landscape analysis, freedom-to-operate assessment, and patentability scoring. Use when conducting a prior-art search, mapping the IP landscape of a technology area, evaluating patentability of an invention, or running an FTO analysis before product launch.",
+      "description": "Patent research and IP landscape: prior-art search, claim mapping, landscape analysis, and freedom-to-operate. Use when conducting a prior-art search, mapping an IP landscape, evaluating patentability, or running an FTO analysis.",
       "tags": [
         "patent",
         "ip",

@@ -1,12 +1,9 @@
 ---
 name: patent
 description: >
-  Patent research and IP landscape skill. Covers prior-art search
-  strategy, claim mapping, landscape analysis, freedom-to-operate
-  assessment, and patentability scoring. Use when conducting a prior-art
-  search, mapping the IP landscape of a technology area, evaluating
-  patentability of an invention, or running an FTO analysis before
-  product launch.
+  Patent research and IP landscape: prior-art search, claim mapping, landscape
+  analysis, and freedom-to-operate. Use when conducting a prior-art search,
+  mapping an IP landscape, evaluating patentability, or running an FTO analysis.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

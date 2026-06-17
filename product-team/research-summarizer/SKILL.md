@@ -1,13 +1,9 @@
 ---
 name: research-summarizer
 description: >
-  User research synthesis and communication skill for PMs, researchers,
-  and design leads. Takes raw research artifacts (interview transcripts,
-  survey results, observations, support tickets, win/loss notes) and
-  produces structured insights, themed findings, and decision-ready briefs.
-  Use when synthesizing a batch of user interviews, building a findings
-  brief, separating signal from anecdote, or communicating research to
-  stakeholders who didn't participate.
+  Synthesize raw user research (interviews, surveys, tickets) into themed
+  findings and decision-ready briefs. Use when synthesizing user interviews,
+  building a findings brief, or communicating research to stakeholders.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

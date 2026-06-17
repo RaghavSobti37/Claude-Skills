@@ -2,10 +2,9 @@
 name: business-model-canvas
 description: >
   Build, evaluate, and stress-test a Business Model Canvas (Osterwalder)
-  across all 9 building blocks. Use when designing or refreshing a business
-  model, auditing an existing canvas for gaps, exploring monetization
-  alternatives, or aligning leadership on the business model assumptions
-  that everything else depends on.
+  across all 9 blocks. Use when designing or refreshing a business model,
+  auditing a canvas for gaps, exploring monetization, or aligning on the
+  model's assumptions.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

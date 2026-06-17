@@ -2,6 +2,18 @@
 
 Reference catalog of ~50 specific data quality check patterns organized by category (volume, freshness, schema, values, distribution). For each: when to use, detection heuristic, SQL pattern, tool snippets (dbt tests / Great Expectations / Soda Core), threshold guidance.
 
+## Category summary
+
+Five categories of checks, applied per dataset:
+
+| Category | Examples | When |
+|----------|----------|------|
+| **Volume** | Row count is between min/max; row count is within ±N% of yesterday | Always for batch tables |
+| **Freshness** | `MAX(updated_at)` ≤ N minutes ago; pipeline ran in last N minutes | All tables with refresh SLA |
+| **Schema** | Column exists; column type matches; column ordinal; column nullable matches | All tables; especially upstream-sourced |
+| **Values** | NOT NULL; UNIQUE; in enum; matches regex; min/max; reference exists | Per-column based on semantic role |
+| **Distribution** | Mean / median / p99 within expected band; histogram doesn't shift; cardinality stable | Tables where data shape matters (ML features, analytics dimensions) |
+
 ---
 
 ## Volume checks

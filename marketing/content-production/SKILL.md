@@ -1,13 +1,9 @@
 ---
 name: content-production
 description: >
-  Full content production pipeline from blank page to publish-ready piece.
-  Covers competitive research, content briefs, drafting, SEO optimization,
-  readability scoring, editorial quality gates, and internal linking. Use when
-  writing blog posts, articles, guides, or long-form content end-to-end, or when
-  user mentions write a post, draft an article, create content, content
-  pipeline, editorial workflow, content operations, content calendar management,
-  repurposing, or content at scale.
+  Full content production pipeline from blank page to publish-ready piece:
+  research, briefs, drafting, SEO, readability, and editorial gates. Use when
+  writing blog posts, articles, guides, or long-form content end-to-end at scale.
 license: MIT
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: eu-ai-act-specialist
 description: >
-  EU AI Act (Regulation EU 2024/1689) compliance specialist. Use when
-  classifying AI systems by risk tier, assessing provider or deployer
-  obligations, evaluating GPAI model compliance, running conformity assessments,
-  performing bias detection and fairness testing, building AI governance
-  programs, or preparing for EU AI Act enforcement deadlines. Covers the full
-  regulatory lifecycle from system inventory through post-market monitoring.
+  EU AI Act (Regulation EU 2024/1689) compliance specialist. Use for AI system
+  risk classification, provider/deployer obligations, GPAI model compliance,
+  conformity assessments, bias and fairness testing, and AI governance programs.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,8 @@
 ---
 name: gtm-strategy
 description: >
-  Go-to-market strategy: ICP × motion × channels × messaging × success
-  metrics × launch plan. Distinct from individual marketing or sales
-  skills by being the integrated cross-functional strategy spanning
-  product, marketing, sales, CS, and finance. Use when launching a
+  Integrated go-to-market strategy spanning ICP, motion, channels,
+  messaging, success metrics, and launch plan. Use when launching a
   new product, entering a new segment, or auditing why an existing
   GTM isn't working.
 license: MIT + Commons Clause

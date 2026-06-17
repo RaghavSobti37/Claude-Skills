@@ -1,11 +1,9 @@
 ---
 name: ccpa-cpra-privacy-expert
 description: >
-  CCPA and CPRA privacy compliance automation. Audits organizations for
-  California privacy law compliance, maps personal information flows, validates
-  consumer rights readiness, and checks technical safeguards. Use for CCPA
-  compliance assessments, CPRA readiness checks, privacy policy review, consumer
-  rights handling, data mapping, and California privacy audits.
+  CCPA and CPRA California privacy compliance. Use for CCPA/CPRA readiness
+  assessments, personal information data mapping, consumer rights handling,
+  privacy policy review, opt-out mechanisms, and California privacy audits.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

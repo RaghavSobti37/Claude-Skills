@@ -1,13 +1,9 @@
 ---
 name: climate-tech-advisor
 description: >
-  Strategic advisory for climate-tech founders covering carbon markets,
-  GHG accounting (Scope 1/2/3), regulatory landscape (CSRD, SEC climate
-  rules, EU Green Deal), funding sources (DOE, IRA, private climate VC),
-  and category landscape (energy, industry, transport, food, carbon
-  removal). Use when scoping a climate-tech idea, navigating climate
-  funding, picking a category, or when the user mentions climate, carbon,
-  GHG, ESG, IRA, DOE, CDR, or net-zero.
+  Strategic advisory for climate-tech founders on carbon markets, GHG accounting,
+  climate regulation, and funding. Use when scoping a climate-tech idea or picking a
+  category, or mentioning climate, carbon, GHG, ESG, IRA, DOE, or net-zero.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

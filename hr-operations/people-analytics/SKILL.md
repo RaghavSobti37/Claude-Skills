@@ -1,11 +1,9 @@
 ---
 name: people-analytics
 description: >
-  Expert people analytics covering workforce analytics, HR metrics, predictive
-  modeling, employee insights, and data-driven HR decisions. Use when building
-  turnover prediction models, analyzing engagement surveys, running pay equity
-  regressions, designing people dashboards, scoring flight risk, or advising HR
-  leaders with workforce data.
+  People analytics across workforce metrics, predictive modeling, and employee
+  insights. Use when building turnover models, analyzing engagement surveys,
+  running pay equity regressions, or scoring flight risk.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

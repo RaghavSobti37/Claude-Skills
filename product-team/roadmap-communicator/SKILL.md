@@ -1,12 +1,9 @@
 ---
 name: roadmap-communicator
 description: >
-  Roadmap communication skill for PMs and product leaders. Helps translate
-  a single internal roadmap into audience-appropriate formats (exec deck,
-  customer one-pager, eng commit list, sales narrative, board section)
-  and applies confidence-band discipline so promises match reality. Use
-  when preparing a roadmap readout, translating roadmap for a specific
-  audience, or auditing roadmap commitments for over-promise risk.
+  Translate one internal roadmap into audience-appropriate formats with
+  confidence-band discipline. Use when preparing a roadmap readout, tailoring it
+  for an exec, customer, eng, or sales audience, or auditing over-promise risk.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

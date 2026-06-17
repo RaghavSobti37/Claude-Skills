@@ -1,13 +1,9 @@
 ---
 name: healthtech-advisor
 description: >
-  Strategic advisory for digital health and healthtech founders covering
-  HIPAA scope, FDA SaMD vs non-SaMD classification, EHR integration patterns,
-  payor/provider/employer GTM, and value-based care models. Complements the
-  RA/QM compliance domain with software-side strategic guidance. Use when
-  scoping a healthtech idea, classifying PHI, picking a GTM, or when the
-  user mentions HIPAA, PHI, FDA SaMD, EHR integration, telehealth, or
-  digital therapeutics.
+  Strategic advisory for digital health founders on HIPAA scope, FDA SaMD
+  classification, EHR integration, and payor/provider GTM. Use when scoping a
+  healthtech idea, classifying PHI, or mentioning HIPAA, FDA SaMD, EHR, or telehealth.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

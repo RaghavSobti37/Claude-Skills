@@ -2,12 +2,9 @@
 name: compliance-readiness
 description: >
   Cross-framework compliance readiness orchestrator. Use when preparing for
-  multi-framework certification (SOC 2 + ISO 27001 + NIST CSF together), when
-  building a shared-evidence strategy that satisfies multiple frameworks
-  simultaneously, when sequencing certifications (which to do first), or when
-  mapping a single control to its expression across multiple frameworks.
-  Sits above the framework-specific audit-prep skills and the deep
-  framework-specialist skills.
+  multi-framework certification (SOC 2 + ISO 27001 + NIST CSF), building a
+  shared-evidence strategy, sequencing certifications, or mapping a control across
+  frameworks.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,9 @@
 ---
 name: tdd-guide
 description: >
-  Guides red-green-refactor TDD workflows with test generation, coverage gap
-  analysis, and multi-framework support. Use when writing tests first,
-  analyzing coverage reports, generating test stubs, or converting tests
-  between Jest, Pytest, JUnit, and Vitest.
+  Guide red-green-refactor TDD with test generation, coverage-gap analysis, and multi-
+  framework support. Use when writing tests first, analyzing coverage, generating test stubs,
+  or converting tests between Jest, Pytest, JUnit, and Vitest.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

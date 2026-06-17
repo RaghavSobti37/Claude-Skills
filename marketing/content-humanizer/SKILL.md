@@ -1,13 +1,10 @@
 ---
 name: content-humanizer
 description: >
-  Transform AI-generated content into authentic, human-sounding writing. Covers
-  AI pattern detection, natural writing rhythm restoration, voice injection,
-  brand personality application, and authenticity scoring. Use when content
-  sounds robotic, uses AI cliches, lacks personality, reads like committee
-  writing, or when user mentions AI content, make it human, add personality,
-  sounds robotic, fix AI writing, content authenticity, AI detection, or
-  humanize content.
+  Transform AI-generated content into human-sounding writing via AI pattern
+  detection, rhythm restoration, and authenticity scoring. Use when content
+  sounds robotic, uses AI cliches, or the user wants to humanize or fix AI
+  writing.
 license: MIT
 metadata:
   version: 1.0.0

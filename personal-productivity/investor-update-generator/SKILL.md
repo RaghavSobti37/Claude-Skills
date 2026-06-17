@@ -1,11 +1,9 @@
 ---
 name: investor-update-generator
 description: >
-  Validate that a monthly investor update has the structural sections that
-  separate strong updates (transparent, decision-relevant, asks specific) from
-  weak ones (PR-style, all-good-news, no asks). Use before sending a monthly
-  investor update, or when the user mentions investor update, monthly update,
-  or fundraise communication cadence.
+  Validate a monthly investor update against a rubric of strong-update
+  sections (transparency, decision-relevance, specific asks). Use before
+  sending a monthly investor update or setting a fundraise communication cadence.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

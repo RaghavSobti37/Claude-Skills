@@ -1,11 +1,9 @@
 ---
 name: seo-specialist
 description: >
-  Expert SEO covering technical SEO, content optimization, link building,
-  keyword research, and search analytics. Use when auditing technical SEO
-  issues, researching keywords by intent and difficulty, optimizing on-page
-  elements, building link acquisition strategies, or analyzing organic search
-  performance.
+  SEO covering technical SEO, content optimization, link building, keyword
+  research, and search analytics. Use when auditing technical SEO, researching
+  keywords, optimizing on-page elements, or analyzing organic search performance.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

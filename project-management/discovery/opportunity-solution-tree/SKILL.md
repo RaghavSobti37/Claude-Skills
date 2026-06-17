@@ -1,11 +1,10 @@
 ---
 name: opportunity-solution-tree
 description: >
-  Opportunity Solution Tree (Teresa Torres) — a continuous discovery
-  artifact mapping desired outcomes → opportunities → solutions →
-  assumption tests. Use when prioritizing discovery work, structuring
-  weekly customer interviews, mapping multiple solutions to one
-  problem, or auditing whether your roadmap actually moves outcomes.
+  Opportunity Solution Tree (Teresa Torres) mapping outcomes →
+  opportunities → solutions → assumption tests. Use when prioritizing
+  discovery work, mapping solutions to a problem, or checking whether
+  a roadmap moves outcomes.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0
