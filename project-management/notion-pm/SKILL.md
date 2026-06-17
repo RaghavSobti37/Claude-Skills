@@ -1,10 +1,9 @@
 ---
 name: notion-pm
 description: >
-  Notion expert for product management workflows: database design for PRDs, OKRs,
-  Roadmaps, and Decisions; property types (relation, rollup, formula); view design
-  (Board, Timeline, Calendar, Gallery, Table); page architecture; Notion-flavored
-  Markdown; Notion REST API; and sync with Jira, Linear, and GitHub.
+  Notion expert for product management workflows. Use for database design
+  for PRDs/OKRs/Roadmaps/Decisions, property and view design, page
+  architecture, Notion REST API, and sync with Jira, Linear, and GitHub.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.1

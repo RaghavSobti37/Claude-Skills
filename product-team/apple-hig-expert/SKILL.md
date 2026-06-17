@@ -1,12 +1,10 @@
 ---
 name: apple-hig-expert
 description: >
-  Apple Human Interface Guidelines expert for iOS, iPadOS, macOS, watchOS,
-  tvOS, and visionOS. Covers platform-native patterns, navigation, typography,
-  controls, gestures, accessibility, and the platform-specific conventions
-  that make apps feel native. Use when designing or reviewing an Apple
-  platform app, auditing for HIG compliance, picking the right native
-  components, or validating accessibility against Apple's requirements.
+  Apple Human Interface Guidelines expert across iOS, iPadOS, macOS, watchOS,
+  tvOS, and visionOS. Use when designing or reviewing an Apple-platform app,
+  auditing for HIG compliance, picking native components, or validating
+  accessibility.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

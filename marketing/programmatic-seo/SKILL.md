@@ -1,10 +1,10 @@
 ---
 name: programmatic-seo
 description: >
-  Programmatic page generation at scale using template-based SEO, data
-  pipelines, and automated content production. Covers keyword pattern mining,
-  template architecture, data sourcing, quality control, and indexation strategy
-  for 100-100K+ page deployments.
+  Programmatic page generation at scale using template-based SEO and data
+  pipelines: keyword pattern mining, template architecture, and indexation for
+  100-100K+ pages. Use when building SEO pages at scale or scoping a programmatic
+  SEO build.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

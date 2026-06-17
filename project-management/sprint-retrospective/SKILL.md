@@ -1,10 +1,10 @@
 ---
 name: sprint-retrospective
 description: >
-  Data-driven sprint retrospectives from git history — velocity analytics, cycle/
-  lead time, contributor insights, code churn hotspots, bus factor, work-session
-  detection, and sprint-over-sprint comparison reports. Use to run a retrospective,
-  analyze team velocity/throughput, or generate a retro report from commit history.
+  Data-driven sprint retrospectives from git history — velocity, cycle/lead
+  time, contributor insights, and churn hotspots. Use to run a
+  retrospective, analyze team velocity or throughput, or generate a retro
+  report from commit history.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.1

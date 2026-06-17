@@ -1,13 +1,9 @@
 ---
 name: soc2-compliance-expert
 description: >
-  SOC 2 Type I and Type II compliance management. Use when conducting SOC 2
-  readiness assessments, performing gap analysis against Trust Services
-  Criteria, collecting audit evidence, validating infrastructure security
-  controls, preparing for CPA firm audits, managing the observation period, or
-  building continuous compliance programs. Covers all TSC categories (CC1-CC9,
-  A1, PI1, C1, P1) with infrastructure validation for cloud, DNS, TLS,
-  endpoints, and CI/CD pipelines.
+  SOC 2 Type I and Type II compliance management against the Trust Services
+  Criteria. Use for SOC 2 readiness assessments, TSC gap analysis, audit evidence
+  collection, infrastructure control validation, and CPA firm audit preparation.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

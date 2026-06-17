@@ -1,11 +1,9 @@
 ---
 name: talent-acquisition
 description: >
-  Expert talent acquisition covering recruiting strategy, candidate sourcing,
-  interview design, employer branding, and hiring analytics. Use when building
-  job descriptions, designing interview scorecards, analyzing hiring funnels,
-  drafting sourcing outreach, structuring compensation bands, or improving offer
-  acceptance rates.
+  Talent acquisition across recruiting strategy, sourcing, interviews, and
+  hiring analytics. Use when writing job descriptions, designing interview
+  scorecards, analyzing hiring funnels, or improving offer acceptance rates.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

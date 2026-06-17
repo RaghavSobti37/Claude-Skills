@@ -1,11 +1,9 @@
 ---
 name: database-schema-designer
 description: >
-  Design relational database schemas from requirements with normalization,
-  migration planning, ERD generation, RLS policies, index strategies, and type
-  generation. Supports PostgreSQL, MySQL, and SQLite with Drizzle, Prisma, and
-  Alembic migrations. Use when designing new features, reviewing schemas, or
-  adding multi-tenancy.
+  Design relational schemas from requirements with normalization, migrations, ERDs, RLS
+  policies, and indexes for PostgreSQL, MySQL, and SQLite. Use when designing new features,
+  reviewing schemas, or adding multi-tenancy.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

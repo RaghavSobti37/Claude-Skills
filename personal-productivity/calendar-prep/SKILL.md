@@ -1,10 +1,9 @@
 ---
 name: calendar-prep
 description: >
-  Generate one-page meeting briefings from a structured input (attendees,
-  prior context, decisions needed) so you walk into every meeting prepared.
-  Use before customer calls, board meetings, 1:1s, or when the user mentions
-  meeting prep, briefing, pre-read, or pre-meeting.
+  Generate one-page meeting briefings from structured input (attendees, prior
+  context, decisions needed). Use before customer calls, board meetings, or
+  1:1s to prepare a pre-read or briefing.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

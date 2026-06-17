@@ -1,11 +1,9 @@
 ---
 name: litreview
 description: >
-  Literature review skill for academic, R&D, and professional research.
-  Covers search strategy, source assessment (quality, relevance, recency),
-  thematic synthesis, citation management, and the discipline of
-  reproducible reviews. Use when conducting a systematic literature
-  review, building a research bibliography, or preparing a
+  Literature review for academic and R&D research: search strategy, source
+  assessment, synthesis, and citation management. Use when conducting a
+  systematic literature review, building a bibliography, or preparing a
   research-grounded report.
 license: MIT + Commons Clause
 metadata:

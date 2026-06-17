@@ -1,10 +1,9 @@
 ---
 name: invoice-organizer
 description: >
-  Categorize invoices and receipts by vendor, expense category, and tax bucket,
-  detect duplicates, and produce a tax-ready monthly summary. Use during
-  bookkeeping, tax prep, expense reimbursement, or when the user mentions
-  receipts, invoices, expenses, bookkeeping, or tax categorization.
+  Categorize invoices and receipts by vendor, expense, and tax bucket, detect
+  duplicates, and produce a tax-ready monthly summary. Use during bookkeeping,
+  tax prep, or expense reimbursement.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

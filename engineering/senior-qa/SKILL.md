@@ -1,10 +1,9 @@
 ---
 name: senior-qa
 description: >
-  This skill should be used when the user asks to "generate tests", "write unit
-  tests", "analyze test coverage", "scaffold E2E tests", "set up Playwright",
-  "configure Jest", "implement testing patterns", or "improve test quality". Use
-  for React/Next.js testing with Jest, React Testing Library, and Playwright.
+  Testing for React/Next.js with Jest, React Testing Library, and Playwright. Use when
+  generating tests, writing unit tests, analyzing coverage, scaffolding E2E tests, configuring
+  Jest, or improving test quality.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

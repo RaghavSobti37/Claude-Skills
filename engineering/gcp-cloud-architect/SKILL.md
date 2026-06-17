@@ -1,15 +1,9 @@
 ---
 name: gcp-cloud-architect
 description: >
-  Design, review, and validate Google Cloud (GCP) architectures. Use when picking
-  the right GCP compute (GKE / Cloud Run / Cloud Functions / GCE / Cloud Run Jobs),
-  data store (Cloud SQL / Spanner / Firestore / BigQuery / Bigtable / Cloud Storage),
-  networking (VPC / Private Service Connect / Cloud Load Balancing / Cloud Armor),
-  identity (IAM / Workload Identity Federation / Service Accounts), or applying the
-  Google Cloud Architecture Framework (Operational Excellence, Security, Reliability,
-  Cost Optimization, Performance Optimization) to a workload. Pairs with our existing
-  senior-cloud-architect (multi-cloud, abstract patterns) by going deep on GCP-specific
-  services, pricing, and operational defaults.
+  Design, review, and validate Google Cloud (GCP) architectures. Use when choosing GCP
+  compute, storage, networking, or identity services, or applying the Google Cloud
+  Architecture Framework (reliability, security, cost, performance).
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

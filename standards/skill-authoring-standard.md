@@ -21,9 +21,10 @@ AI assistants scan skill descriptions to decide relevance. Vague openings mean t
 
 ### Requirements
 
-- First 3 lines: clear, specific description of what the skill does
-- Include trigger phrases (words a user would say when they need this skill)
-- Specify target audience
+- Use the two-part form: `<what it does — one clause>. Use when <trigger a>, <trigger b>, <trigger c>.`
+- Include real trigger phrases (words a user would say when they need this skill) — these drive discovery.
+- **Token budget: keep the `description:` at or under 60 tokens (~240 chars).** It is always resident in context, so every wasted token is paid on every session. Do NOT pad it with: the skill's own name restated, exhaustive service/feature enumerations (those belong in the body and `tags`), "Pairs with / Distinct from X" cross-skill prose (put routing in the body's Scope section), keyword-stuffing tails, or marketing adjectives.
+- Verify with `python3 scripts/skill_token_audit.py --domain <domain>` — it must report `0 skills with oversized descriptions`.
 
 ### Good vs Bad
 

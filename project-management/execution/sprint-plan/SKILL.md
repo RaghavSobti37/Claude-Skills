@@ -2,9 +2,8 @@
 name: sprint-plan
 description: >
   Plan a sprint that ships — capacity, commitment vs stretch, dependencies,
-  risk-identification, and the pre-sprint discipline that prevents
-  mid-sprint surprises. Distinct from scrum-master (process facilitation)
-  by focusing on the planning artifact itself.
+  and risk identification that prevents mid-sprint surprises. Use to build
+  the sprint planning artifact itself.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,10 @@
 ---
 name: lean-canvas
 description: >
-  Lean Canvas (Ash Maurya) — startup-focused adaptation of the Business
-  Model Canvas, optimized for capturing assumptions and unfair advantages
-  in early-stage products. Use when at the idea, pre-PMF, or pivot stage;
-  when BMC is too operational; when you need a 1-page model in 20 minutes.
+  Lean Canvas (Ash Maurya) — startup adaptation of the Business Model
+  Canvas for capturing assumptions and unfair advantages in early-stage
+  products. Use at the idea, pre-PMF, or pivot stage, or when you need a
+  1-page model fast.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

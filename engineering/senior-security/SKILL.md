@@ -1,10 +1,9 @@
 ---
 name: senior-security
 description: >
-  Performs STRIDE threat modeling, DREAD risk scoring, secret detection, and
-  secure architecture design. Use when conducting threat models, reviewing code
-  for security vulnerabilities, designing defense-in-depth architectures, or
-  scanning for hardcoded secrets and credentials.
+  STRIDE threat modeling, DREAD risk scoring, secret detection, and secure architecture
+  design. Use when conducting threat models, reviewing code for vulnerabilities, designing
+  defense-in-depth, or scanning for hardcoded secrets.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

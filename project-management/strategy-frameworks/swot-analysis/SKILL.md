@@ -1,11 +1,10 @@
 ---
 name: swot-analysis
 description: >
-  SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) — the
-  foundational strategic-positioning exercise. Use when assessing a new
-  market entry, a strategic pivot, a competitive response, an org
-  restructure, or as input to annual strategic planning. Includes a
-  validator that flags generic, ungrounded, or one-sided SWOTs.
+  SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for
+  strategic positioning. Use when assessing a new market entry, a
+  strategic pivot, a competitive response, an org restructure, or as
+  input to annual strategic planning.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: gdpr-audit-prep
 description: >
-  GDPR audit-prep playbook: 4/8/12-week sprint to prepare for a supervisory
-  authority inquiry, a customer-side DPA audit, or an internal compliance
-  review. Use when an audit is on the calendar, when readiness assessment
-  surfaced gaps, or when ROPA (Records of Processing Activities) needs
-  rapid completion. Pairs with our deep gdpr-dsgvo-expert skill (the
-  program-building one) — this is the operational audit-prep variant.
+  GDPR audit-prep playbook: sprint to prepare for a supervisory authority inquiry,
+  DPA audit, or internal review. Use when an audit is scheduled, when readiness gaps
+  surface, or when ROPA (Records of Processing Activities) needs completion.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

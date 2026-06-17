@@ -1,11 +1,9 @@
 ---
 name: performance-profiler
 description: >
-  Systematic performance profiling for Node.js, Python, and Go applications.
-  Covers CPU flamegraphs, memory leak detection, bundle analysis, database query
-  optimization, N+1 detection, load testing with k6, and before/after
-  measurement methodology. Use when diagnosing slow endpoints, memory growth,
-  large bundles, or preparing for traffic spikes.
+  Performance profiling for Node.js, Python, and Go: CPU flamegraphs, memory leak detection,
+  bundle analysis, query optimization, and k6 load testing. Use when diagnosing slow
+  endpoints, memory growth, large bundles, or traffic spikes.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

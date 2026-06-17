@@ -1,11 +1,9 @@
 ---
 name: nis2-directive-specialist
 description: >
-  NIS2 Directive (EU 2022/2555) compliance automation. Analyzes organizational
-  scope, assesses compliance against all 10 minimum security measures, validates
-  incident reporting readiness, and generates gap analysis reports. Use for NIS2
-  compliance assessments, critical infrastructure cybersecurity planning, supply
-  chain security evaluation, and incident reporting preparation.
+  NIS2 Directive (EU 2022/2555) compliance for critical infrastructure entities,
+  covering the 10 minimum security measures. Use for NIS2 compliance assessments,
+  entity scope analysis, supply chain security, and incident reporting readiness.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

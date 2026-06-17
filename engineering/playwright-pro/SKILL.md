@@ -1,11 +1,9 @@
 ---
 name: playwright-pro
 description: >
-  Production-grade end-to-end testing with Playwright. Covers test generation
-  from user stories, page object patterns, locator strategy, flaky test
-  diagnosis, Cypress/Selenium migration, CI integration, visual regression
-  testing, and accessibility auditing. Use when writing E2E tests, fixing flaky
-  tests, or migrating from Cypress/Selenium.
+  End-to-end testing with Playwright: test generation, page objects, locator strategy, flaky-
+  test diagnosis, visual regression, and CI integration. Use when writing E2E tests, fixing
+  flaky tests, or migrating from Cypress/Selenium.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

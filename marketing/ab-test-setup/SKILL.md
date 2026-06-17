@@ -1,9 +1,9 @@
 ---
 name: ab-test-setup
 description: >
-  This skill should be used when the user asks to "set up an A/B test", "calculate sample size",
-  "design an experiment", "analyze A/B test results", "check statistical significance",
-  "determine test duration", or "evaluate conversion rate experiments".
+  Design and analyze A/B tests: sample size, test duration, and statistical
+  significance for conversion experiments. Use when setting up an A/B test,
+  calculating sample size, designing an experiment, or analyzing results.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

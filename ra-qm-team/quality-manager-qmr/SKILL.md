@@ -1,12 +1,9 @@
 ---
 name: quality-manager-qmr
 description: >
-  Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech
-  companies. Use when conducting management reviews, setting quality objectives,
-  tracking quality KPIs, assessing quality culture, overseeing regulatory
-  compliance across jurisdictions, or preparing for Notified Body and FDA
-  inspections. Provides quality system governance and performance monitoring per
-  ISO 13485 Clause 5.5.2.
+  Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech. Use
+  for management reviews, quality objectives and KPIs, quality culture, and
+  Notified Body / FDA inspection prep per ISO 13485 Clause 5.5.2.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

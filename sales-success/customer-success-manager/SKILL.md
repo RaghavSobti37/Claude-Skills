@@ -1,10 +1,9 @@
 ---
 name: customer-success-manager
 description: >
-  Expert customer success covering onboarding, adoption, retention, expansion,
-  health scoring, and customer advocacy. Use when designing onboarding
-  playbooks, calculating health scores, building QBR decks, planning renewal
-  strategies, or identifying expansion opportunities.
+  Customer success across onboarding, adoption, retention, and expansion. Use
+  when designing onboarding playbooks, calculating health scores, building QBR
+  decks, planning renewal strategies, or identifying expansion opportunities.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

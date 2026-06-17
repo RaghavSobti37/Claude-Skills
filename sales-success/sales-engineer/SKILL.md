@@ -1,11 +1,9 @@
 ---
 name: sales-engineer
 description: >
-  Expert sales engineering covering technical demos, solution design, RFP
-  responses, POC management, and technical objection handling. Use when
-  preparing product demos, responding to RFPs/RFIs, scoping proof-of-concept
-  projects, building competitive battle cards, or handling technical objections
-  during sales cycles.
+  Technical sales engineering: demos, solution design, RFP responses, and POC
+  management. Use when preparing demos, responding to RFPs/RFIs, scoping
+  proof-of-concepts, building battle cards, or handling technical objections.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

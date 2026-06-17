@@ -1,10 +1,9 @@
 ---
 name: release-orchestrator
 description: >
-  Use when running pre-release validation, generating changelogs, bumping
-  semantic versions, scoring deployment readiness, or orchestrating end-to-end
-  release pipelines. Provides pre-flight checks, secret scanning, conventional
-  commit parsing, and GO/CONDITIONAL/NO-GO gating.
+  Orchestrate end-to-end release pipelines. Use when running pre-release validation,
+  generating changelogs, bumping semantic versions, scoring deployment readiness, or gating
+  releases with secret scanning and GO/NO-GO checks.
 license: MIT + Commons Clause
 metadata:
   version: 2.1.0

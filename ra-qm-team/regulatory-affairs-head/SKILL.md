@@ -1,11 +1,9 @@
 ---
 name: regulatory-affairs-head
 description: >
-  Senior Regulatory Affairs Manager for HealthTech and MedTech companies. Use
-  when developing regulatory strategy, preparing FDA 510(k)/PMA/De Novo
-  submissions, planning EU MDR CE marking, coordinating global market access, or
-  monitoring regulatory intelligence. Provides pathway analysis, submission
-  management, timeline planning, and cross-functional regulatory leadership.
+  Senior Regulatory Affairs Manager for HealthTech and MedTech. Use for regulatory
+  strategy, FDA 510(k)/PMA/De Novo submissions, EU MDR CE marking, global market
+  access, and regulatory intelligence.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

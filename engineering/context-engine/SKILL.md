@@ -1,11 +1,9 @@
 ---
 name: context-engine
 description: >
-  Context management engine for AI coding agents. Handles context window
-  optimization, persistent memory across sessions, context retrieval strategies,
-  token budget allocation, and knowledge graph construction from codebases. Use
-  when building agent memory systems, optimizing context windows, designing RAG
-  pipelines for code, or managing multi-session agent state.
+  Context management engine for AI coding agents. Use when building agent memory systems,
+  optimizing context windows, allocating token budgets, designing RAG pipelines for code, or
+  managing persistent multi-session agent state.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

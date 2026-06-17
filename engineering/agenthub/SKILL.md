@@ -1,11 +1,9 @@
 ---
 name: agenthub
 description: >
-  Multi-agent DAG orchestration framework. Design, execute, and manage workflows
-  where multiple AI agents collaborate on complex tasks with dependency graphs.
-  Covers agent spawning, output merging, quality evaluation, and real-time status
-  boards. Use when a task requires multiple specialized agents working in concert,
-  or when you need to parallelize AI work across sub-tasks.
+  Multi-agent DAG orchestration for workflows where AI agents collaborate via dependency
+  graphs, covering agent spawning, output merging, and quality evaluation. Use when a task
+  needs multiple specialized agents or to parallelize AI work.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

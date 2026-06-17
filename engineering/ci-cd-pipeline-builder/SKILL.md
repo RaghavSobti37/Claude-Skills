@@ -1,11 +1,9 @@
 ---
 name: ci-cd-pipeline-builder
 description: >
-  Design and generate CI/CD pipelines from detected project stack signals.
-  Covers GitHub Actions, GitLab CI, CircleCI, and Buildkite with caching, matrix
-  builds, deployment strategies (blue-green, canary, rolling), environment
-  gates, and security scanning. Use when bootstrapping CI, migrating pipelines,
-  or optimizing build times.
+  Design and generate CI/CD pipelines from project stack signals across GitHub Actions, GitLab
+  CI, CircleCI, and Buildkite. Use when bootstrapping CI, migrating pipelines, adding
+  deployment gates, or optimizing build times.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

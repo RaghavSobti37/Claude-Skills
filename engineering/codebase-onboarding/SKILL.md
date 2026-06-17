@@ -1,11 +1,9 @@
 ---
 name: codebase-onboarding
 description: >
-  Analyze a codebase and generate comprehensive onboarding documentation
-  including architecture overviews, key file maps, local setup guides, task
-  runbooks, debugging guides, and contribution guidelines. Audience-aware output
-  for junior, senior, or contractor developers. Use when onboarding new team
-  members, open-sourcing, or documenting after a major refactor.
+  Analyze a codebase and generate onboarding docs: architecture overviews, file maps, setup
+  guides, runbooks, and debugging guides. Use when onboarding new team members, open-sourcing,
+  or documenting after a major refactor.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

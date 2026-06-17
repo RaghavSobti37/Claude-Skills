@@ -1,11 +1,9 @@
 ---
 name: aws-solution-architect
 description: >
-  Design AWS architectures for startups using serverless patterns and IaC
-  templates. Use when asked to design serverless architecture, create
-  CloudFormation templates, optimize AWS costs, set up CI/CD pipelines, or
-  migrate to AWS. Covers Lambda, API Gateway, DynamoDB, ECS, Aurora, and cost
-  optimization.
+  Design AWS serverless architectures for startups with IaC. Use when designing serverless
+  architecture, writing CloudFormation, optimizing AWS costs, setting up CI/CD, or migrating
+  to AWS across Lambda, API Gateway, and DynamoDB.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

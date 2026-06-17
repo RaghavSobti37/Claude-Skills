@@ -1,12 +1,9 @@
 ---
 name: edtech-advisor
 description: >
-  Strategic advisory for edtech founders covering FERPA / COPPA / GDPR-K
-  compliance, K-12 vs higher-ed vs corporate L&D market dynamics, school
-  district sales cycles, and edtech pricing models. Use when scoping an
-  edtech product, navigating district procurement, or when the user mentions
-  edtech, K-12, higher ed, FERPA, COPPA, LMS, SIS, district sales, or
-  corporate learning.
+  Strategic advisory for edtech founders on FERPA/COPPA compliance, K-12 vs higher-ed
+  vs L&D dynamics, district sales, and pricing. Use when scoping an edtech product or
+  navigating procurement, or mentioning edtech, K-12, FERPA, COPPA, or LMS.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

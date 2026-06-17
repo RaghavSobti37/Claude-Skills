@@ -1,15 +1,9 @@
 ---
 name: azure-cloud-architect
 description: >
-  Design, review, and validate Azure cloud architectures. Use when picking
-  the right Azure compute (AKS / App Service / Container Apps / Functions /
-  VMs / VMSS), data store (SQL DB / Cosmos / Postgres Flexible / Storage),
-  networking (VNet / Private Endpoint / Front Door / Application Gateway),
-  identity (Entra ID / Managed Identity / RBAC scopes), or applying the
-  Azure Well-Architected Framework (Reliability, Security, Cost Optimization,
-  Operational Excellence, Performance Efficiency) to a workload. Pairs with
-  our existing senior-cloud-architect (multi-cloud, abstract patterns) by
-  going deep on Azure-specific services, pricing, and operational defaults.
+  Design, review, and validate Azure cloud architectures. Use when choosing Azure
+  compute, storage, networking, or identity services, or applying the Azure
+  Well-Architected Framework to a workload.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

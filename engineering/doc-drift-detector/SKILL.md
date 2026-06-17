@@ -1,10 +1,9 @@
 ---
 name: doc-drift-detector
 description: >
-  Detects documentation drift against code changes, scores staleness on a
-  weighted 0-100 scale, validates API docs via AST parsing, and audits link
-  integrity. Use when documentation falls out of sync with code, preparing
-  releases, running CI doc gates, or auditing README/API doc accuracy.
+  Detect documentation drift against code changes, score staleness, validate API docs via AST
+  parsing, and audit link integrity. Use when docs fall out of sync with code, preparing
+  releases, running CI doc gates, or auditing doc accuracy.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

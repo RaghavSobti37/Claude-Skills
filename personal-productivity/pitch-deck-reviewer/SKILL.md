@@ -1,11 +1,9 @@
 ---
 name: pitch-deck-reviewer
 description: >
-  Score a pitch deck (provided as text/markdown summary of slides) against
-  YC, Sequoia, and a16z heuristics — does it have the right slides in the
-  right order with the right content? Use before sending a deck to investors,
-  practicing pitch with a co-founder, or when the user mentions pitch deck,
-  fundraising deck, seed deck, or Series A deck review.
+  Score a pitch deck's structure and content against YC, Sequoia, and a16z
+  heuristics. Use before sending a deck to investors, practicing a pitch, or
+  reviewing a seed or Series A fundraising deck.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

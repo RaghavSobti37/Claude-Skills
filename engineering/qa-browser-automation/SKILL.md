@@ -1,10 +1,9 @@
 ---
 name: qa-browser-automation
 description: >
-  Use when performing browser-based QA testing, visual regression tracking,
-  WCAG accessibility auditing, performance profiling, or health scoring web
-  applications. Combines Chrome MCP browser control with Python analysis tools
-  for systematic, repeatable quality assurance.
+  Browser-based QA combining Chrome MCP control with Python analysis tools. Use when
+  performing browser QA testing, visual regression tracking, WCAG accessibility auditing,
+  performance profiling, or health-scoring web applications.
 license: MIT + Commons Clause
 metadata:
   version: 2.1.0

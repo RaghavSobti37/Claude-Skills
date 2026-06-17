@@ -1,12 +1,9 @@
 ---
 name: ai-act-readiness
 description: >
-  EU AI Act readiness assessment + sprint playbook. Use when preparing for the
-  Aug 2026 high-risk AI system requirements deadline, when notified-body
-  conformity assessment is scheduled, when GPAI (general-purpose AI) obligations
-  apply, or when annual readiness assessment is due. Pairs with our deep
-  eu-ai-act-specialist skill — that one builds the program; this one preps
-  for the specific assessment.
+  EU AI Act readiness assessment and sprint playbook. Use when preparing for the
+  Aug 2026 high-risk AI system deadline, when a notified-body conformity assessment
+  is scheduled, or when GPAI (general-purpose AI) obligations apply.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

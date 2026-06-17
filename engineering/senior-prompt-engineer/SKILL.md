@@ -1,11 +1,9 @@
 ---
 name: senior-prompt-engineer
 description: >
-  This skill should be used when the user asks to "optimize prompts", "design
-  prompt templates", "evaluate LLM outputs", "build agentic systems", "implement
-  RAG", "create few-shot examples", "analyze token usage", or "design AI
-  workflows". Use for prompt engineering patterns, LLM evaluation frameworks,
-  agent architectures, and structured output design.
+  Prompt engineering and LLM evaluation. Use when optimizing prompts, designing prompt
+  templates, evaluating LLM outputs, building agentic systems, implementing RAG, creating few-
+  shot examples, or designing structured-output workflows.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

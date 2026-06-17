@@ -1,14 +1,9 @@
 ---
 name: feature-flags-architect
 description: >
-  Feature flag strategy, lifecycle, and operations for production systems. Use
-  when designing a flag taxonomy, planning a gradual rollout, building kill
-  switches for risky changes, auditing flag debt in a codebase, defining flag
-  governance (who can flip what, when, and how), running progressive delivery
-  experiments, or recovering from a bad release via flag-based rollback. Covers
-  the four flag types (release, ops, experiment, permission), rollout
-  ramp patterns, blast-radius math, kill-switch runbooks, and the flag-debt
-  cleanup loop that prevents flag rot.
+  Feature flag strategy, lifecycle, and operations. Use when designing a flag taxonomy,
+  planning a gradual rollout, building kill switches, auditing flag debt, defining governance,
+  running progressive delivery, or rolling back via flags.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

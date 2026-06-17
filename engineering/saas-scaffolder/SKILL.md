@@ -1,12 +1,9 @@
 ---
 name: saas-scaffolder
 description: >
-  Generate complete production-ready SaaS boilerplate with authentication,
-  database schemas, billing integration (Stripe), multi-tenancy, API routes,
-  dashboard UI, and deployment configuration. Supports Next.js App Router,
-  TypeScript, Tailwind, shadcn/ui, Drizzle ORM, and multiple auth/payment
-  providers. Use when starting a new SaaS product, subscription app, or
-  multi-tenant platform.
+  Generate SaaS boilerplate with auth, database schemas, Stripe billing, multi-tenancy, API
+  routes, and dashboard UI on a Next.js/TypeScript/Tailwind stack. Use when starting a new
+  SaaS product, subscription app, or multi-tenant platform.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

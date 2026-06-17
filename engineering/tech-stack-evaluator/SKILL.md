@@ -1,10 +1,9 @@
 ---
 name: tech-stack-evaluator
 description: >
-  Technology stack evaluation and comparison with TCO analysis, security
-  assessment, and ecosystem health scoring. Use when comparing frameworks,
-  evaluating technology stacks, calculating total cost of ownership, assessing
-  migration paths, or analyzing ecosystem viability.
+  Evaluate and compare technology stacks with TCO analysis, security assessment, and ecosystem
+  health scoring. Use when comparing frameworks, calculating total cost of ownership,
+  assessing migration paths, or analyzing ecosystem viability.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,9 @@
 ---
 name: interview-system-designer
 description: >
-  Designs calibrated interview loops, competency-based question banks, and
-  hiring calibration systems. Use when designing interview processes, creating
-  hiring pipelines, generating scoring rubrics, analyzing interviewer bias,
-  or building question banks for engineering, product, or design roles.
+  Design calibrated interview loops, competency-based question banks, and hiring calibration.
+  Use when designing interview processes, creating hiring pipelines, generating scoring
+  rubrics, analyzing interviewer bias, or building question banks.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

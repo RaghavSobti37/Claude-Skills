@@ -1,10 +1,9 @@
 ---
 name: agent-workflow-designer
 description: >
-  Design and implement multi-agent orchestration systems with workflow DAGs,
-  agent routing, handoff protocols, state management, and cost optimization. Use
-  when building AI pipelines with multiple specialized agents, designing
-  fan-out/fan-in patterns, or implementing fault-tolerant agent workflows.
+  Design multi-agent orchestration with workflow DAGs, routing, handoff protocols, and state
+  management. Use when building pipelines of specialized agents, designing fan-out/fan-in
+  patterns, or implementing fault-tolerant workflows.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

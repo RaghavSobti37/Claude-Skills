@@ -1,11 +1,9 @@
 ---
 name: solutions-architect
 description: >
-  Expert solutions architecture covering technical requirements, solution
-  design, integration planning, and enterprise architecture alignment. Use when
-  conducting technical discovery, designing integration architectures, running
-  security assessments, scoping proof-of-concept engagements, or creating
-  solution architecture documents.
+  Solutions architecture for technical pre-sales. Use when running technical
+  discovery, designing integration architectures, running security assessments,
+  scoping proof-of-concepts, or writing solution architecture documents.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

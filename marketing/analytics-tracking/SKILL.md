@@ -1,11 +1,9 @@
 ---
 name: analytics-tracking
 description: >
-  End-to-end analytics implementation for web and SaaS products. Covers GA4
-  configuration, Google Tag Manager setup, event taxonomy design, conversion
-  tracking across Google Ads and Meta, cross-domain tracking, UTM strategy,
-  consent management, and data quality auditing. Use when building a tracking
-  plan, debugging missing events, setting up GTM, or auditing existing
+  End-to-end analytics implementation for web and SaaS: GA4, Google Tag Manager,
+  event taxonomy, conversion tracking, and UTM strategy. Use when building a
+  tracking plan, debugging missing events, setting up GTM, or auditing existing
   analytics.
 license: MIT + Commons Clause
 metadata:

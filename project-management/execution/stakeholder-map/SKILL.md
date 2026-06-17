@@ -1,11 +1,10 @@
 ---
 name: stakeholder-map
 description: >
-  Map stakeholders by power × interest (or influence × support), design
-  a communication plan, and run the stakeholder-management discipline
+  Map stakeholders by power × interest and design a communication plan
   that prevents surprise objections. Use when launching a major
   initiative, navigating an enterprise deal, planning a re-org, or
-  pre-empting political resistance to a roadmap change.
+  pre-empting resistance to a roadmap change.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

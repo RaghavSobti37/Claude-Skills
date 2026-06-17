@@ -1,11 +1,9 @@
 ---
 name: observability-designer
 description: >
-  Designs comprehensive observability strategies including SLI/SLO frameworks,
-  alerting optimization, and dashboard generation. Use when implementing
-  monitoring for a production service, creating or tuning alert rules, designing
-  Grafana dashboards, defining SLOs and error budgets, or reducing alert fatigue
-  in on-call rotations.
+  Design observability strategies: SLI/SLO frameworks, alerting, and dashboards. Use when
+  instrumenting a production service, tuning alert rules, designing Grafana dashboards,
+  defining SLOs and error budgets, or reducing alert fatigue.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,11 +1,9 @@
 ---
 name: senior-data-engineer
 description: >
-  Use when designing data architectures, building batch or streaming pipelines,
-  implementing data quality frameworks, optimizing ETL/ELT performance, working
-  with Airflow/dbt/Spark/Kafka, or troubleshooting data pipeline failures.
-  Provides pipeline generation, data quality validation, and SQL/Spark
-  performance optimization.
+  Data engineering for batch and streaming pipelines with Airflow, dbt, Spark, and Kafka. Use
+  when designing data architectures, building pipelines, adding data-quality checks,
+  optimizing ETL/ELT, or troubleshooting pipeline failures.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

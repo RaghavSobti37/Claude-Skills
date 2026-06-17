@@ -1,11 +1,9 @@
 ---
 name: lead-researcher
 description: >
-  Qualify and prioritize sales leads against an ICP definition, score lead lists
-  for outreach worthiness, and draft personalized outreach hooks. Use when
-  building a target account list, qualifying inbound leads, prepping for outreach,
-  or when the user mentions lead research, prospecting, sales outreach,
-  ICP scoring, or account targeting.
+  Qualify and prioritize sales leads against an ICP, score lead lists, and
+  draft personalized outreach hooks. Use when building a target account list,
+  qualifying inbound leads, prepping for outreach, or scoring prospects.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

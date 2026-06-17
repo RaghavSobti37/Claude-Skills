@@ -1,12 +1,9 @@
 ---
 name: ecommerce-advisor
 description: >
-  Strategic advisory for e-commerce founders covering unit economics, fulfillment
-  models (3PL, DTC, dropship, retail), payment economics, returns / refunds,
-  and channel strategy (DTC site / Amazon / wholesale / retail). Use when
-  evaluating an ecommerce idea, modeling unit economics, picking fulfillment
-  strategy, or when the user mentions DTC, e-commerce, Shopify, Amazon, 3PL,
-  CAC, contribution margin, or retail expansion.
+  Strategic advisory for e-commerce founders on unit economics, fulfillment models,
+  payments, and channel strategy. Use when evaluating an ecommerce idea or modeling
+  unit economics, or mentioning DTC, Shopify, Amazon, 3PL, or CAC.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

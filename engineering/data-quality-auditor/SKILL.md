@@ -1,14 +1,9 @@
 ---
 name: data-quality-auditor
 description: >
-  Audit data quality across pipelines, warehouses, and operational stores. Use
-  when designing a DQ program from scratch, defining DQ dimensions (completeness,
-  accuracy, consistency, timeliness, validity, uniqueness) for a dataset,
-  building rule-based checks (Great Expectations / dbt tests / Soda / custom),
-  detecting schema drift, monitoring freshness SLAs, responding to a DQ incident,
-  or auditing an existing pipeline for missing DQ coverage. Complements our
-  `senior-data-engineer` skill (which covers pipeline design / ETL / Spark) by
-  going deep on audit-grade quality, not throughput.
+  Audit data quality across pipelines, warehouses, and stores. Use when designing a DQ
+  program, defining DQ dimensions, building rule-based checks, detecting schema drift,
+  monitoring freshness SLAs, or responding to a DQ incident.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

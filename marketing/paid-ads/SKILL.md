@@ -1,13 +1,10 @@
 ---
 name: paid-ads
 description: >
-  Plan, execute, and optimize paid advertising campaigns across Google Ads, Meta
-  Ads, LinkedIn Ads, Twitter/X, and TikTok. Covers campaign structure, audience
-  targeting, budget allocation, bid strategies, retargeting, attribution, and
-  performance optimization. Use when running PPC campaigns, setting up ad
-  accounts, optimizing ROAS/CPA, or when user mentions paid ads, PPC, Google
-  Ads, Meta Ads, LinkedIn Ads, ad campaigns, retargeting, audience targeting,
-  budget optimization, ROAS, CPA, or ad performance.
+  Plan, execute, and optimize paid ad campaigns across Google, Meta, LinkedIn,
+  Twitter/X, and TikTok, covering targeting, budget, bid strategies, and
+  retargeting. Use when running PPC campaigns, setting up ad accounts, or
+  optimizing ROAS/CPA.
 license: MIT
 metadata:
   version: 1.0.0

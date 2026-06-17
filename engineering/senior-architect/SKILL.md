@@ -1,12 +1,9 @@
 ---
 name: senior-architect
 description: >
-  This skill should be used when the user asks to "design system architecture",
-  "evaluate microservices vs monolith", "create architecture diagrams", "analyze
-  dependencies", "choose a database", "plan for scalability", "make technical
-  decisions", or "review system design". Use for architecture decision records
-  (ADRs), tech stack evaluation, system design reviews, dependency analysis, and
-  generating architecture diagrams in Mermaid, PlantUML, or ASCII format.
+  System architecture design and review. Use when designing architecture, evaluating
+  microservices vs monolith, writing ADRs, choosing a database, planning for scalability,
+  reviewing system design, or generating architecture diagrams.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

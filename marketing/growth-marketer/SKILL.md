@@ -1,11 +1,9 @@
 ---
 name: growth-marketer
 description: >
-  Expert growth marketing covering experimentation, funnel optimization,
-  acquisition channels, retention strategies, and viral growth. Use when
-  designing A/B experiments, optimizing AARRR funnel stages, calculating viral
-  coefficients, building growth models, or prioritizing acquisition channels by
-  CAC and LTV.
+  Growth marketing covering experimentation, funnel optimization, acquisition
+  channels, retention, and viral growth. Use when designing A/B experiments,
+  optimizing AARRR funnel stages, or prioritizing channels by CAC and LTV.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

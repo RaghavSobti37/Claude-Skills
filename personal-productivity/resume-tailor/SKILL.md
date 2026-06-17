@@ -1,11 +1,9 @@
 ---
 name: resume-tailor
 description: >
-  Tailor a resume to a specific job description by extracting target keywords,
-  scoring keyword match, and rewriting bullets for impact and relevance. Use
-  when applying to a specific role, optimizing for ATS keyword match, or when
-  the user mentions resume tailoring, job application, ATS optimization, or
-  cover letter customization.
+  Tailor a resume to a job description by extracting keywords, scoring match,
+  and rewriting bullets for impact. Use when applying to a role, optimizing
+  for ATS keyword match, or customizing a cover letter.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

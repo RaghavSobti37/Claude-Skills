@@ -1,11 +1,10 @@
 ---
 name: email-template-builder
 description: >
-  Build production-grade email template systems with React Email or MJML. Covers
-  responsive layouts, dark mode, multi-provider sending (Resend, SendGrid,
-  Postmark, SES), i18n, spam score optimization, preview servers, and analytics
-  tracking. Use when setting up transactional email infrastructure, building
-  email design systems, or debugging deliverability issues.
+  Build email template systems with React Email or MJML: responsive layouts,
+  dark mode, multi-provider sending, and spam score optimization. Use when
+  setting up transactional email, building email design systems, or debugging
+  deliverability.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

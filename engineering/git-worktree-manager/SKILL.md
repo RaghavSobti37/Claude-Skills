@@ -1,11 +1,9 @@
 ---
 name: git-worktree-manager
 description: >
-  Manage parallel development with Git worktrees. Covers worktree creation with
-  port allocation, environment sync, branch isolation for multi-agent workflows,
-  cleanup automation, and Docker Compose integration. Use when working on
-  multiple branches simultaneously, running parallel CI validations, or
-  isolating agent workspaces.
+  Manage parallel development with Git worktrees: creation with port allocation, environment
+  sync, branch isolation, and cleanup. Use when working multiple branches at once, running
+  parallel CI validations, or isolating agent workspaces.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

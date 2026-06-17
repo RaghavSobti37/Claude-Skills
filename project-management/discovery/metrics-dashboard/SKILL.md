@@ -1,11 +1,10 @@
 ---
 name: metrics-dashboard
 description: >
-  Design a product metrics dashboard — North Star + input metrics +
-  guardrails — that the team actually uses to make decisions. Distinct
-  from north-star-metric (defines THE one number) by focusing on the
-  full dashboard architecture: layers, owners, cadence, visualization,
-  and the discipline that prevents 30-chart dashboards.
+  Design a product metrics dashboard — North Star, input metrics, and
+  guardrails — that a team actually uses to make decisions. Use when
+  building dashboard architecture: layers, owners, cadence, and
+  visualization.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,11 +1,9 @@
 ---
 name: pci-dss-specialist
 description: >
-  PCI DSS v4.0 payment card industry data security standard compliance,
-  assessment, and implementation. Use for PCI DSS, payment card security,
-  cardholder data, PCI compliance, payment security, PCI assessment, SAQ, ROC,
-  QSA, credit card security, payment processing security, PCI scoping,
-  tokenization, payment terminal security, CDE security, and merchant
+  PCI DSS v4.0 payment card data security compliance, assessment, and
+  implementation. Use for PCI DSS scoping, cardholder data environment (CDE)
+  security, SAQ and ROC preparation, QSA engagement, tokenization, and merchant
   compliance.
 license: MIT + Commons Clause
 metadata:

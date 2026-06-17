@@ -1,10 +1,10 @@
 ---
 name: product-designer
 description: >
-  Expert product design covering UI/UX design, design systems, prototyping, user
-  research, and design thinking. Use when creating user journey maps, building
-  wireframes, defining design tokens and component systems, planning usability
-  tests, or establishing design principles for a product.
+  Product design across UI/UX, design systems, prototyping, and user research.
+  Use when creating user journey maps, building wireframes, defining design
+  tokens and component systems, planning usability tests, or establishing
+  design principles.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

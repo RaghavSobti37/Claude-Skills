@@ -1,10 +1,9 @@
 ---
 name: database-designer
 description: >
-  Provides expert-level database design with schema analysis, index
-  optimization, and migration generation. Supports PostgreSQL, MySQL, MongoDB,
-  and DynamoDB. Use when designing schemas, optimizing queries, planning
-  migrations, or analyzing database performance.
+  Database design with schema analysis, index optimization, and migration generation for
+  PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries,
+  planning migrations, or analyzing database performance.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: runbook-generator
 description: >
-  Generate production-grade operational runbooks from codebase analysis. Covers
-  deployment procedures, incident response, database maintenance, scaling
-  operations, and monitoring setup. Every step includes copy-paste commands,
-  verification checks, rollback procedures, escalation paths, and time
-  estimates. Use when bootstrapping ops docs, preparing for on-call, or
-  post-incident improvements.
+  Generate operational runbooks from codebase analysis covering deployment, incident response,
+  scaling, and monitoring, with copy-paste commands and rollback steps. Use when bootstrapping
+  ops docs, preparing for on-call, or post-incident.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

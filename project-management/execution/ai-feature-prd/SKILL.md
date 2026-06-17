@@ -1,10 +1,10 @@
 ---
 name: ai-feature-prd
 description: >
-  AI/ML feature PRD scaffolding for the modern AI product manager. Extends the
-  standard 8-section PRD with 3 AI-specific sections covering model selection,
-  evals, guardrails, data flow, deployment, failure modes, human-in-the-loop,
-  AI metrics, ethical review, and cost monitoring.
+  AI/ML feature PRD scaffolding for the modern AI product manager. Use to
+  extend a standard PRD with AI-specific sections covering model selection,
+  evals, guardrails, failure modes, human-in-the-loop, AI metrics, and cost
+  monitoring.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.1

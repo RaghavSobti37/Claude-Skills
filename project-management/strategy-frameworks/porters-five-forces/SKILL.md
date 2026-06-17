@@ -3,8 +3,8 @@ name: porters-five-forces
 description: >
   Porter's Five Forces — analyze the competitive intensity and
   attractiveness of an industry. Use when evaluating a new market entry,
-  understanding why margins are under pressure, designing a defensive
-  strategy, or auditing strategic positioning at industry level.
+  diagnosing margin pressure, designing a defensive strategy, or auditing
+  industry-level positioning.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

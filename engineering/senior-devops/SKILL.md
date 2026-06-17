@@ -1,11 +1,9 @@
 ---
 name: senior-devops
 description: >
-  Use when building CI/CD pipelines, containerizing applications, managing
-  Kubernetes clusters, provisioning cloud infrastructure with Terraform,
-  implementing deployment strategies (blue-green, canary, rolling), setting up
-  monitoring/observability, optimizing cloud costs, or handling infrastructure
-  incident response.
+  DevOps for CI/CD, containers, Kubernetes, and Terraform. Use when building pipelines,
+  containerizing apps, managing clusters, provisioning cloud infra, deploying with blue-
+  green/canary, or handling infrastructure incidents.
 license: MIT + Commons Clause
 metadata:
   version: 2.1.0

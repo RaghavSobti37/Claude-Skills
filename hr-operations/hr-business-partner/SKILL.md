@@ -1,11 +1,9 @@
 ---
 name: hr-business-partner
 description: >
-  Expert HR business partnership covering talent strategy, organizational
-  development, employee relations, and people analytics. Use when building
-  workforce plans, designing performance review cycles, resolving employee
-  relations cases, running calibration sessions, structuring compensation
-  philosophy, or advising leadership on organizational change.
+  HR business partnership across talent strategy, org development, and employee
+  relations. Use when building workforce plans, designing performance reviews,
+  resolving employee relations cases, or advising leadership on org change.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

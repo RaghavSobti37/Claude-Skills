@@ -1,11 +1,9 @@
 ---
 name: design-auditor
 description: >
-  Use when auditing UI/UX designs for quality, detecting AI-generated slop
-  patterns, validating WCAG accessibility compliance, checking design system
-  token adherence, or reviewing responsive design across breakpoints. Produces
-  three independent grades (Design, AI Slop, Accessibility) with prioritized
-  fix recommendations.
+  Audit UI/UX designs for quality, AI-generated slop, and accessibility. Use when reviewing
+  designs, detecting slop patterns, validating WCAG compliance, checking design-token
+  adherence, or reviewing responsive design across breakpoints.
 license: MIT + Commons Clause
 metadata:
   version: 2.1.0

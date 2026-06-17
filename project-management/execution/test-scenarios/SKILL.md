@@ -1,11 +1,10 @@
 ---
 name: test-scenarios
 description: >
-  Generate complete test scenario coverage from a feature spec: happy
-  paths, edge cases, error handling, accessibility, security, and
-  performance scenarios. Includes a coverage analyzer that flags
-  gaps before QA writes the test plan. Distinct from automated test
-  generation — this is the WHAT to test before HOW.
+  Generate test scenario coverage from a feature spec — happy paths, edge
+  cases, error handling, accessibility, security, and performance — with a
+  coverage analyzer that flags gaps. Use to define what to test before QA
+  writes the test plan.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,9 @@
 ---
 name: incident-commander
 description: >
-  Use when handling production incidents, classifying severity, reconstructing
-  timelines, writing postmortems, generating communication templates, or
-  building incident response playbooks. Provides automated severity scoring,
-  RCA frameworks (5 Whys, Fishbone, Bow Tie), and structured PIR generation.
+  Production incident response. Use when handling incidents, classifying severity,
+  reconstructing timelines, writing postmortems, generating comms templates, or building
+  response playbooks with severity scoring and RCA frameworks.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

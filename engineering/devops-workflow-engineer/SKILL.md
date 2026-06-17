@@ -1,11 +1,9 @@
 ---
 name: devops-workflow-engineer
 description: >
-  Use when designing GitHub Actions workflows, creating CI/CD pipelines,
-  planning multi-environment deployments, optimizing pipeline cost and
-  execution time, or implementing deployment strategies (blue-green, canary,
-  rolling). Generates production-ready workflow YAML, analyzes existing
-  pipelines for optimization, and creates deployment plans.
+  Generate and optimize GitHub Actions CI/CD workflows. Use when designing workflows, planning
+  multi-environment deployments, optimizing pipeline cost and runtime, or implementing blue-
+  green, canary, or rolling deployment strategies.
 license: MIT + Commons Clause
 metadata:
   version: 1.1.0

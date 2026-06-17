@@ -1,13 +1,9 @@
 ---
 name: ad-creative
 description: >
-  Design high-converting ad creative across Google, Meta, LinkedIn, Twitter/X,
-  and TikTok. Includes platform-specific format specs, A/B testing frameworks,
-  headline formulas, creative iteration methodology, and compliance validation.
-  Use when writing ad copy, generating headline variations, creating ad sets,
-  iterating on winning ads, validating creative against platform specs, or when
-  user mentions ad copy, RSA headlines, Meta ad copy, LinkedIn ads, creative
-  testing, ad variations, or bulk creative production.
+  Design ad creative across Google, Meta, LinkedIn, Twitter/X, and TikTok with
+  platform format specs, headline formulas, and A/B testing. Use when writing ad
+  copy, generating headline variations, creating ad sets, or validating creative.
 license: MIT
 metadata:
   version: 1.0.0

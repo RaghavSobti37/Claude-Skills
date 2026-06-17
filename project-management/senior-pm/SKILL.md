@@ -1,11 +1,10 @@
 ---
 name: senior-pm
 description: >
-  Senior Project Manager for enterprise software, SaaS, and digital
-  transformation. Specializes in portfolio management, quantitative risk analysis
-  (EMV, Monte Carlo), WSJF/RICE/ICE prioritization, resource optimization,
-  stakeholder mapping, and executive RAG reporting. Use for portfolio health
-  reviews, board-ready status reports, and multi-project risk/capacity analysis.
+  Senior PM for enterprise software and SaaS — portfolio management,
+  quantitative risk analysis, prioritization, and executive reporting.
+  Use for portfolio health reviews, board-ready status reports, and
+  multi-project risk/capacity analysis.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.1

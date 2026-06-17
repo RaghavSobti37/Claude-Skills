@@ -1,12 +1,10 @@
 ---
 name: fintech-advisor
 description: >
-  Strategic advisory for fintech founders and product leaders covering
-  US/EU regulatory triggers, license-vs-partner decisions, KYC/AML basics,
-  PSD2 / Open Banking, embedded finance patterns, and fintech business
-  models. Use when evaluating a fintech idea, scoping regulatory exposure,
-  picking a BaaS partner, or when the user mentions fintech, money
-  transmitter, lending, neobank, embedded finance, KYC, AML, or PSD2.
+  Strategic advisory for fintech founders on US/EU regulatory triggers,
+  license-vs-partner, KYC/AML, and embedded finance. Use when scoping a fintech idea
+  or regulatory exposure, or mentioning fintech, money transmitter, neobank, KYC,
+  or PSD2.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

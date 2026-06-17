@@ -1,11 +1,9 @@
 ---
 name: marketing-analyst
 description: >
-  Expert marketing analytics covering campaign analysis, attribution modeling,
-  marketing mix modeling, ROI measurement, and performance reporting. Use when
-  analyzing campaign ROI, comparing attribution models, optimizing marketing
-  budget allocation, building executive dashboards, or running A/B test
-  statistical analysis.
+  Marketing analytics covering campaign analysis, attribution and marketing mix
+  modeling, ROI measurement, and performance reporting. Use when analyzing
+  campaign ROI, comparing attribution models, or optimizing budget allocation.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

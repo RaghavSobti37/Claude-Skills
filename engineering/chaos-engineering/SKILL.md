@@ -1,14 +1,9 @@
 ---
 name: chaos-engineering
 description: >
-  Chaos engineering practice: hypothesis-driven fault injection to surface
-  weakness before users do. Use when designing a chaos experiment, planning a
-  gameday, picking what to inject (network, host, dependency, resource, state),
-  computing the blast radius of an experiment, building a chaos maturity model
-  for a team, or running a post-incident game to verify the same failure
-  doesn't recur. Covers the four chaos maturity levels, the experiment design
-  loop (steady-state → hypothesis → variables → blast-radius → run → learn),
-  and the catalog of fault types per layer.
+  Chaos engineering: hypothesis-driven fault injection to surface weakness before users do.
+  Use when designing a chaos experiment, planning a gameday, choosing what to inject,
+  computing blast radius, or building a chaos maturity model.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

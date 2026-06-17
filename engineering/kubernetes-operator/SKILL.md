@@ -1,14 +1,9 @@
 ---
 name: kubernetes-operator
 description: >
-  Design, build, and operate Kubernetes operators using the operator pattern.
-  Use when extending Kubernetes with a custom controller for a domain object
-  (database, message queue, ML pipeline, internal platform primitive), deciding
-  between operator-SDK / Kubebuilder / controller-runtime / metacontroller,
-  designing CRDs with proper schema and conversion, implementing reconciliation
-  loops that are idempotent and converge, building status subresources for
-  observability, or auditing an existing operator for anti-patterns
-  (leaky abstractions, missing finalizers, no leader election, status as spec).
+  Design, build, and operate Kubernetes operators. Use when extending Kubernetes with a custom
+  controller, choosing a framework, designing CRDs, implementing reconciliation loops, or
+  auditing an operator for anti-patterns.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

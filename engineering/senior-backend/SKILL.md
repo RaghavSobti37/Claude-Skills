@@ -1,11 +1,9 @@
 ---
 name: senior-backend
 description: >
-  This skill should be used when the user asks to "design REST APIs", "optimize
-  database queries", "implement authentication", "build microservices", "review
-  backend code", "set up GraphQL", "handle database migrations", or "load test
-  APIs". Use for Node.js/Express/Fastify development, PostgreSQL optimization,
-  API security, and backend architecture patterns.
+  Backend development with Node.js/Express/Fastify and PostgreSQL. Use when designing REST or
+  GraphQL APIs, optimizing database queries, implementing authentication, building
+  microservices, handling migrations, or reviewing backend code.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

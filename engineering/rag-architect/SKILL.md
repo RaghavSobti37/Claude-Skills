@@ -1,11 +1,9 @@
 ---
 name: rag-architect
 description: >
-  Designs production-grade RAG pipelines with chunking optimization, retrieval
-  evaluation, and pipeline architecture. Use when building a RAG system,
-  selecting a chunking strategy, choosing a vector database, optimizing
-  retrieval quality, designing embedding pipelines, or evaluating RAG
-  performance with RAGAS metrics.
+  Design RAG pipelines: chunking, retrieval evaluation, and architecture. Use when building a
+  RAG system, selecting a chunking strategy, choosing a vector database, optimizing retrieval
+  quality, or evaluating with RAGAS metrics.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0
