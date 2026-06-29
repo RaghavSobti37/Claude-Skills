@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-22T15:51:32+00:00",
+  "generated_at": "2026-06-29T18:03:37+00:00",
   "skill_count": 339,
   "domain_count": 17,
   "skills": [
@@ -2410,10 +2410,11 @@
       "path": "engineering/threat-detection",
       "files": [
         "SKILL.md",
+        "examples/access.log",
         "references/threat-indicators.md",
         "scripts/threat_signal_analyzer.py"
       ],
-      "size_bytes": 25347,
+      "size_bytes": 32948,
       "has_scripts": true,
       "has_references": true,
       "has_assets": false
