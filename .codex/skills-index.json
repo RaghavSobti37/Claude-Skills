@@ -3,7 +3,7 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/borghei/Claude-Skills",
-  "total_skills": 222,
+  "total_skills": 226,
   "skills": [
     {
       "name": "channel-economics",
@@ -342,6 +342,12 @@
       "description": ">"
     },
     {
+      "name": "agentic-evaluation-framework",
+      "source": "../../engineering/agentic-evaluation-framework",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
       "name": "ai-security",
       "source": "../../engineering/ai-security",
       "category": "engineering",
@@ -368,6 +374,12 @@
     {
       "name": "azure-cloud-architect",
       "source": "../../engineering/azure-cloud-architect",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "batch-api-orchestrator",
+      "source": "../../engineering/batch-api-orchestrator",
       "category": "engineering",
       "description": ">"
     },
@@ -416,6 +428,12 @@
     {
       "name": "codex-cli-specialist",
       "source": "../../engineering/codex-cli-specialist",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "computer-use-automation",
+      "source": "../../engineering/computer-use-automation",
       "category": "engineering",
       "description": ">"
     },
@@ -476,6 +494,12 @@
     {
       "name": "env-secrets-manager",
       "source": "../../engineering/env-secrets-manager",
+      "category": "engineering",
+      "description": ">"
+    },
+    {
+      "name": "extended-thinking-architect",
+      "source": "../../engineering/extended-thinking-architect",
       "category": "engineering",
       "description": ">"
     },
@@ -1350,7 +1374,7 @@
       "description": "Executive leadership and advisory skills"
     },
     "engineering": {
-      "count": 82,
+      "count": 86,
       "source": "../../engineering",
       "description": "Software engineering and technical skills"
     },
